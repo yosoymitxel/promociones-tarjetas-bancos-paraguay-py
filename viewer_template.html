@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PromoScraper PY — Dashboard de Beneficios</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            mono: ['Space Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background: #0B0F19;
+      color: #F1F5F9;
+      min-height: 100vh;
+    }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #0B0F19; }
+    ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+    /* ---- Mesh background ---- */
+    .mesh-bg {
+      position: fixed; top: 0; left: 0; right: 0; height: 100vh;
+      pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 15% -5%, rgba(56,189,248,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 85% 5%, rgba(139,92,246,0.1) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(20,184,166,0.06) 0%, transparent 70%);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+    .glass {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+  </style>
+</head>
+<body>
+<div class="mesh-bg"></div>
+<div id="root" class="relative z-10"></div>
+
+<script type="text/babel">
+const { useState, useMemo } = React;
+
+const PROMOS = __PROMOS_JSON__;
+const STATS = __STATS_JSON__;
+const GENERATED_TIME = "__TIMESTAMP__";
+
+const BANKS = [
+  { id: 'basa', name: 'Banco BASA', short: 'BASA', color: '#F59E0B', url: 'https://www.bancobasa.com.py/promociones-personas' },
+  { id: 'eclub', name: 'eClub', short: 'eClub', color: '#EC4899', url: 'https://eclub.com.py/promociones/' },
+  { id: 'gnb', name: 'Banco GNB', short: 'GNB', color: '#10B981', url: 'https://www.beneficiosbancognb.com.py/v2/beneficios/categorias' },
+  { id: 'itau', name: 'Itaú Paraguay', short: 'Itaú', color: '#FF6B00', url: 'https://www.itau.com.py/beneficios' },
+  { id: 'continental', name: 'Banco Continental', short: 'Continental', color: '#3B82F6', url: 'https://www.bancontinental.com.py/#/club-continental/comercios' },
+  { id: 'personalpay', name: 'Personal Pay', short: 'PersonalPay', color: '#8B5CF6', url: 'https://www.personalpay.com.py/beneficios' },
+];
+
+const CATEGORIES = [
+  "🍽️ Gastronomía", "🛒 Supermercados", "💊 Salud", "🏋️ Fitness", 
+  "📱 Tecnología", "👗 Moda", "🏠 Hogar", "🎓 Educación", 
+  "🏨 Viajes & Hoteles", "⛽ Combustible", "🎬 Entretenimiento", "💳 Financiero"
+];
+
+function App() {
+  const [search, setSearch] = useState("");
+  const [selectedBank, setSelectedBank] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedDiscount, setSelectedDiscount] = useState("");
+  const [selectedDay, setSelectedDay] = useState("");
+  const [selectedInstallments, setSelectedInstallments] = useState("");
+
+  const filteredPromos = useMemo(() => {
+    return PROMOS.filter(p => {
+      if (search && !p.title.toLowerCase().includes(search.toLowerCase()) && 
+          !(p.desc || "").toLowerCase().includes(search.toLowerCase())) return false;
+      if (selectedBank && p.bankId !== selectedBank) return false;
+      if (selectedCategory && p.category !== selectedCategory) return false;
+      if (selectedDiscount && (!p.discount_percent || p.discount_percent < parseInt(selectedDiscount))) return false;
+      if (selectedDay && (!p.days || !p.days.includes(selectedDay))) return false;
+      if (selectedInstallments) {
+        const cuotas = parseInt(selectedInstallments);
+        if (cuotas === 0) {
+          if (p.installments === null || p.installments < 0) return false;
+        } else {
+          if (!p.installments || p.installments < cuotas) return false;
+        }
+      }
+      return true;
+    });
+  }, [search, selectedBank, selectedCategory, selectedDiscount, selectedDay, selectedInstallments]);
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-8">
+      {/* HEADER */}
+      <header className="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6 border-b border-slate-800/60 pb-6">
+        <div>
+          <div className="flex items-center gap-3">
+            <span className="text-3xl">🇵🇾</span>
+            <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-teal-400 to-indigo-400 bg-clip-text text-transparent">
+              PromoScraper PY
+            </h1>
+          </div>
+          <p className="text-sm text-slate-400 mt-1">
+            Dashboard consolidado de promociones y beneficios bancarios de Paraguay.
+          </p>
+        </div>
+        <div className="flex flex-col items-end gap-1 text-right">
+          <span className="text-xs font-mono text-slate-500">Actualizado: {GENERATED_TIME}</span>
+          <div className="flex gap-2 mt-1">
+            {BANKS.map(b => (
+              <a key={b.id} href={b.url} target="_blank" rel="noreferrer"
+                 className="text-xs px-2.5 py-1 rounded bg-slate-800/80 hover:bg-slate-700 text-slate-300 transition-colors border border-slate-700/50">
+                {b.short}
+              </a>
+            ))}
+          </div>
+        </div>
+      </header>
+
+      {/* STATS BAR */}
+      <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div className="glass p-4 rounded-2xl">
+          <span className="text-xs text-slate-400 uppercase tracking-wider block font-semibold">Total Promociones</span>
+          <span className="text-3xl font-black text-white">{PROMOS.length}</span>
+        </div>
+        <div className="glass p-4 rounded-2xl">
+          <span className="text-xs text-slate-400 uppercase tracking-wider block font-semibold">Descuentos</span>
+          <span className="text-3xl font-black text-emerald-400">{PROMOS.filter(p => p.discount_percent).length}</span>
+        </div>
+        <div className="glass p-4 rounded-2xl">
+          <span className="text-xs text-slate-400 uppercase tracking-wider block font-semibold">Fuentes OK</span>
+          <span className="text-3xl font-black text-indigo-400">
+            {Object.values(STATS).filter(s => s.status === 'success').length} / {Object.keys(STATS).length}
+          </span>
+        </div>
+        <div className="glass p-4 rounded-2xl">
+          <span className="text-xs text-slate-400 uppercase tracking-wider block font-semibold font-semibold">Filtrados</span>
+          <span className="text-3xl font-black text-sky-400">{filteredPromos.length}</span>
+        </div>
+      </section>
+
+      {/* FILTERS */}
+      <section className="glass p-5 rounded-3xl mb-8 flex flex-col gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="relative">
+            <input 
+              type="text" 
+              placeholder="Buscar por comercio o palabra clave..." 
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              className="w-full bg-slate-900/90 border border-slate-700/50 rounded-xl px-4 py-2.5 text-sm text-slate-200 outline-none focus:border-blue-500 transition-colors"
+            />
+          </div>
+
+          <select 
+            value={selectedBank} 
+            onChange={e => setSelectedBank(e.target.value)}
+            className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
+          >
+            <option value="">Todos los bancos</option>
+            {BANKS.map(b => (
+              <option key={b.id} value={b.id}>{b.name}</option>
+            ))}
+          </select>
+
+          <select 
+            value={selectedCategory} 
+            onChange={e => setSelectedCategory(e.target.value)}
+            className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
+          >
+            <option value="">Todas las categorías</option>
+            {CATEGORIES.map(c => (
+              <option key={c} value={c}>{c}</option>
+            ))}
+          </select>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <select 
+            value={selectedDiscount} 
+            onChange={e => setSelectedDiscount(e.target.value)}
+            className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
+          >
+            <option value="">Cualquier descuento</option>
+            <option value="10">10%+ Descuento</option>
+            <option value="20">20%+ Descuento</option>
+            <option value="30">30%+ Descuento</option>
+            <option value="40">40%+ Descuento</option>
+            <option value="50">50%+ Descuento</option>
+          </select>
+
+          <select 
+            value={selectedDay} 
+            onChange={e => setSelectedDay(e.target.value)}
+            className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
+          >
+            <option value="">Cualquier día</option>
+            <option value="Todos">Todos los días</option>
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miércoles">Miércoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+            <option value="Sábado">Sábado</option>
+            <option value="Domingo">Domingo</option>
+          </select>
+
+          <select 
+            value={selectedInstallments} 
+            onChange={e => setSelectedInstallments(e.target.value)}
+            className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
+          >
+            <option value="">Cuotas (cualquiera)</option>
+            <option value="0">Cuotas sin interés</option>
+            <option value="3">3+ cuotas</option>
+            <option value="6">6+ cuotas</option>
+            <option value="12">12+ cuotas</option>
+            <option value="18">18+ cuotas</option>
+          </select>
+        </div>
+      </section>
+
+      {/* PROMO GRID */}
+      {filteredPromos.length === 0 ? (
+        <div className="text-center py-20 glass rounded-3xl">
+          <span className="text-5xl block mb-4">🔍</span>
+          <h3 className="text-lg font-bold text-slate-300">No se encontraron resultados</h3>
+          <p className="text-sm text-slate-500 mt-1">Prueba cambiando los criterios de los filtros.</p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {filteredPromos.map((p, index) => {
+            const bank = BANKS.find(b => b.id === p.bankId) || { color: '#64748B', short: p.bankId };
+            return (
+              <div 
+                key={p.id || index}
+                className="glass rounded-2xl overflow-hidden flex flex-col justify-between hover:border-slate-500/40 hover:-translate-y-0.5 transition-all duration-300 fade-up"
+                style={{ animationDelay: `${Math.min(index * 15, 300)}ms` }}
+              >
+                <div>
+                  {/* Image/Stripe */}
+                  <div className="h-32 bg-slate-950/85 relative flex items-center justify-center overflow-hidden">
+                    {p.img ? (
+                      <img src={p.img} alt={p.title} className="w-full h-full object-cover opacity-85" onError={(e) => { e.target.style.display = 'none'; }} />
+                    ) : (
+                      <span className="text-4xl opacity-35">🏷️</span>
+                    )}
+                    <span 
+                      className="absolute top-3 left-3 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full border"
+                      style={{ color: bank.color, backgroundColor: `${bank.color}15`, borderColor: `${bank.color}35` }}
+                    >
+                      {bank.short}
+                    </span>
+
+                    {p.category && (
+                      <span className="absolute bottom-3 right-3 text-[10px] font-semibold bg-slate-900/90 text-slate-400 px-2 py-0.5 rounded">
+                        {p.category}
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="p-4">
+                    {/* Badges row */}
+                    <div className="flex gap-2 flex-wrap mb-2">
+                      {p.discount_percent && (
+                        <span className="text-xs font-bold text-amber-400 bg-amber-400/10 px-2.5 py-0.5 rounded-full border border-amber-400/20">
+                          {p.discount_percent}% OFF
+                        </span>
+                      )}
+                      {p.installments !== null && (
+                        <span className="text-xs font-bold text-violet-400 bg-violet-400/10 px-2.5 py-0.5 rounded-full border border-violet-400/20">
+                          {p.installments === 0 ? 'Sin Interés' : `${p.installments} Cuotas`}
+                        </span>
+                      )}
+                    </div>
+
+                    <h4 className="font-bold text-slate-100 text-sm leading-snug line-clamp-2" title={p.title}>
+                      {p.title}
+                    </h4>
+
+                    {p.desc && (
+                      <p className="text-xs text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                        {p.desc}
+                      </p>
+                    )}
+                  </div>
+                </div>
+
+                <div className="p-4 pt-0">
+                  {p.days && p.days.length > 0 && (
+                    <div className="text-[11px] font-mono text-slate-500 mb-3">
+                      📅 {p.days.includes('Todos') ? 'Todos los días' : p.days.join(', ')}
+                    </div>
+                  )}
+
+                  {p.href && (
+                    <a 
+                      href={p.href} 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="w-full text-center block text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 py-2.5 rounded-xl transition-colors border border-slate-700/40"
+                    >
+                      Ver Bases y Condiciones
+                    </a>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* SCRAPER STATUS REPORT */}
+      <section className="mt-16 glass p-6 rounded-3xl">
+        <h3 className="font-bold text-slate-300 text-sm tracking-wider uppercase font-mono mb-4">
+          Estado del Scraper (Última Corrida)
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {Object.entries(STATS).map(([bankId, stat]) => {
+            const bank = BANKS.find(b => b.id === bankId) || { name: bankId, color: '#64748B' };
+            const success = stat.status === 'success';
+            const skipped = stat.status === 'skipped';
+            return (
+              <div key={bankId} className="flex items-center justify-between p-3 bg-slate-900/60 rounded-xl border border-slate-850">
+                <span className="text-sm font-semibold" style={{ color: bank.color }}>{bank.name}</span>
+                <span className={`text-xs px-2.5 py-0.5 rounded font-mono ${
+                  success ? 'bg-emerald-500/10 text-emerald-400' :
+                  skipped ? 'bg-amber-500/10 text-amber-400' :
+                  'bg-rose-500/10 text-rose-400'
+                }`}>
+                  {success ? `${stat.count} promos` : stat.status}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="mt-16 border-t border-slate-800/80 pt-8 text-center text-xs text-slate-500">
+        <p>PromoScraper PY — Hecho para consolidación de alianzas bancarias de Paraguay.</p>
+      </footer>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
