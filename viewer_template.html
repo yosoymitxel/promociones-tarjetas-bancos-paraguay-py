@@ -224,9 +224,9 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedDiscount, setSelectedDiscount] = useState("");
   const [selectedDay, setSelectedDay] = useState("");
-  const [selectedInstallments, setSelectedInstallments] = useState("");
-  
-// New filters requested by user
+const [selectedInstallments, setSelectedInstallments] = useState("");
+   
+   // New filters requested by user
    const [validityFilter, setValidityFilter] = useState(""); // "", "with", "without"
   
   // Theme toggle state
@@ -272,33 +272,44 @@ function App() {
       // 3) Category selection
       if (selectedCategory && p.category !== selectedCategory) return false;
       
-      // 4) Discount percentage range
-      if (selectedDiscount && (!p.discount_percent || p.discount_percent < parseInt(selectedDiscount))) return false;
-      
-      // 5) Days selection
-      if (selectedDay && (!p.days || !p.days.includes(selectedDay))) return false;
-      
-      // 6) Installments selection
-      if (selectedInstallments) {
-        const cuotas = parseInt(selectedInstallments);
-        if (cuotas === 0) {
-          // Cuotas sin interés: solo promos con installments === 0
-          if (p.installments !== 0) return false;
-        } else {
-          if (!p.installments || p.installments < cuotas) return false;
-        }
-      }
-      
-      // 9) Validity Filter (With/Without date)
-      if (validityFilter) {
-        const hasV = !!p.validity;
-        if (validityFilter === "with" && !hasV) return false;
-        if (validityFilter === "without" && hasV) return false;
-      }
-      
-      return true;
-    });
-  }, [search, selectedBank, selectedCategory, selectedDiscount, selectedDay, selectedInstallments, validityFilter]);
+// 4) Discount filter (range or yes/no)
+       if (selectedDiscount) {
+         if (selectedDiscount === "yes") {
+           if (!p.discount_percent) return false; // Con Descuento
+         } else if (selectedDiscount === "no") {
+           if (p.discount_percent) return false; // Sin Descuento
+         } else {
+           const minDiscount = parseInt(selectedDiscount);
+           if (!p.discount_percent || p.discount_percent < minDiscount) return false;
+         }
+       }
+       
+// 6) Installments filter (range or yes/no)
+       if (selectedInstallments) {
+         if (selectedInstallments === "yes") {
+           if (p.installments === null || p.installments === undefined) return false; // Con Cuotas
+         } else if (selectedInstallments === "no") {
+           if (p.installments !== null && p.installments !== undefined) return false; // Sin Cuotas
+         } else {
+           const cuotas = parseInt(selectedInstallments);
+           if (cuotas === 0) {
+             if (p.installments !== 0) return false; // Sin Interés exacto
+           } else {
+             if (!p.installments || p.installments < cuotas) return false;
+           }
+         }
+       }
+       
+       // 7) Validity Filter (With/Without date)
+       if (validityFilter) {
+         const hasV = !!p.validity;
+         if (validityFilter === "with" && !hasV) return false;
+         if (validityFilter === "without" && hasV) return false;
+       }
+       
+       return true;
+     });
+   }, [search, selectedBank, selectedCategory, selectedDiscount, selectedDay, selectedInstallments, validityFilter]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -404,6 +415,8 @@ function App() {
              className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
            >
              <option value="">Nivel de descuento</option>
+             <option value="yes">Con Descuento (% OFF)</option>
+             <option value="no">Sin Descuento</option>
              <option value="10">10%+ Descuento</option>
              <option value="20">20%+ Descuento</option>
              <option value="30">30%+ Descuento</option>
@@ -433,27 +446,29 @@ function App() {
              className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
            >
              <option value="">Cuotas (rango)</option>
+             <option value="yes">Con Cuotas</option>
+             <option value="no">Sin Cuotas</option>
              <option value="0">Sin Interés</option>
              <option value="3">3+ cuotas</option>
              <option value="6">6+ cuotas</option>
              <option value="12">12+ cuotas</option>
-             <option value="18">18+ cuotas</option>
-           </select>
-         </div>
+<option value="18">18+ cuotas</option>
+            </select>
+          </div>
 
-         {/* Row 3 (New Filters!) */}
-         <div className="grid grid-cols-1 md:grid-cols-1 gap-4 border-t border-slate-800/40 pt-4">
-           <select 
-             value={validityFilter} 
-             onChange={e => setValidityFilter(e.target.value)}
-             className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
-           >
-             <option value="">Vigencia (cualquiera)</option>
-             <option value="with">Con vigencia especificada</option>
-             <option value="without">Sin vigencia especificada</option>
-           </select>
-         </div>
-       </section>
+          {/* Row 3 */}
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-4 border-t border-slate-800/40 pt-4">
+            <select 
+              value={validityFilter} 
+              onChange={e => setValidityFilter(e.target.value)}
+              className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
+            >
+              <option value="">Vigencia (cualquiera)</option>
+              <option value="with">Con vigencia especificada</option>
+              <option value="without">Sin vigencia especificada</option>
+            </select>
+          </div>
+        </section>
 
       {/* PROMO GRID */}
       {filteredPromos.length === 0 ? (

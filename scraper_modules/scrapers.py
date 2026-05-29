@@ -405,23 +405,38 @@ class ItaúScraper(ScraperBase):
                 page.goto(self.bank_url, wait_until="domcontentloaded", timeout=45_000)
                 page.wait_for_timeout(5_000)
 
-                # Find all category links matching `/beneficios2/categoria/`
+                # Find all category links matching `/beneficios2/categoria/` and extract names from carousel
                 elements = page.query_selector_all('a[href*="/beneficios2/categoria/"]')
                 category_urls = []
+                category_map = {}  # Map URL to category name
                 for el in elements:
                     href = el.get_attribute("href")
                     if href:
                         url = urljoin(self.bank_url, href)
                         if url not in category_urls:
                             category_urls.append(url)
+                            # Extract category name from span.una-linea
+                            cat_name_el = el.query_selector("span.una-linea")
+                            cat_name = cat_name_el.inner_text().strip() if cat_name_el else None
+                            category_map[url] = cat_name
 
-                # Fallback list of category IDs if main page returned none
+                # Fallback list of category URLs with names if main page returned none
                 if not category_urls:
                     print("    [Itaú] No categories found on main page. Using fallback categories.")
                     category_urls = [
                         f"https://www.itau.com.py/beneficios2/categoria/{i}"
                         for i in [7, 13, 3, 39, 10, 11, 15, 20]
                     ]
+                    category_map = {
+                        "https://www.itau.com.py/beneficios2/categoria/7": "Gastronomía",
+                        "https://www.itau.com.py/beneficios2/categoria/13": "Supermercados",
+                        "https://www.itau.com.py/beneficios2/categoria/3": "Belleza y Salud",
+                        "https://www.itau.com.py/beneficios2/categoria/39": "Niños",
+                        "https://www.itau.com.py/beneficios2/categoria/10": "Educación",
+                        "https://www.itau.com.py/beneficios2/categoria/11": "Itaú Personal Bank",
+                        "https://www.itau.com.py/beneficios2/categoria/15": "Recreación",
+                        "https://www.itau.com.py/beneficios2/categoria/20": "Restaurantes",
+                    }
 
                 print(f"    [Itaú] Crawling up to {len(category_urls)} categories for promotion grids...")
                 
@@ -431,10 +446,9 @@ class ItaúScraper(ScraperBase):
                         page.goto(cat_url, wait_until="domcontentloaded", timeout=30_000)
                         page.wait_for_timeout(4_050)
                         
-                        # Extract the category name from header if present
-                        category_el = page.query_selector("h2, h3, h4, .category-title")
-                        category_name = category_el.inner_text().strip() if category_el else None
-
+                        # Use category name from main page carousel (pre-extracted)
+                        category_name = category_map.get(cat_url)
+                        
                         # Find all cards `a.item-oferta`
                         cards = page.query_selector_all("a.item-oferta")
                         if not cards:
