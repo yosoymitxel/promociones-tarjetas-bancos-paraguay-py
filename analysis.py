@@ -168,15 +168,53 @@ def extract_category(title: str, desc: str | None) -> str | None:
     return None
 
 
+# ─── Validity Extraction ──────────────────────────────────────────
+def extract_validity(title: str, desc: str | None) -> str | None:
+    """Extract a validity string or date range from text (e.g., 'Del 01 de enero al 31 de diciembre del 2026')."""
+    text = f"{title} {desc or ''}"
+    
+    # Spanish months list
+    months_pat = r'(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)'
+    
+    # Typical date patterns in Paraguayan bank promos
+    patterns = [
+        # Del XX de mes al YY de mes de AAAA
+        r'(?i)(del\s+\d+\s+de\s+' + months_pat + r'\s+(?:al|del|a)\s+\d+\s+de\s+' + months_pat + r'(?:\s+del|\s+de)?\s+\d{4})',
+        # Del XX de mes de AAAA al YY de mes de BBBB
+        r'(?i)(del\s+\d+\s+de\s+' + months_pat + r'(?:\s+del|\s+de)?\s+\d{4}\s+(?:al|del|a)\s+\d+\s+de\s+' + months_pat + r'(?:\s+del|\s+de)?\s+\d{4})',
+        # Válido hasta el XX de mes de AAAA
+        r'(?i)(válido\s+hasta\s+el\s+\d+\s+de\s+' + months_pat + r'(?:\s+del|\s+de)?\s+\d{4})',
+        # Hasta el XX de mes de AAAA
+        r'(?i)(hasta\s+el\s+\d+\s+de\s+' + months_pat + r'(?:\s+del|\s+de)?\s+\d{4})',
+        # XX/XX/XXXX al YY/YY/XXXX
+        r'(\d{2}/\d{2}/\d{4}\s+(?:al|a|-)\s+\d{2}/\d{2}/\d{4})',
+        # Vigencia: XX/XX/XXXX
+        r'(?i)(vigencia:?\s*\d{2}/\d{2}/\d{4}(?:\s+al\s+\d{2}/\d{2}/\d{4})?)',
+    ]
+    
+    for pattern in patterns:
+        m = re.search(pattern, text)
+        if m:
+            # Clean up multiple whitespaces
+            res = re.sub(r'\s+', ' ', m.group(1)).strip()
+            # Strip trailing period if present
+            if res.endswith('.'):
+                res = res[:-1]
+            return res[0].upper() + res[1:]
+            
+    return None
+
+
 # ─── Main enrichment function ────────────────────────────────────
 def analyze_promo(promo: dict) -> dict:
-    """Enrich a promo dict with extracted discount, days, installments, and category."""
+    """Enrich a promo dict with extracted discount, days, installments, category, and validity."""
     title = promo.get("title", "")
     desc = promo.get("desc")
 
     promo["discount_percent"] = extract_discount(title, desc)
     promo["days"] = extract_days(title, desc)
     promo["installments"] = extract_installments(title, desc)
+    promo["validity"] = extract_validity(title, desc)
 
     # Only set category if not already present
     if not promo.get("category"):
