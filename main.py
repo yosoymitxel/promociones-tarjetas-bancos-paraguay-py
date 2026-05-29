@@ -112,7 +112,7 @@ def main():
     print("====================================================")
 
     # Save output
-    output_dir = Path("output")
+    output_dir = Path("./")
     output_dir.mkdir(exist_ok=True)
 
     json_path = output_dir / "promos.json"
