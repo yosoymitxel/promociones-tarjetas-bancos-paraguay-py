@@ -70,12 +70,14 @@ class BASAScraper(ScraperBase):
             if link:
                 href = link.get("href", "")
 
-            promos.append(self.make_promo(
-                title=title,
-                desc=None,
-                img=img_url,
-                href=href,
-            ))
+            # Only add if we have at least an image or a link
+            if img_url or href:
+                promos.append(self.make_promo(
+                    title=title,
+                    desc=None,
+                    img=img_url,
+                    href=href,
+                ))
 
         # Method 2: If method 1 didn't find much, try broader search
         if len(promos) < 5:
@@ -99,11 +101,13 @@ class BASAScraper(ScraperBase):
                     if src:
                         img_url = src if src.startswith("http") else urljoin(self.bank_url, src)
 
-                promos.append(self.make_promo(
-                    title=title,
-                    img=img_url,
-                    href=href,
-                ))
+                # Only add if we have at least an image or a link (href should be non-empty from the selector, but we check anyway)
+                if img_url or href:
+                    promos.append(self.make_promo(
+                        title=title,
+                        img=img_url,
+                        href=href,
+                    ))
 
         return promos
 
@@ -161,12 +165,14 @@ class EClubScraper(ScraperBase):
             if link:
                 href = link.get("href", "")
 
-            promos.append(self.make_promo(
-                title=title,
-                desc=desc,
-                img=img_url,
-                href=href,
-            ))
+            # Only add if we have at least one of: description, image, or link
+            if desc or img_url or href:
+                promos.append(self.make_promo(
+                    title=title,
+                    desc=desc,
+                    img=img_url,
+                    href=href,
+                ))
 
         # Deduplicate by title
         seen = set()
@@ -209,12 +215,22 @@ class GNBScraper(ScraperBase):
                     for item in data:
                         title = item.get("nombre") or item.get("name") or item.get("titulo") or ""
                         if title:
-                            promos.append(self.make_promo(
-                                title=title,
-                                desc=item.get("descripcion") or item.get("description"),
-                                img=item.get("imagen") or item.get("image") or "",
-                                href=item.get("url") or item.get("link") or "",
-                            ))
+                            desc = item.get("descripcion") or item.get("description")
+                            # Handle img field: might be a dict or string
+                            img_raw = item.get("imagen") or item.get("image", "")
+                            if isinstance(img_raw, dict):
+                                img = img_raw.get("url", "")
+                            else:
+                                img = img_raw if isinstance(img_raw, str) else ""
+                            href = item.get("url") or item.get("link", "")
+                            # Only keep if we have a non-empty description or href (to filter out category-only entries)
+                            if (desc is not None and desc.strip() != '') or (href is not None and href.strip() != ''):
+                                promos.append(self.make_promo(
+                                    title=title,
+                                    desc=desc.strip() if desc else None,
+                                    img=img,
+                                    href=href,
+                                ))
                     if promos:
                         return promos
             except Exception:
@@ -287,12 +303,22 @@ class GNBScraper(ScraperBase):
                                     item.get("titulo") or item.get("title") or ""
                                 )
                                 if title and len(title) > 2:
-                                    promos.append(self.make_promo(
-                                        title=title,
-                                        desc=item.get("descripcion") or item.get("description"),
-                                        img=item.get("imagen") or item.get("image") or "",
-                                        href=item.get("url") or item.get("link") or "",
-                                    ))
+                                    desc = item.get("descripcion") or item.get("description")
+                                    # Handle img field: might be a dict or string
+                                    img_raw = item.get("imagen") or item.get("image", "")
+                                    if isinstance(img_raw, dict):
+                                        img = img_raw.get("url", "")
+                                    else:
+                                        img = img_raw if isinstance(img_raw, str) else ""
+                                    href = item.get("url") or item.get("link") or ""
+                                    # Only keep if we have a non-empty description or href (to filter out category-only entries)
+                                    if (desc is not None and desc.strip() != '') or (href is not None and href.strip() != ''):
+                                        promos.append(self.make_promo(
+                                            title=title,
+                                            desc=desc.strip() if desc else None,
+                                            img=img,
+                                            href=href,
+                                        ))
 
                 # If API interception didn't work, parse the rendered DOM
                 if not promos:
@@ -329,16 +355,23 @@ class ItaúScraper(ScraperBase):
             try:
                 data = self.fetch_json(url, timeout=10)
                 if isinstance(data, list) and data:
-                    return [
-                        self.make_promo(
-                            title=item.get("titulo") or item.get("title", ""),
-                            desc=item.get("descripcion") or item.get("description"),
-                            img=item.get("imagen") or item.get("image", ""),
-                            href=item.get("url") or item.get("link", ""),
-                        )
-                        for item in data
-                        if (item.get("titulo") or item.get("title", ""))
-                    ]
+                    promos = []
+                    for item in data:
+                        title = item.get("titulo") or item.get("title", "")
+                        if title:
+                            desc = item.get("descripcion") or item.get("description")
+                            img = item.get("imagen") or item.get("image", "")
+                            href = item.get("url") or item.get("link", "")
+                            # Solo considerar como promoción si tiene al menos título y alguno de: descripción, imagen o enlace
+                            if desc or img or href:
+                                promos.append(self.make_promo(
+                                    title=title,
+                                    desc=desc,
+                                    img=img,
+                                    href=href,
+                                ))
+                    if promos:
+                        return promos
             except Exception:
                 continue
         raise NotImplementedError("No Itaú API found")
@@ -478,16 +511,28 @@ class ContinentalScraper(ScraperBase):
             try:
                 data = self.fetch_json(url, timeout=10)
                 if isinstance(data, list) and data:
-                    return [
-                        self.make_promo(
-                            title=item.get("nombre") or item.get("title", ""),
-                            desc=item.get("descripcion") or item.get("description"),
-                            img=item.get("imagen") or item.get("image", ""),
-                            href=item.get("url") or item.get("link", ""),
-                        )
-                        for item in data
-                        if (item.get("nombre") or item.get("title", ""))
-                    ]
+                    promos = []
+                    for item in data:
+                        title = item.get("nombre") or item.get("title", "")
+                        if title and len(title) > 2:
+                            desc = item.get("descripcion") or item.get("description")
+                            # Handle img field: might be a dict or string
+                            img_raw = item.get("imagen") or item.get("image", "")
+                            if isinstance(img_raw, dict):
+                                img = img_raw.get("url", "")
+                            else:
+                                img = img_raw if isinstance(img_raw, str) else ""
+                            href = item.get("url") or item.get("link", "")
+                            # Only keep if we have a non-empty description or href (to filter out category-only entries)
+                            if (desc is not None and desc.strip() != '') or (href is not None and href.strip() != ''):
+                                promos.append(self.make_promo(
+                                    title=title,
+                                    desc=desc.strip() if desc else None,
+                                    img=img,
+                                    href=href,
+                                ))
+                    if promos:
+                        return promos
             except Exception:
                 continue
         raise NotImplementedError("No Continental API found")
@@ -539,13 +584,23 @@ class ContinentalScraper(ScraperBase):
                             if isinstance(item, dict):
                                 title = item.get("nombre") or item.get("title") or item.get("comercio") or ""
                                 if title and len(title) > 2:
-                                    promos.append(self.make_promo(
-                                        title=title,
-                                        desc=item.get("descripcion") or item.get("description"),
-                                        img=item.get("imagen") or item.get("image", ""),
-                                        href=item.get("url") or item.get("link", ""),
-                                        category=item.get("categoria") or item.get("category"),
-                                    ))
+                                    desc = item.get("descripcion") or item.get("description")
+                                    # Handle img field: might be a dict or string
+                                    img_raw = item.get("imagen") or item.get("image", "")
+                                    if isinstance(img_raw, dict):
+                                        img = img_raw.get("url", "")
+                                    else:
+                                        img = img_raw if isinstance(img_raw, str) else ""
+                                    href = item.get("url") or item.get("link", "")
+                                    # Only keep if we have a non-empty description or href (to filter out category-only entries)
+                                    if (desc is not None and desc.strip() != '') or (href is not None and href.strip() != ''):
+                                        promos.append(self.make_promo(
+                                            title=title,
+                                            desc=desc.strip() if desc else None,
+                                            img=img,
+                                            href=href,
+                                            category=item.get("categoria") or item.get("category"),
+                                        ))
 
                 if not promos:
                     html = page.content()
@@ -579,16 +634,23 @@ class PersonalPayScraper(ScraperBase):
             try:
                 data = self.fetch_json(url, timeout=10)
                 if isinstance(data, list) and data:
-                    return [
-                        self.make_promo(
-                            title=item.get("titulo") or item.get("title", ""),
-                            desc=item.get("descripcion") or item.get("description"),
-                            img=item.get("imagen") or item.get("image", ""),
-                            href=item.get("url") or item.get("link", ""),
-                        )
-                        for item in data
-                        if (item.get("titulo") or item.get("title", ""))
-                    ]
+                    promos = []
+                    for item in data:
+                        title = item.get("titulo") or item.get("title", "")
+                        if title:
+                            desc = item.get("descripcion") or item.get("description")
+                            img = item.get("imagen") or item.get("image", "")
+                            href = item.get("url") or item.get("link", "")
+                            # Solo considerar como promoción si tiene al menos título y alguno de: descripción, imagen o enlace
+                            if desc or img or href:
+                                promos.append(self.make_promo(
+                                    title=title,
+                                    desc=desc,
+                                    img=img,
+                                    href=href,
+                                ))
+                    if promos:
+                        return promos
             except Exception:
                 continue
         raise NotImplementedError("No PersonalPay API found")
@@ -648,12 +710,18 @@ class PersonalPayScraper(ScraperBase):
                             if isinstance(item, dict):
                                 title = item.get("titulo") or item.get("title") or item.get("nombre") or ""
                                 if title and len(title) > 2:
-                                    promos.append(self.make_promo(
-                                        title=title,
-                                        desc=item.get("descripcion") or item.get("description"),
-                                        img=item.get("imagen") or item.get("image", ""),
-                                        href=item.get("url") or item.get("link", ""),
-                                    ))
+                                    desc = item.get("descripcion") or item.get("description")
+                                    img = item.get("imagen") or item.get("image", "")
+                                    href = item.get("url") or item.get("link", "")
+                                    # Solo considerar como promoción si tiene al menos título y alguno de: descripción, imagen o enlace
+                                    if desc or img or href:
+                                        promos.append(self.make_promo(
+                                            title=title,
+                                            desc=desc,
+                                            img=img,
+                                            href=href,
+                                            category=item.get("categoria") or item.get("category"),
+                                        ))
 
                 if not promos:
                     html = page.content()

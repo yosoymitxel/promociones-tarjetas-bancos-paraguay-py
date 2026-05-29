@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import time
@@ -205,10 +206,35 @@ class ScraperBase(ABC):
         if href and not href.startswith("http"):
             href = urljoin(self.bank_url, href)
 
+        # Clean description: strip HTML tags, preserve explicit newlines (from <br> or existing)
+        if desc is not None:
+            # Parse HTML
+            soup = BeautifulSoup(desc, "html.parser")
+            # Replace <br> tags with newline to preserve explicit line breaks
+            for br in soup.find_all("br"):
+                br.replace_with("\n")
+            # Get text (newline characters from replaced <br> and original text are kept)
+            desc = soup.get_text()
+            # Strip leading/trailing whitespace
+            desc = desc.strip()
+            # If after cleaning we have empty string, set to None
+            if desc == "":
+                desc = None
+
+        # Generate a unique, stable, deterministic ID based on title, description, and link
+        unique_payload = f"{self.bank_id}|{title.strip()}"
+        if desc:
+            unique_payload += f"|{desc.strip()}"
+        if href:
+            unique_payload += f"|{href.strip()}"
+        
+        promo_hash = hashlib.md5(unique_payload.encode('utf-8')).hexdigest()[:16]
+        promo_id = f"{self.bank_id}-{promo_hash}"
+
         return {
-            "id": f"{self.bank_id}-{abs(hash(title)) % 100000}",
+            "id": promo_id,
             "title": title.strip(),
-            "desc": desc.strip() if desc else None,
+            "desc": desc,
             "img": img,
             "href": href,
             "bankId": self.bank_id,

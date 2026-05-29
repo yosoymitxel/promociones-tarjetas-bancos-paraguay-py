@@ -3,3 +3,7 @@ __pycache__
 output/promos.json
 *.pyc
 .DS_Store
+reports/**/
+*_backup_*
+*.log
+**test_*
