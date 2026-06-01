@@ -50,204 +50,192 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/1bcea5b7a8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Outfit', 'sans-serif'],
-            mono: ['Space Mono', 'monospace'],
-          }
-        }
-      }
+      theme: { extend: { fontFamily: { sans: ['Outfit', 'sans-serif'], mono: ['Space Mono', 'monospace'] } } }
     }
   </script>
 
   <style>
     :root {
-      /* Dark Theme variables (default) */
-      --bg-color: #0b0f19;
-      --text-color: #f1f5f9;
-      --text-muted: #94a3b8;
-      --glass-bg: rgba(15, 23, 42, 0.7);
-      --glass-border: rgba(255, 255, 255, 0.06);
-      --card-hover-border: rgba(255, 255, 255, 0.15);
-      --input-bg: rgba(15, 23, 42, 0.9);
-      --input-border: rgba(51, 65, 85, 0.5);
-      --input-focus: #3b82f6;
-      --mesh-opacity-1: 0.12;
-      --mesh-opacity-2: 0.1;
-      --mesh-opacity-3: 0.06;
-      --shadow-intensity: rgba(0, 0, 0, 0.5);
+      --bg: #090d18;
+      --surface: rgba(13, 20, 40, 0.75);
+      --border: rgba(255, 255, 255, 0.07);
+      --border-hover: rgba(255, 255, 255, 0.16);
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --input-bg: rgba(10, 16, 32, 0.92);
+      --shadow: rgba(0, 0, 0, 0.55);
     }
 
-    body.light-theme {
-      /* Premium Light Theme variables */
-      --bg-color: #f8fafc;
-      --text-color: #0f172a;
-      --text-muted: #475569;
-      --glass-bg: rgba(255, 255, 255, 0.75);
-      --glass-border: rgba(15, 23, 42, 0.08);
-      --card-hover-border: rgba(15, 23, 42, 0.2);
-      --input-bg: rgba(255, 255, 255, 0.95);
-      --input-border: rgba(148, 163, 184, 0.4);
-      --input-focus: #2563eb;
-      --mesh-opacity-1: 0.06;
-      --mesh-opacity-2: 0.05;
-      --mesh-opacity-3: 0.03;
-      --shadow-intensity: rgba(15, 23, 42, 0.04);
+    body.light {
+      --bg: #f1f5fb;
+      --surface: rgba(255, 255, 255, 0.82);
+      --border: rgba(15, 23, 42, 0.09);
+      --border-hover: rgba(15, 23, 42, 0.22);
+      --text: #0f172a;
+      --muted: #475569;
+      --input-bg: rgba(255, 255, 255, 0.97);
+      --shadow: rgba(15, 23, 42, 0.06);
     }
 
     body {
-      background: var(--bg-color);
-      color: var(--text-color);
+      background: var(--bg);
+      color: var(--text);
       min-height: 100vh;
-      transition: background-color 0.4s ease, color 0.4s ease;
+      transition: background .35s, color .35s;
+      font-family: 'Outfit', sans-serif;
     }
 
-    ::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
+    .glass {
+      background: var(--surface);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 28px var(--shadow);
+      transition: background .35s, border-color .35s;
     }
 
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #1e293b;
-      border-radius: 99px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #334155;
-    }
-
-    /* ---- Mesh background ---- */
-    .mesh-bg {
+    .mesh {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100vh;
+      inset: 0;
       pointer-events: none;
       z-index: 0;
       background:
-        radial-gradient(ellipse 60% 40% at 15% -5%, rgba(56, 189, 248, var(--mesh-opacity-1)) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 30% at 85% 5%, rgba(139, 92, 246, var(--mesh-opacity-2)) 0%, transparent 70%),
-        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(20, 184, 166, var(--mesh-opacity-3)) 0%, transparent 70%);
-      transition: background 0.4s ease;
+        radial-gradient(ellipse 60% 40% at 15% -5%, rgba(56, 189, 248, .11) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 85% 5%, rgba(139, 92, 246, .09) 0%, transparent 70%),
+        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(20, 184, 166, .06) 0%, transparent 70%);
     }
 
     @keyframes fadeUp {
       from {
         opacity: 0;
-        transform: translateY(12px);
+        transform: translateY(10px)
       }
 
       to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0)
       }
     }
 
     .fade-up {
-      animation: fadeUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation: fadeUp .28s cubic-bezier(.16, 1, .3, 1) both;
     }
 
     @keyframes scaleUp {
       from {
         opacity: 0;
-        transform: scale(0.95);
+        transform: scale(.96)
       }
 
       to {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1)
       }
     }
 
     .scale-up {
-      animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation: scaleUp .22s cubic-bezier(.16, 1, .3, 1) both;
     }
 
-    .glass {
-      background: var(--glass-bg);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      box-shadow: 0 4px 30px var(--shadow-intensity);
-      transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+    ::-webkit-scrollbar {
+      width: 5px
     }
 
-    /* ---- Light Theme Overrides ---- */
-    body.light-theme h1,
-    body.light-theme h3,
-    body.light-theme h4,
-    body.light-theme h2 {
-      color: #0F172A !important;
+    ::-webkit-scrollbar-track {
+      background: transparent
     }
 
-    body.light-theme p,
-    body.light-theme span.text-slate-300,
-    body.light-theme span.text-slate-400 {
-      color: #334155 !important;
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 99px
     }
 
-    body.light-theme select option {
-      background: #FFFFFF !important;
-      color: #0F172A !important;
+    /* pill chips */
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 8px;
+      border-radius: 99px;
+      font-size: 10px;
+      font-weight: 700;
+      border-width: 1px;
+      border-style: solid;
     }
 
-    body.light-theme select,
-    body.light-theme input {
-      background: #FFFFFF !important;
-      border-color: rgba(15, 23, 42, 0.12) !important;
-      color: #0F172A !important;
+    /* status badges */
+    .badge-active {
+      background: rgba(16, 185, 129, .12);
+      color: #34d399;
+      border-color: rgba(16, 185, 129, .25);
     }
 
-    body.light-theme select:focus,
-    body.light-theme input:focus {
-      border-color: #2563eb !important;
+    .badge-expiring {
+      background: rgba(245, 158, 11, .12);
+      color: #fbbf24;
+      border-color: rgba(245, 158, 11, .28);
     }
 
-    body.light-theme .glass {
-      background: rgba(255, 255, 255, 0.75) !important;
-      border-color: rgba(15, 23, 42, 0.08) !important;
+    .badge-future {
+      background: rgba(59, 130, 246, .12);
+      color: #93c5fd;
+      border-color: rgba(59, 130, 246, .25);
     }
 
-    body.light-theme .glass span.text-slate-500,
-    body.light-theme .glass span.text-slate-400 {
-      color: #475569 !important;
+    .badge-expired {
+      background: rgba(239, 68, 68, .10);
+      color: #f87171;
+      border-color: rgba(239, 68, 68, .22);
     }
 
-    body.light-theme .glass span.text-white {
-      color: #0f172a !important;
+    .badge-nodate {
+      background: rgba(100, 116, 139, .10);
+      color: #94a3b8;
+      border-color: rgba(100, 116, 139, .22);
     }
 
-    body.light-theme .glass span.font-mono {
-      color: #475569 !important;
+    /* today highlight ring on card */
+    .today-ring {
+      box-shadow: 0 0 0 2px rgba(16, 185, 129, .55), 0 4px 28px rgba(0, 0, 0, .5);
     }
 
-    body.light-theme footer p {
-      color: #64748b !important;
+    body.light select option {
+      background: #fff;
+      color: #0f172a;
+    }
+
+    body.light select,
+    body.light input {
+      background: var(--input-bg) !important;
+      border-color: var(--border) !important;
+      color: var(--text) !important;
+    }
+
+    body.light .glass {
+      background: var(--surface) !important;
+      border-color: var(--border) !important;
+    }
+
+    /* Calculadora slider */
+    input[type=range] {
+      accent-color: #3b82f6;
     }
   </style>
 </head>
 
 <body>
-  <div class="mesh-bg"></div>
+  <div class="mesh"></div>
   <div id="root" class="relative z-10"></div>
 
   <script type="text/babel">
-    const { useState, useMemo, useEffect } = React;
+    const { useState, useMemo, useEffect, useCallback, useRef } = React;
 
     const PROMOS = __PROMOS_JSON__;
     const STATS = __STATS_JSON__;
@@ -265,115 +253,509 @@
     const CATEGORIES = [
       "🍽️ Gastronomía", "🛒 Supermercados", "💊 Salud", "🏋️ Fitness",
       "📱 Tecnología", "👗 Moda", "🏠 Hogar", "🎓 Educación",
-      "🏨 Viajes & Hoteles", "⛽ Combustible", "🎬 Entretenimiento", "💳 Financiero"
+      "🏨 Viajes & Hoteles", "⛽ Combustible", "🎬 Entretenimiento", "💳 Financiero",
     ];
 
+    const DAYS_ORDER = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+    const DAYS_ES = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+
+    // ─── Date helpers ────────────────────────────────────────────────
+    function parseSpanishDate(str) {
+      if (!str) return null;
+      const MONTHS = {
+        enero: 0, febrero: 1, marzo: 2, abril: 3, mayo: 4, junio: 5,
+        julio: 6, agosto: 7, septiembre: 8, setiembre: 8, octubre: 9, noviembre: 10, diciembre: 11
+      };
+      // dd/mm/yyyy
+      let m = str.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+      if (m) return new Date(+m[3], +m[2] - 1, +m[1]);
+      // dd de mes de yyyy
+      m = str.match(/(\d{1,2})\s+de\s+(\w+)(?:\s+del?)?\s+(\d{4})/i);
+      if (m) {
+        const mo = MONTHS[m[2].toLowerCase()];
+        if (mo !== undefined) return new Date(+m[3], mo, +m[1]);
+      }
+      return null;
+    }
+
+    function getValidityInfo(validity) {
+      if (!validity) return { status: 'nodate', label: 'Sin fecha', daysLeft: null, endDate: null };
+      const today = new Date(); today.setHours(0, 0, 0, 0);
+
+      // Try to find start and end dates
+      // Patterns: "Del X al Y", "Hasta el X", "X al Y"
+      let start = null, end = null;
+
+      // "Del DD de mes al DD de mes de YYYY"
+      const rangeMatch = validity.match(/del?\s+(.+?)\s+al\s+(.+)/i);
+      if (rangeMatch) {
+        // append year to start if missing
+        let startStr = rangeMatch[1], endStr = rangeMatch[2];
+        const yearMatch = endStr.match(/\d{4}/);
+        if (yearMatch && !/\d{4}/.test(startStr)) startStr += ' ' + yearMatch[0];
+        start = parseSpanishDate(startStr);
+        end = parseSpanishDate(endStr);
+      }
+      if (!end) {
+        // "hasta el X"
+        const hastaMatch = validity.match(/hasta\s+el\s+(.+)/i);
+        if (hastaMatch) end = parseSpanishDate(hastaMatch[1]);
+      }
+      if (!end) end = parseSpanishDate(validity);
+
+      if (!end) return { status: 'nodate', label: 'Ver detalles', daysLeft: null, endDate: null };
+
+      const diffEnd = Math.ceil((end - today) / 86400000);
+      const isActive = !start || start <= today;
+
+      if (!isActive) {
+        const diffStart = Math.ceil((start - today) / 86400000);
+        return { status: 'future', label: `Empieza en ${diffStart}d`, daysLeft: diffStart, startDate: start, endDate: end };
+      }
+      if (diffEnd < 0) return { status: 'expired', label: 'Vencida', daysLeft: diffEnd, endDate: end };
+      if (diffEnd <= 7) return { status: 'expiring', label: `Vence en ${diffEnd}d`, daysLeft: diffEnd, endDate: end };
+      return { status: 'active', label: `${diffEnd}d restantes`, daysLeft: diffEnd, endDate: end };
+    }
+
+    function todayDayName() {
+      return DAYS_ES[new Date().getDay()];
+    }
+
+    function promoIsToday(p) {
+      const days = Array.isArray(p.days) ? p.days : [];
+      if (days.length === 0) return false;
+      if (days.includes('Todos')) return true;
+      return days.includes(todayDayName());
+    }
+
+    // ─── Similarity helper (for "también en otros bancos") ──────────
+    function normTitle(t) {
+      return (t || '').toLowerCase()
+        .replace(/[^a-záéíóúñü\s]/gi, '').trim()
+        .split(/\s+/).filter(w => w.length > 3).join(' ');
+    }
+
+    function getSimilarPromos(promo, all) {
+      const words = normTitle(promo.title).split(' ');
+      if (words.length === 0) return [];
+      return all.filter(p =>
+        p.id !== promo.id &&
+        p.bankId !== promo.bankId &&
+        words.some(w => normTitle(p.title).includes(w))
+      ).slice(0, 4);
+    }
+
+    // ─── Badge component ─────────────────────────────────────────────
+    function ValidityBadge({ info }) {
+      const cls = { active: 'badge-active', expiring: 'badge-expiring', future: 'badge-future', expired: 'badge-expired', nodate: 'badge-nodate' };
+      const icon = { active: 'fa-circle-check', expiring: 'fa-clock', future: 'fa-hourglass-start', expired: 'fa-circle-xmark', nodate: 'fa-circle-minus' };
+      return (
+        <span className={`chip ${cls[info.status]}`}>
+          <i className={`fa-solid ${icon[info.status]} text-[9px]`}></i>
+          {info.label}
+        </span>
+      );
+    }
+
+    // ─── Discount Calculator ─────────────────────────────────────────
+    function DiscountCalc({ promo, onClose }) {
+      const [price, setPrice] = useState(100000);
+      const pct = promo.discount_percent || 0;
+      const saving = Math.round(price * pct / 100);
+      const final = price - saving;
+      const fmt = n => n.toLocaleString('es-PY');
+      return (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md" onClick={onClose}>
+          <div className="glass max-w-sm w-full rounded-3xl p-6 scale-up" onClick={e => e.stopPropagation()}>
+            <div className="flex items-center justify-between mb-5">
+              <h4 className="font-bold text-white text-lg">🧮 Calculadora</h4>
+              <button onClick={onClose} className="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-sm">✕</button>
+            </div>
+            <p className="text-xs text-slate-400 mb-4 line-clamp-2">{promo.title}</p>
+            <div className="mb-5">
+              <label className="text-xs text-slate-400 mb-1 block">Precio original (₲)</label>
+              <input
+                type="range" min="10000" max="5000000" step="10000"
+                value={price} onChange={e => setPrice(+e.target.value)}
+                className="w-full mb-2"
+              />
+              <input
+                type="number" value={price} onChange={e => setPrice(+e.target.value)}
+                className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white outline-none focus:border-blue-500"
+              />
+            </div>
+            <div className="bg-slate-900/70 rounded-2xl p-4 space-y-2 border border-slate-800/50">
+              <div className="flex justify-between text-sm">
+                <span className="text-slate-400">Descuento ({pct}%)</span>
+                <span className="text-red-400 font-bold">- ₲ {fmt(saving)}</span>
+              </div>
+              <div className="flex justify-between text-lg font-black border-t border-slate-700/50 pt-2">
+                <span className="text-slate-300">Pagás</span>
+                <span className="text-emerald-400">₲ {fmt(final)}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // ─── Promo Card ───────────────────────────────────────────────────
+    function PromoCard({ p, index, onOpen }) {
+      const bank = BANKS.find(b => b.id === p.bankId) || { color: '#64748B', short: p.bankId };
+      const vi = useMemo(() => getValidityInfo(p.validity), [p.validity]);
+      const isToday = promoIsToday(p);
+
+      return (
+        <div
+          onClick={() => onOpen(p)}
+          className={`glass rounded-xl overflow-hidden flex flex-col group hover:ring-1 hover:ring-blue-500/50 transition-all duration-300 hover:-translate-y-0.5 fade-up cursor-pointer ${isToday ? 'today-ring' : ''}`}
+          style={{ animationDelay: `${Math.min(index * 12, 280)}ms` }}
+        >
+          {/* Image */}
+          <div className="relative h-44 overflow-hidden bg-slate-950/50">
+            {p.img ? (
+              <img src={p.img} alt={p.title} loading="lazy"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onError={e => { e.target.style.display = 'none'; }} />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center">
+                <span className="text-5xl opacity-20">🏷️</span>
+              </div>
+            )}
+            {/* Overlay badges top-left */}
+            <div className="absolute top-2.5 left-2.5 flex flex-col gap-1.5">
+              {p.discount_percent > 0 && (
+                <span className="chip" style={{ background: 'rgba(245,158,11,.2)', color: '#fcd34d', borderColor: 'rgba(245,158,11,.35)' }}>
+                  🏷️ {p.discount_percent}% OFF
+                </span>
+              )}
+              {p.installments !== null && p.installments !== undefined && (
+                <span className="chip" style={{ background: 'rgba(139,92,246,.18)', color: '#c4b5fd', borderColor: 'rgba(139,92,246,.35)' }}>
+                  💳 {p.installments === 0 ? 'Sin interés' : `${p.installments} cuotas`}
+                </span>
+              )}
+            </div>
+            {/* Bank badge top-right */}
+            <div className="absolute top-2.5 right-2.5 px-2 py-1 rounded-lg bg-white/90 font-bold text-xs" style={{ color: bank.color }}>
+              {bank.short}
+            </div>
+            {/* Today indicator */}
+            {isToday && (
+              <div className="absolute bottom-0 left-0 right-0 bg-emerald-500/20 backdrop-blur-sm border-t border-emerald-500/30 px-2.5 py-1 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+                <span className="text-[10px] font-bold text-emerald-300">Disponible hoy</span>
+              </div>
+            )}
+          </div>
+
+          {/* Body */}
+          <div className="p-3.5 flex-1 flex flex-col gap-2">
+            <div>
+              <h3 className="font-bold text-sm leading-snug line-clamp-2 mb-1" style={{ color: 'var(--text)' }} title={p.title}>
+                {p.title}
+              </h3>
+              {p.category && (
+                <span className="text-[10px] font-semibold text-teal-400 uppercase tracking-wide">{p.category}</span>
+              )}
+            </div>
+
+            {/* Days */}
+            {Array.isArray(p.days) && p.days.length > 0 && (
+              <div className="flex flex-wrap gap-1">
+                {p.days.includes('Todos') ? (
+                  <span className="chip" style={{ background: 'rgba(20,184,166,.1)', color: '#5eead4', borderColor: 'rgba(20,184,166,.25)' }}>
+                    <i className="fa-solid fa-calendar-days text-[8px]"></i> Todos los días
+                  </span>
+                ) : p.days.map(d => {
+                  const active = d === todayDayName();
+                  return (
+                    <span key={d} className={`chip ${active ? 'badge-active' : ''}`}
+                      style={active ? {} : { background: 'rgba(100,116,139,.1)', color: '#94a3b8', borderColor: 'rgba(100,116,139,.2)' }}>
+                      {d.slice(0, 3)}
+                    </span>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Validity */}
+            <ValidityBadge info={vi} />
+
+            {/* Actions */}
+            <div className="mt-auto flex gap-1.5 pt-1">
+              <button
+                onClick={e => { e.stopPropagation(); onOpen(p); }}
+                className="flex-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 py-1.5 rounded-lg text-[10px] font-bold hover:bg-blue-500 hover:text-white transition-all"
+              >DETALLES</button>
+              {p.href && (
+                <button onClick={e => { e.stopPropagation(); window.open(p.href, '_blank'); }}
+                  className="w-8 flex items-center justify-center bg-slate-800/50 border border-slate-700/50 rounded-lg hover:bg-slate-700 transition-all" title="Bases y condiciones">
+                  <i className="fa-solid fa-file-lines text-slate-400 text-xs"></i>
+                </button>
+              )}
+              <button onClick={e => { e.stopPropagation(); window.open(`https://www.google.com/maps/search/${encodeURIComponent(p.title)}+Paraguay`, '_blank'); }}
+                className="w-8 flex items-center justify-center bg-slate-800/50 border border-slate-700/50 rounded-lg hover:bg-slate-700 transition-all" title="Ver en mapa">
+                <i className="fa-solid fa-location-dot text-slate-400 text-xs"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // ─── Detail Modal ─────────────────────────────────────────────────
+    function DetailModal({ promo, allPromos, onClose, onOpen, onCalc }) {
+      const bank = BANKS.find(b => b.id === promo.bankId) || { color: '#64748B', short: promo.bankId, name: promo.bankId };
+      const vi = useMemo(() => getValidityInfo(promo.validity), [promo.validity]);
+      const similar = useMemo(() => getSimilarPromos(promo, allPromos), [promo, allPromos]);
+      const isToday = promoIsToday(promo);
+
+      return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md" onClick={onClose}>
+          <div className="glass max-w-2xl w-full rounded-3xl overflow-hidden shadow-2xl relative max-h-[90vh] flex flex-col scale-up"
+            onClick={e => e.stopPropagation()}>
+
+            <button onClick={onClose}
+              className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-slate-900/80 text-white flex items-center justify-center border border-slate-700/50 hover:bg-slate-800 transition-colors text-sm">
+              ✕
+            </button>
+
+            {/* Hero image */}
+            <div className="h-52 bg-slate-950 relative flex items-center justify-center overflow-hidden">
+              {promo.img ? (
+                <img src={promo.img} alt={promo.title} className="w-full h-full object-cover opacity-90" onError={e => e.target.style.display = 'none'} />
+              ) : (
+                <span className="text-7xl opacity-20">🏷️</span>
+              )}
+              <span className="absolute top-4 left-4 text-xs uppercase font-bold tracking-wider px-3 py-1 rounded-full border"
+                style={{ color: bank.color, background: `${bank.color}20`, borderColor: `${bank.color}40` }}>
+                {bank.short}
+              </span>
+              {promo.category && (
+                <span className="absolute bottom-4 right-4 text-xs font-bold bg-slate-900/90 text-slate-300 px-3 py-1 rounded-full">
+                  {promo.category}
+                </span>
+              )}
+              {isToday && (
+                <span className="absolute bottom-4 left-4 chip badge-active">
+                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span> Hoy disponible
+                </span>
+              )}
+            </div>
+
+            {/* Body */}
+            <div className="p-6 overflow-y-auto flex-1">
+              {/* Chips row */}
+              <div className="flex gap-2 flex-wrap mb-3">
+                {promo.discount_percent > 0 && (
+                  <span className="chip" style={{ background: 'rgba(245,158,11,.15)', color: '#fcd34d', borderColor: 'rgba(245,158,11,.3)' }}>
+                    🏷️ {promo.discount_percent}% OFF
+                  </span>
+                )}
+                {promo.installments !== null && promo.installments !== undefined && (
+                  <span className="chip" style={{ background: 'rgba(139,92,246,.15)', color: '#c4b5fd', borderColor: 'rgba(139,92,246,.3)' }}>
+                    💳 {promo.installments === 0 ? 'Cuotas sin interés' : `${promo.installments} cuotas`}
+                  </span>
+                )}
+                <ValidityBadge info={vi} />
+              </div>
+
+              <h3 className="text-xl font-black mb-3 leading-tight" style={{ color: 'var(--text)' }}>{promo.title}</h3>
+
+              {/* Validity detail */}
+              {promo.validity && (
+                <div className="flex items-center gap-2 text-sm bg-teal-500/10 border border-teal-500/20 rounded-xl px-3.5 py-2 mb-3 w-fit">
+                  <i className="fa-solid fa-calendar-range text-teal-400 text-xs"></i>
+                  <span className="text-teal-300 font-semibold text-xs">{promo.validity}</span>
+                </div>
+              )}
+
+              {/* Days */}
+              {Array.isArray(promo.days) && promo.days.length > 0 && (
+                <div className="flex items-center gap-2 flex-wrap mb-3">
+                  <span className="text-xs text-slate-500">Días:</span>
+                  {promo.days.includes('Todos') ? (
+                    <span className="chip" style={{ background: 'rgba(20,184,166,.1)', color: '#5eead4', borderColor: 'rgba(20,184,166,.25)' }}>Todos los días</span>
+                  ) : promo.days.map(d => (
+                    <span key={d} className={`chip ${d === todayDayName() ? 'badge-active' : ''}`}
+                      style={d === todayDayName() ? {} : { background: 'rgba(100,116,139,.1)', color: '#94a3b8', borderColor: 'rgba(100,116,139,.2)' }}>
+                      {d}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {/* Description */}
+              {promo.desc ? (
+                <div className="text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4 whitespace-pre-line">
+                  {promo.desc}
+                </div>
+              ) : (
+                <p className="text-sm text-slate-500 italic border-t border-slate-800/60 pt-4">
+                  Sin descripción adicional. Consultá las bases y condiciones oficiales.
+                </p>
+              )}
+
+              {/* Similar promos in other banks */}
+              {similar.length > 0 && (
+                <div className="mt-5 border-t border-slate-800/60 pt-4">
+                  <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                    <i className="fa-solid fa-code-compare mr-1"></i> También en otros bancos
+                  </p>
+                  <div className="flex flex-col gap-2">
+                    {similar.map(s => {
+                      const sb = BANKS.find(b => b.id === s.bankId) || { color: '#64748B', short: s.bankId };
+                      const svi = getValidityInfo(s.validity);
+                      return (
+                        <div key={s.id}
+                          onClick={() => onOpen(s)}
+                          className="flex items-center gap-3 p-2.5 bg-slate-900/60 rounded-xl border border-slate-800/40 cursor-pointer hover:border-slate-700 transition-all">
+                          <span className="text-xs font-bold px-2 py-0.5 rounded" style={{ background: `${sb.color}20`, color: sb.color }}>{sb.short}</span>
+                          <span className="text-xs text-slate-300 flex-1 line-clamp-1">{s.title}</span>
+                          {s.discount_percent > 0 && <span className="text-[10px] text-amber-400 font-bold">{s.discount_percent}%</span>}
+                          <ValidityBadge info={svi} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Footer actions */}
+            <div className="p-4 border-t border-slate-800/40 flex gap-2">
+              {promo.discount_percent > 0 && (
+                <button onClick={() => onCalc(promo)}
+                  className="flex items-center gap-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-4 py-2.5 rounded-xl text-xs font-bold hover:bg-emerald-500 hover:text-white transition-all">
+                  <i className="fa-solid fa-calculator"></i> Calcular descuento
+                </button>
+              )}
+              {promo.href && (
+                <a href={promo.href} target="_blank" rel="noreferrer"
+                  className="flex-1 text-center text-sm font-bold bg-blue-600 hover:bg-blue-500 text-white py-2.5 rounded-xl transition-all">
+                  Ver Bases y Condiciones
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // ─── Main App ─────────────────────────────────────────────────────
     function App() {
       const [search, setSearch] = useState("");
-      const [selectedBank, setSelectedBank] = useState("");
-      const [selectedCategory, setSelectedCategory] = useState("");
-      const [selectedDiscount, setSelectedDiscount] = useState("");
-      const [selectedDay, setSelectedDay] = useState("");
-      const [selectedInstallments, setSelectedInstallments] = useState("");
-
-      // New filters requested by user
-      const [validityFilter, setValidityFilter] = useState(""); // "", "with", "without"
-
-      // Theme toggle state
-      const [theme, setTheme] = useState("dark"); // "dark" or "light"
-
-      // Modal state
+      const [selBank, setSelBank] = useState("");
+      const [selCat, setSelCat] = useState("");
+      const [selDiscount, setSelDiscount] = useState("");
+      const [selDay, setSelDay] = useState("");
+      const [selInst, setSelInst] = useState("");
+      const [selValidity, setSelValidity] = useState("");
+      const [todayOnly, setTodayOnly] = useState(false);
+      const [theme, setTheme] = useState("dark");
       const [activePromo, setActivePromo] = useState(null);
+      const [calcPromo, setCalcPromo] = useState(null);
 
-      // Esc key closes modal
+      // Search debounce
+      const [debouncedQ, setDebouncedQ] = useState("");
       useEffect(() => {
-        const handleKeyDown = (e) => {
-          if (e.key === 'Escape') setActivePromo(null);
-        };
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
+        const t = setTimeout(() => setDebouncedQ(search), 180);
+        return () => clearTimeout(t);
+      }, [search]);
+
+      // Esc to close
+      useEffect(() => {
+        const h = e => { if (e.key === 'Escape') { setActivePromo(null); setCalcPromo(null); } };
+        window.addEventListener('keydown', h);
+        return () => window.removeEventListener('keydown', h);
       }, []);
 
       const toggleTheme = () => {
-        const nextTheme = theme === "dark" ? "light" : "dark";
-        setTheme(nextTheme);
-        if (nextTheme === "light") {
-          document.body.classList.add("light-theme");
-        } else {
-          document.body.classList.remove("light-theme");
-        }
+        const next = theme === "dark" ? "light" : "dark";
+        setTheme(next);
+        document.body.classList.toggle("light", next === "light");
+      };
+
+      // Active-filter count for reset button
+      const activeFilters = [selBank, selCat, selDiscount, selDay, selInst, selValidity].filter(Boolean).length
+        + (todayOnly ? 1 : 0) + (search ? 1 : 0);
+
+      const resetFilters = () => {
+        setSearch(""); setSelBank(""); setSelCat(""); setSelDiscount("");
+        setSelDay(""); setSelInst(""); setSelValidity(""); setTodayOnly(false);
       };
 
       const filteredPromos = useMemo(() => {
-        const q = search.trim().toLowerCase();
-
+        const q = debouncedQ.trim().toLowerCase();
         return PROMOS.filter(p => {
 
-          // 1. Texto libre
+          // Text search
           if (q) {
-            const haystack = [p.title, p.desc, p.category, p.validity]
-              .map(v => (v == null ? "" : String(v)).toLowerCase())
-              .join(" ");
-            if (!haystack.includes(q)) return false;
+            const hay = [p.title, p.desc, p.category, p.validity]
+              .map(v => v == null ? "" : String(v).toLowerCase()).join(" ");
+            if (!hay.includes(q)) return false;
           }
 
-          // 2. Banco
-          if (selectedBank !== "" && p.bankId !== selectedBank) return false;
+          // Bank
+          if (selBank !== "" && p.bankId !== selBank) return false;
 
-          // 3. Categoria
-          if (selectedCategory !== "" && p.category !== selectedCategory) return false;
+          // Category
+          if (selCat !== "" && p.category !== selCat) return false;
 
-          // 4. Descuento
-          if (selectedDiscount !== "") {
+          // Discount
+          if (selDiscount !== "") {
             const pct = p.discount_percent;
-            const hasPct = pct !== null && pct !== undefined && pct > 0;
-            if      (selectedDiscount === "yes") { if (!hasPct)          return false; }
-            else if (selectedDiscount === "no")  { if ( hasPct)          return false; }
-            else {
-              const min = Number(selectedDiscount);
-              if (!hasPct || pct < min) return false;
-            }
+            const has = pct !== null && pct !== undefined && pct > 0;
+            if (selDiscount === "yes") { if (!has) return false; }
+            else if (selDiscount === "no") { if (has) return false; }
+            else { const min = Number(selDiscount); if (!has || pct < min) return false; }
           }
 
-          // 5. Dia
-          if (selectedDay !== "") {
+          // Day
+          if (selDay !== "") {
             const days = Array.isArray(p.days) ? p.days : [];
             if (days.length === 0) return false;
-            if (selectedDay === "Todos") {
-              if (!days.includes("Todos")) return false;
-            } else {
-              if (!days.includes(selectedDay) && !days.includes("Todos")) return false;
-            }
+            if (selDay === "Todos") { if (!days.includes("Todos")) return false; }
+            else { if (!days.includes(selDay) && !days.includes("Todos")) return false; }
           }
 
-          // 6. Cuotas
-          if (selectedInstallments !== "") {
+          // Today only
+          if (todayOnly && !promoIsToday(p)) return false;
+
+          // Installments
+          if (selInst !== "") {
             const inst = p.installments;
-            const hasInst = inst !== null && inst !== undefined;
-            if      (selectedInstallments === "yes") { if (!hasInst)      return false; }
-            else if (selectedInstallments === "no")  { if ( hasInst)      return false; }
-            else if (selectedInstallments === "0")   { if (inst !== 0)    return false; }
-            else {
-              const min = Number(selectedInstallments);
-              if (!hasInst || inst === 0 || inst < min) return false;
-            }
+            const has = inst !== null && inst !== undefined;
+            if (selInst === "yes") { if (!has) return false; }
+            else if (selInst === "no") { if (has) return false; }
+            else if (selInst === "0") { if (inst !== 0) return false; }
+            else { const min = Number(selInst); if (!has || inst === 0 || inst < min) return false; }
           }
 
-          // 7. Vigencia
-          if (validityFilter !== "") {
-            const hasV = p.validity != null && p.validity !== "";
-            if (validityFilter === "with"    && !hasV) return false;
-            if (validityFilter === "without" &&  hasV) return false;
+          // Validity status
+          if (selValidity !== "") {
+            const vi = getValidityInfo(p.validity);
+            if (selValidity === "active" && vi.status !== "active") return false;
+            if (selValidity === "expiring" && vi.status !== "expiring") return false;
+            if (selValidity === "future" && vi.status !== "future") return false;
+            if (selValidity === "expired" && vi.status !== "expired") return false;
+            if (selValidity === "with" && vi.status === "nodate") return false;
+            if (selValidity === "without" && vi.status !== "nodate") return false;
           }
 
           return true;
         });
-      }, [search, selectedBank, selectedCategory, selectedDiscount, selectedDay, selectedInstallments, validityFilter]);
+      }, [debouncedQ, selBank, selCat, selDiscount, selDay, selInst, selValidity, todayOnly]);
+
+      const todayCount = useMemo(() => PROMOS.filter(promoIsToday).length, []);
+
+      const sel = "w-full bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm outline-none focus:border-blue-500 transition-colors";
 
       return (
         <div className="max-w-7xl mx-auto px-4 py-8">
+
           {/* HEADER */}
-          <header className="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6 border-b border-slate-800/60 pb-6">
+          <header className="mb-8 flex flex-col md:flex-row md:items-start md:justify-between gap-4 border-b border-slate-800/60 pb-6">
             <div>
               <div className="flex items-center gap-3">
                 <span className="text-3xl">🇵🇾</span>
@@ -381,25 +763,24 @@
                   PromoScraper PY
                 </h1>
               </div>
-              <p className="text-sm text-slate-400 mt-1">
+              <p className="text-sm mt-1" style={{ color: 'var(--muted)' }}>
                 Dashboard consolidado de promociones y beneficios bancarios de Paraguay.
               </p>
             </div>
-            <div className="flex flex-col md:items-end gap-3 text-left md:text-right">
-              <div className="flex items-center gap-3 mt-1">
-                <span className="text-xs font-mono text-slate-500">Actualizado: {GENERATED_TIME}</span>
-                <button
-                  onClick={toggleTheme}
-                  className="p-2.5 rounded-xl border border-slate-700/50 hover:bg-slate-800 transition-colors glass flex items-center justify-center text-xl"
-                  title={theme === 'dark' ? 'Cambiar a Modo Claro' : 'Cambiar a Modo Oscuro'}
-                >
+            <div className="flex flex-col md:items-end gap-2">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono" style={{ color: 'var(--muted)' }}>Actualizado: {GENERATED_TIME}</span>
+                <button onClick={toggleTheme}
+                  className="p-2.5 rounded-xl border border-slate-700/50 hover:bg-slate-800 transition-colors glass flex items-center justify-center text-lg"
+                  title={theme === 'dark' ? 'Modo Claro' : 'Modo Oscuro'}>
                   {theme === 'dark' ? '☀️' : '🌙'}
                 </button>
               </div>
-              <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-1.5 flex-wrap">
                 {BANKS.map(b => (
                   <a key={b.id} href={b.url} target="_blank" rel="noreferrer"
-                    className="text-xs px-2.5 py-1 rounded bg-slate-800/80 hover:bg-slate-700 text-slate-300 transition-colors border border-slate-700/50">
+                    className="text-xs px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 transition-colors border border-slate-700/50"
+                    style={{ color: b.color }}>
                     {b.short}
                   </a>
                 ))}
@@ -407,350 +788,146 @@
             </div>
           </header>
 
-          {/* STATS BAR */}
-          <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div className="glass p-4 rounded-2xl">
-              <span className="text-xs text-slate-400 uppercase tracking-wider block font-semibold">Total Promociones</span>
-              <span className="text-3xl font-black text-white">{PROMOS.length}</span>
-            </div>
-            <div className="glass p-4 rounded-2xl">
-              <span className="text-xs text-slate-400 uppercase tracking-wider block font-semibold">Descuentos</span>
-              <span className="text-3xl font-black text-emerald-400">{PROMOS.filter(p => p.discount_percent).length}</span>
-            </div>
-            <div className="glass p-4 rounded-2xl">
-              <span className="text-xs text-slate-400 uppercase tracking-wider block font-semibold">Fuentes OK</span>
-              <span className="text-3xl font-black text-indigo-400">
-                {Object.values(STATS).filter(s => s.status === 'success').length} / {Object.keys(STATS).length}
-              </span>
-            </div>
-            <div className="glass p-4 rounded-2xl">
-              <span className="text-xs text-slate-400 uppercase tracking-wider block font-semibold font-semibold">Filtrados</span>
-              <span className="text-3xl font-black text-sky-400">{filteredPromos.length}</span>
-            </div>
+          {/* STATS */}
+          <section className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-7">
+            {[
+              { label: 'Total Promos', value: PROMOS.length, color: 'text-white' },
+              { label: 'Con Descuento', value: PROMOS.filter(p => p.discount_percent > 0).length, color: 'text-amber-400' },
+              { label: 'Hoy disponibles', value: todayCount, color: 'text-emerald-400' },
+              { label: 'Mostrando', value: filteredPromos.length, color: 'text-sky-400' },
+            ].map(s => (
+              <div key={s.label} className="glass p-4 rounded-2xl">
+                <span className="text-[11px] text-slate-400 uppercase tracking-wider block font-semibold mb-0.5">{s.label}</span>
+                <span className={`text-3xl font-black ${s.color}`}>{s.value}</span>
+              </div>
+            ))}
           </section>
 
-          {/* FILTERS PANEL */}
-          <section className="glass p-6 rounded-3xl mb-8 flex flex-col gap-4">
+          {/* FILTERS */}
+          <section className="glass p-5 rounded-3xl mb-7 flex flex-col gap-3">
             {/* Row 1 */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Buscar por comercio, vigencia o palabras clave..."
-                  value={search}
-                  onChange={e => setSearch(e.target.value)}
-                  className="w-full bg-slate-900/90 border border-slate-700/50 rounded-xl px-4 py-2.5 text-sm text-slate-200 outline-none focus:border-blue-500 transition-colors"
-                />
+                <i className="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs pointer-events-none"></i>
+                <input type="text" placeholder="Buscar comercio, vigencia, categoría..."
+                  value={search} onChange={e => setSearch(e.target.value)}
+                  className={`${sel} pl-9 text-slate-200`} />
               </div>
-
-              <select
-                value={selectedBank}
-                onChange={e => setSelectedBank(e.target.value)}
-                className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
-              >
+              <select value={selBank} onChange={e => setSelBank(e.target.value)} className={`${sel} text-slate-300`}>
                 <option value="">Todos los bancos</option>
-                {BANKS.map(b => (
-                  <option key={b.id} value={b.id}>{b.name}</option>
-                ))}
+                {BANKS.map(b => <option key={b.id} value={b.id}>{b.name}</option>)}
               </select>
-
-              <select
-                value={selectedCategory}
-                onChange={e => setSelectedCategory(e.target.value)}
-                className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
-              >
+              <select value={selCat} onChange={e => setSelCat(e.target.value)} className={`${sel} text-slate-300`}>
                 <option value="">Todas las categorías</option>
-                {CATEGORIES.map(c => (
-                  <option key={c} value={c}>{c}</option>
-                ))}
+                {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
               </select>
             </div>
-
             {/* Row 2 */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <select
-                value={selectedDiscount}
-                onChange={e => setSelectedDiscount(e.target.value)}
-                className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
-              >
-                <option value="">Nivel de descuento</option>
-                <option value="yes">Con Descuento (% OFF)</option>
-                <option value="no">Sin Descuento</option>
-                <option value="10">10%+ Descuento</option>
-                <option value="20">20%+ Descuento</option>
-                <option value="30">30%+ Descuento</option>
-                <option value="40">40%+ Descuento</option>
-                <option value="50">50%+ Descuento</option>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              <select value={selDiscount} onChange={e => setSelDiscount(e.target.value)} className={`${sel} text-slate-300`}>
+                <option value="">Descuento (cualquiera)</option>
+                <option value="yes">Con descuento</option>
+                <option value="no">Sin descuento</option>
+                <option value="10">10%+ OFF</option>
+                <option value="20">20%+ OFF</option>
+                <option value="30">30%+ OFF</option>
+                <option value="40">40%+ OFF</option>
+                <option value="50">50%+ OFF</option>
               </select>
-
-              <select
-                value={selectedDay}
-                onChange={e => setSelectedDay(e.target.value)}
-                className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
-              >
+              <select value={selDay} onChange={e => setSelDay(e.target.value)} className={`${sel} text-slate-300`}>
                 <option value="">Cualquier día</option>
                 <option value="Todos">Todos los días</option>
-                <option value="Lunes">Lunes</option>
-                <option value="Martes">Martes</option>
-                <option value="Miércoles">Miércoles</option>
-                <option value="Jueves">Jueves</option>
-                <option value="Viernes">Viernes</option>
-                <option value="Sábado">Sábado</option>
-                <option value="Domingo">Domingo</option>
+                {DAYS_ORDER.map(d => <option key={d} value={d}>{d}</option>)}
               </select>
-
-              <select
-                value={selectedInstallments}
-                onChange={e => setSelectedInstallments(e.target.value)}
-                className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
-              >
-                <option value="">Cuotas (rango)</option>
-                <option value="yes">Con Cuotas</option>
-                <option value="no">Sin Cuotas</option>
-                <option value="0">Sin Interés</option>
+              <select value={selInst} onChange={e => setSelInst(e.target.value)} className={`${sel} text-slate-300`}>
+                <option value="">Cuotas (cualquiera)</option>
+                <option value="yes">Con cuotas</option>
+                <option value="no">Sin cuotas</option>
+                <option value="0">Sin interés</option>
                 <option value="3">3+ cuotas</option>
                 <option value="6">6+ cuotas</option>
                 <option value="12">12+ cuotas</option>
                 <option value="18">18+ cuotas</option>
               </select>
             </div>
-
             {/* Row 3 */}
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-4 border-t border-slate-800/40 pt-4">
-              <select
-                value={validityFilter}
-                onChange={e => setValidityFilter(e.target.value)}
-                className="bg-slate-900/90 border border-slate-700/50 rounded-xl px-3 py-2.5 text-sm text-slate-300 outline-none focus:border-blue-500 transition-colors"
-              >
+            <div className="flex flex-col md:flex-row gap-3 items-start md:items-center border-t border-slate-800/40 pt-3">
+              <select value={selValidity} onChange={e => setSelValidity(e.target.value)} className={`${sel} text-slate-300 md:w-72`}>
                 <option value="">Vigencia (cualquiera)</option>
-                <option value="with">Con vigencia especificada</option>
-                <option value="without">Sin vigencia especificada</option>
+                <option value="active">✅ Activas ahora</option>
+                <option value="expiring">⚠️ Vencen pronto (7d)</option>
+                <option value="future">🕑 Próximas a iniciar</option>
+                <option value="expired">❌ Vencidas</option>
+                <option value="with">Con fecha especificada</option>
+                <option value="without">Sin fecha especificada</option>
               </select>
+
+              <label className="flex items-center gap-2 cursor-pointer select-none">
+                <div onClick={() => setTodayOnly(!todayOnly)}
+                  className={`relative w-10 h-5 rounded-full border transition-all ${todayOnly ? 'bg-emerald-500 border-emerald-400' : 'bg-slate-800 border-slate-700'}`}>
+                  <div className={`absolute top-0.5 w-4 h-4 rounded-full bg-white shadow transition-all ${todayOnly ? 'left-5' : 'left-0.5'}`}></div>
+                </div>
+                <span className="text-sm text-slate-300">Solo disponibles hoy ({todayCount})</span>
+              </label>
+
+              {activeFilters > 0 && (
+                <button onClick={resetFilters}
+                  className="ml-auto flex items-center gap-1.5 text-xs text-slate-400 hover:text-white border border-slate-700/50 px-3 py-2 rounded-xl hover:bg-slate-800 transition-all">
+                  <i className="fa-solid fa-xmark"></i> Limpiar filtros ({activeFilters})
+                </button>
+              )}
             </div>
           </section>
 
-          {/* PROMO GRID */}
+          {/* GRID */}
           <div>
             {filteredPromos.length === 0 && (
               <div className="text-center py-20 glass rounded-3xl">
-                <span className="text-5xl block mb-4">🔍</span>
-                <h3 className="text-lg font-bold text-slate-300">No se encontraron resultados</h3>
-                <p className="text-sm text-slate-500 mt-1">Prueba cambiando los criterios de los filtros.</p>
+                <span className="text-5xl block mb-3">🔍</span>
+                <h3 className="text-base font-bold text-slate-300">Sin resultados</h3>
+                <p className="text-sm mt-1" style={{ color: 'var(--muted)' }}>Probá cambiando los filtros.</p>
+                {activeFilters > 0 && (
+                  <button onClick={resetFilters} className="mt-4 text-xs text-blue-400 hover:underline">
+                    Limpiar todos los filtros
+                  </button>
+                )}
               </div>
             )}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredPromos.map((p, index) => {
-                  const bank = BANKS.find(b => b.id === p.bankId) || { color: '#64748B', short: p.bankId };
-                  return (
-                  <div
-                    key={`promo-${p.id || `${p.title}-${index}`}`}
-                    onClick={() => setActivePromo(p)}
-                    className="glass rounded-xl overflow-hidden shadow-xl flex flex-col group hover:ring-1 hover:ring-blue-500/50 transition-all duration-300 hover:-translate-y-0.5 fade-up cursor-pointer"
-                    style={{ animationDelay: `${Math.min(index * 15, 300)}ms` }}
-                  >
-                    <div className="relative h-48 w-full overflow-hidden">
-                      {p.img ? (
-                        <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onError={(e) => { e.target.style.display = 'none'; }} />
-                      ) : (
-                        <div className="w-full h-full bg-slate-900/50 flex items-center justify-center">
-                          <span className="text-4xl opacity-35">🏷️</span>
-                        </div>
-                      )}
-                      <div className="absolute top-3 left-3 flex gap-2">
-                        {p.discount_percent && (
-                          <span className="bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-lg text-[10px] font-bold border border-amber-500/30">
-                            {p.discount_percent}% OFF
-                          </span>
-                        )}
-                      </div>
-                      <div className="absolute top-3 right-3 bg-white/90 px-2 py-1 rounded-lg">
-                        <div className="font-bold text-sm" style={{ color: bank.color }}>{bank.short}</div>
-                      </div>
-                    </div>
-
-                    <div className="p-4 flex-1 flex flex-col">
-                      <div className="flex justify-between items-start mb-3">
-                        <div>
-                          <h3 className="font-bold text-slate-100 text-sm leading-tight mb-1 line-clamp-2" title={p.title}>
-                            {p.title}
-                          </h3>
-                          {p.category && (
-                            <div className="flex items-center gap-1.5 text-teal-400">
-                              <span className="text-[10px] font-semibold uppercase">{p.category}</span>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-
-                      {p.days && p.days.length > 0 && (
-                        <div className="flex items-center gap-2 text-slate-400 text-xs mb-2">
-                          <i className="fas fa-calendar text-[10px]"></i>
-                          <span className="text-[11px]">{p.days.includes('Todos') ? 'Todos los días' : p.days.join(', ')}</span>
-                        </div>
-                      )}
-
-                      {p.validity && (
-                        <div className="flex items-center gap-2 text-teal-400 text-xs mb-4">
-                          <i className="fas fa-calendar-alt text-[10px]"></i>
-                          <span className="text-[11px] font-semibold">{p.validity}</span>
-                        </div>
-                      )}
-
-                      <div className={`mt-auto grid gap-2 ${p.href ? "grid-cols-3" : "grid-cols-2"}`}>
-                        <button
-                          onClick={(e) => { e.stopPropagation(); setActivePromo(p); }}
-                          className="bg-blue-500/10 text-blue-400 border border-blue-500/20 py-2 rounded-lg text-[10px] font-bold hover:bg-blue-500 hover:text-white transition-all"
-                        >
-                          DETALLES
-                        </button>
-                        {p.href && (
-                          <button
-                            onClick={(e) => { e.stopPropagation(); window.open(p.href, '_blank'); }}
-                            className="bg-slate-800/50 flex items-center justify-center border border-slate-700/50 py-2 rounded-lg hover:bg-slate-700 transition-all"
-                            title="Ver bases y condiciones"
-                          >
-                            <i className="fas fa-file-alt text-slate-400 text-sm"></i>
-                          </button>
-                        )}
-                        <button
-                          onClick={(e) => { e.stopPropagation(); window.open(`https://www.google.com/maps/search/${encodeURIComponent(p.title)}`, '_blank'); }}
-                          className="bg-slate-800/50 flex items-center justify-center border border-slate-700/50 py-2 rounded-lg hover:bg-slate-700 transition-all"
-                          title="Buscar en mapa"
-                        >
-                          <i className="fas fa-map-marker-alt text-slate-400 text-sm"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  );
-              })}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+              {filteredPromos.map((p, i) => (
+                <PromoCard key={p.id || `${p.bankId}-${i}`} p={p} index={i} onOpen={setActivePromo} />
+              ))}
             </div>
           </div>
-          {/* END GRID WRAPPER */}
 
           {/* DETAIL MODAL */}
           {activePromo && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md" onClick={() => setActivePromo(null)}>
-              <div
-                className="glass max-w-2xl w-full rounded-3xl overflow-hidden shadow-2xl relative max-h-[90vh] flex flex-col scale-up"
-                onClick={e => e.stopPropagation()}
-              >
-                {/* Close button */}
-                <button
-                  onClick={() => setActivePromo(null)}
-                  className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-slate-900/80 text-white flex items-center justify-center border border-slate-700/50 hover:bg-slate-800 transition-colors"
-                >
-                  ✕
-                </button>
-
-                {/* Promo Image */}
-                <div className="h-48 md:h-64 bg-slate-950/90 relative flex items-center justify-center overflow-hidden">
-                  {activePromo.img ? (
-                    <img src={activePromo.img} alt={activePromo.title} className="w-full h-full object-cover opacity-90" onError={e => e.target.style.display = 'none'} />
-                  ) : (
-                    <span className="text-6xl opacity-35">🏷️</span>
-                  )}
-
-                  {/* Bank badge */}
-                  <span
-                    className="absolute top-4 left-4 text-xs uppercase font-bold tracking-wider px-3 py-1 rounded-full border"
-                    style={{
-                      color: (BANKS.find(b => b.id === activePromo.bankId) || { color: '#64748B' }).color,
-                      backgroundColor: `${(BANKS.find(b => b.id === activePromo.bankId) || { color: '#64748B' }).color}20`,
-                      borderColor: `${(BANKS.find(b => b.id === activePromo.bankId) || { color: '#64748B' }).color}40`
-                    }}
-                  >
-                    {(BANKS.find(b => b.id === activePromo.bankId) || { short: activePromo.bankId }).short}
-                  </span>
-
-                  {activePromo.category && (
-                    <span className="absolute bottom-4 right-4 text-xs font-bold bg-slate-900/90 text-slate-300 px-3 py-1 rounded">
-                      {activePromo.category}
-                    </span>
-                  )}
-                </div>
-
-                {/* Content body */}
-                <div className="p-6 md:p-8 overflow-y-auto flex-1">
-                  <div className="flex gap-2 flex-wrap mb-4">
-                    {activePromo.discount_percent && (
-                      <span className="text-xs font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/25">
-                        {activePromo.discount_percent}% OFF
-                      </span>
-                    )}
-                    {activePromo.installments !== null && (
-                      <span className="text-xs font-bold text-violet-400 bg-violet-400/10 px-3 py-1 rounded-full border border-violet-400/25">
-                        {activePromo.installments === 0 ? 'Sin Interés' : `${activePromo.installments} Cuotas`}
-                      </span>
-                    )}
-                  </div>
-
-                  <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
-                    {activePromo.title}
-                  </h3>
-
-                  {activePromo.validity && (
-                    <div className="text-sm font-semibold text-teal-400 mb-4 bg-teal-500/10 px-3.5 py-2 rounded-xl border border-teal-500/20 w-fit">
-                      <i className="fas fa-calendar-alt mr-1"></i> Vigencia: {activePromo.validity}
-                    </div>
-                  )}
-
-                  {activePromo.days && activePromo.days.length > 0 && (
-                    <div className="text-xs font-mono text-slate-400 mb-6 flex items-center gap-1.5 flex-wrap">
-                      <i className="fas fa-calendar-alt"></i>
-                      <span>Días habilitados:</span>
-                      <span className="text-slate-200 bg-slate-800 px-2 py-0.5 rounded font-semibold">
-                        {activePromo.days.includes('Todos') ? 'Todos los días' : activePromo.days.join(', ')}
-                      </span>
-                    </div>
-                  )}
-
-                  {activePromo.desc ? (
-                    <div className="text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 pt-4 whitespace-pre-line font-normal">
-                      {activePromo.desc}
-                    </div>
-                  ) : (
-                    <p className="text-sm text-slate-500 italic border-t border-slate-800/80 pt-4">
-                      Sin descripción adicional disponible. Por favor consulte las bases y condiciones oficiales.
-                    </p>
-                  )}
-                </div>
-
-                {/* Bottom Action Footer */}
-                {activePromo.href && (
-                  <div className="p-6 pt-0 border-t border-slate-800/40 mt-auto">
-                    <a
-                      href={activePromo.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="w-full text-center block text-sm font-bold bg-blue-600 hover:bg-blue-500 text-white py-3.5 rounded-2xl transition-all shadow-lg hover:shadow-blue-500/20 border border-blue-500/20"
-                    >
-                      Ver Bases y Condiciones Oficiales
-                    </a>
-                  </div>
-                )}
-              </div>
-            </div>
+            <DetailModal
+              promo={activePromo}
+              allPromos={PROMOS}
+              onClose={() => setActivePromo(null)}
+              onOpen={p => setActivePromo(p)}
+              onCalc={p => { setCalcPromo(p); }}
+            />
           )}
 
-          {/* SCRAPER STATUS REPORT */}
-          <section className="mt-16 glass p-6 rounded-3xl">
-            <h3 className="font-bold text-slate-300 text-sm tracking-wider uppercase font-mono mb-4">
-              Estado del Scraper (Última Corrida)
+          {/* CALCULATOR MODAL */}
+          {calcPromo && <DiscountCalc promo={calcPromo} onClose={() => setCalcPromo(null)} />}
+
+          {/* SCRAPER STATUS */}
+          <section className="mt-14 glass p-5 rounded-3xl">
+            <h3 className="font-bold text-slate-400 text-xs tracking-widest uppercase font-mono mb-3">
+              Estado del Scraper — Última Corrida
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {Object.entries(STATS).map(([bankId, stat]) => {
-                const bank = BANKS.find(b => b.id === bankId) || { name: bankId, color: '#64748B' };
-                const success = stat.status === 'success';
-                const skipped = stat.status === 'skipped';
+                const b = BANKS.find(x => x.id === bankId) || { name: bankId, color: '#64748B' };
+                const ok = stat.status === 'success', sk = stat.status === 'skipped';
                 return (
                   <div key={bankId} className="flex items-center justify-between p-3 bg-slate-900/60 rounded-xl border border-slate-800/30">
-                    <span className="text-sm font-semibold" style={{ color: bank.color }}>{bank.name}</span>
-                    <span className={`text-xs px-2.5 py-0.5 rounded font-mono ${success ? 'bg-emerald-500/10 text-emerald-400' :
-                      skipped ? 'bg-amber-500/10 text-amber-400' :
-                        'bg-rose-500/10 text-rose-400'
-                      }`}>
-                      {success ? `${stat.count} promos` : stat.status}
+                    <span className="text-sm font-semibold" style={{ color: b.color }}>{b.name}</span>
+                    <span className={`text-xs px-2.5 py-0.5 rounded font-mono ${ok ? 'bg-emerald-500/10 text-emerald-400' : sk ? 'bg-amber-500/10 text-amber-400' : 'bg-rose-500/10 text-rose-400'}`}>
+                      {ok ? `${stat.count} promos` : stat.status}
                     </span>
                   </div>
                 );
@@ -759,9 +936,9 @@
           </section>
 
           {/* FOOTER */}
-          <footer className="mt-16 border-t border-slate-800/80 pt-8 text-center text-xs text-slate-500">
-            <p>PromoScraper PY — Conector inteligente y unificado de beneficios bancarios en Paraguay.</p>
-            <p className="mt-2 text-slate-600 font-mono">Powered by GitHub Pages & React</p>
+          <footer className="mt-14 border-t border-slate-800/80 pt-6 text-center text-xs" style={{ color: 'var(--muted)' }}>
+            <p>PromoScraper PY — Conector inteligente de beneficios bancarios en Paraguay.</p>
+            <p className="mt-1 text-slate-600 font-mono">Powered by GitHub Pages & React</p>
           </footer>
         </div>
       );

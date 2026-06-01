@@ -55,6 +55,10 @@ class BASAScraper(ScraperBase):
             title = h5.get_text(strip=True)
             if not title or len(title) < 2 or len(title) > 200:
                 continue
+            # Skip titles containing "conoce más acá"
+            if "conoce más acá" in title.lower():
+                continue
+
 
             # Get image
             img_tag = item.select_one("img")
@@ -86,6 +90,10 @@ class BASAScraper(ScraperBase):
                 title = a_tag.get_text(strip=True)
                 if not title or len(title) < 2 or len(title) > 200:
                     continue
+                # Skip titles containing "conoce más acá"
+                if "conoce más acá" in title.lower():
+                    continue
+
                 # Skip duplicates
                 if any(p["title"].lower() == title.lower() for p in promos):
                     continue
@@ -145,6 +153,9 @@ class EClubScraper(ScraperBase):
                 continue
             # Skip navigation/generic headings
             if title.lower() in ("descargá eclub", "encontranos en las redes", "escribinos con confianza", "¿qué sorteamos?"):
+                continue
+            # Skip titles containing "sorteo" or "descubrí"
+            if "sorteo" in title.lower() or "descubrí" in title.lower():
                 continue
 
             # Get description from first paragraph
@@ -215,6 +226,11 @@ class GNBScraper(ScraperBase):
                     for item in data:
                         title = item.get("nombre") or item.get("name") or item.get("titulo") or ""
                         if title:
+                            # Clean title: remove "GNB" and "Día GNB"
+                            title = title.replace("Día GNB", "").replace("GNB", "").strip()
+                            title = ' '.join(title.split())
+                            if not title:
+                                continue
                             desc = item.get("descripcion") or item.get("description")
                             # Handle img field: might be a dict or string
                             img_raw = item.get("imagen") or item.get("image", "")
@@ -297,12 +313,15 @@ class GNBScraper(ScraperBase):
                     items = data if isinstance(data, list) else data.get("data", data.get("items", []))
                     if isinstance(items, list):
                         for item in items:
-                            if isinstance(item, dict):
-                                title = (
-                                    item.get("nombre") or item.get("name") or
-                                    item.get("titulo") or item.get("title") or ""
-                                )
-                                if title and len(title) > 2:
+                         if isinstance(item, dict):
+                             title = (
+                                 item.get("nombre") or item.get("name") or
+                                 item.get("titulo") or item.get("title") or ""
+                             )
+                             # Clean title: remove "GNB" and "Día GNB"
+                             title = title.replace("Día GNB", "").replace("GNB", "").strip()
+                             title = ' '.join(title.split())
+                             if title and len(title) > 2:
                                     desc = item.get("descripcion") or item.get("description")
                                     # Handle img field: might be a dict or string
                                     img_raw = item.get("imagen") or item.get("image", "")
@@ -362,6 +381,8 @@ class ItaúScraper(ScraperBase):
                             desc = item.get("descripcion") or item.get("description")
                             img = item.get("imagen") or item.get("image", "")
                             href = item.get("url") or item.get("link", "")
+                            # Extract category if available
+                            category = item.get("categoria") or item.get("category")
                             # Solo considerar como promoción si tiene al menos título y alguno de: descripción, imagen o enlace
                             if desc or img or href:
                                 promos.append(self.make_promo(
@@ -369,6 +390,7 @@ class ItaúScraper(ScraperBase):
                                     desc=desc,
                                     img=img,
                                     href=href,
+                                    category=category,
                                 ))
                     if promos:
                         return promos
