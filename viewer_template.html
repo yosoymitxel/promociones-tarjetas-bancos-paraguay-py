@@ -305,56 +305,65 @@
       };
 
       const filteredPromos = useMemo(() => {
+        const q = search.trim().toLowerCase();
+
         return PROMOS.filter(p => {
-          // 1) Search keyword matching title, description, category, and validity
-          if (search) {
-            const query = search.toLowerCase();
-            const titleMatch = p.title.toLowerCase().includes(query);
-            const descMatch = (p.desc || "").toLowerCase().includes(query);
-            const catMatch = (p.category || "").toLowerCase().includes(query);
-            const validityMatch = (p.validity || "").toLowerCase().includes(query);
-            if (!titleMatch && !descMatch && !catMatch && !validityMatch) return false;
+
+          // 1. Texto libre
+          if (q) {
+            const haystack = [p.title, p.desc, p.category, p.validity]
+              .map(v => (v == null ? "" : String(v)).toLowerCase())
+              .join(" ");
+            if (!haystack.includes(q)) return false;
           }
 
-          // 2) Bank selection
-          if (selectedBank && p.bankId !== selectedBank) return false;
+          // 2. Banco
+          if (selectedBank !== "" && p.bankId !== selectedBank) return false;
 
-          // 3) Category selection
-          if (selectedCategory && p.category !== selectedCategory) return false;
+          // 3. Categoria
+          if (selectedCategory !== "" && p.category !== selectedCategory) return false;
 
-          // 4) Discount filter (range or yes/no)
-          if (selectedDiscount) {
-            if (selectedDiscount === "yes") {
-              if (!p.discount_percent) return false; // Con Descuento
-            } else if (selectedDiscount === "no") {
-              if (p.discount_percent) return false; // Sin Descuento
-            } else {
-              const minDiscount = parseInt(selectedDiscount);
-              if (!p.discount_percent || p.discount_percent < minDiscount) return false;
+          // 4. Descuento
+          if (selectedDiscount !== "") {
+            const pct = p.discount_percent;
+            const hasPct = pct !== null && pct !== undefined && pct > 0;
+            if      (selectedDiscount === "yes") { if (!hasPct)          return false; }
+            else if (selectedDiscount === "no")  { if ( hasPct)          return false; }
+            else {
+              const min = Number(selectedDiscount);
+              if (!hasPct || pct < min) return false;
             }
           }
 
-          // 6) Installments filter (range or yes/no)
-          if (selectedInstallments) {
-            if (selectedInstallments === "yes") {
-              if (p.installments === null || p.installments === undefined) return false; // Con Cuotas
-            } else if (selectedInstallments === "no") {
-              if (p.installments !== null && p.installments !== undefined) return false; // Sin Cuotas
+          // 5. Dia
+          if (selectedDay !== "") {
+            const days = Array.isArray(p.days) ? p.days : [];
+            if (days.length === 0) return false;
+            if (selectedDay === "Todos") {
+              if (!days.includes("Todos")) return false;
             } else {
-              const cuotas = parseInt(selectedInstallments);
-              if (cuotas === 0) {
-                if (p.installments !== 0) return false; // Sin Interés exacto
-              } else {
-                if (!p.installments || p.installments < cuotas) return false;
-              }
+              if (!days.includes(selectedDay) && !days.includes("Todos")) return false;
             }
           }
 
-          // 7) Validity Filter (With/Without date)
-          if (validityFilter) {
-            const hasV = !!p.validity;
-            if (validityFilter === "with" && !hasV) return false;
-            if (validityFilter === "without" && hasV) return false;
+          // 6. Cuotas
+          if (selectedInstallments !== "") {
+            const inst = p.installments;
+            const hasInst = inst !== null && inst !== undefined;
+            if      (selectedInstallments === "yes") { if (!hasInst)      return false; }
+            else if (selectedInstallments === "no")  { if ( hasInst)      return false; }
+            else if (selectedInstallments === "0")   { if (inst !== 0)    return false; }
+            else {
+              const min = Number(selectedInstallments);
+              if (!hasInst || inst === 0 || inst < min) return false;
+            }
+          }
+
+          // 7. Vigencia
+          if (validityFilter !== "") {
+            const hasV = p.validity != null && p.validity !== "";
+            if (validityFilter === "with"    && !hasV) return false;
+            if (validityFilter === "without" &&  hasV) return false;
           }
 
           return true;
@@ -521,19 +530,20 @@
           </section>
 
           {/* PROMO GRID */}
-          {filteredPromos.length === 0 ? (
-            <div className="text-center py-20 glass rounded-3xl">
-              <span className="text-5xl block mb-4">🔍</span>
-              <h3 className="text-lg font-bold text-slate-300">No se encontraron resultados</h3>
-              <p className="text-sm text-slate-500 mt-1">Prueba cambiando los criterios de los filtros.</p>
-            </div>
-          ) : (
+          <div>
+            {filteredPromos.length === 0 && (
+              <div className="text-center py-20 glass rounded-3xl">
+                <span className="text-5xl block mb-4">🔍</span>
+                <h3 className="text-lg font-bold text-slate-300">No se encontraron resultados</h3>
+                <p className="text-sm text-slate-500 mt-1">Prueba cambiando los criterios de los filtros.</p>
+              </div>
+            )}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {filteredPromos.map((p, index) => {
-                const bank = BANKS.find(b => b.id === p.bankId) || { color: '#64748B', short: p.bankId };
-                return (
+                  const bank = BANKS.find(b => b.id === p.bankId) || { color: '#64748B', short: p.bankId };
+                  return (
                   <div
-                    key={p.id || index}
+                    key={`promo-${p.id || `${p.title}-${index}`}`}
                     onClick={() => setActivePromo(p)}
                     className="glass rounded-xl overflow-hidden shadow-xl flex flex-col group hover:ring-1 hover:ring-blue-500/50 transition-all duration-300 hover:-translate-y-0.5 fade-up cursor-pointer"
                     style={{ animationDelay: `${Math.min(index * 15, 300)}ms` }}
@@ -612,10 +622,11 @@
                       </div>
                     </div>
                   </div>
-                );
+                  );
               })}
             </div>
-          )}
+          </div>
+          {/* END GRID WRAPPER */}
 
           {/* DETAIL MODAL */}
           {activePromo && (
