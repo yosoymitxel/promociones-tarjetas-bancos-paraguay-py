@@ -250,11 +250,34 @@
       { id: 'personalpay', name: 'Personal Pay', short: 'PersonalPay', color: '#8B5CF6', url: 'https://www.personalpay.com.py/beneficios' },
     ];
 
-    const CATEGORIES = [
-      "🍽️ Gastronomía", "🛒 Supermercados", "💊 Salud", "🏋️ Fitness",
-      "📱 Tecnología", "👗 Moda", "🏠 Hogar", "🎓 Educación",
-      "🏨 Viajes & Hoteles", "⛽ Combustible", "🎬 Entretenimiento", "💳 Financiero",
-    ];
+    // Emoji decorators for known category names (plain strings from the scraper).
+    // The select dropdown and card chips both derive from this map so they always stay in sync.
+    const CATEGORY_ICONS = {
+      "Gastronomía": "🍽️",   "Restaurantes": "🍽️",
+      "Supermercados": "🛒",
+      "Salud": "💊",         "Belleza y Salud": "💅",
+      "Fitness": "🏋️",
+      "Tecnología": "📱",
+      "Moda": "👗",
+      "Hogar": "🏠",
+      "Educación": "🎓",
+      "Viajes & Hoteles": "🏨",
+      "Combustible": "⛽",
+      "Entretenimiento": "🎬",  "Recreación": "🎡",
+      "Financiero": "💳",    "Itaú Personal Bank": "🏦",
+      "Niños": "👶",
+    };
+
+    // Derive the category list at runtime from the actual promo data.
+    // This guarantees the dropdown options always match p.category values in PROMOS,
+    // regardless of what the scraper / analyze_promo returns.
+    const CATEGORIES = [...new Set(
+      PROMOS.map(p => p.category).filter(c => c && typeof c === 'string')
+    )].sort();
+
+    function catLabel(c) {
+      return CATEGORY_ICONS[c] ? `${CATEGORY_ICONS[c]} ${c}` : c;
+    }
 
     const DAYS_ORDER = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
     const DAYS_ES = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
@@ -454,8 +477,8 @@
               <h3 className="font-bold text-sm leading-snug line-clamp-2 mb-1" style={{ color: 'var(--text)' }} title={p.title}>
                 {p.title}
               </h3>
-              {p.category && (
-                <span className="text-[10px] font-semibold text-teal-400 uppercase tracking-wide">{p.category}</span>
+              {p.category && typeof p.category === 'string' && (
+                <span className="text-[10px] font-semibold text-teal-400 uppercase tracking-wide">{catLabel(p.category)}</span>
               )}
             </div>
 
@@ -531,9 +554,9 @@
                 style={{ color: bank.color, background: `${bank.color}20`, borderColor: `${bank.color}40` }}>
                 {bank.short}
               </span>
-              {promo.category && (
+              {promo.category && typeof promo.category === 'string' && (
                 <span className="absolute bottom-4 right-4 text-xs font-bold bg-slate-900/90 text-slate-300 px-3 py-1 rounded-full">
-                  {promo.category}
+                  {catLabel(promo.category)}
                 </span>
               )}
               {isToday && (
@@ -819,7 +842,7 @@
               </select>
               <select value={selCat} onChange={e => setSelCat(e.target.value)} className={`${sel} text-slate-300`}>
                 <option value="">Todas las categorías</option>
-                {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
+                {CATEGORIES.map(c => <option key={c} value={c}>{catLabel(c)}</option>)}
               </select>
             </div>
             {/* Row 2 */}
