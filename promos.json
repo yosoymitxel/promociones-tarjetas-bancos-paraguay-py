@@ -60,21 +60,6 @@
     "validity": null
   },
   {
-    "id": "basa-1455a6be",
-    "title": "DIA DE LA MADRE",
-    "desc": null,
-    "img": "",
-    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/byc%20mayo%20destacados%20y%20vencidas/BASES%20Y%20CONDICIONES%20MES%20DE%20LA%20MADRE.pdf",
-    "bankId": "basa",
-    "bankShort": "BASA",
-    "bankColor": "#F59E0B",
-    "category": null,
-    "discount_percent": null,
-    "days": [],
-    "installments": null,
-    "validity": null
-  },
-  {
     "id": "basa-51285426",
     "title": "EQUIPATE PARA EL PARTIDO",
     "desc": null,
@@ -3483,23 +3468,6 @@
     "validity": "Del 02 de enero al 28 de noviembre del 2026"
   },
   {
-    "id": "gnb-35da5675",
-    "title": "Areté y Festa",
-    "desc": "Todos los días 15% off en supermercado y restaurante.\n \nDel 01 de enero al 30 de junio del 2026.\n\n15% de reintegro para pagos con tarjetas de crédito del Banco GNB Paraguay.\nVía reintegro en el extracto al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta\nTope de compra mensual de Gs. 2.000.000 (guaraníes dos millones) en conjunto de Areté y Festa, por cuenta de tarjeta de crédito (Incluye titulares y adicionales) equivalente a un reintegro máximo mensual en el extracto Gs. 300.000 (guaraníes trescientos mil) para pagos con tarjetas de crédito Banco GNB aplicado al total de compras realizadas en Areté.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48 hs. hábiles luego de la compra\nNo aplica compras realizadas a través de plataformas de terceros.\nNo acumulable con otras promociones.\n\n \nConsulte las Bases y Condiciones para información.",
-    "img": "",
-    "href": "https://www.arete.com.py/",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Días GNB",
-    "discount_percent": 15,
-    "days": [
-      "Todos"
-    ],
-    "installments": null,
-    "validity": "Del 01 de enero al 30 de junio del 2026"
-  },
-  {
     "id": "gnb-8924e0a8",
     "title": "Electrónica y electrodomésticos",
     "desc": "Hasta 12 cuotas sin intereses todos los días.\n \nDel 05 de enero al 31 de diciembre del 2026.\n\nHasta 12 cuotas sin intereses para tarjetas de crédito del Banco GNB Paraguay en tiendas del Rubro Electrónica y Electrodomésticos adheridas a la procesadora Bancard.\nPara el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nBeneficio no aplica a compras vía web.\nNo participan de la promoción las tarjetas de débito y crédito de afinidades Empresariales, Corporativas, Gift Card, Gourmet y Prepagas.\nNo acumulable con otras promociones.",
@@ -3515,6 +3483,23 @@
     ],
     "installments": 12,
     "validity": "Del 05 de enero al 31 de diciembre del 2026"
+  },
+  {
+    "id": "gnb-35da5675",
+    "title": "Areté y Festa",
+    "desc": "Todos los días 15% off en supermercado y restaurante.\n \nDel 01 de enero al 30 de junio del 2026.\n\n15% de reintegro para pagos con tarjetas de crédito del Banco GNB Paraguay.\nVía reintegro en el extracto al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta\nTope de compra mensual de Gs. 2.000.000 (guaraníes dos millones) en conjunto de Areté y Festa, por cuenta de tarjeta de crédito (Incluye titulares y adicionales) equivalente a un reintegro máximo mensual en el extracto Gs. 300.000 (guaraníes trescientos mil) para pagos con tarjetas de crédito Banco GNB aplicado al total de compras realizadas en Areté.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48 hs. hábiles luego de la compra\nNo aplica compras realizadas a través de plataformas de terceros.\nNo acumulable con otras promociones.\n\n \nConsulte las Bases y Condiciones para información.",
+    "img": "",
+    "href": "https://www.arete.com.py/",
+    "bankId": "gnb",
+    "bankShort": "GNB",
+    "bankColor": "#10B981",
+    "category": "Días GNB",
+    "discount_percent": 15,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": "Del 01 de enero al 30 de junio del 2026"
   },
   {
     "id": "gnb-a313906b",
@@ -3568,11 +3553,26 @@
     "validity": "Del 22 de enero al 26 de noviembre del 2026"
   },
   {
-    "id": "gnb-bc2ba75d",
+    "id": "gnb-a296d807",
+    "title": "Días para Papá",
+    "desc": "Hasta 25% de reintegro + Hasta 18 cuotas sin intereses.\n \nDel 13 al 21 de junio del 2026.\n\n25% de reintegro para pagos con tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier del Banco GNB Paraguay.\n20% de reintegro para pagos con tarjetas de crédito Mastercard Clásicas y Oro del Banco GNB Paraguay.\nHasta 18 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra por periodo de la promoción: Gs. 5.000.000 (guaraníes cinco millones) por cuenta de tarjeta de crédito Incluye titulares y adicionales, en el conjunto de los rubros participantes en la promoción según el listado detallado en el punto 5.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nPara el rubro de electrónica y electrodomésticos aplica a compras realizadas en e-commerce, así como también a compras en tienda física.\nNo acumulable con otras promociones.",
+    "img": "",
+    "href": "",
+    "bankId": "gnb",
+    "bankShort": "GNB",
+    "bankColor": "#10B981",
+    "category": "Días GNB",
+    "discount_percent": 25,
+    "days": [],
+    "installments": 18,
+    "validity": null
+  },
+  {
+    "id": "gnb-3ed2097d",
     "title": "Viajes",
     "desc": "Hasta 18 cuotas sin intereses en agencias y aerolíneas de todo el país.\n \nDel 05 de enero al 31 de diciembre del 2026.\n\nHasta 18 cuotas sin intereses para tarjetas de crédito del Banco GNB Paraguay. En Agencias de Viajes y Aerolíneas adheridas al rubro en la procesadora Bancard.\nPara el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nPagos realizados con tarjetas de crédito Banco GNB Paraguay S.A.E.C.A.\nLa promoción aplica todos los días durante el periodo de promoción.\nNo acumulable con otras promociones.\nNo aplica para compras ecommerce.",
     "img": "",
-    "href": "https://www.beneficiosbancognb.com.py/imagenes/3655_listado-de-comercios-agencia-de-viajes-6-04-2026-.pdf",
+    "href": "https://www.beneficiosbancognb.com.py/imagenes//3655_listado-de-comercios-agencia-de-viajes-junio-2026.pdf",
     "bankId": "gnb",
     "bankShort": "GNB",
     "bankColor": "#10B981",
@@ -3617,23 +3617,6 @@
     ],
     "installments": null,
     "validity": null
-  },
-  {
-    "id": "gnb-7763f674",
-    "title": "Petromax",
-    "desc": "20% de reintegro todos los jueves.\n \nDel 01 de enero al 25 de junio del 2026.\n\n20% de reintegro para pagos con tarjetas de crédito Mastercard Clásicas, Oro, Black, Black Premier y Metalcard Premier del Banco GNB Paraguay.\nTope de compra semanal: Gs. 500.000 (guaraníes quinientos mil).\nEl tope de compra aplica por cuenta de tarjeta de crédito (titulares + adicionales).\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nNo aplica para pagos realizados a través de plataformas de terceros.\nBeneficio no aplica a compras vía web.\nNo acumulable con otras promociones.",
-    "img": "",
-    "href": "",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Días GNB",
-    "discount_percent": 20,
-    "days": [
-      "Jueves"
-    ],
-    "installments": null,
-    "validity": "Del 01 de enero al 25 de junio del 2026"
   },
   {
     "id": "itau-0b24ab3a",
@@ -5061,6 +5044,21 @@
     "validity": null
   },
   {
+    "id": "itau-ed6bc23d",
+    "title": "Tecnocentro",
+    "desc": "10 Cuotas sin intereses con 45 % Hasta",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/Tecnocentro_136x96px.jpg",
+    "href": "https://www.itau.com.py/beneficios2/categoria/14",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Tecnología",
+    "discount_percent": 45,
+    "days": [],
+    "installments": 10,
+    "validity": null
+  },
+  {
     "id": "itau-abd390d0",
     "title": "Claro",
     "desc": "12 Cuotas sin intereses con tarjeta de crédito",
@@ -5121,6 +5119,21 @@
     "validity": null
   },
   {
+    "id": "itau-413f1848",
+    "title": "Bristol",
+    "desc": "10 % con 12 Cuotas sin intereses",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/bristol136x96f5718a80-7885-47d6-baef-f15f1c521dd7.png",
+    "href": "https://www.itau.com.py/beneficios2/categoria/14",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Tecnología",
+    "discount_percent": 10,
+    "days": [],
+    "installments": 12,
+    "validity": null
+  },
+  {
     "id": "itau-46b418e8",
     "title": "Tigo",
     "desc": "12 Cuotas sin intereses con tarjeta de crédito",
@@ -5161,6 +5174,66 @@
     "bankColor": "#FF6B00",
     "category": "Autoaccesorios",
     "discount_percent": 15,
+    "days": [],
+    "installments": 10,
+    "validity": null
+  },
+  {
+    "id": "itau-b423c34e",
+    "title": "BR1 Equipamientos",
+    "desc": "20 % con 10 Cuotas sin intereses",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/br1_logo_136x96.jpg",
+    "href": "https://www.itau.com.py/beneficios2/categoria/2",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Autoaccesorios",
+    "discount_percent": 20,
+    "days": [],
+    "installments": 10,
+    "validity": null
+  },
+  {
+    "id": "itau-b7066df6",
+    "title": "Auto Prime",
+    "desc": "20 % con 10 Cuotas sin intereses",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/autoprime.136x961b05e170-250f-4599-bbe8-193d4ba0a03d.png",
+    "href": "https://www.itau.com.py/beneficios2/categoria/2",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Autoaccesorios",
+    "discount_percent": 20,
+    "days": [],
+    "installments": 10,
+    "validity": null
+  },
+  {
+    "id": "itau-bb2b4710",
+    "title": "Toyotoshi",
+    "desc": "20 % con 10 Cuotas sin intereses",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/logo.136x96dcaa7f93-0d90-471f-9ffb-d6864f9fd7bd.png",
+    "href": "https://www.itau.com.py/beneficios2/categoria/2",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Autoaccesorios",
+    "discount_percent": 20,
+    "days": [],
+    "installments": 10,
+    "validity": null
+  },
+  {
+    "id": "itau-3b27d27e",
+    "title": "Ansa",
+    "desc": "20 % con 10 Cuotas sin intereses",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/ansa_136x96348cf677-7ab0-4701-81f4-295c6a6183d2.png",
+    "href": "https://www.itau.com.py/beneficios2/categoria/2",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Autoaccesorios",
+    "discount_percent": 20,
     "days": [],
     "installments": 10,
     "validity": null
@@ -5226,55 +5299,10 @@
     "validity": null
   },
   {
-    "id": "itau-3b27d27e",
-    "title": "Ansa",
-    "desc": "20 % con 10 Cuotas sin intereses",
-    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/ansa_136x96348cf677-7ab0-4701-81f4-295c6a6183d2.png",
-    "href": "https://www.itau.com.py/beneficios2/categoria/2",
-    "bankId": "itau",
-    "bankShort": "Itaú",
-    "bankColor": "#FF6B00",
-    "category": "Autoaccesorios",
-    "discount_percent": 20,
-    "days": [],
-    "installments": 10,
-    "validity": null
-  },
-  {
     "id": "itau-5923a5eb",
     "title": "Diesa",
     "desc": "20 % con 10 Cuotas sin intereses",
     "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/Logo_diesa_136x96.png",
-    "href": "https://www.itau.com.py/beneficios2/categoria/2",
-    "bankId": "itau",
-    "bankShort": "Itaú",
-    "bankColor": "#FF6B00",
-    "category": "Autoaccesorios",
-    "discount_percent": 20,
-    "days": [],
-    "installments": 10,
-    "validity": null
-  },
-  {
-    "id": "itau-0354178f",
-    "title": "3AM Auto Centro",
-    "desc": "20 % con 10 Cuotas sin intereses",
-    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/3am.png",
-    "href": "https://www.itau.com.py/beneficios2/categoria/2",
-    "bankId": "itau",
-    "bankShort": "Itaú",
-    "bankColor": "#FF6B00",
-    "category": "Autoaccesorios",
-    "discount_percent": 20,
-    "days": [],
-    "installments": 10,
-    "validity": null
-  },
-  {
-    "id": "itau-50549d9a",
-    "title": "Cusat",
-    "desc": "20 % con 10 Cuotas sin intereses",
-    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/cusat_28099afa277-00a5-4233-9bc5-ab26c6f51478.png",
     "href": "https://www.itau.com.py/beneficios2/categoria/2",
     "bankId": "itau",
     "bankShort": "Itaú",
@@ -5301,10 +5329,10 @@
     "validity": null
   },
   {
-    "id": "itau-b423c34e",
-    "title": "BR1 Equipamientos",
+    "id": "itau-50549d9a",
+    "title": "Cusat",
     "desc": "20 % con 10 Cuotas sin intereses",
-    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/br1_logo_136x96.jpg",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/cusat_28099afa277-00a5-4233-9bc5-ab26c6f51478.png",
     "href": "https://www.itau.com.py/beneficios2/categoria/2",
     "bankId": "itau",
     "bankShort": "Itaú",
@@ -5316,25 +5344,10 @@
     "validity": null
   },
   {
-    "id": "itau-b7066df6",
-    "title": "Auto Prime",
+    "id": "itau-0354178f",
+    "title": "3AM Auto Centro",
     "desc": "20 % con 10 Cuotas sin intereses",
-    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/autoprime.136x961b05e170-250f-4599-bbe8-193d4ba0a03d.png",
-    "href": "https://www.itau.com.py/beneficios2/categoria/2",
-    "bankId": "itau",
-    "bankShort": "Itaú",
-    "bankColor": "#FF6B00",
-    "category": "Autoaccesorios",
-    "discount_percent": 20,
-    "days": [],
-    "installments": 10,
-    "validity": null
-  },
-  {
-    "id": "itau-bb2b4710",
-    "title": "Toyotoshi",
-    "desc": "20 % con 10 Cuotas sin intereses",
-    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/logo.136x96dcaa7f93-0d90-471f-9ffb-d6864f9fd7bd.png",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/3am.png",
     "href": "https://www.itau.com.py/beneficios2/categoria/2",
     "bankId": "itau",
     "bankShort": "Itaú",
@@ -5376,6 +5389,36 @@
     "validity": null
   },
   {
+    "id": "itau-e186c969",
+    "title": "Petersen",
+    "desc": "10 Cuotas sin intereses con tarjeta de crédito",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/Logo_petersen_280x160_1121.png",
+    "href": "https://www.itau.com.py/beneficios2/categoria/8",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Hogar",
+    "discount_percent": null,
+    "days": [],
+    "installments": 10,
+    "validity": null
+  },
+  {
+    "id": "itau-eba44a72",
+    "title": "Casa Austria",
+    "desc": "10 Cuotas sin intereses con tarjeta de crédito",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/casaaustria_136x9645a789c0-db2d-494a-b72e-a11ccd4f2fc4.png",
+    "href": "https://www.itau.com.py/beneficios2/categoria/8",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Hogar",
+    "discount_percent": null,
+    "days": [],
+    "installments": 10,
+    "validity": null
+  },
+  {
     "id": "itau-a7725aa4",
     "title": "Essen",
     "desc": "10 Cuotas sin intereses con tarjeta de crédito",
@@ -5401,6 +5444,21 @@
     "bankColor": "#FF6B00",
     "category": "Hogar",
     "discount_percent": 45,
+    "days": [],
+    "installments": 10,
+    "validity": null
+  },
+  {
+    "id": "itau-1f891f4f",
+    "title": "Quality Home",
+    "desc": "20 % con 10 Cuotas sin intereses",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/quality136x96logonuevod3262c22-34b4-411d-aad5-afb87a249c38.png",
+    "href": "https://www.itau.com.py/beneficios2/categoria/8",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Hogar",
+    "discount_percent": 20,
     "days": [],
     "installments": 10,
     "validity": null
@@ -12271,24 +12329,6 @@
     "validity": "Hasta el 25 de febrero de 2027"
   },
   {
-    "id": "continental-bcb12901",
-    "title": "Dia del Padre - 2026",
-    "desc": "Promo - Día del Padre 2026.\nDel 12 al 17 de junio, en comercios adheridos de diferentes rubros.\n\n- 25% de reintegro, con Privilege Continental. Límite de compras mensual de hasta Gs. 2.000.000 por cuenta de tarjeta.\n- 20% de reintegro, con Dinelco, Clásica, Oro, Black e Infinite. Límite de compras mensual de hasta Gs. 1.000.000 por cuenta de tarjeta.\n\nLímites de compra en conjunto para todos los comercios adheridos, durante la vigencia de la promoción.\n\nCon tarjetas de crédito. Exclusivo en POS Dinelco.\n\nRubros adheridos:\n- Tiendas: ver aquí https://www.bancontinental.com.py/api/uploads/Tiendas_adheridas_6b48751363.pdf\n- Perfumerías: ver aquí https://www.bancontinental.com.py/api/uploads/Perfumerias_8736f6492f.pdf\n- Sastrerías: ver aquí https://www.bancontinental.com.py/api/uploads/Sastrerias_aa64dd739e.pdf\n- Rubro Automotriz: https://www.bancontinental.com.py/api/uploads/Rubro_Automotriz_91a3065dbb.pdf\n- Ferreterías: https://www.bancontinental.com.py/api/uploads/Ferreterias_2e25b7c3ae.pdf\n\nVigente hasta el 17 de junio de 2026.\n\nEl 20 y 21 de junio, en bodegas adheridas de todo el país.\n- 25% de reintegro,con Privilege Continental. Límite de compra mensual de hasta Gs. 500.000 por cuenta de tarjeta.\n- 20% de reintegro, con Dinelco, Clásica, Oro, Black e Infinite. Límite de compra mensual de hasta Gs. 300.000 por cuenta de tarjeta.\n\nLímites de compra en conjunto para todos los comercios adheridos, durante la vigencia de la promoción.\n\nCon tarjetas de crédito. Exclusivo en POS Dinelco.\n\nBodegas adheridas: ver aquí https://www.bancontinental.com.py/api/uploads/Bodegas_adheridas_0da6a06a8d.pdf\n\n\nVigente hasta el 21 de junio de 2026.\n\nEl 20 y 21 de junio, en bares y restaurantes.\n- 20% de reintegro en comercios adheridos con Dinelco, Clásica y Oro. Límite de compra mensual de hasta Gs. 500.000 por cuenta de tarjeta, en conjunto para los comercios adheridos durante la vigencia de la promoción.\n\nBares y restaurantes adheridos: ver aquí https://www.bancontinental.com.py/api/uploads/Bares_y_restaurantes_85c6b8024a.pdf\n\nAdemás, los sábados y domingos:\n- 35% de reintegro con Privilege Continental. Límite de compra mensual de hasta Gs. 2.000.000 por cuenta de tarjeta, por rubro.\n- 25% de reintegro con Black e Infinite. Límite de compra mensual de hasta Gs. 1.000.000 por cuenta de tarjeta, por rubro.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales, vía POS físico. No aplica para pagos online, a través links de pago o POS virtuales.\n\n(*) No participan las tarjetas Cabal, Pre Pagas ni Gourmet Card. No acumulable con otras promociones.                               \n\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.",
-    "img": "",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
-    "discount_percent": 25,
-    "days": [
-      "Domingo",
-      "Sábado"
-    ],
-    "installments": null,
-    "validity": "Hasta el 17 de junio de 2026"
-  },
-  {
     "id": "continental-c2a78d91",
     "title": "San Bernardino Country Club",
     "desc": "Todos los días, en San Bernardino Country Club. \n- Hasta 12 cuotas sin intereses en pagos de membresías, con las tarjetas de crédito Continental exclusivamente a través del POS Dinelco.\n\nLímites de compras:\n- Cuotas sin intereses con límite de compra mensual de Gs. 50.000.000 por cuenta de tarjeta.\n\nAplica únicamente para compras presenciales. No aplica para pagos a través de POS Virtual. \nVigente hasta el 16 de julio de 2026.\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n \n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
@@ -12715,6 +12755,24 @@
     "validity": "Hasta el 18 de marzo de 2027"
   },
   {
+    "id": "continental-bcb12901",
+    "title": "Dia del Padre - 2026",
+    "desc": "Promo - Día del Padre 2026.\nDel 12 al 17 de junio, en comercios adheridos de diferentes rubros.\n\n- 25% de reintegro, con Privilege Continental. Límite de compras mensual de hasta Gs. 2.000.000 por cuenta de tarjeta.\n- 20% de reintegro, con Dinelco, Clásica, Oro, Black e Infinite. Límite de compras mensual de hasta Gs. 1.000.000 por cuenta de tarjeta.\n\nLímites de compra en conjunto para todos los comercios adheridos, durante la vigencia de la promoción.\n\nCon tarjetas de crédito. Exclusivo en POS Dinelco.\n\nRubros adheridos:\n- Tiendas: ver aquí https://www.bancontinental.com.py/api/uploads/Tiendas_adheridas_6b48751363.pdf\n- Perfumerías: ver aquí https://www.bancontinental.com.py/api/uploads/Perfumerias_8736f6492f.pdf\n- Sastrerías: ver aquí https://www.bancontinental.com.py/api/uploads/Sastrerias_aa64dd739e.pdf\n- Rubro Automotriz: ver aquí https://www.bancontinental.com.py/api/uploads/Rubro_Automotriz_91a3065dbb.pdf\n- Ferreterías: ver aquí https://www.bancontinental.com.py/api/uploads/Ferreterias_2e25b7c3ae.pdf\n- Zapaterías: ver aquí https://www.bancontinental.com.py/api/uploads/Zapaterias_2ccf3e25e2.pdf\n\nVigente hasta el 17 de junio de 2026.\n\nEl 20 y 21 de junio, en bodegas adheridas de todo el país.\n- 25% de reintegro,con Privilege Continental. Límite de compra mensual de hasta Gs. 500.000 por cuenta de tarjeta.\n- 20% de reintegro, con Dinelco, Clásica, Oro, Black e Infinite. Límite de compra mensual de hasta Gs. 300.000 por cuenta de tarjeta.\n\nLímites de compra en conjunto para todos los comercios adheridos, durante la vigencia de la promoción.\n\nCon tarjetas de crédito. Exclusivo en POS Dinelco.\n\nBodegas adheridas: ver aquí https://www.bancontinental.com.py/api/uploads/Bodegas_adheridas_0da6a06a8d.pdf\n\n\nVigente hasta el 21 de junio de 2026.\n\nEl 20 y 21 de junio, en bares y restaurantes.\n- 20% de reintegro en comercios adheridos con Dinelco, Clásica y Oro. Límite de compra mensual de hasta Gs. 500.000 por cuenta de tarjeta, en conjunto para los comercios adheridos durante la vigencia de la promoción.\n\nBares y restaurantes adheridos: ver aquí https://www.bancontinental.com.py/api/uploads/Bares_y_restaurantes_85c6b8024a.pdf\n\nAdemás, los sábados y domingos:\n- 35% de reintegro con Privilege Continental. Límite de compra mensual de hasta Gs. 2.000.000 por cuenta de tarjeta, por rubro.\n- 25% de reintegro con Black e Infinite. Límite de compra mensual de hasta Gs. 1.000.000 por cuenta de tarjeta, por rubro.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales, vía POS físico. No aplica para pagos online, a través links de pago o POS virtuales.\n\n(*) No participan las tarjetas Cabal, Pre Pagas ni Gourmet Card. No acumulable con otras promociones.                               \n\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.",
+    "img": "",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "🍽️ Gastronomía",
+    "discount_percent": 25,
+    "days": [
+      "Domingo",
+      "Sábado"
+    ],
+    "installments": null,
+    "validity": "Hasta el 17 de junio de 2026"
+  },
+  {
     "id": "continental-4ac91ffc",
     "title": "Moda for you",
     "desc": "Todos los días, en Moda For You.   \n\n- 15% de descuento en caja + 12 cuotas sin intereses, pagando con las tarjetas de crédito Continental. exclusivamente a través del POS Dinelco. \n\nLímites de compras: \n\n- Cuotas sin intereses con límite de compra mensual de Gs. 50.000.000 por cuenta de tarjeta. \n\nAplica únicamente para compras presenciales. No aplica para pagos a través de POS Virtual. \n\nVigente hasta el 18 de agosto de 2026. \n\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones. \n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente. \n\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
@@ -12904,7 +12962,7 @@
   {
     "id": "continental-8faa0cf2",
     "title": "Olier",
-    "desc": "Todos los días, en Olier. \n- Hasta 12 cuotas sin intereses, pagando con las tarjetas de crédito Continental. Límite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta. Exclusivamente a través del POS Dinelco.\n\nVigente hasta el 15 de julio de 2026.\n\nLas promociones aplican únicamente para compras o pagos presenciales, vía POS físico. No aplican para pagos online, a través links de pagos o POS virtuales.\n\n(*) Beneficio exclusivo para compras de consumo personal o familiar, no aplica a compras con fines comerciales.\n\n(*) Reintegros y cuotas no son válidos para compras realizadas con tarjetas de débito.\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "desc": "Todos los días, en Olier. \n- Hasta 12 cuotas sin intereses, pagando con las tarjetas de crédito Continental. Límite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta. \n\nVigente hasta el 15 de julio de 2026.\n\nLas promociones aplican únicamente para compras o pagos presenciales, vía POS físico. No aplican para pagos online, a través links de pagos o POS virtuales.\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
     "img": "",
     "href": "",
     "bankId": "continental",
@@ -13003,6 +13061,23 @@
     ],
     "installments": 12,
     "validity": "Hasta el 27 de abril de 2027"
+  },
+  {
+    "id": "continental-89e8cf1e",
+    "title": "Molino Caaguazú - Miércoles de Supermercados",
+    "desc": "Los miércoles, en Supermercado Molino Caaguazú.\n- 20% de reintegro. Límite de compra semanal de Gs. 1.000.000 por cuenta de tarjeta, en conjunto para todos los supermercados adheridos a la promoción de \"Miércoles de Supermercados\".\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco\n\nAplica únicamente para compras o pagos presenciales, vía POS físico. No aplica para pagos online, a través links de pagos o POS virtuales.\n \nVigente hasta el 09 de julio de 2026. \n\n(*) No aplica para compras en patios de comida. \n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones. \n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "img": "",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "🍽️ Gastronomía",
+    "discount_percent": 20,
+    "days": [
+      "Miércoles"
+    ],
+    "installments": null,
+    "validity": "Hasta el 09 de julio de 2026"
   },
   {
     "id": "continental-71225f14",
@@ -13159,6 +13234,23 @@
     "validity": "Hasta el 21 de agosto del 2026"
   },
   {
+    "id": "continental-8b016f14",
+    "title": "Contimarket - 25%",
+    "desc": "El miércoles 10 de junio,  en Contimarket.com\n- 25% de reintegro. Límite de compra mensual de hasta Gs. 1.000.000 por cuenta de tarjeta, en conjunto para los días de promoción durante el mes. \n\nVigente el 10 de junio de 2026.\n\nAdemás, todos los días:\n- Hasta 36 cuotas sin intereses. Límite de compra mensual de hasta  Gs. 50.000.000 por cuenta de tarjeta. \nVigente hasta el 15 de julio  de 2026.\n\nVálido pagando con tarjetas de crédito Continental, únicamente para compras procesadas a través de Contimarket.com.\n\n(*) Beneficio exclusivo para compras de consumo personal o familiar, no aplica a compras con fines comerciales.\n\n(*) Reintegros y cuotas no son válidos para compras realizadas con tarjetas de débito.\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "img": "",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "💳 Financiero",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": 36,
+    "validity": "Hasta el 15 de julio de 2026"
+  },
+  {
     "id": "continental-2b304310",
     "title": "Meyer Gini",
     "desc": "Todos los días, en MeyerGini. \n- Hasta 12 cuotas sin intereses, pagando con las tarjetas de crédito Continental. Límite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta. Exclusivamente a través del POS Dinelco. \n\nAplica únicamente para compras presenciales. No aplica para pagos a través de POS Virtual. \n\nVigente hasta el 05 de noviembre de 2026.\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
@@ -13208,6 +13300,23 @@
     ],
     "installments": 6,
     "validity": "Hasta el 15 de abril de 2027"
+  },
+  {
+    "id": "continental-8c5add1e",
+    "title": "Creativa - Informática & Papelería",
+    "desc": "Todos los días, en Creativa\n- Hasta 12 cuotas sin intereses.  Límite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales, vía POS físico. No aplica para pagos online, a través links de pago o POS virtuales.\n\n\nVigente hasta el 09 de junio de 2027.\n\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.\n \"",
+    "img": "",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "💳 Financiero",
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": 12,
+    "validity": "Hasta el 09 de junio de 2027"
   },
   {
     "id": "continental-c39ec95d",
@@ -13399,7 +13508,7 @@
   {
     "id": "continental-6aee813b",
     "title": "Sport Center",
-    "desc": "El último jueves de cada mes, en Sport Center.  \n\n- 20% de reintegro en el extracto, pagando con las tarjetas de crédito Continental. Limite de compra mensual de hasta Gs. 1.000.000 por cuenta de tarjeta exclusivamente a través del POS Dinelco.\n\nAdemás, todos los días: hasta 12 cuotas sin intereses, pagando con las tarjetas de crédito Continental. Límite de compra mensual de Gs. 50.000.000 por cuenta de tarjeta.\n\nLas promociones aplican únicamente para compras o pagos presenciales, vía POS físico. No aplican para pagos online, a través links de pagos o POS virtuales.\n\n Vigente hasta el 13 de mayo del 2027.\n\n(*) No participan las tarjetas Pre-Pagas,Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "desc": "El último jueves de cada mes, en Sport Center.  \n\n- 20% de reintegro en el extracto, pagando con las tarjetas de crédito Continental. Limite de compra mensual de hasta Gs. 2.000.000 por cuenta de tarjeta exclusivamente a través del POS Dinelco.\n\nAdemás, todos los días: hasta 12 cuotas sin intereses, pagando con las tarjetas de crédito Continental. Límite de compra mensual de Gs. 50.000.000 por cuenta de tarjeta.\n\nLas promociones aplican únicamente para compras o pagos presenciales, vía POS físico. No aplican para pagos online, a través links de pagos o POS virtuales.\n\n Vigente hasta el 13 de mayo del 2027.\n\n(*) No participan las tarjetas Pre-Pagas,Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
     "img": "",
     "href": "",
     "bankId": "continental",
@@ -16741,23 +16850,6 @@
     "validity": "Hasta el 28 de octubre de 2026"
   },
   {
-    "id": "continental-8b016f14",
-    "title": "Contimarket - 25%",
-    "desc": "El jueves 04 de junio en Contimarket.com\n- 25% de reintegro. Límite de compra mensual de hasta Gs. 1.000.000 por cuenta de tarjeta, en conjunto para los días de promoción durante el mes. Tope de reintegro de Gs. 350.000.\n\n\nVálido pagando con tarjetas de crédito Continental, únicamente para compras procesadas a través de Contimarket.com.\n\n\nVigente el 04 de junio de 2026.\n\n\n(*) Beneficio exclusivo para compras de consumo personal o familiar, no aplica a compras con fines comerciales.\n\n\n(*) Reintegros y cuotas no son válidos para compras realizadas con tarjetas de débito.\n\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "💳 Financiero",
-    "discount_percent": 25,
-    "days": [
-      "Jueves"
-    ],
-    "installments": null,
-    "validity": null
-  },
-  {
     "id": "continental-f40e3219",
     "title": "Ánima - Anima",
     "desc": "Todos los días, en Ánima\n- Hasta 18 cuotas sin intereses, pagando con las tarjetas de crédito Continental exclusivamente a través del POS Dinelco. Límite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta. \n\nVigente hasta el 21 de septiembre del 2026. \n\nAplica únicamente para compras presenciales. No aplica para pagos a través de POS Virtual. \n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones. \n\n (**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente. \n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n \n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
@@ -18226,23 +18318,6 @@
     ],
     "installments": null,
     "validity": "Hasta el 20 de noviembre del 2026"
-  },
-  {
-    "id": "continental-89e8cf1e",
-    "title": "Molino Caaguazú - Miércoles de Supermercados",
-    "desc": "Todos los miércoles, en Supermercado Molino Caaguazú\n- 20% de reintegro, pagando con las tarjetas de crédito Continental.  Límite de compra semanal de Gs. 1.000.000 por cuenta de tarjeta, en conjunto para todos los supermercados adheridos a la promoción de \"Miércoles de Supermercados\".\n\nExclusivo en POS Dinelco\n\nAplica únicamente para compras o pagos presenciales, vía POS físico. No aplica para pagos online, a través links de pagos o POS virtuales.\n \nVigente hasta el 03 de junio de 2026. \n\n(*) No aplica para compras en patios de comida. \n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones. \n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
-    "discount_percent": 20,
-    "days": [
-      "Miércoles"
-    ],
-    "installments": null,
-    "validity": "Hasta el 03 de junio de 2026"
   },
   {
     "id": "continental-d2b989ae",
