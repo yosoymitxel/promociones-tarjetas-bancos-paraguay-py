@@ -10,10 +10,10 @@ from .scrapers import (
 )
 
 SCRAPERS = {
-    "basa": BASAScraper,
-    "eclub": EClubScraper,
-    "gnb": GNBScraper,
-    "itau": ItaúScraper,
+    "basa":        BASAScraper,
+    "eclub":       EClubScraper,
+    "gnb":         GNBScraper,
+    "itau":        ItaúScraper,
     "continental": ContinentalScraper,
     "personalpay": PersonalPayScraper,
 }

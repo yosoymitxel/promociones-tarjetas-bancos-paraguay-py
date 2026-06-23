@@ -17,12 +17,23 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
-from scraper_modules.base import ScraperBase
+from scraper_modules.base import ScraperBase, HAS_PLAYWRIGHT
 
 
 # ══════════════════════════════════════════════════════════════════
 #  BASA  ·  https://www.bancobasa.com.py/promociones-personas
-#  Static HTML (OctoberCMS) — parseable via httpx
+#
+#  Two-phase scrape:
+#    Phase 1 — httpx (fast, no Playwright needed):
+#              scrapes the page HTML for the full list of promos.
+#    Phase 2 — Playwright (optional enrichment):
+#              downloads each alianza PDF, parses it for structured
+#              fields (validity, discount, days, installments) and
+#              writes the result to desc.  Unchanged PDFs are served
+#              from a content-hash cache — no re-download, no re-parse.
+#
+#  requires_playwright stays False because Phase 1 alone is useful.
+#  Phase 2 activates automatically when Playwright is available.
 # ══════════════════════════════════════════════════════════════════
 class BASAScraper(ScraperBase):
     bank_id    = "basa"
@@ -30,6 +41,10 @@ class BASAScraper(ScraperBase):
     bank_url   = "https://www.bancobasa.com.py/promociones-personas"
     bank_color = "#F59E0B"
     bank_short = "BASA"
+
+    # Playwright is NOT required — Phase 1 works without it.
+    # Phase 2 (PDF enrichment) will simply be skipped if it is absent.
+    requires_playwright = False
 
     def scrape_api(self) -> list[dict]:
         raise NotImplementedError("BASA has no public API")
@@ -39,6 +54,103 @@ class BASAScraper(ScraperBase):
         self._save_html_sample(html, "html")
         return self._parse_basa(BeautifulSoup(html, "html.parser"))
 
+    # ── Override scrape() to add Phase 2 after the base HTML scrape ─
+    def scrape(self) -> list[dict]:
+        """Phase 1 (HTML) + optional Phase 2 (PDF enrichment)."""
+        promos = super().scrape()           # runs scrape_api → scrape_html
+
+        if promos and HAS_PLAYWRIGHT:
+            promos = self._enrich_with_pdfs(promos)
+
+        return promos
+
+    # ── Phase 2 — PDF enrichment ─────────────────────────────────────
+    def _enrich_with_pdfs(self, promos: list[dict]) -> list[dict]:
+        """
+        Download and parse alianza PDFs using Playwright's authenticated
+        session, then update each promo's ``desc`` field.
+
+        Uses a content-hash cache so unchanged PDFs are never re-processed.
+        Promos without a PDF href (e.g. highlighted cards) are left as-is.
+        """
+        # Lazy import — pdfplumber is optional; missing it disables enrichment
+        try:
+            from scraper_modules.basa_pdf import BASAPDFParser, PDFCache
+        except ImportError:
+            print("    [BASA] pdfplumber not installed — skipping PDF enrichment")
+            return promos
+
+        pdf_promos = [p for p in promos if "/pdf/" in p.get("href", "")]
+        if not pdf_promos:
+            return promos
+
+        parser = BASAPDFParser()
+        cache  = PDFCache()
+
+        print(f"    [BASA] {len(pdf_promos)} PDF(s) to check "
+              f"(cache has {cache.stats()['total_entries']} entries)…")
+
+        counts = {"cached": 0, "parsed": 0, "error": 0}
+
+        # Build a lookup from href → promo so we can update in-place
+        pdf_map: dict[str, dict] = {p["href"]: p for p in pdf_promos}
+
+        with self.open_playwright_page() as (page, _):
+            # Visit main page first to establish the browser session / cookies
+            # that unlock the PDF storage URLs (direct httpx calls get 403).
+            page.goto(self.bank_url, wait_until="domcontentloaded", timeout=45_000)
+            page.wait_for_timeout(2_000)
+
+            for href, promo in pdf_map.items():
+                title   = promo["title"]
+                pdf_url = href if href.startswith("http") else urljoin(self.bank_url, href)
+
+                try:
+                    # page.request inherits the browser's cookies + headers
+                    resp      = page.request.get(pdf_url, timeout=20_000)
+                    pdf_bytes = resp.body()
+
+                    if not pdf_bytes or len(pdf_bytes) < 512:
+                        raise ValueError(f"empty response ({len(pdf_bytes)} bytes)")
+
+                    if cache.needs_parse(pdf_url, pdf_bytes):
+                        parsed = parser.parse(pdf_bytes, commerce_name=title)
+                        cache.store(pdf_url, pdf_bytes, parsed)
+                        counts["parsed"] += 1
+                        status = "PARSED"
+                    else:
+                        parsed = cache.get(pdf_url)
+                        counts["cached"] += 1
+                        status = "CACHED"
+
+                    # Enrich promo in-place
+                    if parsed:
+                        if parsed.get("desc"):
+                            promo["desc"] = parsed["desc"]
+                        if parsed.get("validity") and not promo.get("validity"):
+                            promo["validity"] = parsed["validity"]
+                        if parsed.get("discount_percent") and not promo.get("discount_percent"):
+                            promo["discount_percent"] = parsed["discount_percent"]
+                        if parsed.get("days") and not promo.get("days"):
+                            promo["days"] = parsed["days"]
+                        if parsed.get("installments") is not None and "installments" not in promo:
+                            promo["installments"] = parsed["installments"]
+
+                    print(f"      [{status}] {title[:50]}")
+
+                except Exception as exc:
+                    counts["error"] += 1
+                    print(f"      [ERROR]  {title[:50]}: {exc}")
+
+        cache.save()   # no-op if nothing changed
+
+        print(f"    [BASA] PDF enrichment done — "
+              f"{counts['parsed']} parsed, {counts['cached']} cached, "
+              f"{counts['error']} errors")
+
+        return promos
+
+    # ── HTML parser (shared by both phases) ──────────────────────────
     def _parse_basa(self, soup: BeautifulSoup) -> list[dict]:
         promos: list[dict] = []
         seen: set[str] = set()
@@ -53,7 +165,6 @@ class BASAScraper(ScraperBase):
             promos.append(self.make_promo(title=title, img=img_url, href=href))
 
         # Pass 1: cards with dedicated images (sección "Destacadas")
-        # Structure: .col-md-4 / .col-md-3 / .col-6  with <h5> + <img>
         for item in soup.select(".row .col-md-4, .row .col-md-3, .row .col-6"):
             h5 = item.select_one("h5")
             if not h5:
@@ -71,12 +182,7 @@ class BASAScraper(ScraperBase):
                 _add(title, img_url, href)
 
         # Pass 2: PDF links (sección "Alianzas")
-        # These entries list commerce names as anchor text pointing to a T&C PDF.
-        # We intentionally do NOT look for images here: the BASA DOM groups several
-        # anchor tags under the same parent <div>, so naively calling
-        # parent.select_one("img") would copy the *first* card's logo onto every
-        # subsequent entry in that group (e.g. "avenida.png" on ACE, ACM Group,
-        # Vialaser, …).  A missing image is better than the wrong one.
+        # No image here — see the comment in the previous version for why.
         for a_tag in soup.select('a[href*="/storage/app/media/pdf/bases-condiciones/"]'):
             title = a_tag.get_text(strip=True)
             href  = a_tag.get("href", "")
