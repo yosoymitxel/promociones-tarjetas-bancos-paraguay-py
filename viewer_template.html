@@ -234,10 +234,11 @@
   <div class="mesh"></div>
   <div id="root" class="relative z-10"></div>
 
+  <script type="text/javascript"> const PROMOS = __PROMOS_JSON__; </script>
+
   <script type="text/babel">
     const { useState, useMemo, useEffect, useCallback, useRef } = React;
 
-    const PROMOS = __PROMOS_JSON__;
     const STATS = __STATS_JSON__;
     const GENERATED_TIME = "__TIMESTAMP__";
 
@@ -253,9 +254,9 @@
     // Emoji decorators for known category names (plain strings from the scraper).
     // The select dropdown and card chips both derive from this map so they always stay in sync.
     const CATEGORY_ICONS = {
-      "Gastronomía": "🍽️",   "Restaurantes": "🍽️",
+      "Gastronomía": "🍽️", "Restaurantes": "🍽️",
       "Supermercados": "🛒",
-      "Salud": "💊",         "Belleza y Salud": "💅",
+      "Salud": "💊", "Belleza y Salud": "💅",
       "Fitness": "🏋️",
       "Tecnología": "📱",
       "Moda": "👗",
@@ -263,8 +264,8 @@
       "Educación": "🎓",
       "Viajes & Hoteles": "🏨",
       "Combustible": "⛽",
-      "Entretenimiento": "🎬",  "Recreación": "🎡",
-      "Financiero": "💳",    "Itaú Personal Bank": "🏦",
+      "Entretenimiento": "🎬", "Recreación": "🎡",
+      "Financiero": "💳", "Itaú Personal Bank": "🏦",
       "Niños": "👶",
     };
 
