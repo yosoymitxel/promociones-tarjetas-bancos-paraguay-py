@@ -476,8 +476,7 @@ class ContinentalScraper(ScraperBase):
         for url in self._api_candidates:
             try:
                 data  = self.fetch_json(url, timeout=10)
-                items = self._unwrap_api_response(data)
-                promos = self._parse_api_items(items)
+                promos = self._parse_continental_items(self._unwrap_api_response(data))
                 if promos:
                     return promos
             except Exception:
@@ -492,12 +491,83 @@ class ContinentalScraper(ScraperBase):
             page.goto(self.bank_url, wait_until="domcontentloaded", timeout=45_000)
             page.wait_for_timeout(8_000)
 
-            promos = self._promos_from_intercepted(responses)
+            promos = self._parse_continental_responses(responses)
 
             if not promos:
                 html = page.content()
                 self._save_html_sample(html, "playwright")
                 promos = self._parse_common(BeautifulSoup(html, "html.parser"))
+
+        return promos
+
+    def _parse_continental_responses(self, api_responses: list[dict]) -> list[dict]:
+        """Route each captured XHR response through the nested-aware parser."""
+        promos: list[dict] = []
+        for resp in api_responses:
+            items = self._unwrap_api_response(resp["data"])
+            promos.extend(self._parse_continental_items(items))
+        return promos
+
+    def _parse_continental_items(self, items: list) -> list[dict]:
+        """
+        Handle Continental's two possible API shapes:
+
+        Nested  →  [{nombre: "Salud", comercios: [{nombre: "Farmacenter", ...}]}]
+        Flat    →  [{nombre: "Farmacenter", descuento: "20%", ...}]
+
+        Category-header objects in flat lists are filtered out: they have a title
+        that matches a known category label AND no discount / validity info.
+        """
+        promos: list[dict] = []
+
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+
+            # ── Nested: item is a category container ─────────────────────
+            sub = (
+                item.get("comercios") or
+                item.get("establecimientos") or
+                item.get("negocios") or
+                item.get("items") or
+                []
+            )
+            if sub:
+                cat_name_raw = item.get("nombre") or item.get("name") or None
+                # cat_name may be a dict itself — unwrap
+                if isinstance(cat_name_raw, dict):
+                    cat_name = cat_name_raw.get("nombre") or cat_name_raw.get("name")
+                else:
+                    cat_name = cat_name_raw
+                for commerce in sub:
+                    if not isinstance(commerce, dict):
+                        continue
+                    title, desc, img, href, _ = self._extract_item_fields(commerce)
+                    if not title or len(title) <= 2:
+                        continue
+                    promos.append(self.make_promo(
+                        title=title, desc=desc, img=img, href=href, category=cat_name
+                    ))
+                continue  # handled as category — don't fall through
+
+            # ── Flat: item is a direct commerce entry ─────────────────────
+            title, desc, img, href, category = self._extract_item_fields(item)
+            if not title or len(title) <= 2:
+                continue
+
+            # Discard items that look like category headers:
+            # they have a short generic name and no payload beyond an image.
+            has_payload = bool(desc or href)
+            is_header   = not has_payload and len(title) <= 30 and not any(
+                item.get(k) for k in ("descuento", "discount", "cuotas",
+                                      "beneficio", "vigencia", "validez")
+            )
+            if is_header:
+                continue
+
+            promos.append(self.make_promo(
+                title=title, desc=desc, img=img, href=href, category=category
+            ))
 
         return promos
 
@@ -519,12 +589,28 @@ class PersonalPayScraper(ScraperBase):
         "https://www.personalpay.com.py/api/v1/beneficios",
     ]
 
+    # PersonalPay's API (and sometimes DOM) appends day-of-week labels directly
+    # to the title string with no separator, e.g.:
+    #   "50% más de contenido en Packs de NavegaciónTODOS LOS DÍAS"
+    # This pattern strips those suffixes so titles are clean.
+    import re as _re
+    _RE_PP_DAYS = _re.compile(
+        r'(TODOS\s+LOS\s+D[IÍ]AS?|LUNES\s+A\s+JUEVES?|LUNES\s+A\s+VIERNES?|' +
+        r'S[AÁ]BADOS?\s+Y\s+DOMINGOS?|FINES?\s+DE\s+SEMANA|LUNES|MARTES|' +
+        r'MI[EÉ]RCOLES|JUEVES|VIERNES)\s*$',
+        _re.IGNORECASE,
+    )
+
+    @classmethod
+    def _clean_pp_title(cls, title: str) -> str:
+        return cls._RE_PP_DAYS.sub('', title).strip()
+
     def scrape_api(self) -> list[dict]:
         for url in self._api_candidates:
             try:
                 data  = self.fetch_json(url, timeout=10)
                 items = self._unwrap_api_response(data)
-                promos = self._parse_api_items(items)
+                promos = self._parse_api_items(items, title_cleaner=self._clean_pp_title)
                 if promos:
                     return promos
             except Exception:
@@ -544,7 +630,9 @@ class PersonalPayScraper(ScraperBase):
             page.goto(self.bank_url, wait_until="domcontentloaded", timeout=45_000)
             page.wait_for_timeout(10_000)   # Extra time for Cloudflare JS challenge
 
-            promos = self._promos_from_intercepted(responses)
+            promos = self._promos_from_intercepted(
+                responses, title_cleaner=self._clean_pp_title
+            )
 
             if not promos:
                 html = page.content()

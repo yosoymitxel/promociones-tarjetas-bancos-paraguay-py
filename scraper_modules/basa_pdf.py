@@ -79,8 +79,7 @@ _RE_VIGENCIA = re.compile(
     re.IGNORECASE,
 )
 _RE_DATE_RANGE = re.compile(
-    r'del?\s+\d{1,2}\s+de\s+\w+.{0,40}?al\s+\d{1,2}\s+de\s+\w+'
-    r'(?:\s+de\s+\d{4})?',
+    r'del?\s+\d{1,2}(?:\s+de\s+\w+)?\s+al\s+\d{1,2}\s+de\s+\w+(?:\s+de\s+\d{4})?',
     re.IGNORECASE,
 )
 _RE_DESCUENTO = re.compile(
@@ -90,10 +89,6 @@ _RE_DESCUENTO = re.compile(
 _RE_PERCENT_BARE = re.compile(r'(\d+(?:[.,]\d+)?)\s*%')   # fallback
 _RE_CUOTAS = re.compile(
     r'(\d+)\s*cuotas?\s*(?:sin\s*inter[eé]s|0\s*%|a\s*tasa\s*0)?',
-    re.IGNORECASE,
-)
-_RE_TARJETAS = re.compile(
-    r'tarjetas?\s+(.{3,60}?)(?:\n|\.|basa)',
     re.IGNORECASE,
 )
 
@@ -150,14 +145,14 @@ class BASAPDFParser:
                 "installments": None, "raw_text": f"PARSE ERROR: {exc}",
             }
 
-        discount    = self._extract_discount(full_text)
+        discount, benefit_str = self._extract_discount_and_benefit(full_text)
         installments = self._extract_installments(full_text)
         validity    = self._extract_validity(full_text)
-        days        = self._extract_days(full_text)
+        days        = self._extract_days(full_text, validity)
         cards       = self._extract_cards(full_text)
 
         desc = self._build_desc(
-            discount=discount,
+            discount_str=benefit_str,
             installments=installments,
             validity=validity,
             days=days,
@@ -199,18 +194,31 @@ class BASAPDFParser:
         m2 = _RE_DATE_RANGE.search(text)
         return m2.group(0).strip() if m2 else None
 
-    def _extract_discount(self, text: str) -> int | None:
+    def _extract_discount_and_benefit(self, text: str) -> tuple[int | None, str | None]:
         matches = _RE_DESCUENTO.findall(text)
         if not matches:
             matches = _RE_PERCENT_BARE.findall(text)
         if not matches:
-            return None
+            return None, None
         try:
-            values = [int(float(v.replace(",", "."))) for v in matches]
-            # Return the most frequent value (avoids picking up a 0% or 100% edge case)
-            return max(set(values), key=values.count)
-        except (ValueError, TypeError):
-            return None
+            values = []
+            for v in matches:
+                val = int(float(v.replace(",", ".")))
+                if 0 < val < 100:
+                    values.append(val)
+            if not values:
+                return None, None
+            benefit_type = "reintegro" if "reintegro" in text.lower() else "descuento"
+            unique_values = sorted(list(set(values)))
+            if len(unique_values) > 1:
+                benefit_str = " / ".join(f"{v}%" for v in unique_values) + f" de {benefit_type}"
+                discount = unique_values[-1]
+            else:
+                discount = unique_values[0]
+                benefit_str = f"{discount}% de {benefit_type}"
+            return discount, benefit_str
+        except Exception:
+            return None, None
 
     def _extract_installments(self, text: str) -> int | None:
         m = _RE_CUOTAS.search(text)
@@ -221,26 +229,98 @@ class BASAPDFParser:
         # Encode "sin interés" as 0 (convention used in the rest of the scraper)
         return 0 if ("sin inter" in full or "0%" in full or "tasa 0" in full) else n
 
-    def _extract_days(self, text: str) -> list[str]:
-        lower = text.lower()
+    def _extract_days(self, text: str, validity: str | None) -> list[str]:
+        if validity:
+            val_lower = validity.lower()
+            if "todos los día" in val_lower or "todos los dia" in val_lower:
+                return ["Todos"]
+            found_in_val = []
+            for pattern, canonical in _DAY_NAMES_ES.items():
+                if re.search(pattern, val_lower):
+                    found_in_val.append(canonical)
+            if found_in_val:
+                order = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+                return sorted(found_in_val, key=lambda d: order.index(d) if d in order else 99)
+            if "del" in val_lower and "al" in val_lower:
+                return ["Todos"]
+            if "desde" in val_lower and "hasta" in val_lower:
+                return ["Todos"]
+            if _RE_DATE_RANGE.search(val_lower):
+                return ["Todos"]
+
+        clean_text = re.sub(r'[\w\-%%]+.pdf', '', text, flags=re.IGNORECASE)
+        lower = clean_text.lower()
         if re.search(r'todos\s+los\s+d[ií]as?', lower):
             return ["Todos"]
         found: list[str] = []
         for pattern, canonical in _DAY_NAMES_ES.items():
             if re.search(pattern, lower) and canonical not in found:
                 found.append(canonical)
-        # Preserve weekday order
-        order = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
-        return sorted(found, key=lambda d: order.index(d) if d in order else 99)
+        if found:
+            order = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+            return sorted(found, key=lambda d: order.index(d) if d in order else 99)
+        return ["Todos"]
 
     def _extract_cards(self, text: str) -> str | None:
-        m = _RE_TARJETAS.search(text)
-        return m.group(1).strip() if m else None
+        lines = [line.strip() for line in text.splitlines() if line.strip()]
+        brand_terms = ["clásica", "clasica", "oro", "black", "signature", "afinidad", "tarjeta b!", "b!", "prepaga", "empresarial", "pymes"]
+        line_scores = []
+        for idx, line in enumerate(lines):
+            lower = line.lower()
+            score = sum(1 for term in brand_terms if term in lower)
+            if "visa" in lower: score += 1
+            if "mastercard" in lower or "mc " in lower: score += 1
+            line_scores.append((idx, score))
+            
+        blocks = []
+        current_block = []
+        for idx, score in line_scores:
+            if score > 0 or (current_block and any(term in lines[idx].lower() for term in ["tarjeta", "pagos", "adheridas", "exclusivamente", "seleccionadas", "a continuación"])):
+                current_block.append((idx, score))
+            else:
+                if current_block:
+                    blocks.append(current_block)
+                    current_block = []
+        if current_block:
+            blocks.append(current_block)
+            
+        if not blocks:
+            return None
+            
+        block_scores = []
+        for block in blocks:
+            total_score = sum(score for idx, score in block)
+            block_text = " ".join(lines[idx] for idx, _ in block).lower()
+            if "adheridas" in block_text or "seleccionadas" in block_text or "aplica" in block_text:
+                total_score += 5
+            block_scores.append((block, total_score))
+            
+        best_block = max(block_scores, key=lambda x: x[1])[0]
+        indices = [idx for idx, _ in best_block]
+        full_text = " ".join(lines[idx] for idx in indices)
+        
+        clean_text = full_text
+        prefix_patterns = [
+            r'^.*tarjetas\s+adheridas\s*:\s*',
+            r'^.*tarjetas\s+seleccionadas\s*:\s*',
+            r'^.*pagos\s+realizados\s+con\s+tarjetas\s+de\s+cr[eé]dito\s+seleccionadas\s+citadas\s+a\s+continuaci[oó]n\s*:\s*',
+            r'^.*tarjetas\s+de\s+cr[eé]dito\s+seleccionadas\s*:\s*',
+            r'^.*tarjetas\s+adheridas\s*',
+            r'^.*tarjetas\s+seleccionadas\s*'
+        ]
+        for pattern in prefix_patterns:
+            m = re.search(pattern, clean_text, re.IGNORECASE)
+            if m:
+                clean_text = clean_text[m.end():]
+                break
+                
+        clean_text = re.sub(r'[\s.,▪\-;]+$', '', clean_text).strip()
+        return clean_text
 
     # ── Description builder ──────────────────────────────────────
     def _build_desc(
         self,
-        discount: int | None,
+        discount_str: str | None,
         installments: int | None,
         validity: str | None,
         days: list[str],
@@ -256,8 +336,8 @@ class BASAPDFParser:
         parts: list[str] = []
 
         # Benefit line
-        if discount is not None:
-            parts.append(f"{discount}% de descuento")
+        if discount_str:
+            parts.append(discount_str)
         if installments is not None:
             cuota_str = "sin interés" if installments == 0 else f"{installments} cuotas"
             parts.append(f"{installments if installments else ''} cuotas {cuota_str}".strip())

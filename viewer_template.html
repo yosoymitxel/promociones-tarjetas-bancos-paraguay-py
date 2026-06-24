@@ -57,6 +57,14 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script>
+    // Register a preset that locks JSX to the classic runtime
+    // (React.createElement) so Babel never emits ESM import statements
+    // inside a non-module <script> tag, regardless of the standalone version.
+    Babel.registerPreset('react-classic', {
+      presets: [[Babel.availablePresets['react'], { runtime: 'classic' }]]
+    });
+  </script>
+  <script>
     tailwind.config = {
       theme: { extend: { fontFamily: { sans: ['Outfit', 'sans-serif'], mono: ['Space Mono', 'monospace'] } } }
     }
@@ -234,12 +242,21 @@
   <div class="mesh"></div>
   <div id="root" class="relative z-10"></div>
 
-  <script type="text/javascript"> const PROMOS = __PROMOS_JSON__; </script>
+  <!-- Data injected by main.py — in a PLAIN script so Babel never parses the JSON payload. -->
+  <script>
+    window.__APP_DATA__ = {
+      promos:    __PROMOS_JSON__,
+      stats:     __STATS_JSON__,
+      timestamp: "__TIMESTAMP__"
+    };
+  </script>
 
-  <script type="text/babel">
+  <script type="text/babel" data-presets="react-classic">
     const { useState, useMemo, useEffect, useCallback, useRef } = React;
 
-    const STATS = __STATS_JSON__;
+    // Data is pre-loaded in a plain <script> above — Babel never touches the JSON.
+    const PROMOS    = window.__APP_DATA__.promos;
+    const STATS     = window.__APP_DATA__.stats;
     const GENERATED_TIME = "__TIMESTAMP__";
 
     const BANKS = [
@@ -251,34 +268,11 @@
       { id: 'personalpay', name: 'Personal Pay', short: 'PersonalPay', color: '#8B5CF6', url: 'https://www.personalpay.com.py/beneficios' },
     ];
 
-    // Emoji decorators for known category names (plain strings from the scraper).
-    // The select dropdown and card chips both derive from this map so they always stay in sync.
-    const CATEGORY_ICONS = {
-      "Gastronomía": "🍽️", "Restaurantes": "🍽️",
-      "Supermercados": "🛒",
-      "Salud": "💊", "Belleza y Salud": "💅",
-      "Fitness": "🏋️",
-      "Tecnología": "📱",
-      "Moda": "👗",
-      "Hogar": "🏠",
-      "Educación": "🎓",
-      "Viajes & Hoteles": "🏨",
-      "Combustible": "⛽",
-      "Entretenimiento": "🎬", "Recreación": "🎡",
-      "Financiero": "💳", "Itaú Personal Bank": "🏦",
-      "Niños": "👶",
-    };
-
-    // Derive the category list at runtime from the actual promo data.
-    // This guarantees the dropdown options always match p.category values in PROMOS,
-    // regardless of what the scraper / analyze_promo returns.
-    const CATEGORIES = [...new Set(
-      PROMOS.map(p => p.category).filter(c => c && typeof c === 'string')
-    )].sort();
-
-    function catLabel(c) {
-      return CATEGORY_ICONS[c] ? `${CATEGORY_ICONS[c]} ${c}` : c;
-    }
+    const CATEGORIES = [
+      "🍽️ Gastronomía", "🛒 Supermercados", "💊 Salud", "🏋️ Fitness",
+      "📱 Tecnología", "👗 Moda", "🏠 Hogar", "🎓 Educación",
+      "🏨 Viajes & Hoteles", "⛽ Combustible", "🎬 Entretenimiento", "💳 Financiero",
+    ];
 
     const DAYS_ORDER = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
     const DAYS_ES = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
@@ -478,8 +472,8 @@
               <h3 className="font-bold text-sm leading-snug line-clamp-2 mb-1" style={{ color: 'var(--text)' }} title={p.title}>
                 {p.title}
               </h3>
-              {p.category && typeof p.category === 'string' && (
-                <span className="text-[10px] font-semibold text-teal-400 uppercase tracking-wide">{catLabel(p.category)}</span>
+              {p.category && (
+                <span className="text-[10px] font-semibold text-teal-400 uppercase tracking-wide">{p.category}</span>
               )}
             </div>
 
@@ -555,9 +549,9 @@
                 style={{ color: bank.color, background: `${bank.color}20`, borderColor: `${bank.color}40` }}>
                 {bank.short}
               </span>
-              {promo.category && typeof promo.category === 'string' && (
+              {promo.category && (
                 <span className="absolute bottom-4 right-4 text-xs font-bold bg-slate-900/90 text-slate-300 px-3 py-1 rounded-full">
-                  {catLabel(promo.category)}
+                  {promo.category}
                 </span>
               )}
               {isToday && (
@@ -843,7 +837,7 @@
               </select>
               <select value={selCat} onChange={e => setSelCat(e.target.value)} className={`${sel} text-slate-300`}>
                 <option value="">Todas las categorías</option>
-                {CATEGORIES.map(c => <option key={c} value={c}>{catLabel(c)}</option>)}
+                {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
               </select>
             </div>
             {/* Row 2 */}
