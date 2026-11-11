@@ -2253,20 +2253,17 @@
   {
     "id": "basa-cb1dbb60",
     "title": "Haras La Valtellina",
-    "desc": "20% / 25% de reintegro\nTarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Miércoles / Domingo\nVigencia: de miércoles a domingos hasta el 31 de diciembre de 2026.",
+    "desc": null,
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/modificacion%20byc%20vencidas%20junio%20sin%20tarjetas/Basa_Alianzas_Bases-Y-Condiciones_HARAS%20LA%20VALTELLINA.pdf",
     "bankId": "basa",
     "bankShort": "BASA",
     "bankColor": "#F59E0B",
-    "category": "💊 Salud",
-    "validity": "Hasta el 31 de diciembre de 2026",
-    "discount_percent": 20,
-    "days": [
-      "Domingo",
-      "Miércoles"
-    ],
-    "installments": null
+    "category": null,
+    "discount_percent": null,
+    "days": [],
+    "installments": null,
+    "validity": null
   },
   {
     "id": "basa-4377b23b",
@@ -13122,23 +13119,6 @@
     "validity": "Hasta el 26 de agosto de 2027"
   },
   {
-    "id": "continental-61d8fbe6",
-    "title": "Kingo Supermercados - Miércoles de Supermercados",
-    "desc": "Los miércoles, en Kingo Supermercados  \n- 25% de reintegro.  Límite de compra semanal de hasta Gs. 1.000.000 por cuenta de tarjeta, en conjunto para todos los supermercados adheridos a la promoción de \"Miércoles de Supermercados\".\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\n\nVigente hasta el 10 de diciembre de 2026.\n\n\n(*) No aplica para compras en patios de comida.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
-    "discount_percent": 25,
-    "days": [
-      "Miércoles"
-    ],
-    "installments": null,
-    "validity": "Hasta el 10 de diciembre de 2026"
-  },
-  {
     "id": "continental-6cc52da3",
     "title": "Arte & Company",
     "desc": "Todos los días, en Arte & Company.   \n\n- Hasta 12 cuotas sin intereses, pagando con las tarjetas de crédito Continental exclusivamente a través del POS Dinelco. \n\nLímites de compras: \n\n- Cuotas sin intereses con límite de compra mensual de Gs. 50.000.000 por cuenta de tarjeta. \n\n \nAplica únicamente para compras presenciales. No aplica para pagos a través de POS Virtual. \n\nVigente hasta el 27 de noviembre del 2026. \n\n \n\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones. \n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente. \n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
@@ -13289,6 +13269,23 @@
     ],
     "installments": null,
     "validity": "Hasta el 18 de noviembre de 2026"
+  },
+  {
+    "id": "continental-61d8fbe6",
+    "title": "Kingo Supermercados - Miércoles de Supermercados",
+    "desc": "Los miércoles, en Kingo Supermercados  \n- 25% de reintegro.  Límite de compra semanal de hasta Gs. 1.000.000 por cuenta de tarjeta, en conjunto para todos los supermercados adheridos a la promoción de \"Miércoles de Supermercados\".\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\n\nVigente hasta el 10 de diciembre de 2026.\n\nDisponible en:\n- San Lorenzo\n- Capiatá\n\n(*) No aplica para compras en patios de comida.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "img": "",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "🍽️ Gastronomía",
+    "discount_percent": 25,
+    "days": [
+      "Miércoles"
+    ],
+    "installments": null,
+    "validity": "Hasta el 10 de diciembre de 2026"
   },
   {
     "id": "continental-06b9bb88",
@@ -16507,6 +16504,23 @@
     "validity": null
   },
   {
+    "id": "continental-1e77bbec",
+    "title": "La Economía - Miércoles de Supermercados",
+    "desc": "Los miércoles, en La Economía Comercial. \n- 20% de reintegro. Límite de compra semanal de hasta Gs. 1.000.000 por cuenta de tarjeta, en conjunto para todos los supermercados adheridos a la promoción de \"Miércoles de Supermercados\".\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales,vía POS físico, con tarjeta física o QR en la Sucursal de Capiatá. No aplica para pagos online, a través de links de pago o POS virtuales.\n\n Vigente hasta el 04 de noviembre de 2027.\n\n\n(*) No aplica para compras en patios de comida.\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "img": "",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "🍽️ Gastronomía",
+    "discount_percent": 20,
+    "days": [
+      "Miércoles"
+    ],
+    "installments": null,
+    "validity": "Hasta el 04 de noviembre de 2027"
+  },
+  {
     "id": "continental-8927670e",
     "title": "Biggie Express - Miércoles de supermercados",
     "desc": "Los miércoles, en Biggie Express.  \n- 20% de reintegro. Límite de compra semanal de hasta Gs. 1.000.000 por cuenta de tarjeta, en conjunto para todos los supermercados adheridos a la promoción de \"Miércoles de Supermercados\".\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\n Vigente hasta el 08 de septiembre de 2027.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente. \n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
@@ -16522,23 +16536,6 @@
     ],
     "installments": null,
     "validity": "Hasta el 08 de septiembre de 2027"
-  },
-  {
-    "id": "continental-1e77bbec",
-    "title": "La Economía - Miércoles de Supermercados",
-    "desc": "Los miércoles, en La Economía Comercial. \n- 20% de reintegro. Límite de compra semanal de hasta Gs. 1.000.000 por cuenta de tarjeta, en conjunto para todos los supermercados adheridos a la promoción de \"Miércoles de Supermercados\".\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales,vía POS físico, con tarjeta física o QR en la Sucursal de Capiatá. No aplica para pagos online, a través de links de pago o POS virtuales.\n\n Vigente hasta el 04 de noviembre de 2026.\n\n\n\n(*) No aplica para compras en patios de comida.\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
-    "discount_percent": 20,
-    "days": [
-      "Miércoles"
-    ],
-    "installments": null,
-    "validity": "Hasta el 04 de noviembre de 2026"
   },
   {
     "id": "continental-7e479953",
@@ -17494,7 +17491,7 @@
   {
     "id": "continental-46a92fd0",
     "title": "Restaurante - Don Papalo",
-    "desc": "Todos los sábados y domingos, en Hotel Resort Don Papalo.\n\n- 20% de reintegro, pagando con las tarjetas de crédito Continental. Límite de compra mensual de hasta Gs. 5.000.000 por cuenta de tarjeta. Exclusivamente a través del POS Dinelco.\n\n\nAdemás, todos los días: hasta 12 cuotas sin intereses, pagando con las tarjetas de crédito Continental. Límite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta. Exclusivamente a través del POS Dinelco.\n\n\n\nVigente hasta el 06 de diciembre de 2026.\n\n\nLas promociones aplican únicamente para compras o pagos presenciales, vía POS físico. No aplican para pagos online, a través links de pagos o POS virtuales.\n\n(*) No participan las tarjetas Pre-Pagas,Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "desc": "Los sábados y domingos, en Hotel Resort Don Papalo.\n- 20% de reintegro. Límite de compra mensual de hasta Gs. 5.000.000 por cuenta de tarjeta.\n\nAdemás, todos los días:\n\n- Hasta 12 cuotas sin intereses. Límite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 06 de diciembre de 2026.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
     "img": "",
     "href": "",
     "bankId": "continental",
