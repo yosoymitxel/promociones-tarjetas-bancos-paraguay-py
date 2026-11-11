@@ -5,6 +5,7 @@
 PromoScraper PY es una herramienta inteligente que recopila, analiza y unifica las promociones, descuentos, reintegros y cuotas sin intereses de las principales entidades bancarias y billeteras de Paraguay en un único dashboard interactivo.
 
 🌐 **[Ver Dashboard en Vivo (GitHub Pages)](https://yosoymitxel.github.io/promociones-tarjetas-bancos-paraguay-py/)**
+🧭 **[Mi panel](https://yosoymitxel.github.io/Web-scrapping/)**
 🔗 **[Repositorio en GitHub](https://github.com/yosoymitxel/promociones-tarjetas-bancos-paraguay-py)**
 
 ---
