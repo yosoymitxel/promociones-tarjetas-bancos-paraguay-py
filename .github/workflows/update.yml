@@ -1,0 +1,20 @@
+name: update
+on:
+  schedule: [{ cron: '43 9 * * *' }]
+  workflow_dispatch:
+permissions: { contents: write }
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install . && python -m playwright install --with-deps chromium
+      - run: cp promos.json /tmp/prev.json && python main.py
+      # Si los bancos fallan y sale menos de la mitad, no pisa los datos buenos
+      - run: |
+          python -c "import json,sys;n=len(json.load(open('promos.json')));p=len(json.load(open('/tmp/prev.json')));print(n,p);sys.exit(n<p/2)" || git checkout promos.json index.html
+          git config user.name bot && git config user.email bot@users.noreply.github.com
+          git add promos.json index.html && git commit -m "promos" && git push || echo sin cambios
