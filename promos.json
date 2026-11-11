@@ -3943,17 +3943,19 @@
   {
     "id": "basa-c5d4da69",
     "title": "GIMSA",
-    "desc": null,
+    "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/DESTACADAS%20AGOSTO/Basa_Alianzas_Bases-Y-Condiciones_gimsa.pdf",
     "bankId": "basa",
     "bankShort": "BASA",
     "bankColor": "#F59E0B",
-    "category": null,
+    "category": "💊 Salud",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "days": [
+      "Todos"
+    ],
     "discount_percent": null,
-    "days": [],
-    "installments": null,
-    "validity": null
+    "installments": null
   },
   {
     "id": "basa-9e97f5cb",
@@ -19263,23 +19265,6 @@
     ],
     "installments": null,
     "validity": "Hasta el 22 de julio de 2027"
-  },
-  {
-    "id": "continental-46a92fd0",
-    "title": "Restaurante - Don Papalo",
-    "desc": "Los sábados y domingos, en Hotel Resort Don Papalo.\n- 20% de reintegro. Límite de compra mensual de hasta Gs. 5.000.000 por cuenta de tarjeta.\n\nAdemás, todos los días:\n\n- Hasta 12 cuotas sin intereses. Límite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 06 de diciembre de 2026.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
-    "discount_percent": 20,
-    "days": [
-      "Todos"
-    ],
-    "installments": 12,
-    "validity": "Hasta el 06 de diciembre de 2026"
   },
   {
     "id": "continental-59b2ef23",
