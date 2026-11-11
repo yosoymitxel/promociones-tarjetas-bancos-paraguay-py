@@ -151,8 +151,8 @@
     "when": "todos los jueves desde el 5 de marzo hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-79800c7d-larosarinadesdeeljueves1",
-    "title": "La Rosarina desde el jueves 10/09/2026",
+    "id": "basa-79800c7d-larosarinadesdeeljueves",
+    "title": "La Rosarina desde el jueves",
     "desc": "20% / 25% de reintegro\nTarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Jueves\nVigencia: todos los jueves desde el 5 de marzo hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/OCTUBRE%202026/jueves%20de%20supermercado.pdf",
@@ -278,8 +278,8 @@
     "installments": null
   },
   {
-    "id": "basa-3d6754f7-acuarelahonororiobarpapi",
-    "title": "Acuarela ▪ Honororio Bar ▪ Papillon",
+    "id": "basa-3d6754f7-acuarela",
+    "title": "Acuarela",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -303,8 +303,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-almacendesushiilmercatto",
-    "title": "Almacen De Sushi ▪ Il Mercatto de Bellini ▪ Paraqvaria",
+    "id": "basa-3d6754f7-honororiobar",
+    "title": "Honororio Bar",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -328,8 +328,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-barleokfcpizzahut",
-    "title": "Bar Leo ▪ Kfc ▪ Pizza Hut",
+    "id": "basa-3d6754f7-papillon",
+    "title": "Papillon",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -353,8 +353,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-barsanroquekeikibistrpor",
-    "title": "Bar San Roque ▪ Keiki Bistró ▪ Porchetta",
+    "id": "basa-3d6754f7-almacendesushi",
+    "title": "Almacen De Sushi",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -378,8 +378,383 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-bellinilacasitagourmetde",
-    "title": "Bellini ▪ La Casita Gourmet De ▪ Puerto Pira",
+    "id": "basa-3d6754f7-ilmercattodebellini",
+    "title": "Il Mercatto de Bellini",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-paraqvaria",
+    "title": "Paraqvaria",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-antillascaf",
+    "title": "Antillas Café",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-javorai",
+    "title": "Javorai",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-patonovinilsantarita",
+    "title": "Pato No Vinil Santa Rita",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-kaffeicoffee",
+    "title": "Kaffe'i - Coffee",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-pederzani",
+    "title": "Pederzani",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-barleo",
+    "title": "Bar Leo",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-kfc",
+    "title": "Kfc",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-pizzahut",
+    "title": "Pizza Hut",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-barsanroque",
+    "title": "Bar San Roque",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-keikibistr",
+    "title": "Keiki Bistró",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-porchetta",
+    "title": "Porchetta",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-bellini",
+    "title": "Bellini",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-lacasitagourmetde",
+    "title": "La Casita Gourmet De",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-puertopira",
+    "title": "Puerto Pira",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -428,8 +803,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-bocatta01112026ravellori",
-    "title": "Bocatta 01/11/2026) ▪ Ravello Ristorante",
+    "id": "basa-3d6754f7-quattrod",
+    "title": "Quattro D",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -453,8 +828,108 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-boriborilacavadelhvillam",
-    "title": "Bori Bori ▪ LA CAVA del H. Villa Morra ▪ Rich Restaurante",
+    "id": "basa-3d6754f7-bocatta",
+    "title": "Bocatta",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-ravelloristorante",
+    "title": "Ravello Ristorante",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-boribori",
+    "title": "Bori Bori",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-lacavadelhvillamorra",
+    "title": "LA CAVA del H. Villa Morra",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-richrestaurante",
+    "title": "Rich Restaurante",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -503,8 +978,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-bomcortesantarita1610202",
-    "title": "Bom Corte Santa Rita 16/10/2026) ▪ Sabores De Mi Tierra",
+    "id": "basa-3d6754f7-rodizio",
+    "title": "Rodizio",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -528,8 +1003,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-brasaylealadespechadasan",
-    "title": "Brasa y leña ▪ La Despechada ▪ San Miguel",
+    "id": "basa-3d6754f7-bomcortesantarita",
+    "title": "Bom Corte Santa Rita",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -553,8 +1028,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-brujaslanutrysanpietro",
-    "title": "Brujas ▪ La Nutry ▪ San Pietro",
+    "id": "basa-3d6754f7-saboresdemitierra",
+    "title": "Sabores De Mi Tierra",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -578,8 +1053,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-buccapastaslapiccolaroma",
-    "title": "Bucca Pastas ▪ La Piccola Romanaccio ▪ Santoche",
+    "id": "basa-3d6754f7-brasaylea",
+    "title": "Brasa y leña",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -603,8 +1078,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-burgerkinglapreferostise",
-    "title": "Burger King ▪ La Prefe Rostisería ▪ Sawasdee",
+    "id": "basa-3d6754f7-ladespechada",
+    "title": "La Despechada",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -628,8 +1103,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-carlitoswayslapreferidas",
-    "title": "Carlitos Ways ▪ La Preferida ▪ Shangrila",
+    "id": "basa-3d6754f7-sanmiguel",
+    "title": "San Miguel",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -653,8 +1128,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-chavallidobarstilocampo",
-    "title": "Chaval ▪ Lido Bar ▪ Stilo Campo",
+    "id": "basa-3d6754f7-brujas",
+    "title": "Brujas",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -678,8 +1153,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-costacolonmaumausubway",
-    "title": "Costa Colon ▪ Mau Mau ▪ Subway",
+    "id": "basa-3d6754f7-lanutry",
+    "title": "La Nutry",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -703,8 +1178,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-delvecchiopizzasmccarthy",
-    "title": "Del Vecchio pizzas ▪ McCarthy's Irish Pub ▪ Sul Brasil",
+    "id": "basa-3d6754f7-sanpietro",
+    "title": "San Pietro",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -728,8 +1203,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-delpopolopizzeriamargari",
-    "title": "Del Popolo Pizzeria ▪ Margarita Vista Alegre ▪ Taberna Española",
+    "id": "basa-3d6754f7-buccapastas",
+    "title": "Bucca Pastas",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -753,8 +1228,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-elcaffrancsmximoshopping",
-    "title": "El Café Francés ▪ Máximo Shopping Fuente ▪ Takuare'e",
+    "id": "basa-3d6754f7-lapiccolaromanaccio",
+    "title": "La Piccola Romanaccio",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -778,8 +1253,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-ellegadoshoppinglagocdet",
-    "title": "El Legado / Shopping Lago (CDE) ▪ Tempo Resto Collection",
+    "id": "basa-3d6754f7-santoche",
+    "title": "Santoche",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -803,8 +1278,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-elelegidomercaditoempori",
-    "title": "El Elegido ▪ Mercadito Emporio ▪ Terracota",
+    "id": "basa-3d6754f7-burgerking",
+    "title": "Burger King",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -828,8 +1303,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-elmolinomburuvichatalaur",
-    "title": "El Molino ▪ Mburuvicha ▪ Tía Laura",
+    "id": "basa-3d6754f7-lapreferostisera",
+    "title": "La Prefe Rostisería",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -853,8 +1328,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-elnidomilordhotelrestoto",
-    "title": "El Nido ▪ Milord Hotel Resto ▪ Tío Lucas Restaurante",
+    "id": "basa-3d6754f7-sawasdee",
+    "title": "Sawasdee",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -878,8 +1353,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-eltoquealemnmcdonalstodo",
-    "title": "El Toque Alemán ▪ Mcdonals ▪ Todo Rico",
+    "id": "basa-3d6754f7-carlitosways",
+    "title": "Carlitos Ways",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -903,8 +1378,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-eselugarmoshimoshitrcafc",
-    "title": "Ese Lugar ▪ Moshi Moshi ▪ Tr Café Cotidiano",
+    "id": "basa-3d6754f7-shangrila",
+    "title": "Shangrila",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -928,8 +1403,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-fontanashoppingmostazatr",
-    "title": "Fontana (Shopping ▪ Mostaza ▪ Treffen Bistro Fusion Fuente) ▪ Mume ▪ Toro",
+    "id": "basa-3d6754f7-castelettorestaurant",
+    "title": "Casteletto Restaurant",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -953,8 +1428,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-frankburguernaturissimau",
-    "title": "Frank Burguer ▪ Naturissima ▪ Urbano Cafe",
+    "id": "basa-3d6754f7-lavienesa",
+    "title": "La Vienesa",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -978,8 +1453,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-guaynarmawestfalia",
-    "title": "Guay ▪ Narma ▪ Westfalia",
+    "id": "basa-3d6754f7-sinculpasshoppinglagosan",
+    "title": "Sin Culpas Shopping Lago Santa Rita",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -1003,8 +1478,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-gulasantaritaaeustaquiax",
-    "title": "Gula Santa Rita ▪ Ña Eustaquia ▪ Xumaq",
+    "id": "basa-3d6754f7-lesomeliercde",
+    "title": "Le Somelier (CDE)",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -1028,8 +1503,8 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-hiroshimaovejanegra",
-    "title": "Hiroshima ▪ Oveja Negra",
+    "id": "basa-3d6754f7-chaval",
+    "title": "Chaval",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -1053,8 +1528,1308 @@
     "when": "Todos los días hasta el 31 de diciembre de 2026"
   },
   {
-    "id": "basa-3d6754f7-honeypaulistagrill",
-    "title": "Honey ▪ Paulista Grill",
+    "id": "basa-3d6754f7-lidobar",
+    "title": "Lido Bar",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-stilocampo",
+    "title": "Stilo Campo",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-costacolon",
+    "title": "Costa Colon",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-maumau",
+    "title": "Mau Mau",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-subway",
+    "title": "Subway",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-delvecchiopizzas",
+    "title": "Del Vecchio pizzas",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-mccarthysirishpub",
+    "title": "McCarthy's Irish Pub",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-sulbrasil",
+    "title": "Sul Brasil",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-delpopolopizzeria",
+    "title": "Del Popolo Pizzeria",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-margaritavistaalegre",
+    "title": "Margarita Vista Alegre",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-tabernaespaola",
+    "title": "Taberna Española",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-elcaffrancs",
+    "title": "El Café Francés",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-mximoshoppingfuente",
+    "title": "Máximo Shopping Fuente",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-takuaree",
+    "title": "Takuare'e",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-ellegadoshoppinglagocde",
+    "title": "El Legado / Shopping Lago (CDE)",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-temporestocollection",
+    "title": "Tempo Resto Collection",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-elelegido",
+    "title": "El Elegido",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-mercaditoemporio",
+    "title": "Mercadito Emporio",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-terracota",
+    "title": "Terracota",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-elmolino",
+    "title": "El Molino",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-mburuvicha",
+    "title": "Mburuvicha",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-talaura",
+    "title": "Tía Laura",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-elnido",
+    "title": "El Nido",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-milordhotelresto",
+    "title": "Milord Hotel Resto",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-tolucasrestaurante",
+    "title": "Tío Lucas Restaurante",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-eltoquealemn",
+    "title": "El Toque Alemán",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-mcdonals",
+    "title": "Mcdonals",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-todorico",
+    "title": "Todo Rico",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-eselugar",
+    "title": "Ese Lugar",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-moshimoshi",
+    "title": "Moshi Moshi",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-trcafcotidiano",
+    "title": "Tr Café Cotidiano",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-fontanashopping",
+    "title": "Fontana (Shopping",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-mostaza",
+    "title": "Mostaza",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-treffenbistrofusionfuent",
+    "title": "Treffen Bistro Fusion Fuente)",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-mume",
+    "title": "Mume",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-toro",
+    "title": "Toro",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-frankburguer",
+    "title": "Frank Burguer",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-naturissima",
+    "title": "Naturissima",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-urbanocafe",
+    "title": "Urbano Cafe",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-guay",
+    "title": "Guay",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-narma",
+    "title": "Narma",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-westfalia",
+    "title": "Westfalia",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-gulasantarita",
+    "title": "Gula Santa Rita",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-aeustaquia",
+    "title": "Ña Eustaquia",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-xumaq",
+    "title": "Xumaq",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-grosso",
+    "title": "Grosso",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-avirginia",
+    "title": "Ña Virginia",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-yasyreta",
+    "title": "Yasyreta",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-ochocientostreintayseis",
+    "title": "Ochocientos treinta y seis",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-hiroshima",
+    "title": "Hiroshima",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-ovejanegra",
+    "title": "Oveja Negra",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-honey",
+    "title": "Honey",
+    "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "🍽️ Gastronomía",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "group": "RESTAURANTES",
+    "cards": [
+      "Basa MasterCard Oro 20%",
+      "Visa Signature 25%",
+      "MasterCard Black 25%",
+      "todas las demás tarjetas de crédito 20%"
+    ],
+    "when": "Todos los días hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "basa-3d6754f7-paulistagrill",
+    "title": "Paulista Grill",
     "desc": "20% / 25% de reintegro\nTarjetas: - Se excluyen las Basa MasterCard Oro, MasterCard Black, Visa Signature, las Empresariales, las Gourmet Cards, y las tarjetas Prepagas\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/restaurantes.pdf",
@@ -2168,19 +3943,17 @@
   {
     "id": "basa-c5d4da69",
     "title": "GIMSA",
-    "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: todos los días hasta el 31 de diciembre de 2026.",
+    "desc": null,
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/DESTACADAS%20AGOSTO/Basa_Alianzas_Bases-Y-Condiciones_gimsa.pdf",
     "bankId": "basa",
     "bankShort": "BASA",
     "bankColor": "#F59E0B",
-    "category": "💊 Salud",
-    "validity": "Hasta el 31 de diciembre de 2026",
-    "days": [
-      "Todos"
-    ],
+    "category": null,
     "discount_percent": null,
-    "installments": null
+    "days": [],
+    "installments": null,
+    "validity": null
   },
   {
     "id": "basa-9e97f5cb",
@@ -2253,17 +4026,20 @@
   {
     "id": "basa-cb1dbb60",
     "title": "Haras La Valtellina",
-    "desc": null,
+    "desc": "20% / 25% de reintegro\nTarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Miércoles / Domingo\nVigencia: de miércoles a domingos hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/modificacion%20byc%20vencidas%20junio%20sin%20tarjetas/Basa_Alianzas_Bases-Y-Condiciones_HARAS%20LA%20VALTELLINA.pdf",
     "bankId": "basa",
     "bankShort": "BASA",
     "bankColor": "#F59E0B",
-    "category": null,
-    "discount_percent": null,
-    "days": [],
-    "installments": null,
-    "validity": null
+    "category": "💊 Salud",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "discount_percent": 20,
+    "days": [
+      "Domingo",
+      "Miércoles"
+    ],
+    "installments": null
   },
   {
     "id": "basa-4377b23b",
