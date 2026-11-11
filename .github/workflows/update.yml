@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: pip install . && python -m playwright install --with-deps chromium
+      - run: pip install httpx beautifulsoup4 playwright pdfplumber && python -m playwright install --with-deps chromium
       - run: cp promos.json /tmp/prev.json && python main.py
       # Si los bancos fallan y sale menos de la mitad, no pisa los datos buenos
       - run: |
