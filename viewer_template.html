@@ -665,6 +665,15 @@
       const [search, setSearch] = useState("");
       const [selBank, setSelBank] = useState("");
       const [selCat, setSelCat] = useState("");
+      // Shoppings: listas de locales que junta el panel Web-scrapping
+      const [selMall, setSelMall] = useState("");
+      const [malls, setMalls] = useState([]);
+      useEffect(() => {
+        const n = t => (t || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        fetch('https://yosoymitxel.github.io/Web-scrapping/data/shoppings.json').then(r => r.json())
+          .then(d => setMalls((d.items || []).map(m => ({ name: m.name, set: new Set(m.stores.map(n)) })))).catch(() => {});
+      }, []);
+      const mallOf = p => { const k = (p.title || '').toLowerCase().replace(/[^a-z0-9]/g, ''); return malls.filter(m => m.set.has(k)).map(m => m.name); };
       const [selDiscount, setSelDiscount] = useState("");
       const [selDay, setSelDay] = useState("");
       const [selInst, setSelInst] = useState("");
@@ -695,11 +704,11 @@
       };
 
       // Active-filter count for reset button
-      const activeFilters = [selBank, selCat, selDiscount, selDay, selInst, selValidity].filter(Boolean).length
+      const activeFilters = [selBank, selCat, selMall, selDiscount, selDay, selInst, selValidity].filter(Boolean).length
         + (todayOnly ? 1 : 0) + (search ? 1 : 0);
 
       const resetFilters = () => {
-        setSearch(""); setSelBank(""); setSelCat(""); setSelDiscount("");
+        setSearch(""); setSelBank(""); setSelCat(""); setSelMall(""); setSelDiscount("");
         setSelDay(""); setSelInst(""); setSelValidity(""); setTodayOnly(false);
       };
 
@@ -719,6 +728,9 @@
 
           // Category
           if (selCat !== "" && p.category !== selCat) return false;
+
+          // Shopping
+          if (selMall !== "" && !mallOf(p).includes(selMall)) return false;
 
           // Discount
           if (selDiscount !== "") {
@@ -763,7 +775,7 @@
 
           return true;
         });
-      }, [debouncedQ, selBank, selCat, selDiscount, selDay, selInst, selValidity, todayOnly]);
+      }, [debouncedQ, selBank, selCat, selMall, malls, selDiscount, selDay, selInst, selValidity, todayOnly]);
 
       const todayCount = useMemo(() => PROMOS.filter(promoIsToday).length, []);
 
@@ -839,6 +851,12 @@
                 <option value="">Todas las categorías</option>
                 {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
               </select>
+              {malls.length > 0 && (
+                <select value={selMall} onChange={e => setSelMall(e.target.value)} className={`${sel} text-slate-300`}>
+                  <option value="">Todos los shoppings</option>
+                  {malls.map(m => { const c = PROMOS.filter(p => mallOf(p).includes(m.name)).length; return c ? <option key={m.name} value={m.name}>{m.name} ({c})</option> : null; })}
+                </select>
+              )}
             </div>
             {/* Row 2 */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
