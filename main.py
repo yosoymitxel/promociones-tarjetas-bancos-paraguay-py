@@ -81,6 +81,10 @@ def main() -> None:
                 "count":  0,
             }
 
+    # PDFs con listado de locales adheridos → una promo por local
+    from scraper_modules.explode import explode
+    all_promos = explode(all_promos)
+
     original_len = len(all_promos)
     all_promos   = deduplicate(all_promos)
     dedup_count  = original_len - len(all_promos)
