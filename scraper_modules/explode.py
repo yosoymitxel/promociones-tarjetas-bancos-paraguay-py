@@ -30,14 +30,16 @@ def locales(text: str) -> list[str]:
             continue
         if not on:
             continue
-        m = BULLET.match(line)
-        if m:
-            out.append(m.group(1).strip())
-        elif out and line.strip() and not re.search(r'beneficio|para más|^\d+\.', line, re.I):
-            out[-1] += ' ' + line.strip()
-        elif re.search(r'beneficio', line, re.I):
+        if re.search(r'beneficio', line, re.I):
             break
-    return [re.sub(r'\s*\(desde.*', '', re.sub(r'\*+', '', l)).strip() for l in out if 1 < len(l) < 80]
+        # PDFs a varias columnas: varias viñetas en la misma línea
+        parts = re.split(r'\s*[▪•■●\uf0a7\uf0b7]\s*', line)
+        head, items = parts[0].strip(), [x.strip() for x in parts[1:] if x.strip()]
+        if head and out and not re.search(r'para más|^\d+\.', head, re.I):
+            out[-1] += ' ' + head
+        out.extend(items)
+    out = [re.sub(r'\s*\d{1,2}/\d{1,2}/\d{4}\)?', '', re.sub(r'\s*\(desde.*', '', re.sub(r'\*+', '', l))).strip() for l in out]
+    return [l for l in out if 1 < len(l) < 80]
 
 
 def explode(promos: list[dict]) -> list[dict]:
