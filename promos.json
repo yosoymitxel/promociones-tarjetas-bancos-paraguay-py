@@ -8392,21 +8392,6 @@
     "validity": null
   },
   {
-    "id": "itau-c2a0ae1c",
-    "title": "Jack & Jones",
-    "desc": "10 Cuotas sin intereses con 20 %",
-    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/logo.136x96ec05af2e-cd68-41b2-b1c6-0f55ab122d9e.png",
-    "href": "https://www.itau.com.py/beneficios2/categoria/9",
-    "bankId": "itau",
-    "bankShort": "Itaú",
-    "bankColor": "#FF6B00",
-    "category": "Indumentaria",
-    "discount_percent": 20,
-    "days": [],
-    "installments": 10,
-    "validity": null
-  },
-  {
     "id": "continental-291127ce",
     "title": "Agencias de Viaje y Compañías Aéreas",
     "desc": null,
