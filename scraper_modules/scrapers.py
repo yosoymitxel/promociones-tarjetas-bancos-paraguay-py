@@ -13,6 +13,9 @@ is ~20 lines instead of ~80.
 """
 from __future__ import annotations
 
+import json
+import time
+from pathlib import Path
 from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
@@ -269,6 +272,7 @@ class GNBScraper(ScraperBase):
     requires_playwright = True
 
     _api_candidates = [
+        "https://www.beneficiosbancognb.com.py/apis/rewards/rewards/v1/benefits/benefits?pageSize=999",
         "https://www.beneficiosbancognb.com.py/v2/api/categorias",
         "https://www.beneficiosbancognb.com.py/v2/api/beneficios",
         "https://www.beneficiosbancognb.com.py/api/categorias",
@@ -280,12 +284,24 @@ class GNBScraper(ScraperBase):
         """Strip redundant "GNB" / "Día GNB" prefixes from titles."""
         return " ".join(title.replace("Día GNB", "").replace("GNB", "").split())
 
+    def _from_items(self, items: list) -> list[dict]:
+        # La API trae id: el enlace a la ficha del beneficio sirve de "bases"
+        for it in items:
+            if isinstance(it, dict) and it.get("id") and not (it.get("url") or it.get("link")):
+                it["url"] = f"https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/{it['id']}"
+        return self._parse_api_items(items, title_cleaner=self._clean_title)
+
     def scrape_api(self) -> list[dict]:
+        # GNB bloquea los servidores de GitHub: gnb_raw.json lo genera gnb_local.py desde una PC
+        local = Path("gnb_raw.json")
+        if local.exists() and time.time() - local.stat().st_mtime < 10 * 86400:
+            promos = self._from_items(self._unwrap_api_response(json.loads(local.read_text())))
+            if promos:
+                return promos
         for url in self._api_candidates:
             try:
                 data  = self.fetch_json(url, timeout=10)
-                items = self._unwrap_api_response(data)
-                promos = self._parse_api_items(items, title_cleaner=self._clean_title)
+                promos = self._from_items(self._unwrap_api_response(data))
                 if promos:
                     return promos
             except Exception:
