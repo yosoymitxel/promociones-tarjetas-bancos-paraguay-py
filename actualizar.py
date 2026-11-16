@@ -12,6 +12,6 @@ REPOS = ["yosoymitxel/promociones-tarjetas-bancos-paraguay-py", "yosoymitxel/Web
 print("GNB (desde esta PC)…")
 subprocess.run([sys.executable, "gnb_local.py"], check=False)
 for repo in REPOS:
-    r = subprocess.run(["gh", "workflow", "run", "update.yml", "-R", repo, "--ref", "main"])
+    r = subprocess.run(["gh", "api", "-X", "POST", f"repos/{repo}/actions/workflows/update.yml/dispatches", "-f", "ref=main"])
     print(("✓ " if r.returncode == 0 else "✗ ") + repo)
 print("Listo: en ~10 min están los datos nuevos.")

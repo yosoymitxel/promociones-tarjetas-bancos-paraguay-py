@@ -19,8 +19,11 @@ req = urllib.request.Request(URL, headers={
     "Accept": "application/json",
     "Referer": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias",
 })
-with urllib.request.urlopen(req, timeout=30) as r:
-    data = json.load(r)
+try:
+    with urllib.request.urlopen(req, timeout=30) as r:
+        data = json.load(r)
+except Exception as e:
+    sys.exit(f"GNB no respondió ({e}). Se usa el último gnb_raw.json.")
 items = data.get("data", data) if isinstance(data, dict) else data
 print(f"GNB: {len(items)} beneficios")
 if not items:
