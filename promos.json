@@ -4148,19 +4148,17 @@
   {
     "id": "basa-eb9739d6",
     "title": "INVERFIN",
-    "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: Todos los días desde el 01 de agosto hasta el 31 de diciembre de 2026.",
+    "desc": null,
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/DESTACADAS%20AGOSTO/INVERFIN.pdf",
     "bankId": "basa",
     "bankShort": "BASA",
     "bankColor": "#F59E0B",
-    "category": "💊 Salud",
-    "validity": "Hasta el 31 de diciembre de 2026",
-    "days": [
-      "Todos"
-    ],
+    "category": null,
     "discount_percent": null,
-    "installments": null
+    "days": [],
+    "installments": null,
+    "validity": null
   },
   {
     "id": "basa-601341bf",
