@@ -7747,6 +7747,21 @@
     "validity": null
   },
   {
+    "id": "itau-55f90873",
+    "title": "Casa rica",
+    "desc": "20 % con tarjeta de crédito",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/logo5c8511ea-c321-4ed0-883c-014999f32804.png",
+    "href": "https://www.itau.com.py/beneficios2/categoria/13",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Supermercados",
+    "discount_percent": 20,
+    "days": [],
+    "installments": null,
+    "validity": null
+  },
+  {
     "id": "itau-b77f46e9",
     "title": "AVENTURA PARK",
     "desc": "10 % con 10 Cuotas sin intereses",
@@ -7959,7 +7974,7 @@
   {
     "id": "itau-7101a39e",
     "title": "Tienda Móvil",
-    "desc": "15 Cuotas sin intereses con tarjeta de crédito",
+    "desc": "18 Cuotas sin intereses con tarjeta de crédito",
     "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/tiendamovil_136x96.png",
     "href": "https://www.itau.com.py/beneficios2/categoria/14",
     "bankId": "itau",
@@ -7968,7 +7983,7 @@
     "category": "Tecnología",
     "discount_percent": null,
     "days": [],
-    "installments": 15,
+    "installments": 18,
     "validity": null
   },
   {
