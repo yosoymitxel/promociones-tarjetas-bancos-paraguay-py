@@ -48,7 +48,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Onest:wght@400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     crossorigin="anonymous" />
@@ -66,59 +66,38 @@
   </script>
   <script>
     tailwind.config = {
-      theme: { extend: { fontFamily: { sans: ['Outfit', 'sans-serif'], mono: ['Space Mono', 'monospace'] } } }
+      theme: { extend: { fontFamily: { sans: ['Onest', 'system-ui', 'sans-serif'], mono: ['ui-monospace', 'monospace'] } } }
     }
   </script>
 
   <style>
+    /* Mundo compartido con el panel: carbón, superficies sólidas, un acento lima para el ahorro */
     :root {
-      --bg: #090d18;
-      --surface: rgba(13, 20, 40, 0.75);
-      --border: rgba(255, 255, 255, 0.07);
-      --border-hover: rgba(255, 255, 255, 0.16);
-      --text: #f1f5f9;
-      --muted: #94a3b8;
-      --input-bg: rgba(10, 16, 32, 0.92);
-      --shadow: rgba(0, 0, 0, 0.55);
+      --bg: #0c0d10; --surface: #15171c; --s2: #1d2027; --border: #2a2e37; --border-hover: #4a505c;
+      --text: #f1f2f4; --muted: #9aa0ab; --input-bg: #0c0d10; --ac: #c8f560; --ac-tx: #11140a;
+      --display: "Bricolage Grotesque", system-ui, sans-serif;
     }
-
     body.light {
-      --bg: #f1f5fb;
-      --surface: rgba(255, 255, 255, 0.82);
-      --border: rgba(15, 23, 42, 0.09);
-      --border-hover: rgba(15, 23, 42, 0.22);
-      --text: #0f172a;
-      --muted: #475569;
-      --input-bg: rgba(255, 255, 255, 0.97);
-      --shadow: rgba(15, 23, 42, 0.06);
+      --bg: #f3f2ee; --surface: #fff; --s2: #ebe9e3; --border: #dcd9d1; --border-hover: #9a968d;
+      --text: #15161a; --muted: #5f636b; --input-bg: #fff; --ac: #2f6b00; --ac-tx: #fff;
     }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      transition: background .35s, color .35s;
-      font-family: 'Outfit', sans-serif;
-    }
-
-    .glass {
-      background: var(--surface);
-      backdrop-filter: blur(14px);
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 28px var(--shadow);
-      transition: background .35s, border-color .35s;
-    }
-
-    .mesh {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      background:
-        radial-gradient(ellipse 60% 40% at 15% -5%, rgba(56, 189, 248, .11) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 30% at 85% 5%, rgba(139, 92, 246, .09) 0%, transparent 70%),
-        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(20, 184, 166, .06) 0%, transparent 70%);
-    }
+    body { background: var(--bg); color: var(--text); min-height: 100vh; font-family: 'Onest', system-ui, sans-serif; font-variant-numeric: tabular-nums; -webkit-font-smoothing: antialiased; }
+    ::selection { background: var(--ac); color: var(--ac-tx); }
+    h1, h2, .font-display { font-family: var(--display); letter-spacing: -.025em; }
+    .glass { background: var(--surface); border: 1px solid var(--border); transition: border-color .2s; }
+    .glass:hover { border-color: var(--border-hover); }
+    .mesh { display: none; }
+    /* Acentos de Tailwind usados en la página → un solo acento */
+    .text-blue-400, .text-teal-400, .text-sky-400, .text-cyan-400, .text-indigo-400, .text-emerald-400, .text-emerald-300 { color: var(--ac) !important; }
+    .text-amber-400, .text-amber-300, .text-violet-300, .text-purple-300 { color: var(--text) !important; }
+    .bg-blue-600, .bg-blue-500 { background: var(--ac) !important; color: var(--ac-tx) !important; }
+    .hover\:ring-blue-500\/50:hover { --tw-ring-color: transparent !important; }
+    .border-slate-800\/60, .border-slate-800, .border-slate-700 { border-color: var(--border) !important; }
+    select, input { background: var(--input-bg) !important; border-color: var(--border) !important; color: var(--text) !important; border-radius: 12px !important; }
+    select:focus, input:focus { border-color: var(--ac) !important; outline: none; box-shadow: none !important; }
+    .pct { font-family: var(--display); font-weight: 800; letter-spacing: -.03em; color: var(--ac); }
+    .today-ring { box-shadow: none !important; border-color: var(--ac) !important; }
+    .bank-tag { color: #fff; text-shadow: 0 1px 1px rgb(0 0 0 / .3); }
 
     @keyframes fadeUp {
       from {
@@ -430,38 +409,37 @@
           style={{ animationDelay: `${Math.min(index * 12, 280)}ms` }}
         >
           {/* Image */}
-          <div className="relative h-44 overflow-hidden bg-slate-950/50">
+          <div className="relative h-44 overflow-hidden" style={{ background: 'var(--s2)' }}>
             {p.img ? (
               <img src={p.img} alt={p.title} loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 onError={e => { e.target.style.display = 'none'; }} />
             ) : (
-              <div className="w-full h-full flex items-center justify-center">
-                <span className="text-5xl opacity-20">🏷️</span>
+              <div className="w-full h-full flex items-center justify-center p-4 text-center font-display font-extrabold text-xl" style={{ color: 'var(--muted)' }}>
+                {p.title}
               </div>
             )}
             {/* Overlay badges top-left */}
             <div className="absolute top-2.5 left-2.5 flex flex-col gap-1.5">
               {p.discount_percent > 0 && (
-                <span className="chip" style={{ background: 'rgba(245,158,11,.2)', color: '#fcd34d', borderColor: 'rgba(245,158,11,.35)' }}>
-                  🏷️ {p.discount_percent}% OFF
+                <span className="chip" style={{ background: 'var(--ac)', color: 'var(--ac-tx)', borderColor: 'transparent', fontSize: 13 }}>
+                  -{p.discount_percent}%
                 </span>
               )}
               {p.installments !== null && p.installments !== undefined && (
-                <span className="chip" style={{ background: 'rgba(139,92,246,.18)', color: '#c4b5fd', borderColor: 'rgba(139,92,246,.35)' }}>
-                  💳 {p.installments === 0 ? 'Sin interés' : `${p.installments} cuotas`}
+                <span className="chip" style={{ background: 'rgb(8 9 12 / .7)', color: '#fff', borderColor: 'transparent' }}>
+                  {p.installments === 0 ? 'Sin interés' : `${p.installments} cuotas`}
                 </span>
               )}
             </div>
             {/* Bank badge top-right */}
-            <div className="absolute top-2.5 right-2.5 px-2 py-1 rounded-lg bg-white/90 font-bold text-xs" style={{ color: bank.color }}>
+            <div className="absolute top-2.5 right-2.5 px-2 py-1 rounded-lg font-bold text-xs bank-tag" style={{ background: bank.color }}>
               {bank.short}
             </div>
             {/* Today indicator */}
             {isToday && (
-              <div className="absolute bottom-0 left-0 right-0 bg-emerald-500/20 backdrop-blur-sm border-t border-emerald-500/30 px-2.5 py-1 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
-                <span className="text-[10px] font-bold text-emerald-300">Disponible hoy</span>
+              <div className="absolute bottom-0 left-0 right-0 px-2.5 py-1 flex items-center gap-1.5" style={{ background: 'var(--ac)', color: 'var(--ac-tx)' }}>
+                <span className="text-[11px] font-bold">Disponible hoy</span>
               </div>
             )}
           </div>
@@ -473,7 +451,7 @@
                 {p.title}
               </h3>
               {p.category && (
-                <span className="text-[10px] font-semibold text-teal-400 uppercase tracking-wide">{p.category}</span>
+                <span className="text-xs" style={{ color: 'var(--muted)' }}>{p.category.replace(/^\W+\s*/, '')}</span>
               )}
             </div>
 
@@ -503,8 +481,8 @@
             <div className="mt-auto flex gap-1.5 pt-1">
               <button
                 onClick={e => { e.stopPropagation(); onOpen(p); }}
-                className="flex-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 py-1.5 rounded-lg text-[10px] font-bold hover:bg-blue-500 hover:text-white transition-all"
-              >DETALLES</button>
+                className="flex-1 py-2 rounded-lg text-xs font-semibold transition-colors" style={{ background: 'var(--s2)', color: 'var(--text)' }}
+              >Ver detalles</button>
               {p.href && (
                 <button onClick={e => { e.stopPropagation(); window.open(p.href, '_blank'); }}
                   className="w-8 flex items-center justify-center bg-slate-800/50 border border-slate-700/50 rounded-lg hover:bg-slate-700 transition-all" title="Bases y condiciones">
@@ -543,7 +521,7 @@
               {promo.img ? (
                 <img src={promo.img} alt={promo.title} className="w-full h-full object-cover opacity-90" onError={e => e.target.style.display = 'none'} />
               ) : (
-                <span className="text-7xl opacity-20">🏷️</span>
+                <span className="font-display font-extrabold text-3xl px-6 text-center" style={{ color: 'var(--muted)' }}>{promo.title}</span>
               )}
               <span className="absolute top-4 left-4 text-xs uppercase font-bold tracking-wider px-3 py-1 rounded-full border"
                 style={{ color: bank.color, background: `${bank.color}20`, borderColor: `${bank.color}40` }}>
@@ -556,7 +534,7 @@
               )}
               {isToday && (
                 <span className="absolute bottom-4 left-4 chip badge-active">
-                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span> Hoy disponible
+                  Hoy disponible
                 </span>
               )}
             </div>
@@ -567,12 +545,12 @@
               <div className="flex gap-2 flex-wrap mb-3">
                 {promo.discount_percent > 0 && (
                   <span className="chip" style={{ background: 'rgba(245,158,11,.15)', color: '#fcd34d', borderColor: 'rgba(245,158,11,.3)' }}>
-                    🏷️ {promo.discount_percent}% OFF
+                    -{promo.discount_percent}%
                   </span>
                 )}
                 {promo.installments !== null && promo.installments !== undefined && (
                   <span className="chip" style={{ background: 'rgba(139,92,246,.15)', color: '#c4b5fd', borderColor: 'rgba(139,92,246,.3)' }}>
-                    💳 {promo.installments === 0 ? 'Cuotas sin interés' : `${promo.installments} cuotas`}
+                    {promo.installments === 0 ? 'Cuotas sin interés' : `${promo.installments} cuotas`}
                   </span>
                 )}
                 <ValidityBadge info={vi} />
@@ -617,7 +595,7 @@
               {/* Similar promos in other banks */}
               {similar.length > 0 && (
                 <div className="mt-5 border-t border-slate-800/60 pt-4">
-                  <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                  <p className="text-xs font-bold text-slate-400  mb-2">
                     <i className="fa-solid fa-code-compare mr-1"></i> También en otros bancos
                   </p>
                   <div className="flex flex-col gap-2">
@@ -792,8 +770,7 @@
           <header className="mb-8 flex flex-col md:flex-row md:items-start md:justify-between gap-4 border-b border-slate-800/60 pb-6">
             <div>
               <div className="flex items-center gap-3">
-                <span className="text-3xl">🇵🇾</span>
-                <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-teal-400 to-indigo-400 bg-clip-text text-transparent">
+                <h1 className="text-3xl md:text-4xl font-extrabold">
                   PromoScraper PY
                 </h1>
               </div>
@@ -831,7 +808,7 @@
               { label: 'Mostrando', value: filteredPromos.length, color: 'text-sky-400' },
             ].map(s => (
               <div key={s.label} className="glass p-4 rounded-2xl">
-                <span className="text-[11px] text-slate-400 uppercase tracking-wider block font-semibold mb-0.5">{s.label}</span>
+                <span className="text-[11px] text-slate-400  block font-semibold mb-0.5">{s.label}</span>
                 <span className={`text-3xl font-black ${s.color}`}>{s.value}</span>
               </div>
             ))}
