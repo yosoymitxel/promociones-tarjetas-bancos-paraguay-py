@@ -3057,6 +3057,23 @@
     "installments": null
   },
   {
+    "id": "basa-f3371089",
+    "title": "BRUNO CORSI",
+    "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: todos los días hasta el 31 de diciembre de 2027.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/BRUNO%20CORSI.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "💊 Salud",
+    "validity": "Hasta el 31 de diciembre de 2027",
+    "days": [
+      "Todos"
+    ],
+    "discount_percent": null,
+    "installments": null
+  },
+  {
     "id": "basa-e8a6b891",
     "title": "BLOCK GYM",
     "desc": "20% de reintegro\nTarjetas: Basa MasterCard Oro, MasterCard Black y Visa Signature. ▪ Tope máximo de reintegro: Gs. 672.000 por cuenta de tarjeta por mes de promoción. ▪ Promoción válida exclusivamente para el pago semestral o anual\nDías: Todos los días\nVigencia: Todos los días desde agosto hasta el 31 de diciembre de 2026.",
@@ -3584,6 +3601,23 @@
     "installments": null
   },
   {
+    "id": "basa-93505330",
+    "title": "ENEACHE",
+    "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: todos los días hasta el 31 de diciembre de 2027.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/ENEACHE.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "💊 Salud",
+    "validity": "Hasta el 31 de diciembre de 2027",
+    "days": [
+      "Todos"
+    ],
+    "discount_percent": null,
+    "installments": null
+  },
+  {
     "id": "basa-86062ae8",
     "title": "Elegance",
     "desc": "10% de reintegro\nTarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad. ▪ tope de compra mensual para el reintegro de GS. 1.000.000.- por cuenta de tarjeta\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
@@ -3645,6 +3679,23 @@
     "bankColor": "#F59E0B",
     "category": "💊 Salud",
     "validity": "Hasta el 31 de diciembre de 2026",
+    "days": [
+      "Todos"
+    ],
+    "discount_percent": null,
+    "installments": null
+  },
+  {
+    "id": "basa-6a69b60f",
+    "title": "ESTILO SUR",
+    "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: todos los días hasta el 31 de diciembre de 2027.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/ESTILO%20SUR.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "💊 Salud",
+    "validity": "Hasta el 31 de diciembre de 2027",
     "days": [
       "Todos"
     ],
@@ -3890,23 +3941,6 @@
     "installments": null
   },
   {
-    "id": "basa-c5d4da69",
-    "title": "GIMSA",
-    "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: todos los días hasta el 31 de diciembre de 2026.",
-    "img": "",
-    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/DESTACADAS%20AGOSTO/Basa_Alianzas_Bases-Y-Condiciones_gimsa.pdf",
-    "bankId": "basa",
-    "bankShort": "BASA",
-    "bankColor": "#F59E0B",
-    "category": "💊 Salud",
-    "validity": "Hasta el 31 de diciembre de 2026",
-    "days": [
-      "Todos"
-    ],
-    "discount_percent": null,
-    "installments": null
-  },
-  {
     "id": "basa-9e97f5cb",
     "title": "Genz",
     "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: todos los días hasta el 31 de diciembre de 2026.",
@@ -4148,17 +4182,19 @@
   {
     "id": "basa-eb9739d6",
     "title": "INVERFIN",
-    "desc": null,
+    "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: Todos los días desde el 01 de agosto hasta el 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/DESTACADAS%20AGOSTO/INVERFIN.pdf",
     "bankId": "basa",
     "bankShort": "BASA",
     "bankColor": "#F59E0B",
-    "category": null,
+    "category": "💊 Salud",
+    "validity": "Hasta el 31 de diciembre de 2026",
+    "days": [
+      "Todos"
+    ],
     "discount_percent": null,
-    "days": [],
-    "installments": null,
-    "validity": null
+    "installments": null
   },
   {
     "id": "basa-601341bf",
@@ -4414,6 +4450,23 @@
     "days": [
       "Todos"
     ],
+    "installments": null
+  },
+  {
+    "id": "basa-f6062473",
+    "title": "MARIE MARIE",
+    "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: todos los días hasta el 31 de diciembre de 2027.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/MARIE%20MARIE.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "💊 Salud",
+    "validity": "Hasta el 31 de diciembre de 2027",
+    "days": [
+      "Todos"
+    ],
+    "discount_percent": null,
     "installments": null
   },
   {
@@ -5199,6 +5252,23 @@
     "installments": null
   },
   {
+    "id": "basa-e976554d",
+    "title": "RND",
+    "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: todos los días hasta el 31 de diciembre de 2027.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/RND.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "💊 Salud",
+    "validity": "Hasta el 31 de diciembre de 2027",
+    "days": [
+      "Todos"
+    ],
+    "discount_percent": null,
+    "installments": null
+  },
+  {
     "id": "basa-3290165b",
     "title": "RadiosShack",
     "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2026.",
@@ -5260,6 +5330,23 @@
     "bankColor": "#F59E0B",
     "category": "💊 Salud",
     "validity": "Hasta el 31 de diciembre de 2026",
+    "days": [
+      "Todos"
+    ],
+    "discount_percent": null,
+    "installments": null
+  },
+  {
+    "id": "basa-17893ca4",
+    "title": "RONDINA",
+    "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: todos los días hasta el 31 de diciembre de 2027.",
+    "img": "",
+    "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/noviembre%202026/RONDINA.pdf",
+    "bankId": "basa",
+    "bankShort": "BASA",
+    "bankColor": "#F59E0B",
+    "category": "💊 Salud",
+    "validity": "Hasta el 31 de diciembre de 2027",
     "days": [
       "Todos"
     ],
@@ -6260,6 +6347,21 @@
     "validity": null
   },
   {
+    "id": "itau-4a305305",
+    "title": "Syopar",
+    "desc": "10 Cuotas sin intereses con 15 %",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/syopar_logo_136x96.jpg",
+    "href": "https://www.itau.com.py/beneficios2/categoria/62",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Verano",
+    "discount_percent": 15,
+    "days": [],
+    "installments": 10,
+    "validity": null
+  },
+  {
     "id": "itau-f5f16fa8",
     "title": "Luminotecnia",
     "desc": "20 % con 10 Cuotas sin intereses",
@@ -6555,6 +6657,21 @@
     "bankColor": "#FF6B00",
     "category": "Itaú Personal Bank",
     "discount_percent": 25,
+    "days": [],
+    "installments": null,
+    "validity": null
+  },
+  {
+    "id": "itau-875fb2cf",
+    "title": "Biggie",
+    "desc": "20 % con tarjeta de crédito",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/Biggie.jpg",
+    "href": "https://www.itau.com.py/beneficios2/categoria/11",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Itaú Personal Bank",
+    "discount_percent": 20,
     "days": [],
     "installments": null,
     "validity": null
@@ -7865,6 +7982,21 @@
     "validity": null
   },
   {
+    "id": "itau-a9e65ed2",
+    "title": "Zona Fit",
+    "desc": "25 % Hasta con 12 Cuotas sin intereses",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/logo_zonafit_136X96.jpg",
+    "href": "https://www.itau.com.py/beneficios2/categoria/3",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Belleza y Salud",
+    "discount_percent": 25,
+    "days": [],
+    "installments": 12,
+    "validity": null
+  },
+  {
     "id": "itau-53c8ee94",
     "title": "SANTO PILATES",
     "desc": "20 % con 6 Cuotas sin intereses",
@@ -8345,6 +8477,21 @@
     "validity": null
   },
   {
+    "id": "itau-75b61a13",
+    "title": "Bazzar",
+    "desc": "30 % con 6 Cuotas sin intereses",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/Bazzar_136x96.png",
+    "href": "https://www.itau.com.py/beneficios2/categoria/9",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Indumentaria",
+    "discount_percent": 30,
+    "days": [],
+    "installments": 6,
+    "validity": null
+  },
+  {
     "id": "itau-dd15a6cb",
     "title": "Zora",
     "desc": "6 Cuotas sin intereses con 20 %",
@@ -8402,6 +8549,21 @@
     "discount_percent": 20,
     "days": [],
     "installments": 10,
+    "validity": null
+  },
+  {
+    "id": "itau-17f2f8a3",
+    "title": "Laguna Blanca",
+    "desc": "6 Cuotas sin intereses con 20 %",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/laguna_136x963e542c1b-c7b8-4579-a462-8082b8a09339.png",
+    "href": "https://www.itau.com.py/beneficios2/categoria/9",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Indumentaria",
+    "discount_percent": 20,
+    "days": [],
+    "installments": 6,
     "validity": null
   },
   {
@@ -8618,23 +8780,6 @@
     ],
     "installments": 12,
     "validity": "Hasta el 12 de octubre de 2027"
-  },
-  {
-    "id": "continental-d35dc69b",
-    "title": "Farmatotal",
-    "desc": "Los martes, en Farmatotal.\n- 20% de descuento en caja\n- 10% de reintegro\n\nLímite de compra mensual de hasta Gs. 1.000.000 por cuenta de tarjeta.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 10 de noviembre de 2026.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "💳 Financiero",
-    "discount_percent": 20,
-    "days": [
-      "Martes"
-    ],
-    "installments": null,
-    "validity": "Hasta el 10 de noviembre de 2026"
   },
   {
     "id": "continental-2ea1202b",
@@ -9573,23 +9718,6 @@
     "validity": "Hasta el 09 de julio de 2027"
   },
   {
-    "id": "continental-79576089",
-    "title": "ACE Tape Ruvicha",
-    "desc": "Todos los días, en ACE Grupo Tape Ruvicha.\n\n- 20% de descuento en caja en repuestos originales.\n- Hasta 12 cuotas sin intereses.\n\nLímite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 31 de diciembre de 2026.\n\nDisponible en:\n- Asunción\n- Ciudad del Este\n- Encarnación\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "💳 Financiero",
-    "discount_percent": 20,
-    "days": [
-      "Todos"
-    ],
-    "installments": 12,
-    "validity": "Hasta el 31 de diciembre de 2026"
-  },
-  {
     "id": "continental-8ed35989",
     "title": "Supermercado Sac - Miércoles de supermercados",
     "desc": "Los miércoles  en Supermercado Sac.\n- 10% de reintegro. Límite de compra semanal de hasta Gs. 1.000.000 por cuenta de tarjeta, en conjunto para todos los supermercados adheridos a la promoción de \"Miércoles de Supermercados\".\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 18 de noviembre de 2026.\n\n\n(*) No aplica para compras en patios de comida.\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
@@ -9981,23 +10109,6 @@
     "validity": "Hasta el 31 de marzo de 2027"
   },
   {
-    "id": "continental-24f2d66d",
-    "title": "Tonina",
-    "desc": "Todos los días, en Tonina. \n\n- Hasta 12 cuotas sin intereses, pagando con las tarjetas de crédito Continental exclusivamente a través del POS Dinelco. \n\nLímites de compras:\n- Cuotas sin intereses con límite de compra mensual de Gs. 50.000.000 por cuenta de tarjeta.\n\nAplica únicamente para compras presenciales. No aplica para pagos a través de POS Virtual. \n\nVigente hasta el 14 de noviembre de 2026.\n\n(*) No participan las tarjetas Pre-Pagas,  Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "💳 Financiero",
-    "discount_percent": null,
-    "days": [
-      "Todos"
-    ],
-    "installments": 12,
-    "validity": "Hasta el 14 de noviembre de 2026"
-  },
-  {
     "id": "continental-2a49466f",
     "title": "Las Hortensias - Cine",
     "desc": "Todos los días, en Las Hortensias - Cine\n- 50% de reintegro en el extracto, pagando con las tarjetas de crédito Continental (Black, Infinite y Privilege) exclusivamente a través del POS Dinelco. Límite de compra mensual de hasta Gs. 500.000 por cuenta de tarjeta.\n\nAplica únicamente para compras o pagos presenciales, vía POS físico. No aplica para pagos online, a través links de pagos o POS virtuales. \n\nVigente hasta el 10 de junio del 2027.\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
@@ -10030,6 +10141,23 @@
     ],
     "installments": 12,
     "validity": "Hasta el 09 de marzo de 2027"
+  },
+  {
+    "id": "continental-24f2d66d",
+    "title": "Tonina",
+    "desc": "Todos los días, en Tonina.\n- Hasta 12 cuotas sin intereses. Límite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 14 de noviembre de 2027.\n\nSucursales:\n\n*Asunción*\n-  Avda. Aviadores del Chaco c/ Juez E. Pino (Tonina Ñu Guasu)\n- Avda. Boggiani casi R.I. 5 Gral. Díaz.\n- Avda. Fernando de la Mora casi Paraíso (Tonina La Terminal)\n- Tacuary y Dr. Manuel Domínguez (Casa Central)\n\n*Capiatá*\n- Ruta 2 Km 16,5 y Gral. Garay (Tonina Aratirí)\n\n\n*Ciudad del Este*\n- Avda. Monseñor Rodríguez Km 5 casi Roberto L. Pettit\n\n\n*Coronel Oviedo*\n-  Carmelo Peralta 738 casi La Residenta\n\n\n*Encarnación*\n-  Avda. Irrazábal esq. Gral. Díaz y Aquidabán\n\n\n*Itauguá*\n-  Ruta Mcal. Estigarribia Km 32 casi Félix de Azara\n\n*Lambaré*\n-  Avda. Cacique Lambaré casi Panchito López\n\n\n*Limpio*\n-  Avda. General Aquino casi Capitán Medina\n\n\n*Luque*\n-  Avda. Corrales y Rojas Silva\n\n*Mariano Roque Alonso*\n-  Ruta Transchaco Km 16,5 casi Toledo\n\n*Ñemby / Villa Elisa*\n-  Acceso Sur 1826 casi Lomas Valentinas (zona límite)\n\n*San Lorenzo*\n-  Mcal. José Félix Estigarribia y Destacamento Cazal\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "img": "",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "💳 Financiero",
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": 12,
+    "validity": "Hasta el 14 de noviembre de 2027"
   },
   {
     "id": "continental-e8a9661e",
@@ -10099,23 +10227,6 @@
     ],
     "installments": null,
     "validity": "Hasta el 12 de junio de 2027"
-  },
-  {
-    "id": "continental-e4535fea",
-    "title": "Ford - Tape Ruvicha",
-    "desc": "Todos los días, en Tape Ruvicha (Ford Posventa). \n- 15% de descuento en caja y todos los días, hasta 24 cuotas sin intereses pagando con las tarjetas de crédito Continental exclusivamente a través del POS Dinelco.\n\nLímites de compras:\n- Cuotas sin intereses con límite de compra mensual de Gs. 50.000.000 por cuenta de tarjeta.\n\n\nAplica únicamente para compras presenciales de repuestos. No aplica para pagos a través de POS Virtual. \nVigente hasta el 14 de noviembre del 2026.\n\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "💳 Financiero",
-    "discount_percent": 15,
-    "days": [
-      "Todos"
-    ],
-    "installments": 24,
-    "validity": "Hasta el 14 de noviembre del 2026"
   },
   {
     "id": "continental-8faa0cf2",
@@ -11971,23 +12082,6 @@
     ],
     "installments": 12,
     "validity": "Hasta el 07 de octubre de 2027"
-  },
-  {
-    "id": "continental-d8cf948b",
-    "title": "Total Farma",
-    "desc": "Todos los Martes, en Total Farma   \n\n- 20% de reintegro en el extracto, pagando con las tarjetas de crédito Continental.  exclusivamente a través del POS Dinelco. \n\n\nLímites de compras: \n\n- Reintegros con límite de compra semanal de hasta Gs. 500.000 por cuenta de tarjeta. \n\n\n\nAplica únicamente para compras presenciales.No aplica para pagos a través de POS Virtual. \n\nVigente hasta el 10 de noviembre del 2026.\n\n \n\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones. \n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente. \n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "💳 Financiero",
-    "discount_percent": 20,
-    "days": [
-      "Martes"
-    ],
-    "installments": null,
-    "validity": "Hasta el 10 de noviembre del 2026"
   },
   {
     "id": "continental-a36c236c",
@@ -18941,6 +19035,23 @@
     "validity": "Hasta el 01 de diciembre de 2026"
   },
   {
+    "id": "continental-d8cf948b",
+    "title": "Total Farma",
+    "desc": "Los martes, en Total Farma.\n- 20% de reintegro. Límite de compra semanal de hasta Gs. 500.000 por cuenta de tarjeta.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 16 de noviembre de 2027.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "img": "",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "💳 Financiero",
+    "discount_percent": 20,
+    "days": [
+      "Martes"
+    ],
+    "installments": null,
+    "validity": "Hasta el 16 de noviembre de 2027"
+  },
+  {
     "id": "continental-dd7568a6",
     "title": "Grupo Laso - Estaciones de Servicio",
     "desc": "Los viernes, en las estaciones adheridas del Grupo Laso. \n- 10% de reintegro. Límite de compra semanal de hasta Gs. 500.000 por cuenta de tarjeta, en conjunto para todas las estaciones adheridas.\n\nAplica para cargas de combustible.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 06 de agosto de 2027.\n\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\nEstaciones adheridas\n\nBella Vista:\n- Ruta PY 06 Km 44\n\nEncarnación\n- Encarnación Boy Scout de Paraguay esq. Avda. Irrázabal.\n\nCapitán Miranda:\n- Ruta PY 06 Km 12\n\nAlto Vera:\n- Pedro Juan Caballero, cruce Caronay.\n\nHohenau:\n- Tte. 1º Osvaldo Tischler esq. Gral. Díaz\n\nObligado:\n- Avda. Fulgencio Yegros Nº 7400\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
@@ -21106,6 +21217,108 @@
     "validity": "Hasta el 04 de julio de 2027"
   },
   {
+    "id": "continental-900cb5d9",
+    "title": "Ford Posventa - Tape Ruvicha",
+    "desc": "Todos los días, en Ford Postventa - Tape Ruvicha.\n- Hasta 24 cuotas sin intereses. Límite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 14 de noviembre de 2027.\n\n\nSucursales:\n\n*Asunción*\n- Avda. Madame Lynch y José Pappalardo\n\n*Caaguazú*\n- Dr. José Rodríguez de Francia, Ruta PY02\n\n\n*Ciudad del Este*\n- La Paz casi San Blas - Zona Ruta PY02 Km 5,5\n\n*Encarnación*\n- Marginal Sur - Ruta PY06\n\n*Katueté*\n- Ruta PY03 - Zona Cruce Carolina\n\n*Loma Plata*\n- Avda. Central esq. Tirol\n\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "img": "",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "💳 Financiero",
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": 24,
+    "validity": "Hasta el 14 de noviembre de 2027"
+  },
+  {
+    "id": "continental-7e9a9d0b",
+    "title": "ACE - Grupo Tape Ruvicha",
+    "desc": "Todos los días, en ACE - Grupo Tape Ruvicha.\n- Hasta 12 cuotas sin intereses. Límite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 14 de noviembre de 2027.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "img": "",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "💳 Financiero",
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": 12,
+    "validity": "Hasta el 14 de noviembre de 2027"
+  },
+  {
+    "id": "continental-d35dc69b",
+    "title": "Farmatotal",
+    "desc": "Los martes, en Farmatotal.\n- 20% de descuento en caja.\n- 10% de reintegro.\n\nLímite de compra mensual de hasta Gs. 1.000.000 por cuenta de tarjeta.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 16 de noviembre de 2027.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "img": "",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "💳 Financiero",
+    "discount_percent": 20,
+    "days": [
+      "Martes"
+    ],
+    "installments": null,
+    "validity": "Hasta el 16 de noviembre de 2027"
+  },
+  {
+    "id": "personalpay-e106a6a7",
+    "title": "Personal PayTODOS LOS DÍAS",
+    "desc": "Participa pagando con Personal Pay desde el 16/11/2026 hasta el 31/03/2027",
+    "img": "https://publish-p32363-e119350.adobeaemcloud.com/content/dam/cms-personal-pay/paraguay/beneficios/card-1.jpg",
+    "href": "https://www.personal.com.py/pay/personal-pay-te-lleva-a-rio.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": null
+  },
+  {
+    "id": "personalpay-5c6a25d8",
+    "title": "te lleva aTODOS LOS DÍAS",
+    "desc": "Participa pagando con Personal Pay desde el 16/11/2026 hasta el 31/03/2027",
+    "img": "https://publish-p32363-e119350.adobeaemcloud.com/content/dam/cms-personal-pay/paraguay/beneficios/card-2.jpg",
+    "href": "",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": null
+  },
+  {
+    "id": "personalpay-ea394478",
+    "title": "Río de JaneiroTODOS LOS DÍAS",
+    "desc": "Participa pagando con Personal Pay desde el 16/11/2026 hasta el 31/03/2027",
+    "img": "https://publish-p32363-e119350.adobeaemcloud.com/content/dam/cms-personal-pay/paraguay/beneficios/card-3.jpg",
+    "href": "",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": null
+  },
+  {
     "id": "personalpay-bbcfa96b",
     "title": "50% más de contenido en Packs de NavegaciónTODOS LOS DÍAS",
     "desc": "Válido pagando con Personal Pay desde el 1 de enero al 31 de diciembre del 2026.",
@@ -21362,54 +21575,5 @@
     ],
     "installments": null,
     "validity": "Del 10 de abril de 2025 al 31 de diciembre de 2026"
-  },
-  {
-    "id": "personalpay-ecf32dd8",
-    "title": "Tarifas especiales, pagando con QR Personal Pay.TODOS LOS DÍAS",
-    "desc": "Válido pagando con Personal Pay Del 10 de abril de 2025 al 31 de diciembre de 2026",
-    "img": "https://publish-p32363-e119350.adobeaemcloud.com/content/dam/cms-personal-pay/paraguay/beneficios/bodycenter.png",
-    "href": "https://www.personal.com.py/pay/bodycenter.html",
-    "bankId": "personalpay",
-    "bankShort": "PersonalPay",
-    "bankColor": "#8B5CF6",
-    "category": null,
-    "discount_percent": null,
-    "days": [
-      "Todos"
-    ],
-    "installments": null,
-    "validity": "Del 10 de abril de 2025 al 31 de diciembre de 2026"
-  },
-  {
-    "id": "personalpay-4a6cf36e",
-    "title": "2x1 en compra de entradas.TODOS LOS DÍAS",
-    "desc": "Valido pagando con tu tarjeta de debito virtual de Personal Pay.Del 5 de octubre hasta el 31 de diciembre de 2026",
-    "img": "https://publish-p32363-e119350.adobeaemcloud.com/content/dam/cms-personal-pay/paraguay/beneficios/cinemark-vc.png",
-    "href": "https://www.personal.com.py/pay/cinemark.html",
-    "bankId": "personalpay",
-    "bankShort": "PersonalPay",
-    "bankColor": "#8B5CF6",
-    "category": null,
-    "discount_percent": null,
-    "days": [
-      "Todos"
-    ],
-    "installments": null,
-    "validity": "Hasta el 31 de diciembre de 2026"
-  },
-  {
-    "id": "personalpay-e5737095",
-    "title": "Seguinos para enterarte de las últimas novedades",
-    "desc": "Instagram",
-    "img": "https://publish-p32363-e119350.adobeaemcloud.com/content/dam/cms-personal-pay/iconos-redes/ui-icons-instagram.svg",
-    "href": "https://www.instagram.com/personalpaypy",
-    "bankId": "personalpay",
-    "bankShort": "PersonalPay",
-    "bankColor": "#8B5CF6",
-    "category": null,
-    "discount_percent": null,
-    "days": [],
-    "installments": null,
-    "validity": null
   }
 ]
