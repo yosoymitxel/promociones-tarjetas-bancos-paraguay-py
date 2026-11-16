@@ -15,6 +15,6 @@ jobs:
       - run: cp promos.json /tmp/prev.json && python main.py
       # Si los bancos fallan y sale menos de la mitad, no pisa los datos buenos
       - run: |
-          python -c "import json,sys;n=len(json.load(open('promos.json')));p=len(json.load(open('/tmp/prev.json')));print(n,p);sys.exit(n<p/2)" || git checkout promos.json index.html
+          python -c "import json,sys;n=len(json.load(open('promos.json')));p=len(json.load(open('/tmp/prev.json')));print(n,p);sys.exit(n<p/2)" || (git checkout promos.json && python -c "import json,main;from pathlib import Path;Path('index.html').write_text(main.generate_html(json.load(open('promos.json')),{}))")
           git config user.name bot && git config user.email bot@users.noreply.github.com
           git add promos.json index.html && git commit -m "promos" && git push || echo sin cambios

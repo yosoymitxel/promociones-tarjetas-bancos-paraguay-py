@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 from scraper_modules import SCRAPERS
@@ -28,7 +29,7 @@ def generate_html(all_promos: list[dict], run_stats: dict) -> str:
     template = template_path.read_text()
     html = template.replace("__PROMOS_JSON__", json.dumps(all_promos, ensure_ascii=False))
     html = html.replace("__STATS_JSON__",  json.dumps(run_stats,   ensure_ascii=False))
-    html = html.replace("__TIMESTAMP__",   datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
+    html = html.replace("__TIMESTAMP__",   datetime.now(ZoneInfo("America/Asuncion")).strftime("%d/%m/%Y %H:%M") + " (hora PY)")
     return html
 
 
