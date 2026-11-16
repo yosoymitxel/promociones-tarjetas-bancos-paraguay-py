@@ -30,6 +30,43 @@ def generate_html(all_promos: list[dict], run_stats: dict) -> str:
     html = template.replace("__PROMOS_JSON__", json.dumps(all_promos, ensure_ascii=False))
     html = html.replace("__STATS_JSON__",  json.dumps(run_stats,   ensure_ascii=False))
     html = html.replace("__TIMESTAMP__",   datetime.now(ZoneInfo("America/Asuncion")).strftime("%d/%m/%Y %H:%M") + " (hora PY)")
+    return optimize_html(html)
+
+
+def optimize_html(html: str) -> str:
+    """Compila JSX y Tailwind en la build: el navegador no baja Babel (~3 MB) ni genera CSS al cargar.
+
+    Si falta Node o falla algo, deja la página como estaba (Babel y Tailwind por CDN).
+    """
+    import re
+    import subprocess
+    import tempfile
+
+    m = re.search(r'<script type="text/babel"[^>]*>(.*?)</script>', html, re.S)
+    if not m:
+        return html
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            (d / "app.jsx").write_text(m.group(1))
+            (d / "page.html").write_text(html)
+            (d / "in.css").write_text("@tailwind base;@tailwind components;@tailwind utilities;")
+            (d / "tw.config.js").write_text(
+                "module.exports={content:['./page.html'],theme:{extend:{fontFamily:{sans:['Outfit','sans-serif'],mono:['Space Mono','monospace']}}}}"
+            )
+            run = lambda *a: subprocess.run(a, cwd=d, check=True, capture_output=True, text=True, timeout=180)
+            js = run("npx", "-y", "esbuild@0.24.0", "app.jsx", "--loader:.jsx=jsx", "--jsx=transform", "--minify", "--target=es2019").stdout
+            run("npx", "-y", "tailwindcss@3.4.17", "-c", "tw.config.js", "-i", "in.css", "-o", "out.css", "--minify")
+            css = (d / "out.css").read_text()
+    except Exception as exc:  # sin Node: queda la versión con CDN
+        print(f"[build] sin optimizar: {exc}")
+        return html
+    html = html[:m.start()] + "<script>" + js.replace("</script", "<\\/script") + "</script>" + html[m.end():]
+    html = re.sub(r'\s*<script src="https://unpkg.com/@babel/standalone[^"]*"></script>', "", html)
+    html = re.sub(r"\s*<script>\s*// Register a preset.*?</script>", "", html, flags=re.S)
+    html = re.sub(r'\s*<script src="https://cdn.tailwindcss.com"></script>', "", html)
+    html = re.sub(r"<script>\s*tailwind.config.*?</script>", lambda _: "<style>" + css + "</style>", html, flags=re.S)
+    print(f"[build] JSX {len(js)//1024} KB y CSS {len(css)//1024} KB precompilados")
     return html
 
 

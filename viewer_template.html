@@ -53,8 +53,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     crossorigin="anonymous" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script>
     // Register a preset that locks JSX to the classic runtime
@@ -712,6 +712,7 @@
         setSelDay(""); setSelInst(""); setSelValidity(""); setTodayOnly(false);
       };
 
+      const [shown, setShown] = useState(60);
       const filteredPromos = useMemo(() => {
         const q = debouncedQ.trim().toLowerCase();
         return PROMOS.filter(p => {
@@ -776,6 +777,9 @@
           return true;
         });
       }, [debouncedQ, selBank, selCat, selMall, malls, selDiscount, selDay, selInst, selValidity, todayOnly]);
+      useEffect(() => setShown(60), [filteredPromos]);
+      // Conteo por shopping una sola vez (antes recorría todas las promos en cada render)
+      const mallCounts = useMemo(() => Object.fromEntries(malls.map(m => [m.name, PROMOS.filter(p => mallOf(p).includes(m.name)).length])), [malls]);
 
       const todayCount = useMemo(() => PROMOS.filter(promoIsToday).length, []);
 
@@ -854,7 +858,7 @@
               {malls.length > 0 && (
                 <select value={selMall} onChange={e => setSelMall(e.target.value)} className={`${sel} text-slate-300`}>
                   <option value="">Todos los shoppings</option>
-                  {malls.map(m => { const c = PROMOS.filter(p => mallOf(p).includes(m.name)).length; return c ? <option key={m.name} value={m.name}>{m.name} ({c})</option> : null; })}
+                  {malls.map(m => { const c = mallCounts[m.name]; return c ? <option key={m.name} value={m.name}>{m.name} ({c})</option> : null; })}
                 </select>
               )}
             </div>
@@ -930,10 +934,17 @@
               </div>
             )}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-              {filteredPromos.map((p, i) => (
+              {filteredPromos.slice(0, shown).map((p, i) => (
                 <PromoCard key={p.id || `${p.bankId}-${i}`} p={p} index={i} onOpen={setActivePromo} />
               ))}
             </div>
+            {filteredPromos.length > shown && (
+              <div className="flex justify-center mt-8">
+                <button onClick={() => setShown(n => n + 60)} className="px-6 py-3 rounded-xl border border-slate-700 text-slate-300 hover:border-slate-500">
+                  Ver más ({filteredPromos.length - shown})
+                </button>
+              </div>
+            )}
           </div>
 
           {/* DETAIL MODAL */}
