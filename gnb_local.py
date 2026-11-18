@@ -8,7 +8,7 @@ Correlo cuando quieras (o programalo una vez por semana):
     python gnb_local.py          # baja y sube
     python gnb_local.py --no-push
 
-La actualización diaria usa gnb_raw.json mientras tenga menos de 10 días.
+La actualización diaria usa gnb_raw.json mientras tenga menos de 30 días.
 """
 import json
 import subprocess

@@ -310,7 +310,7 @@ class GNBScraper(ScraperBase):
     def scrape_api(self) -> list[dict]:
         # GNB bloquea los servidores de GitHub: gnb_raw.json lo genera gnb_local.py desde una PC
         local = Path("gnb_raw.json")
-        if local.exists() and time.time() - local.stat().st_mtime < 10 * 86400:
+        if local.exists() and time.time() - local.stat().st_mtime < 30 * 86400:
             promos = self._from_items(self._unwrap_api_response(json.loads(local.read_text(encoding="utf-8"))))
             if promos:
                 return promos
