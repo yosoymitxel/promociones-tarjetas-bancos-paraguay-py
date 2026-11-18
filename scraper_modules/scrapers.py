@@ -14,6 +14,7 @@ is ~20 lines instead of ~80.
 from __future__ import annotations
 
 import json
+import re
 import time
 from pathlib import Path
 from urllib.parse import urljoin
@@ -272,11 +273,8 @@ class GNBScraper(ScraperBase):
     requires_playwright = True
 
     _api_candidates = [
-        "https://www.beneficiosbancognb.com.py/apis/rewards/rewards/v1/benefits/benefits?pageSize=999",
-        "https://www.beneficiosbancognb.com.py/v2/api/categorias",
-        "https://www.beneficiosbancognb.com.py/v2/api/beneficios",
-        "https://www.beneficiosbancognb.com.py/api/categorias",
-        "https://www.beneficiosbancognb.com.py/api/beneficios",
+        "https://www.beneficiosbancognb.com.py/v2/apis/rewards/rewards/v1/benefits/benefits?pageSize=100",
+        "https://www.beneficiosbancognb.com.py/v2/apis/rewards/rewards/v1/benefits/categories?active=true",
     ]
 
     @staticmethod
@@ -284,18 +282,36 @@ class GNBScraper(ScraperBase):
         """Strip redundant "GNB" / "Día GNB" prefixes from titles."""
         return " ".join(title.replace("Día GNB", "").replace("GNB", "").split())
 
+    @staticmethod
+    def _image_url(raw) -> str:
+        """La API manda la imagen como blob PHP serializado: el path REAL va adentro."""
+        for entry in raw if isinstance(raw, list) else [raw]:
+            blob = entry.get("imageLink", "") if isinstance(entry, dict) else str(entry or "")
+            found = re.search(r's:\d+:"path";s:\d+:"([^"]+)"', blob)
+            if found:
+                return "https://www.beneficiosbancognb.com.py/" + found.group(1)
+            if blob.startswith("http"):
+                return blob
+        return ""
+
     def _from_items(self, items: list) -> list[dict]:
         # La API trae id: el enlace a la ficha del beneficio sirve de "bases"
         for it in items:
-            if isinstance(it, dict) and it.get("id") and not (it.get("url") or it.get("link")):
+            if not isinstance(it, dict):
+                continue
+            # La ficha de GNB sirve de "bases" aunque el ítem traiga el sitio del comercio
+            if it.get("id"):
                 it["url"] = f"https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/{it['id']}"
+            img = self._image_url(it.get("image") or it.get("bannerMobile") or it.get("banner"))
+            if img:
+                it["image"] = img
         return self._parse_api_items(items, title_cleaner=self._clean_title)
 
     def scrape_api(self) -> list[dict]:
         # GNB bloquea los servidores de GitHub: gnb_raw.json lo genera gnb_local.py desde una PC
         local = Path("gnb_raw.json")
         if local.exists() and time.time() - local.stat().st_mtime < 10 * 86400:
-            promos = self._from_items(self._unwrap_api_response(json.loads(local.read_text())))
+            promos = self._from_items(self._unwrap_api_response(json.loads(local.read_text(encoding="utf-8"))))
             if promos:
                 return promos
         for url in self._api_candidates:
