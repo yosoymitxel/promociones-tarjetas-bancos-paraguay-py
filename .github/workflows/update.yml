@@ -1,5 +1,10 @@
 name: update
 on:
+  # Rebuild generated promotion data whenever classification rules change.
+  push:
+    branches: [main]
+    paths:
+      - analysis.py
   schedule: [{ cron: '43 9 * * *' }]
   workflow_dispatch:
 permissions: { contents: write }
@@ -15,6 +20,6 @@ jobs:
       - run: cp promos.json /tmp/prev.json && python main.py
       # Si los bancos fallan y sale menos de la mitad, no pisa los datos buenos
       - run: |
-          python -c "import json,sys;n=len(json.load(open('promos.json')));p=len(json.load(open('/tmp/prev.json')));print(n,p);sys.exit(n<p/2)" || (git checkout promos.json && python -c "import json,main;from pathlib import Path;Path('index.html').write_text(main.generate_html(json.load(open('promos.json')),{}))")
+          python -c "import json,sys;n=len(json.load(open('promos.json')));p=len(json.load(open('/tmp/prev.json')));print(n,p);sys.exit(n<p/2)" || (git checkout -- promos.json && python -c "import json,main;from pathlib import Path;from analysis import analyze_promo;p=[analyze_promo(x) for x in json.load(open('promos.json',encoding='utf-8'))];Path('promos.json').write_text(json.dumps(p,ensure_ascii=False,indent=2),encoding='utf-8');Path('index.html').write_text(main.generate_html(p,{}))")
           git config user.name bot && git config user.email bot@users.noreply.github.com
           git add promos.json index.html && git commit -m "promos" && (git pull --rebase -X theirs origin main && git push) || echo sin cambios

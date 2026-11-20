@@ -156,8 +156,33 @@ _CATEGORY_RULES: list[tuple[str, list[str]]] = [
 ]
 
 
+_SUPERMARKET_CATEGORY = "🛒 Supermercados"
+_SUPERMARKET_TITLE_RE = re.compile(
+    r"\b(?:supermercados?|s[uú]per|mayoristas?)\b",
+    re.IGNORECASE,
+)
+_SUPERMARKET_CAMPAIGN_RE = re.compile(
+    r"\b(?:lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)"
+    r"\s+(?:de|en)\s+(?:los\s+)?(?:supermercados?|mayoristas?)\b",
+    re.IGNORECASE,
+)
+
+
+def _is_explicit_supermarket_promo(title: str, desc: str | None) -> bool:
+    """Detect explicit supermarket names in titles or weekday supermarket campaigns."""
+    return bool(
+        _SUPERMARKET_TITLE_RE.search(title or "")
+        or _SUPERMARKET_CAMPAIGN_RE.search(desc or "")
+    )
+
+
 def extract_category(title: str, desc: str | None) -> str | None:
     """Auto-categorize a promotion based on keyword matching."""
+    # A named supermarket campaign is a stronger signal than incidental food terms
+    # in its description (or a category incorrectly supplied by the source API).
+    if _is_explicit_supermarket_promo(title, desc):
+        return _SUPERMARKET_CATEGORY
+
     text = f"{title} {desc or ''}".lower()
 
     for category, keywords in _CATEGORY_RULES:
@@ -216,8 +241,11 @@ def analyze_promo(promo: dict) -> dict:
     promo["installments"] = extract_installments(title, desc)
     promo["validity"] = extract_validity(title, desc)
 
-    # Only set category if not already present
-    if not promo.get("category"):
-        promo["category"] = extract_category(title, desc)
+    detected_category = extract_category(title, desc)
+
+    # Override a conflicting source category only when the promo explicitly
+    # identifies a supermarket campaign. Otherwise preserve source metadata.
+    if detected_category == _SUPERMARKET_CATEGORY or not promo.get("category"):
+        promo["category"] = detected_category
 
     return promo
