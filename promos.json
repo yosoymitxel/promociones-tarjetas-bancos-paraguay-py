@@ -4198,19 +4198,17 @@
   {
     "id": "basa-2463c686",
     "title": "Garden Club",
-    "desc": "50% de reintegro\nTarjetas: 2. Beneficios Basa MasterCard Oro, MasterCard Black y Visa Signature:\nDías: Todos los días\nVigencia: todos los días hasta 31 de diciembre de 2026.",
+    "desc": null,
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/DESTACADAS%20SEPTIEMBRE/garden%20club.pdf",
     "bankId": "basa",
     "bankShort": "BASA",
     "bankColor": "#F59E0B",
-    "category": "💳 Financiero",
-    "validity": null,
-    "discount_percent": 50,
-    "days": [
-      "Todos"
-    ],
-    "installments": null
+    "category": null,
+    "discount_percent": null,
+    "days": [],
+    "installments": null,
+    "validity": null
   },
   {
     "id": "basa-9e97f5cb",
@@ -7224,7 +7222,7 @@
     "bankId": "gnb",
     "bankShort": "GNB",
     "bankColor": "#10B981",
-    "category": "Días GNB",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Lunes"
@@ -7343,7 +7341,7 @@
     "bankId": "gnb",
     "bankShort": "GNB",
     "bankColor": "#10B981",
-    "category": "Días GNB",
+    "category": "🛒 Supermercados",
     "discount_percent": 25,
     "days": [
       "Jueves"
@@ -8590,7 +8588,7 @@
     "bankId": "gnb",
     "bankShort": "GNB",
     "bankColor": "#10B981",
-    "category": "Días GNB",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Lunes"
@@ -8607,7 +8605,7 @@
     "bankId": "gnb",
     "bankShort": "GNB",
     "bankColor": "#10B981",
-    "category": "Días GNB",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Jueves"
@@ -11269,7 +11267,7 @@
     "bankId": "itau",
     "bankShort": "Itaú",
     "bankColor": "#FF6B00",
-    "category": "Itaú Personal Bank",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [],
     "installments": null,
@@ -13732,7 +13730,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -14038,7 +14036,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -14140,7 +14138,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -14208,7 +14206,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -14225,7 +14223,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Todos"
@@ -14242,7 +14240,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -14310,7 +14308,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 15,
     "days": [
       "Miércoles"
@@ -14344,7 +14342,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 15,
     "days": [
       "Miércoles"
@@ -14480,7 +14478,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -14616,7 +14614,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles",
@@ -14651,7 +14649,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 10,
     "days": [
       "Miércoles"
@@ -14702,7 +14700,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -14804,7 +14802,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -14872,7 +14870,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -14957,7 +14955,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -14974,7 +14972,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 10,
     "days": [
       "Miércoles"
@@ -15025,7 +15023,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -15194,7 +15192,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 15,
     "days": [
       "Miércoles"
@@ -15313,7 +15311,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -15532,7 +15530,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -15583,7 +15581,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -15670,7 +15668,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -15755,7 +15753,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -15789,7 +15787,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -15891,7 +15889,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -15942,7 +15940,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -15993,7 +15991,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -16027,7 +16025,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 25,
     "days": [
       "Miércoles"
@@ -16113,7 +16111,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 25,
     "days": [
       "Miércoles"
@@ -16130,7 +16128,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -16351,7 +16349,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -16471,7 +16469,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 10,
     "days": [
       "Miércoles"
@@ -16590,7 +16588,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -16726,7 +16724,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 15,
     "days": [
       "Miércoles"
@@ -16760,7 +16758,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -16777,7 +16775,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -17018,7 +17016,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -17154,7 +17152,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -17222,7 +17220,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Todos"
@@ -17239,7 +17237,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 15,
     "days": [
       "Miércoles"
@@ -17324,7 +17322,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -17375,7 +17373,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -17444,7 +17442,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -17867,7 +17865,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -18393,7 +18391,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 25,
     "days": [
       "Miércoles"
@@ -18461,7 +18459,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 15,
     "days": [
       "Miércoles"
@@ -18869,7 +18867,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -19209,7 +19207,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Lunes"
@@ -19462,7 +19460,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -19649,7 +19647,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -19666,7 +19664,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -19956,7 +19954,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -20008,7 +20006,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -20025,7 +20023,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 25,
     "days": [
       "Miércoles"
@@ -20144,7 +20142,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -20229,7 +20227,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 30,
     "days": [
       "Todos"
@@ -20399,7 +20397,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -20467,7 +20465,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -20654,7 +20652,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -20671,7 +20669,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -20756,7 +20754,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -20977,7 +20975,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 10,
     "days": [
       "Miércoles"
@@ -21011,7 +21009,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -21062,7 +21060,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -21079,7 +21077,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -21164,7 +21162,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 25,
     "days": [
       "Miércoles"
@@ -21232,7 +21230,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -21402,7 +21400,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 25,
     "days": [
       "Todos"
@@ -21419,7 +21417,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -21555,7 +21553,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -21657,7 +21655,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -21929,7 +21927,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -22219,7 +22217,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -22236,7 +22234,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -22253,7 +22251,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 10,
     "days": [
       "Miércoles"
@@ -22287,7 +22285,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -22338,7 +22336,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -22355,7 +22353,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -22372,7 +22370,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 10,
     "days": [
       "Miércoles"
@@ -22389,7 +22387,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -22440,7 +22438,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 10,
     "days": [
       "Miércoles"
@@ -22559,7 +22557,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Todos"
@@ -22678,7 +22676,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -23206,7 +23204,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -23240,7 +23238,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -23292,7 +23290,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -23309,7 +23307,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -23360,7 +23358,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -23513,7 +23511,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -23598,7 +23596,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -23751,7 +23749,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 15,
     "days": [
       "Miércoles"
@@ -23853,7 +23851,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -23989,7 +23987,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 10,
     "days": [
       "Miércoles"
@@ -24193,7 +24191,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -24261,7 +24259,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -24397,7 +24395,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 25,
     "days": [
       "Miércoles"
@@ -24414,7 +24412,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -24737,7 +24735,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -24856,7 +24854,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -24958,7 +24956,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -24975,7 +24973,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -25043,7 +25041,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -25094,7 +25092,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -25111,7 +25109,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -25247,7 +25245,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Todos"
@@ -25349,7 +25347,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
@@ -25417,7 +25415,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 15,
     "days": [
       "Miércoles"
@@ -25646,7 +25644,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Todos"
@@ -26035,7 +26033,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "🍽️ Gastronomía",
+    "category": "🛒 Supermercados",
     "discount_percent": 20,
     "days": [
       "Miércoles"
