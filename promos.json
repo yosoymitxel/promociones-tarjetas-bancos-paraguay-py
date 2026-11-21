@@ -4079,19 +4079,17 @@
   {
     "id": "basa-1dfaa6c0",
     "title": "Fleykoop",
-    "desc": "Tarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2027.",
+    "desc": null,
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/CUOTAS%20EXTENDIDAS%202027/Fleykoop.pdf",
     "bankId": "basa",
     "bankShort": "BASA",
     "bankColor": "#F59E0B",
-    "category": "💊 Salud",
-    "validity": "Hasta el 31 de diciembre de 2027",
-    "days": [
-      "Todos"
-    ],
+    "category": null,
     "discount_percent": null,
-    "installments": null
+    "days": [],
+    "installments": null,
+    "validity": null
   },
   {
     "id": "basa-63a94517",
@@ -4198,17 +4196,19 @@
   {
     "id": "basa-2463c686",
     "title": "Garden Club",
-    "desc": null,
+    "desc": "50% de reintegro\nTarjetas: 2. Beneficios Basa MasterCard Oro, MasterCard Black y Visa Signature:\nDías: Todos los días\nVigencia: todos los días hasta 31 de diciembre de 2026.",
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/DESTACADAS%20SEPTIEMBRE/garden%20club.pdf",
     "bankId": "basa",
     "bankShort": "BASA",
     "bankColor": "#F59E0B",
-    "category": null,
-    "discount_percent": null,
-    "days": [],
-    "installments": null,
-    "validity": null
+    "category": "💳 Financiero",
+    "validity": null,
+    "discount_percent": 50,
+    "days": [
+      "Todos"
+    ],
+    "installments": null
   },
   {
     "id": "basa-9e97f5cb",
@@ -6422,141 +6422,6 @@
       "Todos"
     ],
     "installments": null
-  },
-  {
-    "id": "eclub-8c4b0b64",
-    "title": "20% reintegroBolt",
-    "desc": "¡Viajá en Bolt y pagá con la Rojita! ¡Tenés 20% de reintegro los viernes y sábados de noviembre!",
-    "img": "https://eclub.com.py/wp-content/uploads/2025/11/google-pay-e1791034039179-150x150.png",
-    "href": "https://eclub.com.py/wp-content/uploads/2026/11/Promo-Bolt-Noviembre.pdf",
-    "bankId": "eclub",
-    "bankShort": "eClub",
-    "bankColor": "#EC4899",
-    "category": "💳 Financiero",
-    "discount_percent": 20,
-    "days": [
-      "Sábado",
-      "Viernes"
-    ],
-    "installments": null,
-    "validity": null
-  },
-  {
-    "id": "eclub-5301086c",
-    "title": "20% reintegroPedidosYa",
-    "desc": "¡Comé rico y pagá con la Rojita! ¡Tenés 20% de reintegro los domingos de noviembre!",
-    "img": "https://eclub.com.py/wp-content/uploads/2025/11/google-pay-e1791034039179-150x150.png",
-    "href": "https://eclub.com.py/wp-content/uploads/2026/11/tyc-pedidosya-noviembre.pdf",
-    "bankId": "eclub",
-    "bankShort": "eClub",
-    "bankColor": "#EC4899",
-    "category": "💳 Financiero",
-    "discount_percent": 20,
-    "days": [
-      "Domingo"
-    ],
-    "installments": null,
-    "validity": null
-  },
-  {
-    "id": "eclub-a7a88294",
-    "title": "20% reintegroRecarga Jaha Mas",
-    "desc": "¡Tenés 20% de reintegro en tus recargas Jaha y Mas los jueves de noviembre!",
-    "img": "https://eclub.com.py/wp-content/uploads/2025/11/google-pay-e1791034039179-150x150.png",
-    "href": "https://eclub.com.py/wp-content/uploads/2026/11/Promo-Billetaje-Noviembre.pdf",
-    "bankId": "eclub",
-    "bankShort": "eClub",
-    "bankColor": "#EC4899",
-    "category": "💳 Financiero",
-    "discount_percent": 20,
-    "days": [
-      "Jueves"
-    ],
-    "installments": null,
-    "validity": null
-  },
-  {
-    "id": "eclub-574bcd4f",
-    "title": "20% reintegroRecarga Saldo",
-    "desc": "¡Tenés 20% de reintegro en tus recargas de telefonía los martes de noviembre!",
-    "img": "https://eclub.com.py/wp-content/uploads/2025/11/google-pay-e1791034039179-150x150.png",
-    "href": "https://eclub.com.py/wp-content/uploads/2026/11/Promo-Telefonia-Noviembre.pdf",
-    "bankId": "eclub",
-    "bankShort": "eClub",
-    "bankColor": "#EC4899",
-    "category": "💳 Financiero",
-    "discount_percent": 20,
-    "days": [
-      "Martes"
-    ],
-    "installments": null,
-    "validity": null
-  },
-  {
-    "id": "eclub-e8375019",
-    "title": "15% reintegroFarmacia",
-    "desc": "¡Tenés 15% de reintegro en farmacias todos los miercoles de octubre!",
-    "img": "https://eclub.com.py/wp-content/uploads/2025/11/google-pay-e1791034039179-150x150.png",
-    "href": "https://eclub.com.py/wp-content/uploads/2026/11/Promo-Farmacia-Noviembre.pdf",
-    "bankId": "eclub",
-    "bankShort": "eClub",
-    "bankColor": "#EC4899",
-    "category": "💊 Salud",
-    "discount_percent": 15,
-    "days": [
-      "Miércoles"
-    ],
-    "installments": null,
-    "validity": null
-  },
-  {
-    "id": "eclub-21bbade4",
-    "title": "15% reintegroSupermercado",
-    "desc": "¡Tenés 15% de reintegro en supermercados todos los lunes de octubre pagando con QR!",
-    "img": "https://eclub.com.py/wp-content/uploads/2025/11/google-pay-e1791034039179-150x150.png",
-    "href": "https://eclub.com.py/wp-content/uploads/2026/11/Promo-Supermercado-Noviembre.pdf",
-    "bankId": "eclub",
-    "bankShort": "eClub",
-    "bankColor": "#EC4899",
-    "category": "🛒 Supermercados",
-    "discount_percent": 15,
-    "days": [
-      "Lunes"
-    ],
-    "installments": null,
-    "validity": null
-  },
-  {
-    "id": "eclub-28f92fb1",
-    "title": "Te devolvemos hasta el 40% reintegrode los intereses",
-    "desc": "En eCLUB tus gastos de todos los días juegan a tu favor. Usá la app para tus compras y pagos y tomá el control de tu tasa. Te devolvemos hasta el 40% de los intereses de tu Adelanto. Sin vueltas. Cuanto más usás, más ahorrás.",
-    "img": "https://eclub.com.py/wp-content/uploads/2025/11/google-pay-e1791034039179-150x150.png",
-    "href": "https://eclub.com.py/wp-content/uploads/2026/06/TÉRMINOS-Y-CONDICIONES-DEL-BENEFICIO-USÁ-Y-AHORRÁ-.pdf",
-    "bankId": "eclub",
-    "bankShort": "eClub",
-    "bankColor": "#EC4899",
-    "category": "💳 Financiero",
-    "discount_percent": 40,
-    "days": [
-      "Todos"
-    ],
-    "installments": null,
-    "validity": null
-  },
-  {
-    "id": "eclub-fb1d8fa9",
-    "title": "Reintegro comisión Cobros QR",
-    "desc": "Te reintegramos la comisión de todos los cobros que hagas con tu cuenta eCLUB! Sin limite de reintegro 🙂",
-    "img": "https://eclub.com.py/wp-content/uploads/2025/11/google-pay-e1791034039179-150x150.png",
-    "href": "https://eclub.com.py/wp-content/uploads/2026/05/TyC-Reintegro-Comision-Cobros-QR.pdf",
-    "bankId": "eclub",
-    "bankShort": "eClub",
-    "bankColor": "#EC4899",
-    "category": "💳 Financiero",
-    "discount_percent": null,
-    "days": [],
-    "installments": null,
-    "validity": null
   },
   {
     "id": "gnb-60286603",
@@ -26270,5 +26135,312 @@
     ],
     "installments": null,
     "validity": "Hasta el 01 de octubre de 2027"
+  },
+  {
+    "id": "personalpay-bbcfa96b",
+    "title": "50% más de contenido en Packs de NavegaciónTODOS LOS DÍAS",
+    "desc": "Válido pagando con Personal Pay desde el 1 de enero al 31 de diciembre del 2026.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/personal-packs.svg",
+    "href": "https://www.personal.com.py/pay/packs-de-navegacion-telefonia.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": 50,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": null
+  },
+  {
+    "id": "personalpay-c5820fa3",
+    "title": "Megas de regalo por compras y transacciones desde Personal PayTODOS LOS DÍAS",
+    "desc": "Válido pagando con Personal Pay desde el 1 de enero hasta el 31 de diciembre del 2026.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/personal.svg",
+    "href": "https://www.personal.com.py/pay/megas-regalo.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": "Hasta el 31 de diciembre del 2026"
+  },
+  {
+    "id": "personalpay-eea95d86",
+    "title": "WhatsApp gratis en tus compras de packs y recargas pagando con Personal PayTODOS LOS DÍAS",
+    "desc": "Válido para clientes prepagos que activen su linea desde el 1 de noviembre de 2026, hasta el 31 de marzo de 2027.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/whatsapp-pay.png",
+    "href": "https://www.personal.com.py/pay/whatsapp-gratis.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": "Hasta el 31 de marzo de 2027"
+  },
+  {
+    "id": "personalpay-b455fdf8",
+    "title": "2x1 en la compra de entradasTODOS LOS DIAS",
+    "desc": "Valido pagando con Personal Pay Del 1 de julio al 31 de diciembre de 2026.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/itau-plaza.png",
+    "href": "https://www.personal.com.py/pay/itau-plaza.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": "Del 1 de julio al 31 de diciembre de 2026"
+  },
+  {
+    "id": "personalpay-0a10e976",
+    "title": "20% de descuento + 3gb de regalo pagando con QR de Personal PayTODOS LOS MIERCOLES",
+    "desc": "Valido pagando con Personal Pay del 11 de agosto al 31 de diciembre de 2026.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/punto-farma.svg",
+    "href": "https://www.personal.com.py/pay/punto-farma-descto.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": 20,
+    "days": [
+      "Miércoles"
+    ],
+    "installments": null,
+    "validity": "Del 11 de agosto al 31 de diciembre de 2026"
+  },
+  {
+    "id": "personalpay-399411f6",
+    "title": "Tu plan pospago, ahora ilimitadoTODOS LOS DÍAS",
+    "desc": "Valido pagando con Personal Pay del 1 de noviembre del 2026 al 31 de marzo del 2027.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/plan-pay.png",
+    "href": "https://www.personal.com.py/pay/pospago-ilimitado.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": "🏋️ Fitness",
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": "Del 1 de noviembre del 2026 al 31 de marzo del 2027"
+  },
+  {
+    "id": "personalpay-e4db07fb",
+    "title": "20% de descuentoTODOS LOS DÍAS",
+    "desc": "Valido pagando con Personal Pay del 23 de septiembre de 2026 hasta agotar entradas.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/mamissima1.png",
+    "href": "https://www.personal.com.py/pay/mamissima.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": 20,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": null
+  },
+  {
+    "id": "personalpay-4a8135f5",
+    "title": "15% de descuento pagando con QR de Personal Pay.JUEVES",
+    "desc": "Válido pagando con Personal Pay del 2 de enero de 2026 al 29 de enero de 2027.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/grato.png",
+    "href": "https://www.personal.com.py/pay/grato.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": 15,
+    "days": [
+      "Jueves"
+    ],
+    "installments": null,
+    "validity": "Del 2 de enero de 2026 al 29 de enero de 2027"
+  },
+  {
+    "id": "personalpay-25b6c8ba",
+    "title": "20% de descuento pagando con QR de Personal Pay.LUNES A JUEVES",
+    "desc": "Válido pagando con Personal Pay Del 14 de abril de 2025 al 31 de diciembre de 2026.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/liberato.png",
+    "href": "https://www.personal.com.py/pay/liberato.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": 20,
+    "days": [
+      "Jueves",
+      "Lunes"
+    ],
+    "installments": null,
+    "validity": "Del 14 de abril de 2025 al 31 de diciembre de 2026"
+  },
+  {
+    "id": "personalpay-a43f5175",
+    "title": "10% de descuento pagando con Personal PayTODOS LOS DIAS",
+    "desc": "Válido pagando con Personal Pay desde el 11 de marzo al el 31 de diciembre de 2026.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/Plataforma.webp",
+    "href": "https://www.personal.com.py/pay/plataforma.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": 10,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": null
+  },
+  {
+    "id": "personalpay-e7bb71d1",
+    "title": "15% de descuento pagando con QR de Personal Pay.LUNES A JUEVES",
+    "desc": "Válido pagando con Personal Pay desde el 12 de enero al 31 de diciembre del 2026.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/barbas.png",
+    "href": "https://www.personal.com.py/pay/barbas.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": 15,
+    "days": [
+      "Jueves",
+      "Lunes"
+    ],
+    "installments": null,
+    "validity": null
+  },
+  {
+    "id": "personalpay-8b6087f3",
+    "title": "Hasta 30% de descuento pagando con QR de Personal Pay.TODOS LOS DÍAS",
+    "desc": "Válido pagando con Personal Pay Del 21 de abril de 2025 al 31 de diciembre de 2026.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/koru.png",
+    "href": "https://www.personal.com.py/pay/koru.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": 30,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": "Del 21 de abril de 2025 al 31 de diciembre de 2026"
+  },
+  {
+    "id": "personalpay-080e97ce",
+    "title": "20% de descuento pagando con QR de Personal PayMIERCOLES A VIERNES",
+    "desc": "Válido pagando con QR de Personal Pay del 1 de junio al 31 de diciembre de 2026.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/sport-palace.png",
+    "href": "https://www.personal.com.py/pay/sport-palace.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": 20,
+    "days": [
+      "Miércoles",
+      "Viernes"
+    ],
+    "installments": null,
+    "validity": "Del 1 de junio al 31 de diciembre de 2026"
+  },
+  {
+    "id": "personalpay-db35cc35",
+    "title": "20% de descuento pagando con QR de Personal PayTODOS LOS DÍAS",
+    "desc": "Válido pagando con QR de Personal Pay del 1 de junio al 31 de diciembre de 2026.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/mplay.png",
+    "href": "https://www.personal.com.py/pay/mplay.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": 20,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": "Del 1 de junio al 31 de diciembre de 2026"
+  },
+  {
+    "id": "personalpay-0816e73d",
+    "title": "10% de descuento, pagando con QR Personal Pay.TODOS LOS DÍAS",
+    "desc": "Válido pagando con Personal Pay Del 10 de abril de 2025 al 31 de diciembre de 2026",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/getfit.png",
+    "href": "https://www.personal.com.py/pay/getfit.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": 10,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": "Del 10 de abril de 2025 al 31 de diciembre de 2026"
+  },
+  {
+    "id": "personalpay-ecf32dd8",
+    "title": "Tarifas especiales, pagando con QR Personal Pay.TODOS LOS DÍAS",
+    "desc": "Válido pagando con Personal Pay Del 10 de abril de 2025 al 31 de diciembre de 2026",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/bodycenter.png",
+    "href": "https://www.personal.com.py/pay/bodycenter.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": "Del 10 de abril de 2025 al 31 de diciembre de 2026"
+  },
+  {
+    "id": "personalpay-4a6cf36e",
+    "title": "2x1 en compra de entradas.TODOS LOS DÍAS",
+    "desc": "Valido pagando con tu tarjeta de debito virtual de Personal Pay.Del 5 de octubre hasta el 31 de diciembre de 2026",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/cinemark-vc.png",
+    "href": "https://www.personal.com.py/pay/cinemark.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": "Hasta el 31 de diciembre de 2026"
+  },
+  {
+    "id": "personalpay-e5737095",
+    "title": "Seguinos para enterarte de las últimas novedades",
+    "desc": "Instagram",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/iconos-redes/ui-icons-instagram.svg",
+    "href": "https://www.instagram.com/personalpaypy",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": null,
+    "discount_percent": null,
+    "days": [],
+    "installments": null,
+    "validity": null
   }
 ]
