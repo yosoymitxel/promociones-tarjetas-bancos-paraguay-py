@@ -13355,7 +13355,7 @@
     "bankId": "itau",
     "bankShort": "Itaú",
     "bankColor": "#FF6B00",
-    "category": "💊 Salud y belleza",
+    "category": "🏋️ Deportes y fitness",
     "discount_percent": 25,
     "days": [],
     "installments": 12,
@@ -19349,7 +19349,7 @@
     "bankId": "continental",
     "bankShort": "Continental",
     "bankColor": "#3B82F6",
-    "category": "Otros",
+    "category": "🏋️ Deportes y fitness",
     "discount_percent": 20,
     "days": [
       "Todos"
@@ -27174,7 +27174,7 @@
     "bankId": "personalpay",
     "bankShort": "PersonalPay",
     "bankColor": "#8B5CF6",
-    "category": "Otros",
+    "category": "🏋️ Deportes y fitness",
     "discount_percent": 10,
     "days": [
       "Todos"
@@ -27192,7 +27192,7 @@
     "bankId": "personalpay",
     "bankShort": "PersonalPay",
     "bankColor": "#8B5CF6",
-    "category": "Otros",
+    "category": "🏋️ Deportes y fitness",
     "discount_percent": 10,
     "days": [
       "Todos"
