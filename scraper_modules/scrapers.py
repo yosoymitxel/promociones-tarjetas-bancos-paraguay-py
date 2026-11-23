@@ -583,8 +583,6 @@ class ContinentalScraper(ScraperBase):
                 continue  # handled as category — don't fall through
 
             # ── Flat: item is a direct commerce entry ─────────────────────
-            if not promos:
-                print(f"[Continental] campos: {sorted(item)[:30]}")
             title, desc, img, href, category = self._extract_item_fields(item)
             if not title or len(title) <= 2:
                 continue
@@ -639,32 +637,43 @@ class PersonalPayScraper(ScraperBase):
     def _clean_pp_title(cls, title: str) -> str:
         return cls._RE_PP_DAYS.sub('', title).strip()
 
+    DETAIL_JSON = "https://www.personal.com.py/data/pay-beneficios/beneficios.json"
+
     def scrape(self) -> list[dict]:
-        # El listado solo trae "20% de descuento"; el comercio y las condiciones están en /pay/<slug>.html
-        out = []
-        for p in super().scrape():
-            if '/pay/' not in (p.get('href') or ''):
-                continue  # enlaces a redes sociales, no beneficios
+        # El listado solo trae "20% de descuento"; comercio y condiciones están en beneficios.json,
+        # bajo la clave data-benefit de cada /pay/<slug>.html
+        promos = [p for p in super().scrape() if '/pay/' in (p.get('href') or '')]  # fuera redes sociales
+        try:
+            data = self.fetch_json(self.DETAIL_JSON, timeout=20).get('beneficios', {})
+        except Exception as exc:
+            print(f"[PersonalPay] {self.DETAIL_JSON}: {exc}")
+            data = {}
+        for p in promos:
             try:
                 html = self.fetch_html(p['href'], timeout=15)
-                p.update(self.parse_detail(html, p['title']))
+                key = (re.search(r'data-benefit="([^"]+)"', html) or [None, None])[1]
+                crumb = re.findall(r'<li>([^<]{2,60})</li>', html)
+                p.update(self.parse_detail(data.get(key) or {}, self._RE_PP_DAYS.sub(lambda m: ' · ' + m.group(0).capitalize(), p['title']), crumb[-1].strip() if crumb else ''))
             except Exception as exc:
                 print(f"[PersonalPay] {p['href']}: {exc}")
-            out.append(p)
-        return out
+        return promos
 
     @staticmethod
-    def parse_detail(html: str, offer: str) -> dict:
-        soup = BeautifulSoup(html, "html.parser")
-        box = soup.select_one('section[data-benefit] .content') or soup
-        h2 = box.find('h2')
-        name = re.sub(r'^\s*Promoci[oó]n(es)?\s+', '', h2.get_text(' ', strip=True), flags=re.I) if h2 else ''
+    def parse_detail(b: dict, offer: str, fallback_name: str = '') -> dict:
+        txt = lambda h: re.sub(r'\s+', ' ', BeautifulSoup(str(h), 'html.parser').get_text(' ')).strip(' -\t')
+        txt = lambda h, _t=txt: re.sub(r'\s+([,.:;])', r'\1', _t(h))
         lines = []
-        for el in box.find_all(['h4', 'p', 'li']):
-            t = re.sub(r'\s+([,.:])', r'\1', re.sub(r'^[-\s]+', '', el.get_text(' ', strip=True)))
-            if t:
-                lines.append(f"\n{t}:" if el.name == 'h4' else f"- {t}")
-        out = {'desc': f"{offer.rstrip('.')}.\n" + '\n'.join(lines).strip()} if lines else {}
+        for sec in b.get('secciones') or []:
+            lines.append(f"\n{txt(sec.get('titulo', ''))}:")
+            if sec.get('parrafo'):
+                lines.append(f"- {txt(sec['parrafo'])}")
+            for it in sec.get('lista') or []:
+                for x in (it.get('sublista', []) if isinstance(it, dict) else [it]):
+                    lines.append(f"- {txt(x)}")
+        out = {}
+        if lines:
+            out['desc'] = f"{offer.rstrip('.')}.\n" + '\n'.join(lines).strip()
+        name = re.sub(r'^\s*Promoci[oó]n(es)?\s+', '', b.get('nombre') or '', flags=re.I).strip() or fallback_name
         if name:
             out['title'] = name
         return out

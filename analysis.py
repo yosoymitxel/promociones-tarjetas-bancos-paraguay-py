@@ -75,6 +75,13 @@ def extract_days(title: str, desc: str | None) -> list[str]:
         if re.search(rf'\b{key}\b', text):
             days.add(name)
 
+    # Rangos: "lunes a jueves" → lunes, martes, miércoles, jueves
+    order = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+    norm = lambda w: _DAY_MAP.get(w) or _DAY_MAP[w[:-1]]  # "SÁBADOS" → "SÁBADO"
+    for x, y in re.findall(r'(LUNES|MARTES|MI[EÉ]RCOLES|JUEVES|VIERNES|S[AÁ]BADOS?)\s+(?:A|AL)\s+(MARTES|MI[EÉ]RCOLES|JUEVES|VIERNES|S[AÁ]BADOS?|DOMINGOS?)', text):
+        i, j = order.index(norm(x)), order.index(norm(y))
+        days.update(order[i:j + 1])
+
     # If "Todos" is found, just return that
     if "Todos" in days:
         return ["Todos"]
