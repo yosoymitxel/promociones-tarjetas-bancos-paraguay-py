@@ -92,6 +92,7 @@ _RE_CUOTAS = re.compile(
     re.IGNORECASE,
 )
 
+_DAY_ORDER = ["Todos", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 _DAY_NAMES_ES = {
     "lunes": "Lunes", "martes": "Martes",
     "mi[eé]rcoles": "Miércoles", "jueves": "Jueves",
@@ -151,6 +152,11 @@ class BASAPDFParser:
         days        = self._extract_days(full_text, validity)
         cards       = self._extract_cards(full_text)
 
+        sections = self._benefit_sections(full_text)
+        if len(sections) > 1:
+            days = sorted({d for *_, ds in sections for d in ds}, key=_DAY_ORDER.index)
+            if "Todos" in days:
+                days = ["Todos"]
         desc = self._build_desc(
             discount_str=benefit_str,
             installments=installments,
@@ -161,6 +167,9 @@ class BASAPDFParser:
             commerce_name=commerce_name,
         )
 
+        if len(sections) > 1:
+            # Cada tarjeta con su % y sus días (ej. Oro todos los días, el resto solo viernes)
+            desc = "\n".join(f"{card}: {pct} · {vig}" for card, pct, vig, _ in sections)
         return {
             "desc":             desc,
             "validity":         validity,
@@ -221,6 +230,9 @@ class BASAPDFParser:
             return None, None
 
     def _extract_installments(self, text: str) -> int | None:
+        m2 = re.search(r'cuotas\s+sin\s+inter[eé]s(?:es)?\W{0,20}hasta\s+(\d{1,2})', text, re.I)
+        if m2:
+            return int(m2.group(1))
         m = _RE_CUOTAS.search(text)
         if not m:
             return None
@@ -260,6 +272,21 @@ class BASAPDFParser:
             order = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
             return sorted(found, key=lambda d: order.index(d) if d in order else 99)
         return ["Todos"]
+
+    def _benefit_sections(self, text: str) -> list[tuple[str, str, str, list[str]]]:
+        """Un bloque por "Vigencia:": (tarjeta, %, vigencia, días). Vacío si hay uno solo."""
+        out, start = [], 0
+        for m in re.finditer(r'vigencia\s*:\s*([^\n]{5,120})', text, re.I):
+            chunk = text[start:m.start()]
+            start = m.end()
+            head = re.findall(r'beneficios?\s+(?:con\s+(?:la\s+)?|para\s+(?:las?\s+)?)?([^:\n]{3,60}):', chunk, re.I)
+            pcts = sorted({int(x) for x in re.findall(r'(\d{1,2})\s*%', chunk)})
+            vig = m.group(1).strip().rstrip('.')
+            card = head[-1].strip() if head else 'Tarjetas'
+            card = re.sub(r'^(todas\s+las\s+)?dem[aá]s\s+tarjetas.*', 'Demás tarjetas', card, flags=re.I)
+            pct = ' / '.join(f'{x}%' for x in pcts) or 'cuotas'
+            out.append((card, pct, vig, self._extract_days(vig, vig)))
+        return out if len(out) > 1 else []
 
     def _extract_cards(self, text: str) -> str | None:
         lines = [line.strip() for line in text.splitlines() if line.strip()]
@@ -340,7 +367,7 @@ class BASAPDFParser:
             parts.append(discount_str)
         if installments is not None:
             cuota_str = "sin interés" if installments == 0 else f"{installments} cuotas"
-            parts.append(f"{installments if installments else ''} cuotas {cuota_str}".strip())
+            parts.append("Cuotas sin interés" if installments == 0 else f"Hasta {installments} cuotas sin intereses")
 
         # Conditions
         if cards:

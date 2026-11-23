@@ -61,8 +61,14 @@ _SHORT_DAYS = {
 
 
 def extract_days(title: str, desc: str | None) -> list[str]:
-    """Extract days of the week mentioned in the text."""
-    text = f"{title} {desc or ''}".upper()
+    """Días de la promo principal: lo que va después de "Además," suele ser otro beneficio
+    (ej. "Los miércoles 20%... Además, todos los días: cuotas")."""
+    # El día va al principio; más abajo hay direcciones ("Santo Domingo") y letra chica
+    text = f"{title} {(desc or '')[:600]}".upper()
+    return _days(re.split(r'\bADEM[AÁ]S\b', text)[0]) or _days(text)
+
+
+def _days(text: str) -> list[str]:
     days: set[str] = set()
 
     # Check full day names and phrases first
