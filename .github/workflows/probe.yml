@@ -1,0 +1,25 @@
+name: probe
+on: workflow_dispatch
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install httpx beautifulsoup4 playwright pdfplumber && python -m playwright install --with-deps chromium
+      - run: |
+          python - <<'PY'
+          import io, pdfplumber
+          from playwright.sync_api import sync_playwright
+          from scraper_modules.basa_pdf import BASAPDFParser
+          B='https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/'
+          urls=[B+'noviembre%202026/restaurantes.pdf', B+'CUOTAS%20EXTENDIDAS%202027/Fortis.pdf', B+'DESTACADAS%20SEPTIEMBRE/Basa_Alianzas_Bases-Y-Condiciones_el%20negro.pdf']
+          with sync_playwright() as p:
+              b=p.chromium.launch(); pg=b.new_page(); pg.goto('https://www.bancobasa.com.py/promociones-personas', wait_until='domcontentloaded', timeout=45000)
+              for u in urls:
+                  data=pg.request.get(u).body()
+                  P=BASAPDFParser(); t=P._extract_text(data)
+                  print('=====',u); print(repr(t[-2500:])); print('SECTIONS', P._benefit_sections(t)); print('INST', P._extract_installments(t))
+          PY
