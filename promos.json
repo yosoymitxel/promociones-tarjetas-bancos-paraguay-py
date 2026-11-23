@@ -4495,7 +4495,10 @@
     "discount_percent": 20,
     "days": [
       "Domingo",
-      "Miércoles"
+      "Jueves",
+      "Miércoles",
+      "Sábado",
+      "Viernes"
     ],
     "installments": null,
     "expired": false
@@ -6983,7 +6986,10 @@
     "discount_percent": 25,
     "days": [
       "Domingo",
-      "Miércoles"
+      "Jueves",
+      "Miércoles",
+      "Sábado",
+      "Viernes"
     ],
     "installments": null,
     "validity": "Del 01 de julio al 31 de diciembre del 2026",
@@ -7002,7 +7008,10 @@
     "discount_percent": 25,
     "days": [
       "Domingo",
-      "Miércoles"
+      "Jueves",
+      "Miércoles",
+      "Sábado",
+      "Viernes"
     ],
     "installments": null,
     "validity": "Del 02 de enero del 31 de diciembre del 2026",
@@ -7021,7 +7030,12 @@
     "discount_percent": 20,
     "days": [
       "Domingo",
-      "Lunes"
+      "Jueves",
+      "Lunes",
+      "Martes",
+      "Miércoles",
+      "Sábado",
+      "Viernes"
     ],
     "installments": null,
     "validity": "Del 2 de noviembre al 30 de diciembre del 2026",
@@ -7420,7 +7434,10 @@
     "discount_percent": 20,
     "days": [
       "Domingo",
-      "Miércoles"
+      "Jueves",
+      "Miércoles",
+      "Sábado",
+      "Viernes"
     ],
     "installments": null,
     "validity": "Del 01 de julio al 31 de diciembre del 2026",
@@ -7726,8 +7743,12 @@
     "category": "Otros",
     "discount_percent": 20,
     "days": [
+      "Jueves",
       "Lunes",
-      "Sábado"
+      "Martes",
+      "Miércoles",
+      "Sábado",
+      "Viernes"
     ],
     "installments": 12,
     "validity": "Del 27 de marzo al 31 de diciembre del 2026",
@@ -8666,7 +8687,10 @@
     "category": "🍽️ Gastronomía",
     "discount_percent": 25,
     "days": [
+      "Jueves",
       "Lunes",
+      "Martes",
+      "Miércoles",
       "Viernes"
     ],
     "installments": null,
@@ -8883,8 +8907,12 @@
     "category": "Otros",
     "discount_percent": 20,
     "days": [
+      "Jueves",
       "Lunes",
-      "Sábado"
+      "Martes",
+      "Miércoles",
+      "Sábado",
+      "Viernes"
     ],
     "installments": null,
     "validity": "Del 01 de julio al 31 de diciembre del 2026",
@@ -9118,7 +9146,10 @@
     "category": "🎓 Educación",
     "discount_percent": 20,
     "days": [
+      "Jueves",
       "Lunes",
+      "Martes",
+      "Miércoles",
       "Viernes"
     ],
     "installments": null,
@@ -9209,7 +9240,10 @@
     "category": "Otros",
     "discount_percent": 25,
     "days": [
+      "Jueves",
       "Lunes",
+      "Martes",
+      "Miércoles",
       "Viernes"
     ],
     "installments": null,
@@ -14123,6 +14157,22 @@
     "bankColor": "#FF6B00",
     "category": "👗 Moda",
     "discount_percent": null,
+    "days": [],
+    "installments": null,
+    "validity": null,
+    "expired": false
+  },
+  {
+    "id": "itau-940dc229",
+    "title": "SFERA",
+    "desc": "25 % Hasta con tarjeta de crédito",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/SFERA136X9696654625-c75b-4ec5-a6cd-113828256da8.png",
+    "href": "https://www.itau.com.py/beneficios2/categoria/9",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "👗 Moda",
+    "discount_percent": 25,
     "days": [],
     "installments": null,
     "validity": null,
@@ -26802,15 +26852,33 @@
     "expired": false
   },
   {
+    "id": "continental-ad525aac",
+    "title": "Casa Yasy - Miércoles de Supermercados",
+    "desc": "Los miércoles, en Casa Yasy (Concepción).\n- 20% de reintegro. Límite de compra semanal de hasta Gs. 1.000.000 por cuenta de tarjeta, en conjunto para todos los supermercados adheridos a la promoción de \"Miércoles de Supermercados\".\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 11 de mayo de 2027.\n\n(*) No aplica para compras en patios de comida.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "img": "",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "🛒 Supermercados",
+    "discount_percent": 20,
+    "days": [
+      "Miércoles"
+    ],
+    "installments": null,
+    "validity": "Hasta el 11 de mayo de 2027",
+    "expired": false
+  },
+  {
     "id": "personalpay-bbcfa96b",
-    "title": "50% más de contenido en Packs de NavegaciónTODOS LOS DÍAS",
-    "desc": "50% más de contenido en Packs de NavegaciónTODOS LOS DÍAS.\n- Personal Pay\n- Beneficios\n- Personal",
+    "title": "Packs de Navegación Telefonía 50% Más de Contenido",
+    "desc": "50% más de contenido en Packs de Navegación · Todos los días.\nVigencia:\n- Desde el 1 enero al 31 de diciembre del 2026.\n\nCondiciones:\n- Promoción válida para todos los clientes de Telefonía Personal (Prepago y Pospagos)\n\nBeneficios:\n- + 50% de contenido en saldo de navegación en Packs para líneas vigentes, líneas portadas y Nuevas Altas de Telefonía.\n\nObservaciones:\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previos y a exclusivo criterio de Personal Pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal Pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resuelta por Personal Pay a su solo arbitrio.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/personal-packs.svg",
     "href": "https://www.personal.com.py/pay/packs-de-navegacion-telefonia.html",
     "bankId": "personalpay",
     "bankShort": "PersonalPay",
     "bankColor": "#8B5CF6",
-    "category": "💳 Servicios",
+    "category": "📱 Tecnología",
     "discount_percent": 50,
     "days": [
       "Todos"
@@ -26821,8 +26889,8 @@
   },
   {
     "id": "personalpay-c5820fa3",
-    "title": "Megas de regalo por compras y transacciones desde Personal PayTODOS LOS DÍAS",
-    "desc": "Megas de regalo por compras y transacciones desde Personal PayTODOS LOS DÍAS.\n- Personal Pay\n- Beneficios\n- Personal",
+    "title": "Megas de regalo",
+    "desc": "Megas de regalo por compras y transacciones desde Personal Pay · Todos los días.\nVigencia:\n- Desde el 01 de enero al 31 de diciembre del 2026.\n\nCondiciones:\n- Promoción válida para todos los clientes de Telefonía Personal (Prepago y Pospagos) Rango de transacciones para acceder al beneficio.\n\nBeneficios:\n- ­ Megas de regalo por compras y transacciones desde Personal Pay.\n- ­ Aplica todos los días a estas transacciones Transferencias, Giro de dinero, Compras en comercios, Recarga, pago de servicios. (estos podrían sufrir modificación previo acuerdo entre Personal y Personal Pay)\n\nTope de compra:\n- Sin Tope de compras\n\nModalidad:\n- Los megas se acreditan directo como saldo, puede ser visualizado desde la App de Tienda Personal o marcando *454#.\n\nObservaciones:\n- La promoción NO ES ACUMULABLE con otras promociones.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.­",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/personal.svg",
     "href": "https://www.personal.com.py/pay/megas-regalo.html",
     "bankId": "personalpay",
@@ -26834,13 +26902,13 @@
       "Todos"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Desde el 01 de enero al 31 de diciembre del 2026",
     "expired": false
   },
   {
     "id": "personalpay-eea95d86",
-    "title": "WhatsApp gratis en tus compras de packs y recargas pagando con Personal PayTODOS LOS DÍAS",
-    "desc": "WhatsApp gratis en tus compras de packs y recargas pagando con Personal PayTODOS LOS DÍAS.\n- Personal Pay\n- Beneficios\n- WhatsApp gratis",
+    "title": "WhatsApp gratis",
+    "desc": "WhatsApp gratis en tus compras de packs y recargas pagando con Personal Pay · Todos los días.\nVigencia:\n- Del 1 de noviembre del 2026 al 31 de marzo de 2027.\n\nBeneficio:\n- WhatsApp gratis para los clientes prepagos que activen su línea desde el 1 de noviembre de 2026, que realicen recargas o compren packs con Personal Pay.\n\nDía:\n- Todos los días.\n\nTope de compra:\n- Sin tope.\n\nObservaciones:\n- Aplica a todos los clientes nuevos prepago que recarguen o compren packs con Personal Pay, valido desde la app de Personal Pay, app Mi Personal, web Personal, ussd.\n- Aplica todos los días.\n- Valido para clientes de la telefonía Personal.\n- El WhatsApp gratis permite enviar y recibir mensajes de texto, notas de voz, archivos, estados. No esta habilitado para llamadas y video llamadas, reproducción de videos de links externos, uso de la ubicación en tiempo real.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/whatsapp-pay.png",
     "href": "https://www.personal.com.py/pay/whatsapp-gratis.html",
     "bankId": "personalpay",
@@ -26852,13 +26920,13 @@
       "Todos"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 1 de noviembre del 2026 al 31 de marzo de 2027",
     "expired": false
   },
   {
     "id": "personalpay-b455fdf8",
-    "title": "2x1 en la compra de entradasTODOS LOS DIAS",
-    "desc": "2x1 en la compra de entradasTODOS LOS DIAS.\n- Personal Pay\n- Beneficios\n- 2x1 en Cines",
+    "title": "2x1 en Cines",
+    "desc": "2x1 en la compra de entradas · Todos los dias.\nVigencia:\n- Del 1 de julio al 31 de diciembre de 2026.\n\nBeneficios:\n- 2x1 en la compra de entradas para todos los clientes que paguen con Personal Pay.\n\nDía:\n- Todos los días.\n\nTope de compra:\n- Hasta 4 promos 2x1, es decir hasta 8 entradas. Por día, por cliente.\n\nObservaciones:\n- Aplica a la compra de entradas en la boletería del cine.\n- Válido para entradas con precio de adulto. No aplica a entradas con precio de niño.\n- Aplica a pagos realizados vía QR desde la app de Personal Pay.\n- Aplica a salas 2D y 3D, sobre el precio de lista.\n- No válido para películas con restricción, contenidos alternativos, estrenos, preventas o preestrenos.\n- No aplica en feriados.\n- Cines adheridos: ITAÚ CINEMAPOP (Encarnación y Oviedo), CINE PLAZA (Ciudad del Este) y CINES ITAÚ PINEDO (Central).\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal Pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal Pay considere necesarios.\n- Cualquier situación no prevista en estas Bases y Condiciones será resuelta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/itau-plaza.png",
     "href": "https://www.personal.com.py/pay/itau-plaza.html",
     "bankId": "personalpay",
@@ -26870,13 +26938,13 @@
       "Todos"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 1 de julio al 31 de diciembre de 2026",
     "expired": false
   },
   {
     "id": "personalpay-0a10e976",
-    "title": "20% de descuento + 3gb de regalo pagando con QR de Personal PayTODOS LOS MIERCOLES",
-    "desc": "20% de descuento + 3gb de regalo pagando con QR de Personal PayTODOS LOS MIERCOLES.\n- Personal Pay\n- Beneficios\n- Punto Farma",
+    "title": "descuento en Punto Farma",
+    "desc": "20% de descuento + 3gb de regalo pagando con QR de Personal PayTODOS LOS  · Miercoles.\nVigencia:\n- Hasta el 31 de diciembre de 2026\n\nBeneficios:\n- Durante la vigencia de la promoción:\n- 20% de descuento pagando con QR de Personal Pay. Los miércoles.\n- + 3GB de regalo por compras desde Gs. 50.000\n\nTope de compra:\n- Sin Tope de compra\n\nObservaciones:\n- Aplica los días miércoles\n- Valido vía QR Personal Pay.\n- compra mínima Gs. 50.000\n- 3GB: 1 acreditación por cliente por día de promo\n- 3GB solo miércoles y exclusivo telefonía Personal\n- Modalidad descuento en caja.\n- Promoción válida para la Cadena Punto Farma en todos sus puntos de venta, APP Call Center y compras realizadas desde su página www.puntofarma.com.py\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco via QR desde la App de Personal Pay\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio\n- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/punto-farma.svg",
     "href": "https://www.personal.com.py/pay/punto-farma-descto.html",
     "bankId": "personalpay",
@@ -26888,13 +26956,13 @@
       "Miércoles"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Hasta el 31 de diciembre de 2026",
     "expired": false
   },
   {
     "id": "personalpay-399411f6",
-    "title": "Tu plan pospago, ahora ilimitadoTODOS LOS DÍAS",
-    "desc": "Tu plan pospago, ahora ilimitadoTODOS LOS DÍAS.\n- Personal Pay\n- Beneficios\n- Tu plan pospago ilimitado con Pay",
+    "title": "Tu plan pospago ilimitado con Pay",
+    "desc": "Tu plan pospago, ahora ilimitado · Todos los días.\nVigencia:\n- Del 1 de noviembre de 2026 al 31 de marzo de 2027.\n\nBeneficio:\n- Pagando tu plan de telefonía (1P) desde la app de Personal Pay tu plan es ilimitado. una vez utilizado todos los gigas de su plan de datos el cliente podrá seguir navegando de manera ilimitada a baja velocidad hasta el siguiente ciclo de acreditación.\n\nDía:\n- Todos los días.\n\nTope de compra:\n- Aplica un beneficio por cliente, por cuenta.\n\nObservaciones:\n- Aplica a todos los clientes de telefonía (1P) que abonen su plan desde la app de Personal Pay.\n- El beneficio lo recibe la línea (1P) de telefonía que esta realizando el pago.\n- Aplica todos los días. Pago mínimo Gs. 70.000.\n- Valido para clientes de la telefonía Personal.\n- No aplica a clientes que tengan combinación de 2 o 3 productos.\n- Beneficio plan ilimitado, una vez utilizado todos los gigas de su plan de datos el cliente podrá seguir navegando de manera ilimitada a baja velocidad hasta el siguiente ciclo de acreditación.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/plan-pay.png",
     "href": "https://www.personal.com.py/pay/pospago-ilimitado.html",
     "bankId": "personalpay",
@@ -26906,13 +26974,13 @@
       "Todos"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 1 de noviembre de 2026 al 31 de marzo de 2027",
     "expired": false
   },
   {
     "id": "personalpay-e4db07fb",
-    "title": "20% de descuentoTODOS LOS DÍAS",
-    "desc": "20% de descuentoTODOS LOS DÍAS.\n- Personal Pay\n- Beneficios\n- Mamissima",
+    "title": "Mamissima",
+    "desc": "20% de descuento · Todos los días.\nVigencia:\n- Del 23 de septiembre de 2026 hasta agotar entradas.\n\nBeneficios:\n- 20% de descuento, pagando con Personal Pay.\n\nTope de compra:\n- Sin Tope de compras.\n\nObservaciones:\n- Aplica a compras de entradas por Ticketea. Hasta agotar stock.\n- La promoción NO ES ACUMULABLE con otras promociones.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal Pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal Pay considere necesario.\n- Cualquier situación no prevista en estas Bases y Condiciones será resuelta por Personal Pay a su solo arbitrio.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/mamissima1.png",
     "href": "https://www.personal.com.py/pay/mamissima.html",
     "bankId": "personalpay",
@@ -26929,8 +26997,8 @@
   },
   {
     "id": "personalpay-4a8135f5",
-    "title": "15% de descuento pagando con QR de Personal Pay.JUEVES",
-    "desc": "15% de descuento pagando con QR de Personal Pay.JUEVES.\n- Personal Pay\n- Beneficios\n- Grato Almacen de Regalos",
+    "title": "Grato Almacen de Regalos",
+    "desc": "15% de descuento pagando con QR de Personal Pay. · Jueves.\nVigencia:\n- Del 2 de enero de 2026 al 29 de enero de 2027.\n\nBeneficios:\n- 15% de descuento para todos los clientes que paguen con QR de Personal Pay.\n\nDía:\n- Los jueves.\n\nTope de compra:\n- Gs. 500.000 por día de promo\n\nObservaciones:\n- Aplica a pagos con QR de Personal Pay\n- Aplica los días jueves.\n- Modalidad descuento en caja.\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal Pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/grato.png",
     "href": "https://www.personal.com.py/pay/grato.html",
     "bankId": "personalpay",
@@ -26942,32 +27010,70 @@
       "Jueves"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 2 de enero de 2026 al 29 de enero de 2027",
+    "expired": false
+  },
+  {
+    "id": "personalpay-7b320206",
+    "title": "Archi Supermercados",
+    "desc": "15% de descuento pagando con QR de Personal Pay. · Jueves.\nVigencia:\n- Del 2 de enero de 2026 al 29 de enero de 2027.\n\nBeneficios:\n- 15% de descuento para todos los clientes que paguen con QR de Personal Pay.\n\nDía:\n- Los jueves.\n\nTope de compra:\n- Gs. 500.000 por día de promo\n\nObservaciones:\n- Aplica a pagos con QR de Personal Pay\n- Aplica los días jueves.\n- Modalidad descuento en caja.\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal Pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/archi-supermercados.png",
+    "href": "https://www.personal.com.py/pay/archi-supermercados.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": "🛒 Supermercados",
+    "discount_percent": 15,
+    "days": [
+      "Jueves"
+    ],
+    "installments": null,
+    "validity": "Del 2 de enero de 2026 al 29 de enero de 2027",
+    "expired": false
+  },
+  {
+    "id": "personalpay-02968658",
+    "title": "La Tienda Archi",
+    "desc": "15% de descuento pagando con QR de Personal Pay. · Jueves.\nVigencia:\n- Del 2 de enero de 2026 al 29 de enero de 2027.\n\nBeneficios:\n- 15% de descuento para todos los clientes que paguen con QR de Personal Pay.\n\nDía:\n- Los jueves.\n\nTope de compra:\n- Gs. 500.000 por día de promo\n\nObservaciones:\n- Aplica a pagos con QR de Personal Pay\n- Aplica los días jueves.\n- Modalidad descuento en caja.\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal Pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/archi-tienda.png",
+    "href": "https://www.personal.com.py/pay/archi-tienda.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": "Otros",
+    "discount_percent": 15,
+    "days": [
+      "Jueves"
+    ],
+    "installments": null,
+    "validity": "Del 2 de enero de 2026 al 29 de enero de 2027",
     "expired": false
   },
   {
     "id": "personalpay-25b6c8ba",
-    "title": "20% de descuento pagando con QR de Personal Pay.LUNES A JUEVES",
-    "desc": "20% de descuento pagando con QR de Personal Pay.LUNES A JUEVES.\n- Personal Pay\n- Beneficios\n- Liberato",
+    "title": "Liberato",
+    "desc": "20% de descuento pagando con QR de Personal Pay. · Lunes a jueves.\nVigencia:\n- Del 14 de abril de 2025 al 31 de diciembre de 2026.\n\nBeneficios:\n- 20% de descuento, pagando con QR de Personal Pay. De lunes a jueves. Aplica a las marcas de Liberato Basics, Lacoste, Tommy Hilfiger y Liberato.\n\nTope de compra:\n- Sin Tope de compras\n\nObservaciones:\n- Aplica a pagos con QR de Personal Pay\n- Aplica de lunes a jueves\n- Modalidad descuento en caja.\n- Aplica a las marcas de Liberato Basics, Lacoste, Tommy Hilfiger y Liberato.\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/liberato.png",
     "href": "https://www.personal.com.py/pay/liberato.html",
     "bankId": "personalpay",
     "bankShort": "PersonalPay",
     "bankColor": "#8B5CF6",
-    "category": "Otros",
+    "category": "👗 Moda",
     "discount_percent": 20,
     "days": [
       "Jueves",
-      "Lunes"
+      "Lunes",
+      "Martes",
+      "Miércoles"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 14 de abril de 2025 al 31 de diciembre de 2026",
     "expired": false
   },
   {
     "id": "personalpay-a43f5175",
-    "title": "10% de descuento pagando con Personal PayTODOS LOS DIAS",
-    "desc": "10% de descuento pagando con Personal PayTODOS LOS DIAS.\n- Personal Pay\n- Beneficios\n- Plataforma 10",
+    "title": "descuento en Plataforma 10",
+    "desc": "10% de descuento pagando con Personal Pay · Todos los dias.\nVigencia:\n- Del 11 de marzo al 31 de diciembre de 2026\n\nBeneficios:\n- Durante la vigencia de la promoción:\n- 10% de descuento para todos los clientes que paguen con Personal Pay.\n- Aplica todos los días.\n\nTope de compra:\n- Gs. 200.000 por cuenta cliente, por transacción.\n\nObservaciones:\n- Aplica a pagos realizados en la web de Plataforma 10 con Personal Pay.\n- Aplica todos los días.\n- Modalidad descuento en caja.\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal Pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal Pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/Plataforma.webp",
     "href": "https://www.personal.com.py/pay/plataforma.html",
     "bankId": "personalpay",
@@ -26979,13 +27085,13 @@
       "Todos"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 11 de marzo al 31 de diciembre de 2026",
     "expired": false
   },
   {
     "id": "personalpay-e7bb71d1",
-    "title": "15% de descuento pagando con QR de Personal Pay.LUNES A JUEVES",
-    "desc": "15% de descuento pagando con QR de Personal Pay.LUNES A JUEVES.\n- Personal Pay\n- Beneficios\n- barbas",
+    "title": "barbas",
+    "desc": "15% de descuento pagando con QR de Personal Pay. · Lunes a jueves.\nVigencia:\n- Del 12 de enero al 31 de diciembre de 2026.\n\nBeneficios:\n- 15% de descuento, pagando con QR de Personal Pay. Valido de lunes a jueves.\n\nTope de compra:\n- Sin Tope de compras\n\nObservaciones:\n- Aplica a pagos con QR de Personal Pay\n- Valido de lunes a jueves.\n- Modalidad descuento en caja.\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/barbas.png",
     "href": "https://www.personal.com.py/pay/barbas.html",
     "bankId": "personalpay",
@@ -26995,34 +27101,36 @@
     "discount_percent": 15,
     "days": [
       "Jueves",
-      "Lunes"
+      "Lunes",
+      "Martes",
+      "Miércoles"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 12 de enero al 31 de diciembre de 2026",
     "expired": false
   },
   {
     "id": "personalpay-8b6087f3",
-    "title": "Hasta 30% de descuento pagando con QR de Personal Pay.TODOS LOS DÍAS",
-    "desc": "Hasta 30% de descuento pagando con QR de Personal Pay.TODOS LOS DÍAS.\n- Personal Pay\n- Beneficios\n- Koru",
+    "title": "Koru",
+    "desc": "Hasta 30% de descuento pagando con QR de Personal Pay. · Todos los días.\nVigencia:\n- Del 21 de abril de 2025 al 31 de diciembre de 2026.\n\nBeneficios:\n- Hasta 30% de descuento, pagando con QR de Personal Pay.\n- 30% en Masajes: relajantes, cuello y espalda, reflexologia, shiatzu capilar.\n- 15% en tratamientos faciales: limpieza express, drenaje facial.\n\nTope de compra:\n- Sin Tope de compras\n\nObservaciones:\n- Aplica a pagos con QR de Personal Pay\n- Aplica de todos los días\n- Modalidad descuento en caja.\n- 30% en Masajes: relajantes, cuello y espalda, reflexologia, shiatzu capilar.\n- 15% en tratamientos faciales: limpieza express, drenaje facial.\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/koru.png",
     "href": "https://www.personal.com.py/pay/koru.html",
     "bankId": "personalpay",
     "bankShort": "PersonalPay",
     "bankColor": "#8B5CF6",
-    "category": "Otros",
+    "category": "💊 Salud y belleza",
     "discount_percent": 30,
     "days": [
       "Todos"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 21 de abril de 2025 al 31 de diciembre de 2026",
     "expired": false
   },
   {
     "id": "personalpay-080e97ce",
-    "title": "20% de descuento pagando con QR de Personal PayMIERCOLES A VIERNES",
-    "desc": "20% de descuento pagando con QR de Personal PayMIERCOLES A VIERNES.\n- Personal Pay\n- Beneficios\n- Sport Palace",
+    "title": "Sport Palace",
+    "desc": "20% de descuento pagando con QR de Personal PayMIERCOLES A  · Viernes.\nVigencia:\n- Del 1 de junio al 31 de diciembre de 2026..\n\nBeneficios:\n- 20% de descuento, pagando con QR de Personal Pay.\n\nTope de compra:\n- Sin Tope de compras\n\nObservaciones:\n- ­- Aplica a pagos con QR de Personal Pay\n- ­- Aplica miercoles a viernes.\n- ­- Modalidad descuento en caja.\n- ­- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- ­- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal pay.\n- ­- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- ­- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/sport-palace.png",
     "href": "https://www.personal.com.py/pay/sport-palace.html",
     "bankId": "personalpay",
@@ -27031,35 +27139,36 @@
     "category": "🏋️ Deportes y fitness",
     "discount_percent": 20,
     "days": [
+      "Jueves",
       "Miércoles",
       "Viernes"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 1 de junio al 31 de diciembre de 2026",
     "expired": false
   },
   {
     "id": "personalpay-db35cc35",
-    "title": "20% de descuento pagando con QR de Personal PayTODOS LOS DÍAS",
-    "desc": "20% de descuento pagando con QR de Personal PayTODOS LOS DÍAS.\n- Personal Pay\n- Beneficios\n- M Play",
+    "title": "M Play",
+    "desc": "20% de descuento pagando con QR de Personal Pay · Todos los días.\nVigencia:\n- Del 1 de junio al 31 de diciembre de 2026.\n\nBeneficios:\n- 20% de descuento en juegos pagando con QR de Personal Pay. Todos los días.\n- Aplica a recargas de Gs. 100.000.\n- Pagando la reserva de un cumple con Personal Pay, te llevás un opcional sorpresa para tu fiesta.\n\nTope de compra:\n- Aplica a recargas de Gs. 100.000.\n\nObservaciones:\n- Aplica todos los días.\n- Válido pagando con QR de Personal Pay.\n- El 20% aplica en juegos realizando una carga de Gs. 100.000.\n- Pagando la reserva de un cumple con Personal Pay, te llevás un opcional sorpresa para tu fiesta.\n- Modalidad descuento en caja.\n- Promoción válida para los locales de MPlay Mariscal y MPlay Mariano.\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- La promoción NO ES ACUMULABLE con otras promociones.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal Pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal Pay considere necesario.\n- Cualquier situación no prevista en estas Bases y Condiciones será resuelta por Personal Pay a su solo arbitrio.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/mplay.png",
     "href": "https://www.personal.com.py/pay/mplay.html",
     "bankId": "personalpay",
     "bankShort": "PersonalPay",
     "bankColor": "#8B5CF6",
-    "category": "Otros",
+    "category": "🎬 Entretenimiento",
     "discount_percent": 20,
     "days": [
       "Todos"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 1 de junio al 31 de diciembre de 2026",
     "expired": false
   },
   {
     "id": "personalpay-0816e73d",
-    "title": "10% de descuento, pagando con QR Personal Pay.TODOS LOS DÍAS",
-    "desc": "10% de descuento, pagando con QR Personal Pay.TODOS LOS DÍAS.\n- Personal Pay\n- Beneficios\n- Get Fit",
+    "title": "Get Fit",
+    "desc": "10% de descuento, pagando con QR Personal Pay. · Todos los días.\nVigencia:\n- ­ Del 10 de abril de 2025 al 31 de diciembre de 2026.\n\nBeneficios:\n- 10% de descuento, pagando con QR de Personal Pay. Aplica a pagos mensuales, valido en planes de musculación y funcional.\n\nTope de compra:\n- Sin Tope de compras\n\nObservaciones:\n- Aplica a pagos con QR de Personal Pay\n- Aplica todos los días\n- Modalidad descuento en caja.\n- Aplica a pagos mensuales, valido en planes de musculación y funcional.\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/getfit.png",
     "href": "https://www.personal.com.py/pay/getfit.html",
     "bankId": "personalpay",
@@ -27071,13 +27180,31 @@
       "Todos"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 10 de abril de 2025 al 31 de diciembre de 2026",
+    "expired": false
+  },
+  {
+    "id": "personalpay-5409745b",
+    "title": "Full Training",
+    "desc": "10% de descuento, pagando con QR Personal Pay. · Todos los días.\nVigencia:\n- ­ Del 10 de abril de 2025 al 31 de diciembre de 2026.\n\nBeneficios:\n- 10% de descuento, pagando con QR de Personal Pay. Aplica a pagos mensuales, valido en planes de musculación y funcional.\n\nTope de compra:\n- Sin Tope de compras\n\nObservaciones:\n- Aplica a pagos con QR de Personal Pay\n- Aplica todos los días\n- Modalidad descuento en caja.\n- Aplica a pagos mensuales, valido en planes de musculación y funcional.\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
+    "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/fulltraining.png",
+    "href": "https://www.personal.com.py/pay/fulltraining.html",
+    "bankId": "personalpay",
+    "bankShort": "PersonalPay",
+    "bankColor": "#8B5CF6",
+    "category": "Otros",
+    "discount_percent": 10,
+    "days": [
+      "Todos"
+    ],
+    "installments": null,
+    "validity": "Del 10 de abril de 2025 al 31 de diciembre de 2026",
     "expired": false
   },
   {
     "id": "personalpay-ecf32dd8",
-    "title": "Tarifas especiales, pagando con QR Personal Pay.TODOS LOS DÍAS",
-    "desc": "Tarifas especiales, pagando con QR Personal Pay.TODOS LOS DÍAS.\n- Personal Pay\n- Beneficios\n- Body Center",
+    "title": "Body Center",
+    "desc": "Tarifas especiales, pagando con QR Personal Pay. · Todos los días.\nVigencia:\n- ­ Del 10 de abril de 2025 al 31 de diciembre de 2026.\n\nBeneficios:\n- Tarifa especial para clientes de Personal pay\n\nTope de compra:\n- Sin Tope de compras\n\nObservaciones:\n- Aplica a pagos con QR de Personal Pay\n- Modalidad descuento en caja.\n- La promoción es válida para los pagos realizados a través de los dispositivos de la red Bancard y Dinelco.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/bodycenter.png",
     "href": "https://www.personal.com.py/pay/bodycenter.html",
     "bankId": "personalpay",
@@ -27089,13 +27216,13 @@
       "Todos"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 10 de abril de 2025 al 31 de diciembre de 2026",
     "expired": false
   },
   {
     "id": "personalpay-4a6cf36e",
-    "title": "2x1 en compra de entradas.TODOS LOS DÍAS",
-    "desc": "2x1 en compra de entradas.TODOS LOS DÍAS.\n- Personal Pay\n- Beneficios\n- 2x1 en Cinemark",
+    "title": "2x1 en Cinemark",
+    "desc": "2x1 en compra de entradas. · Todos los días.\nVigencia:\n- Del 5 de octubre al 31 de diciembre de 2026.\n\nBeneficios:\n- 2x1 en compra de entradas para todos los clientes que paguen con su tarjeta de debito virtual de Personal Pay.\n\nDía:\n- Todos los días.\n\nTope de compra:\n- Tope de una promo 2x1 por transacción. Sin tope de transacciones por día.\n\nObservaciones:\n- Aplica a compra de entradas en la web y en la app de Cinemark, beneficio exclusivo pagando con la tarjeta de débito virtual de Personal Pay.\n- Para acceder al beneficio la tarjera de debito virtual de Personal Pay debe estar catastrada en la web/app de Cinemark.\n- Beneficio todos los días el precio del 2x1 aplica sobre la tarifa full Price del cine y formato.\n- Aplica solo en Cinemark Paseo la Galería.\n- Aplica sala 2D-3D y XD, 2x1 sobre full price del formato. Precio adulto, fin de semana.\n- No válido para películas con restricción, contenidos alternativos, estrenos, preventas o preestrenos. No aplica en feriados. No acumulable con otras promociones.\n- Las condiciones y/o beneficios podrán ser modificados o ajustados sin aviso previo y a exclusivo criterio de Personal pay.\n- Las eventuales modificaciones serán informadas a los clientes a través de los medios que Personal pay considere necesario.\n- Cualquier situación no prevista en estas Bases y condiciones será resulta por Personal Pay a su solo arbitrio.\n- La promoción NO ES ACUMULABLE con otras promociones.",
     "img": "https://www.personal.com.ar/content/dam/cms-personal-pay/paraguay/beneficios/cinemark-vc.png",
     "href": "https://www.personal.com.py/pay/cinemark.html",
     "bankId": "personalpay",
@@ -27107,7 +27234,7 @@
       "Todos"
     ],
     "installments": null,
-    "validity": null,
+    "validity": "Del 5 de octubre al 31 de diciembre de 2026",
     "expired": false
   }
 ]
