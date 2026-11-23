@@ -247,11 +247,12 @@
       { id: 'personalpay', name: 'Personal Pay', short: 'PersonalPay', color: '#8B5CF6', url: 'https://www.personalpay.com.py/beneficios' },
     ];
 
-    const CATEGORIES = [
-      "🍽️ Gastronomía", "🛒 Supermercados", "💊 Salud", "🏋️ Fitness",
-      "📱 Tecnología", "👗 Moda", "🏠 Hogar", "🎓 Educación",
-      "🏨 Viajes & Hoteles", "⛽ Combustible", "🎬 Entretenimiento", "💳 Financiero",
-    ];
+    // Rubros presentes en los datos, de más a menos promos; "Otros" al final
+    const CATEGORIES = (() => {
+      const n = {};
+      for (const p of window.__APP_DATA__.promos) if (p.category) n[p.category] = (n[p.category] || 0) + 1;
+      return Object.keys(n).sort((a, b) => (a === 'Otros') - (b === 'Otros') || n[b] - n[a]).map(c => [c, n[c]]);
+    })();
 
     const DAYS_ORDER = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
     const DAYS_ES = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
@@ -742,6 +743,7 @@
           }
 
           // Validity status
+          if (selValidity === "" && getValidityInfo(p.validity).status === 'expired') return false;
           if (selValidity !== "") {
             const vi = getValidityInfo(p.validity);
             if (selValidity === "active" && vi.status !== "active") return false;
@@ -830,7 +832,7 @@
               </select>
               <select value={selCat} onChange={e => setSelCat(e.target.value)} className={`${sel} text-slate-300`}>
                 <option value="">Todas las categorías</option>
-                {CATEGORIES.map(c => <option key={c} value={c}>{c}</option>)}
+                {CATEGORIES.map(([c, n]) => <option key={c} value={c}>{c} ({n})</option>)}
               </select>
               {malls.length > 0 && (
                 <select value={selMall} onChange={e => setSelMall(e.target.value)} className={`${sel} text-slate-300`}>

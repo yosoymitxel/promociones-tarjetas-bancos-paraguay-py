@@ -7,6 +7,7 @@ and auto-categorizes promotions based on title/description keywords.
 from __future__ import annotations
 
 import re
+from datetime import date
 
 
 # ─── Discount ──────────────────────────────────────────────────────
@@ -107,132 +108,104 @@ def extract_installments(title: str, desc: str | None) -> int | None:
 
 
 # ─── Category ─────────────────────────────────────────────────────
-_CATEGORY_RULES: list[tuple[str, list[str]]] = [
-    ("🍽️ Gastronomía", [
-        "restaurant", "restaurante", "gastro", "comida", "hamburgues",
-        "pizza", "café", "cafeter", "bar ", "resto", "parrilla",
-        "sushi", "sbarro", "don vito", "fork", "pollos",
-    ]),
-    ("🛒 Supermercados", [
-        "supermercado", "super ", "súper", "mayorista",
-    ]),
-    ("💊 Salud", [
-        "farmac", "salud", "clínica", "clinic", "hospital", "sanatorio",
-        "odonto", "dental", "óptic", "optic", "rapidoc", "drugstore",
-        "veterinar",
-    ]),
-    ("🏋️ Fitness", [
-        "gym", "fitness", "spa", "deport", "sport",
-    ]),
-    ("📱 Tecnología", [
-        "electr", "tech", "celular", "cell", "samsung", "motorola",
-        "istore", "ishop", "compu", "novatech", "radioshack",
-    ]),
-    ("👗 Moda", [
-        "moda", "ropa", "zapato", "calzado", "tienda", "boutique",
-        "joya", "relojer", "crocs", "nike", "new balance", "timberland",
-        "cole haan",
-    ]),
-    ("🏠 Hogar", [
-        "hogar", "mueble", "deco", "ferret", "construct",
-        "electrodom", "colchon", "sommier",
-    ]),
-    ("🎓 Educación", [
-        "colegio", "universidad", "educativ", "instituto", "academ",
-    ]),
-    ("🏨 Viajes & Hoteles", [
-        "hotel", "viaje", "travel", "turismo", "resort",
-        "aerolín", "vuelo",
-    ]),
-    ("⛽ Combustible", [
-        "copetrol", "petromax", "petrobras", "combustible", "enex",
-    ]),
-    ("🎬 Entretenimiento", [
-        "cine", "cinemark", "show", "stand up", "teatro", "evento",
-    ]),
-    ("💳 Financiero", [
-        "cuotas", "reintegro", "cashback", "sorteo",
-    ]),
+# Rubros fijos: las etiquetas de cada banco ("Días GNB", "Verano", "Itaú Personal Bank",
+# "MasterCard Debit"...) son campañas, no rubros, y se reclasifican por palabras clave.
+_CATEGORY_RULES: list[tuple[str, str]] = [
+    ("🛒 Supermercados", r"supermercad|s[uú]per\b|mayorista|hipermercad|contimarket|biggie|stock\b|superseis|casa rica|delimarket|salemma|real\b|areté|arete|pulsak|\bmarket\b|almac[eé]n|alimentos|distribuidora|atacado"),
+    ("⛽ Combustible", r"copetrol|petromax|petrobras|combustible|\benex\b|\bshell\b|puma energy|estaci[oó]n de servicio"),
+    ("💊 Salud y belleza", r"farma|salud|cl[ií]nica|hospital|sanatorio|odonto|dental|[oó]ptic|laborator|belleza|peluquer|barber|barbas|est[eé]tica|cosm[eé]t|perfum|spa\b|masaje|u[ñn]as|isdin|auditiv|nutri|suplement|dermat|m[eé]dic|psic|kinesi|fisio"),
+    ("🍽️ Gastronomía", r"restaur|resto\b|gastro|comida|hamburgues|burger|pizz|caf[eé]|cafeter|\bbar\b|bares|parrill|sushi|helad|panader|confiter|pastel|delivery|pedidosya|starbucks|juan valdez|mostaza|bellini|lomit|empanad|grill|cervec|brew|bistr|kfc|sbarro|don vito|rostiser|porchetta|bocatta|chicken|pollo|asado|cocina|sabores|taberna|pub\b|food"),
+    ("🏋️ Deportes y fitness", r"\bgym|gimnas|fitness|getfit|body ?center|crossfit|deport|sport|bicicl|outdoor|pilates|yoga"),
+    ("📱 Tecnología", r"electr[oó]nic|tecnolog|celular|samsung|motorola|apple|istore|ishop|inform[aá]tic|computa|gamer|novatech|radioshack|plataforma|streaming|internet|telefon"),
+    ("🏠 Hogar", r"hogar|mueble|decora|ferreter|construc|electrodom|colch[oó]n|sommier|ashley|cer[aá]mic|sanitari|pintur|ilumina|luminot|jard[ií]n|riego|aceros|herramient|alfombra|cortina|bazar|living|cocinas|aberturas|vidrier|piscin|maquin"),
+    ("🚗 Autos", r"\bauto|automot|motor|neum[aá]tic|taller|repuesto|lubric|concesionar|lavadero|car ?wash|cubierta|tire\b|toyot|nissan|kia\b|hyundai|chevrolet|moto"),
+    ("👗 Moda", r"\bmoda|ropa|indumentar|zapat|calzad|boutique|joy[aei]|relojer|crocs|nike|adidas|skechers|lacoste|new balance|timberland|jean|lencer|cartera|accesorio|sneaker|novias|telas|springfield|brooksfield|optica|anteojo|vestir|tienda de ropa|multimarcas|sastrer"),
+    ("🧸 Niños", r"\bni[ñn]os|kids|juguet|beb[eé]|infantil|mam[aá]|mamissima"),
+    ("🎓 Educación", r"colegio|universidad|educa|instituto|academ|idioma|librer|escolar|curso"),
+    ("🏨 Viajes", r"hotel|viaje|travel|turismo|resort|aerol[ií]n|vuelo|pasaje|posada|caba[ñn]a"),
+    ("🎬 Entretenimiento", r"cine|cinemark|entrada|\bshow|teatro|evento|concierto|mplay|juego|parque"),
+    ("🐾 Mascotas y agro", r"veterinar|mascot|pet\b|agro|balancead|ganad|semilla|huerta|vivero"),
+    ("💳 Servicios", r"seguro|pr[eé]stamo|billetera|megas|recarga|packs? de|pospago|whatsapp|compras en el exterior|fotograf|lavander|adelanto de efectivo|pago de servicios|ande\b|essap"),
 ]
+_RE_RULES = [(c, re.compile(rx, re.I)) for c, rx in _CATEGORY_RULES]
+
+# Etiquetas de origen que sí son rubros
+_SOURCE_MAP = {
+    "autoaccesorios": "🚗 Autos", "belleza y salud": "💊 Salud y belleza", "hogar": "🏠 Hogar",
+    "indumentaria": "👗 Moda", "tecnología": "📱 Tecnología", "gastronomía": "🍽️ Gastronomía",
+    "supermercados": "🛒 Supermercados", "niños": "🧸 Niños",
+}
+
+OTHER = "Otros"
 
 
-_SUPERMARKET_CATEGORY = "🛒 Supermercados"
-_SUPERMARKET_TITLE_RE = re.compile(
-    r"\b(?:supermercados?|s[uú]per|mayoristas?)\b",
-    re.IGNORECASE,
-)
-_SUPERMARKET_CAMPAIGN_RE = re.compile(
-    r"\b(?:lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)"
-    r"\s+(?:de|en)\s+(?:los\s+)?(?:supermercados?|mayoristas?)\b",
-    re.IGNORECASE,
-)
-
-
-def _is_explicit_supermarket_promo(title: str, desc: str | None) -> bool:
-    """Detect explicit supermarket names in titles or weekday supermarket campaigns."""
-    return bool(
-        _SUPERMARKET_TITLE_RE.search(title or "")
-        or _SUPERMARKET_CAMPAIGN_RE.search(desc or "")
-    )
-
-
-def extract_category(title: str, desc: str | None) -> str | None:
-    """Auto-categorize a promotion based on keyword matching."""
-    # A named supermarket campaign is a stronger signal than incidental food terms
-    # in its description (or a category incorrectly supplied by the source API).
-    if _is_explicit_supermarket_promo(title, desc):
-        return _SUPERMARKET_CATEGORY
-
-    text = f"{title} {desc or ''}".lower()
-
-    for category, keywords in _CATEGORY_RULES:
-        for kw in keywords:
-            if kw in text:
-                return category
-
-    return None
+def extract_category(title: str, desc: str | None, source: str | None = None) -> str:
+    """Rubro por nombre del comercio; si no alcanza, la primera frase del detalle (el resto es letra chica)."""
+    # Nombre del comercio y comienzo del detalle; la letra chica de abajo confunde
+    head = re.sub(r'afinidad\s+\S+', '', (desc or "")[:300], flags=re.I)  # "Afinidad Farmacenter" es una tarjeta
+    for text in (title or "", head):
+        for cat, rx in _RE_RULES:
+            if rx.search(text):
+                return cat
+    return _SOURCE_MAP.get((source or "").strip().lower(), OTHER)
 
 
 # ─── Validity Extraction ──────────────────────────────────────────
+_M = r'(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)'
+_D = r'\d{1,2}\s+de\s+' + _M + r'(?:(?:\s+(?:de|del))?\s+\d{4})?'
+_WD = r'(?:(?:lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)\s+)?'
+_VALIDITY_RES = [re.compile(x, re.I) for x in (
+    r'(?:desde\s+el|del?)\s+' + _D + r'\s+(?:al|del|hasta(?:\s+el)?|a)\s+(?:el\s+)?' + _D,
+    r'hasta\s+el\s+' + _WD + _D,
+    r'\d{2}/\d{2}/\d{4}\s+(?:al|a|-)\s+\d{2}/\d{2}/\d{4}',
+    r'vigencia:?\s*\d{2}/\d{2}/\d{4}',
+    # Un solo día: "El miércoles 18 de noviembre", "Vigente el 18 de noviembre de 2026"
+    r'\b(?:el|vigente\s+el|v[aá]lido\s+el|solo\s+el)\s+' + _WD + _D + r'(?!\s+(?:al|hasta|a)\b)',
+)]
+_SINGLE = _VALIDITY_RES[-1]
+_MONTHS = {m: i for i, m in enumerate('enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre'.split(), 1)}
+_MONTHS['setiembre'] = 9
+
+
 def extract_validity(title: str, desc: str | None) -> str | None:
-    """Extract a validity string or date range from text (e.g., 'Del 01 de enero al 31 de diciembre del 2026')."""
+    """La primera vigencia del texto (la de la promo; las de abajo suelen ser de "Además...")."""
     text = f"{title} {desc or ''}"
-    
-    # Spanish months list
-    months_pat = r'(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)'
-    
-    # Typical date patterns in Paraguayan bank promos
-    patterns = [
-        # Del XX de mes al YY de mes de AAAA
-        r'(?i)(del\s+\d+\s+de\s+' + months_pat + r'\s+(?:al|del|a)\s+\d+\s+de\s+' + months_pat + r'(?:\s+del|\s+de)?\s+\d{4})',
-        # Del XX de mes de AAAA al YY de mes de BBBB
-        r'(?i)(del\s+\d+\s+de\s+' + months_pat + r'(?:\s+del|\s+de)?\s+\d{4}\s+(?:al|del|a)\s+\d+\s+de\s+' + months_pat + r'(?:\s+del|\s+de)?\s+\d{4})',
-        # Válido hasta el XX de mes de AAAA
-        r'(?i)(válido\s+hasta\s+el\s+\d+\s+de\s+' + months_pat + r'(?:\s+del|\s+de)?\s+\d{4})',
-        # Hasta el XX de mes de AAAA
-        r'(?i)(hasta\s+el\s+\d+\s+de\s+' + months_pat + r'(?:\s+del|\s+de)?\s+\d{4})',
-        # XX/XX/XXXX al YY/YY/XXXX
-        r'(\d{2}/\d{2}/\d{4}\s+(?:al|a|-)\s+\d{2}/\d{2}/\d{4})',
-        # Vigencia: XX/XX/XXXX
-        r'(?i)(vigencia:?\s*\d{2}/\d{2}/\d{4}(?:\s+al\s+\d{2}/\d{2}/\d{4})?)',
-    ]
-    
-    for pattern in patterns:
-        m = re.search(pattern, text)
-        if m:
-            # Clean up multiple whitespaces
-            res = re.sub(r'\s+', ' ', m.group(1)).strip()
-            # Strip trailing period if present
-            if res.endswith('.'):
-                res = res[:-1]
-            return res[0].upper() + res[1:]
-            
-    return None
+    hits = [m for rx in _VALIDITY_RES if (m := rx.search(text))]
+    if not hits:
+        return None
+    m = min(hits, key=lambda m: m.start())
+    res = re.sub(r'\s+', ' ', m.group(0)).strip().rstrip('.')
+    if m.re is _SINGLE:
+        res = 'El ' + re.sub(r'^(el|vigente el|v[aá]lido el|solo el)\s+', '', res, flags=re.I)
+    return res[0].upper() + res[1:]
+
+
+def validity_dates(validity: str | None, today: date) -> list[date]:
+    """Fechas de la vigencia; sin año, el de hoy."""
+    out = []
+    for d, mo, y in re.findall(r'(\d{1,2})\s+de\s+(' + _M + r')(?:(?:\s+(?:de|del))?\s+(\d{4}))?', validity or '', re.I):
+        try:
+            out.append(date(int(y or today.year), _MONTHS[mo.lower()], int(d)))
+        except ValueError:
+            pass
+    for d, mo, y in re.findall(r'(\d{2})/(\d{2})/(\d{4})', validity or ''):
+        try:
+            out.append(date(int(y), int(mo), int(d)))
+        except ValueError:
+            pass
+    # "Del 1 de diciembre al 31 de enero de 2027": el inicio va con el año anterior
+    if len(out) == 2 and out[0] > out[1]:
+        out[0] = out[0].replace(year=out[1].year - 1)
+    return out
+
+
+_DAY_NAMES = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 
 
 # ─── Main enrichment function ────────────────────────────────────
-def analyze_promo(promo: dict) -> dict:
-    """Enrich a promo dict with extracted discount, days, installments, category, and validity."""
+def analyze_promo(promo: dict, today: date | None = None) -> dict:
+    """Completa descuento, días, cuotas, rubro y vigencia; `expired` si la vigencia ya pasó."""
+    today = today or date.today()
     title = promo.get("title", "")
     desc = promo.get("desc")
 
@@ -240,12 +213,12 @@ def analyze_promo(promo: dict) -> dict:
     promo["days"] = extract_days(title, desc)
     promo["installments"] = extract_installments(title, desc)
     promo["validity"] = extract_validity(title, desc)
+    promo["category"] = extract_category(title, desc, promo.get("category"))
 
-    detected_category = extract_category(title, desc)
-
-    # Override a conflicting source category only when the promo explicitly
-    # identifies a supermarket campaign. Otherwise preserve source metadata.
-    if detected_category == _SUPERMARKET_CATEGORY or not promo.get("category"):
-        promo["category"] = detected_category
-
+    dates = validity_dates(promo["validity"], today)
+    if dates and not re.search(r'\d{4}', promo["validity"]):
+        promo["validity"] += f" de {max(dates).year}"  # el visor necesita el año para calcular vencimiento
+    if len(dates) == 1 and (promo["validity"] or "").startswith("El "):
+        promo["days"] = [_DAY_NAMES[dates[0].weekday()]]  # un solo día, no "todos los días"
+    promo["expired"] = bool(dates) and max(dates) < today
     return promo

@@ -27,6 +27,7 @@ def generate_html(all_promos: list[dict], run_stats: dict) -> str:
         raise FileNotFoundError("viewer_template.html not found in the workspace")
 
     template = template_path.read_text()
+    all_promos = [p for p in all_promos if not p.get("expired")]
     html = template.replace("__PROMOS_JSON__", json.dumps(all_promos, ensure_ascii=False))
     html = html.replace("__STATS_JSON__",  json.dumps(run_stats,   ensure_ascii=False))
     html = html.replace("__TIMESTAMP__",   datetime.now(ZoneInfo("America/Asuncion")).strftime("%d/%m/%Y %H:%M") + " (hora PY)")
@@ -123,6 +124,7 @@ def main() -> None:
     from scraper_modules.explode import explode
     all_promos = explode(all_promos)
 
+    all_promos = [p for p in all_promos if not p.get("expired")]
     original_len = len(all_promos)
     all_promos   = deduplicate(all_promos)
     dedup_count  = original_len - len(all_promos)

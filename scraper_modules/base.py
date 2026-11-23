@@ -280,7 +280,9 @@ class ScraperBase(ABC):
         href = item.get("url") or item.get("link") or ""
         # Category may arrive as a nested object {id, name, order, active, image, headerImage}
         # (seen in Continental's and GNB's APIs).  Always coerce to a plain string.
-        category_raw = item.get("categoria") or item.get("category")
+        category_raw = item.get("categoria") or item.get("category") or item.get("rubro") or item.get("categorias")
+        if isinstance(category_raw, list):
+            category_raw = category_raw[0] if category_raw else None
         if isinstance(category_raw, dict):
             category: str | None = category_raw.get("nombre") or category_raw.get("name") or None
         else:

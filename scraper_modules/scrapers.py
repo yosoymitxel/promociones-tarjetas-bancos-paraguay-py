@@ -583,6 +583,8 @@ class ContinentalScraper(ScraperBase):
                 continue  # handled as category — don't fall through
 
             # ── Flat: item is a direct commerce entry ─────────────────────
+            if not promos:
+                print(f"[Continental] campos: {sorted(item)[:30]}")
             title, desc, img, href, category = self._extract_item_fields(item)
             if not title or len(title) <= 2:
                 continue
@@ -636,6 +638,36 @@ class PersonalPayScraper(ScraperBase):
     @classmethod
     def _clean_pp_title(cls, title: str) -> str:
         return cls._RE_PP_DAYS.sub('', title).strip()
+
+    def scrape(self) -> list[dict]:
+        # El listado solo trae "20% de descuento"; el comercio y las condiciones están en /pay/<slug>.html
+        out = []
+        for p in super().scrape():
+            if '/pay/' not in (p.get('href') or ''):
+                continue  # enlaces a redes sociales, no beneficios
+            try:
+                html = self.fetch_html(p['href'], timeout=15)
+                p.update(self.parse_detail(html, p['title']))
+            except Exception as exc:
+                print(f"[PersonalPay] {p['href']}: {exc}")
+            out.append(p)
+        return out
+
+    @staticmethod
+    def parse_detail(html: str, offer: str) -> dict:
+        soup = BeautifulSoup(html, "html.parser")
+        box = soup.select_one('section[data-benefit] .content') or soup
+        h2 = box.find('h2')
+        name = re.sub(r'^\s*Promoci[oó]n(es)?\s+', '', h2.get_text(' ', strip=True), flags=re.I) if h2 else ''
+        lines = []
+        for el in box.find_all(['h4', 'p', 'li']):
+            t = re.sub(r'\s+([,.:])', r'\1', re.sub(r'^[-\s]+', '', el.get_text(' ', strip=True)))
+            if t:
+                lines.append(f"\n{t}:" if el.name == 'h4' else f"- {t}")
+        out = {'desc': f"{offer.rstrip('.')}.\n" + '\n'.join(lines).strip()} if lines else {}
+        if name:
+            out['title'] = name
+        return out
 
     def scrape_api(self) -> list[dict]:
         for url in self._api_candidates:
