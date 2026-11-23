@@ -122,7 +122,7 @@ _CATEGORY_RULES: list[tuple[str, str]] = [
     ("⛽ Combustible", r"copetrol|petromax|petrobras|combustible|\benex\b|\bshell\b|puma energy|estaci[oó]n de servicio"),
     ("💊 Salud y belleza", r"farma|salud|cl[ií]nica|hospital|sanatorio|odonto|dental|[oó]ptic|laborator|belleza|peluquer|barber|barbas|est[eé]tica|cosm[eé]t|perfum|spa\b|masaje|u[ñn]as|isdin|auditiv|nutri|suplement|dermat|m[eé]dic|psic|kinesi|fisio"),
     ("🍽️ Gastronomía", r"restaur|resto\b|gastro|comida|hamburgues|burger|pizz|caf[eé]|cafeter|\bbar\b|bares|parrill|sushi|helad|panader|confiter|pastel|delivery|pedidosya|starbucks|juan valdez|mostaza|bellini|lomit|empanad|grill|cervec|brew|bistr|kfc|sbarro|don vito|rostiser|porchetta|bocatta|chicken|pollo|asado|cocina|sabores|taberna|pub\b|food"),
-    ("🏋️ Deportes y fitness", r"\bgym|gimnas|fitness|getfit|body ?center|crossfit|deport|sport|bicicl|outdoor|pilates|yoga"),
+    ("🏋️ Deportes y fitness", r"\bgym|gimnas|fitness|\bfit\b|training|getfit|body ?center|crossfit|deport|sport|bicicl|outdoor|pilates|yoga"),
     ("📱 Tecnología", r"electr[oó]nic|tecnolog|celular|samsung|motorola|apple|istore|ishop|inform[aá]tic|computa|gamer|novatech|radioshack|plataforma|streaming|internet|telefon"),
     ("🏠 Hogar", r"hogar|mueble|decora|ferreter|construc|electrodom|colch[oó]n|sommier|ashley|cer[aá]mic|sanitari|pintur|ilumina|luminot|jard[ií]n|riego|aceros|herramient|alfombra|cortina|bazar|living|cocinas|aberturas|vidrier|piscin|maquin"),
     ("🚗 Autos", r"\bauto|automot|motor|neum[aá]tic|taller|repuesto|lubric|concesionar|lavadero|car ?wash|cubierta|tire\b|toyot|nissan|kia\b|hyundai|chevrolet|moto"),
