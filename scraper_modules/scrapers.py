@@ -137,7 +137,7 @@ class BASAScraper(ScraperBase):
                             promo["discount_percent"] = parsed["discount_percent"]
                         if parsed.get("days") and not promo.get("days"):
                             promo["days"] = parsed["days"]
-                        if parsed.get("installments") is not None and "installments" not in promo:
+                        if parsed.get("installments") is not None and promo.get("installments") is None:
                             promo["installments"] = parsed["installments"]
 
                     print(f"      [{status}] {title[:50]}")
