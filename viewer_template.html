@@ -351,7 +351,7 @@
         >
           {p.img && (
             <div className="relative h-36 overflow-hidden" style={{ background: 'var(--s2)' }}>
-              <img src={p.img} alt="" loading="lazy" className="w-full h-full object-cover"
+              <img src={p.img} alt="" loading="lazy" referrerPolicy="no-referrer" className="w-full h-full object-cover"
                 onError={e => { e.target.parentNode.style.display = 'none'; }} />
             </div>
           )}
@@ -411,7 +411,7 @@
 
             {promo.img && (
               <div className="h-48 relative overflow-hidden shrink-0" style={{ background: 'var(--s2)' }}>
-                <img src={promo.img} alt="" className="w-full h-full object-cover" onError={e => { e.target.parentNode.style.display = 'none'; }} />
+                <img src={promo.img} alt="" referrerPolicy="no-referrer" className="w-full h-full object-cover" onError={e => { e.target.parentNode.style.display = 'none'; }} />
               </div>
             )}
 

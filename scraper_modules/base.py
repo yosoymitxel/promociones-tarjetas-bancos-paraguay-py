@@ -275,8 +275,10 @@ class ScraperBase(ABC):
             item.get("titulo") or item.get("title") or ""
         )
         desc = item.get("descripcion") or item.get("description")
-        img_raw = item.get("imagen") or item.get("image") or ""
-        img = img_raw.get("url", "") if isinstance(img_raw, dict) else (img_raw or "")
+        img_raw = item.get("imagen") or item.get("image") or item.get("logo") or item.get("imagen_promo") or ""
+        if isinstance(img_raw, dict):  # Strapi: {url, formats: {small: {url}}}
+            img_raw = ((img_raw.get("formats") or {}).get("small") or {}).get("url") or img_raw.get("url", "")
+        img = img_raw or ""
         href = item.get("url") or item.get("link") or ""
         # Category may arrive as a nested object {id, name, order, active, image, headerImage}
         # (seen in Continental's and GNB's APIs).  Always coerce to a plain string.
@@ -368,6 +370,8 @@ class ScraperBase(ABC):
     ) -> dict:
         if href and not href.startswith("http"):
             href = urljoin(self.bank_url, href)
+        if img and not img.startswith(("http", "data:")):
+            img = urljoin(self.bank_url, img)
 
         if desc is not None:
             # Convert HTML to plain text, preserving explicit line-breaks

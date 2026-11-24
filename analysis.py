@@ -147,20 +147,35 @@ _SOURCE_MAP = {
     "autoaccesorios": "🚗 Autos", "belleza y salud": "💊 Salud y belleza", "hogar": "🏠 Hogar",
     "indumentaria": "👗 Moda", "tecnología": "📱 Tecnología", "gastronomía": "🍽️ Gastronomía",
     "supermercados": "🛒 Supermercados", "niños": "🧸 Niños",
+    # Rubros de la API de Continental
+    "electrónica": "📱 Tecnología", "vehículos": "🚗 Autos", "farmacias y perfumerías": "💊 Salud y belleza",
+    "salud": "💊 Salud y belleza", "construcción": "🏠 Hogar", "peluquerías y spas": "💊 Salud y belleza",
+    "estaciones de servicios": "⛽ Combustible", "ferreterías": "🏠 Hogar", "ferreterías y talleres del país": "🏠 Hogar",
+    "deportes": "🏋️ Deportes y fitness", "hoteles": "🏨 Viajes", "mueblerías": "🏠 Hogar",
+    "veterinarias": "🐾 Mascotas y agro", "librerías": "🎓 Educación", "educación": "🎓 Educación",
+    "agencias de viaje y compañías aéreas": "🏨 Viajes", "jugueterías": "🧸 Niños", "joyerías": "👗 Moda",
+    "bodegas": "🍽️ Gastronomía", "heladerías": "🍽️ Gastronomía", "seguros": "💳 Servicios", "courier": "💳 Servicios",
+    "eventos": "🎬 Entretenimiento", "contimarket": "🛒 Supermercados", "caza y pesca": "🏋️ Deportes y fitness",
+    "florerías": "🏠 Hogar", "puma flota": "⛽ Combustible",
 }
 
 OTHER = "Otros"
 
 
 def extract_category(title: str, desc: str | None, source: str | None = None) -> str:
-    """Rubro por nombre del comercio; si no alcanza, la primera frase del detalle (el resto es letra chica)."""
+    """Rubro del banco si es uno real; si no, por el nombre del comercio o el comienzo del detalle."""
+    src = (source or "").strip()
+    if src in {c for c, _ in _CATEGORY_RULES}:
+        return src  # ya clasificada (re-análisis de datos guardados)
+    if src.lower() in _SOURCE_MAP:
+        return _SOURCE_MAP[src.lower()]  # el rubro del banco manda sobre las palabras clave
     # Nombre del comercio y comienzo del detalle; la letra chica de abajo confunde
     head = re.sub(r'afinidad\s+\S+', '', (desc or "")[:300], flags=re.I)  # "Afinidad Farmacenter" es una tarjeta
     for text in (title or "", head):
         for cat, rx in _RE_RULES:
             if rx.search(text):
                 return cat
-    return _SOURCE_MAP.get((source or "").strip().lower(), OTHER)
+    return OTHER
 
 
 # ─── Validity Extraction ──────────────────────────────────────────

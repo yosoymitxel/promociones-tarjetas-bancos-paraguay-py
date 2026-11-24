@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 from pathlib import Path
@@ -19,6 +20,15 @@ def deduplicate(promos: list[dict]) -> list[dict]:
             seen.add(key)
             unique.append(p)
     return unique
+
+
+def share_logos(promos: list[dict]) -> None:
+    """Sin imagen (BASA no publica logos): usa la del mismo comercio en otro banco."""
+    key = lambda t: re.sub(r'[^a-z0-9]', '', re.split(r'\s+[-–(]', (t or '').lower())[0])
+    logos = {key(p["title"]): p["img"] for p in promos if p.get("img") and len(key(p["title"])) > 2}
+    for p in promos:
+        if not p.get("img"):
+            p["img"] = logos.get(key(p["title"]), "")
 
 
 def generate_html(all_promos: list[dict], run_stats: dict) -> str:
@@ -125,6 +135,7 @@ def main() -> None:
     all_promos = explode(all_promos)
 
     all_promos = [p for p in all_promos if not p.get("expired")]
+    share_logos(all_promos)
     original_len = len(all_promos)
     all_promos   = deduplicate(all_promos)
     dedup_count  = original_len - len(all_promos)
