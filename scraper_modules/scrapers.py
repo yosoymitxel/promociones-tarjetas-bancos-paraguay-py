@@ -421,7 +421,7 @@ class ItaúScraper(ScraperBase):
                 lines.append(f"{key.capitalize()}: {val}" if key else val)
         p = soup.select_one(".col-md-8 p")
         if p and clean(p.get_text()):
-            lines.insert(1 if lines and lines[0].startswith("Vigencia") else 0, clean(p.get_text()))
+            lines.insert(0, clean(p.get_text()))  # su vigencia es la de la promo; la de la ficha suele ser más vieja
         rubro = soup.select_one(".col-md-3 span")
         return {"desc": "\n\n".join(lines) or None, "category": clean(rubro.get_text()) if rubro else None}
 

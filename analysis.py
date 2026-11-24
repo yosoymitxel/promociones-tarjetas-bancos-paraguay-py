@@ -243,6 +243,8 @@ def analyze_promo(promo: dict, today: date | None = None) -> dict:
     promo["validity"] = extract_validity(title, desc)
     promo["category"] = extract_category(title, desc, promo.get("category"))
 
+    if not promo["days"] and promo["validity"]:
+        promo["days"] = ["Todos"]  # con vigencia y sin día nombrado, rige toda la semana
     dates = validity_dates(promo["validity"], today)
     if dates and not re.search(r'\d{4}', promo["validity"]):
         promo["validity"] += f" de {max(dates).year}"  # el visor necesita el año para calcular vencimiento
