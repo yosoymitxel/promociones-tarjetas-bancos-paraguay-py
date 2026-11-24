@@ -547,6 +547,12 @@
         try { localStorage.setItem('promopy-theme', theme); } catch {}
       }, [theme]);
       const [activePromo, setActivePromo] = useState(null);
+      // Enlace directo a una promo: …/#p=<id> abre su detalle (lo usa el panel como "Bases")
+      useEffect(() => {
+        const id = decodeURIComponent((location.hash.match(/p=([^&]+)/) || [])[1] || '');
+        const hit = id && PROMOS.find(x => x.id === id);
+        if (hit) setActivePromo(hit);
+      }, []);
       const [calcPromo, setCalcPromo] = useState(null);
 
       // Search debounce

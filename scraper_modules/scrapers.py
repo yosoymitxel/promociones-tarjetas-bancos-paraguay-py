@@ -398,6 +398,33 @@ class ItaúScraper(ScraperBase):
                 continue
         raise NotImplementedError("No Itaú API found")
 
+    @staticmethod
+    def parse_detail(html: str) -> dict:
+        """Fragmento del modal: párrafo principal + beneficio / vigencia / bases y condiciones."""
+        soup = BeautifulSoup(html, "html.parser")
+        clean = lambda t: re.sub(r"\s+", " ", t).strip()
+        lines = []
+        for li in soup.select("ul.item-caracteristicas li"):
+            label = li.find("strong")
+            key = clean(label.get_text()).rstrip(":").lower() if label else ""
+            if label:
+                label.extract()
+            val = clean(li.get_text(" "))
+            if not val or key == "medios de pago":
+                continue
+            if key == "vigencia":  # "2026-06-05 hasta 2027-01-31" → formato que entiende el visor
+                d = re.findall(r"(\d{4})-(\d{2})-(\d{2})", val)
+                if len(d) == 2:
+                    val = f"Del {d[0][2]}/{d[0][1]}/{d[0][0]} al {d[1][2]}/{d[1][1]}/{d[1][0]}"
+                lines.insert(0, f"Vigencia: {val}")
+            else:
+                lines.append(f"{key.capitalize()}: {val}" if key else val)
+        p = soup.select_one(".col-md-8 p")
+        if p and clean(p.get_text()):
+            lines.insert(1 if lines and lines[0].startswith("Vigencia") else 0, clean(p.get_text()))
+        rubro = soup.select_one(".col-md-3 span")
+        return {"desc": "\n\n".join(lines) or None, "category": clean(rubro.get_text()) if rubro else None}
+
     def scrape_html(self) -> list[dict]:
         raise NotImplementedError("Itaú is a SPA")
 
@@ -429,7 +456,8 @@ class ItaúScraper(ScraperBase):
             print(f"    [Itaú] Crawling {len(category_map)} categories…")
 
             # 2. Crawl each category page (cap at 12 to stay within time budget)
-            for cat_url, category_name in list(category_map.items())[:12]:
+            seen: set[str] = set()
+            for cat_url, category_name in category_map.items():
                 try:
                     page.goto(cat_url, wait_until="domcontentloaded", timeout=30_000)
                     page.wait_for_timeout(4_050)
@@ -466,15 +494,28 @@ class ItaúScraper(ScraperBase):
                                 if src:
                                     img_url = urljoin(cat_url, src)
 
-                            href      = card.get_attribute("href")
-                            promo_url = urljoin(cat_url, href) if href else cat_url
+                            # El detalle (bases, vigencia, rubro) se abre en un modal que carga
+                            # /beneficios2/Detalle?b=…&c=…  (onclick="buscar('b','c','nombre')")
+                            ids = re.findall(r"'(\d+)'", card.get_attribute("onclick") or "")
+                            promo_url, category = cat_url, category_name
+                            if len(ids) >= 2:
+                                promo_url = f"https://www.itau.com.py/beneficios2/Detalle?b={ids[0]}&c={ids[1]}"
+                                if promo_url in seen:
+                                    continue
+                                seen.add(promo_url)
+                                try:
+                                    det = self.parse_detail(page.request.get(promo_url, timeout=15_000).text())
+                                    desc = "\n\n".join(x for x in (desc, det.get("desc")) if x)  # resumen de la tarjeta + detalle
+                                    category = det.get("category") or category
+                                except Exception as exc:
+                                    print(f"    [Itaú] detalle {promo_url}: {exc}")
 
                             promos.append(self.make_promo(
                                 title=title,
                                 desc=desc or None,
                                 img=img_url,
                                 href=promo_url,
-                                category=category_name,
+                                category=category,
                             ))
                         except Exception:
                             continue

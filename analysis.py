@@ -185,7 +185,7 @@ _WD = r'(?:(?:lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)\s+)?
 _VALIDITY_RES = [re.compile(x, re.I) for x in (
     r'(?:desde\s+el|del?)\s+' + _D + r'\s+(?:al|del|hasta(?:\s+el)?|a)\s+(?:el\s+)?' + _D,
     r'hasta\s+el\s+' + _WD + _D,
-    r'\d{2}/\d{2}/\d{4}\s+(?:al|a|-)\s+\d{2}/\d{2}/\d{4}',
+    r'(?:del?\s+)?\d{2}/\d{2}/\d{4}\s+(?:al|a|-|hasta)\s+\d{2}/\d{2}/\d{4}',
     r'vigencia:?\s*\d{2}/\d{2}/\d{4}',
     # Un solo día: "El miércoles 18 de noviembre", "Vigente el 18 de noviembre de 2026"
     r'\b(?:el|vigente\s+el|v[aá]lido\s+el|solo\s+el)\s+' + _WD + _D + r'(?!\s+(?:al|hasta|a)\b)',
