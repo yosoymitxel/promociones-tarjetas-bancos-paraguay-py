@@ -71,149 +71,85 @@
   </script>
 
   <style>
-    /* Mundo compartido con el panel: carbón, superficies sólidas, un acento lima para el ahorro */
+    /* Dos temas pensados por separado; un solo acento verde salvia para el ahorro, sin neones */
     :root {
-      --bg: #0c0d10; --surface: #15171c; --s2: #1d2027; --border: #2a2e37; --border-hover: #4a505c;
-      --text: #f1f2f4; --muted: #9aa0ab; --input-bg: #0c0d10; --ac: #c8f560; --ac-tx: #11140a;
+      --bg: #131416; --surface: #1a1b1e; --s2: #232427; --border: #2c2d31; --border-hover: #4a4b50;
+      --text: #ecebe7; --muted: #a2a09a; --faint: #75736e; --input-bg: #161719;
+      --ac: #a7c886; --ac-tx: #142010; --ac-soft: rgb(167 200 134 / .13);
+      --warn: #e2a56b; --warn-soft: rgb(226 165 107 / .12); --bad: #e58c80;
+      --overlay: rgb(8 9 10 / .72); --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 8px 24px rgb(0 0 0 / .25);
       --display: "Bricolage Grotesque", system-ui, sans-serif;
+      color-scheme: dark;
     }
     body.light {
-      --bg: #f3f2ee; --surface: #fff; --s2: #ebe9e3; --border: #dcd9d1; --border-hover: #9a968d;
-      --text: #15161a; --muted: #5f636b; --input-bg: #fff; --ac: #2f6b00; --ac-tx: #fff;
+      --bg: #f4f3ef; --surface: #ffffff; --s2: #efede8; --border: #e3e0d8; --border-hover: #bdb8ad;
+      --text: #1d1e21; --muted: #5c5b56; --faint: #8a8880; --input-bg: #ffffff;
+      --ac: #3d6a28; --ac-tx: #ffffff; --ac-soft: rgb(61 106 40 / .09);
+      --warn: #9a5b14; --warn-soft: rgb(154 91 20 / .09); --bad: #a8352a;
+      --overlay: rgb(30 28 24 / .45); --shadow: 0 1px 2px rgb(40 35 25 / .06), 0 8px 24px rgb(40 35 25 / .07);
+      color-scheme: light;
     }
     body { background: var(--bg); color: var(--text); min-height: 100vh; font-family: 'Onest', system-ui, sans-serif; font-variant-numeric: tabular-nums; -webkit-font-smoothing: antialiased; }
     ::selection { background: var(--ac); color: var(--ac-tx); }
+    :focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
     h1, h2, .font-display { font-family: var(--display); letter-spacing: -.025em; }
-    .glass { background: var(--surface); border: 1px solid var(--border); transition: border-color .2s; }
-    .glass:hover { border-color: var(--border-hover); }
+    .glass { background: var(--surface); border: 1px solid var(--border); transition: border-color .2s, box-shadow .2s, transform .2s; }
     .mesh { display: none; }
-    /* Acentos de Tailwind usados en la página → un solo acento */
-    .text-blue-400, .text-teal-400, .text-sky-400, .text-cyan-400, .text-indigo-400, .text-emerald-400, .text-emerald-300 { color: var(--ac) !important; }
+    .card:hover { border-color: var(--border-hover); box-shadow: var(--shadow); }
+    .mono { font-family: inherit; }
+
+    /* Utilidades fijas de Tailwind → tokens del tema (así claro y oscuro salen de la misma fuente) */
+    .text-white, .text-slate-200, .text-slate-300 { color: var(--text) !important; }
+    .text-slate-400, .text-slate-500, .text-slate-600 { color: var(--muted) !important; }
+    .text-blue-400, .text-teal-400, .text-teal-300, .text-sky-400, .text-cyan-400, .text-indigo-400, .text-emerald-400, .text-emerald-300 { color: var(--ac) !important; }
     .text-amber-400, .text-amber-300, .text-violet-300, .text-purple-300 { color: var(--text) !important; }
+    .text-red-400 { color: var(--bad) !important; }
+    .bg-slate-800, .bg-slate-800\/50, .bg-slate-800\/80, .bg-slate-900, .bg-slate-900\/60, .bg-slate-900\/70, .bg-slate-900\/80, .bg-slate-900\/90, .bg-slate-950 { background: var(--s2) !important; }
+    .bg-slate-950\/80 { background: var(--overlay) !important; }
+    .hover\:bg-slate-700:hover, .hover\:bg-slate-800:hover { background: var(--s2) !important; border-color: var(--border-hover) !important; }
+    .hover\:text-white:hover { color: var(--text) !important; }
+    [class*="border-slate-"] { border-color: var(--border) !important; }
+    .hover\:border-slate-500:hover, .hover\:border-slate-700:hover { border-color: var(--border-hover) !important; }
     .bg-blue-600, .bg-blue-500 { background: var(--ac) !important; color: var(--ac-tx) !important; }
+    .hover\:bg-blue-500:hover { filter: brightness(1.06); }
+    .bg-emerald-500\/10 { background: var(--ac-soft) !important; }
+    [class*="border-emerald-"] { border-color: transparent !important; }
+    .hover\:bg-emerald-500:hover { background: var(--ac) !important; color: var(--ac-tx) !important; }
+    .bg-emerald-500 { background: var(--ac) !important; }
     .hover\:ring-blue-500\/50:hover { --tw-ring-color: transparent !important; }
-    .border-slate-800\/60, .border-slate-800, .border-slate-700 { border-color: var(--border) !important; }
-    select, input { background: var(--input-bg) !important; border-color: var(--border) !important; color: var(--text) !important; border-radius: 12px !important; }
-    select:focus, input:focus { border-color: var(--ac) !important; outline: none; box-shadow: none !important; }
+    .backdrop-blur-md { backdrop-filter: none !important; }
+
+    select, input { background-color: var(--input-bg) !important; border-color: var(--border) !important; color: var(--text) !important; border-radius: 12px !important; }
+    select:hover, input:hover { border-color: var(--border-hover) !important; }
+    select:focus, input:focus { border-color: var(--ac) !important; outline: none; box-shadow: 0 0 0 3px var(--ac-soft) !important; }
+    input::placeholder { color: var(--faint); }
+    select option { background: var(--surface); color: var(--text); }
+    input[type=range] { accent-color: var(--ac); }
+
     .pct { font-family: var(--display); font-weight: 800; letter-spacing: -.03em; color: var(--ac); }
-    .today-ring { box-shadow: none !important; border-color: var(--ac) !important; }
-    .bank-tag { color: #fff; text-shadow: 0 1px 1px rgb(0 0 0 / .3); }
+    .dot { width: 7px; height: 7px; border-radius: 99px; flex: none; }
+    .icon-btn { width: 34px; display: grid; place-items: center; border-radius: 10px; border: 1px solid var(--border); color: var(--muted); background: transparent; transition: color .2s, border-color .2s; }
+    .icon-btn:hover { color: var(--text); border-color: var(--border-hover); }
 
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(10px)
-      }
+    .chip { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 99px; font-size: 11px; font-weight: 600; border: 1px solid transparent; background: var(--s2); color: var(--muted); }
+    .badge-active { background: var(--ac-soft); color: var(--ac); }
+    .badge-expiring { background: var(--warn-soft); color: var(--warn); }
+    .badge-future { background: var(--s2); color: var(--text); }
+    .badge-expired { background: transparent; color: var(--bad); border-color: var(--border); }
+    .badge-nodate { background: transparent; color: var(--faint); padding-left: 0; }
+    .today-ring { box-shadow: none; }
+    @media (max-width: 767px) { section[data-more="0"] .more-f { display: none !important; } }
 
-      to {
-        opacity: 1;
-        transform: translateY(0)
-      }
-    }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+    .fade-up { animation: fadeUp .3s cubic-bezier(.16, 1, .3, 1) both; }
+    @keyframes scaleUp { from { opacity: 0; transform: scale(.98) } to { opacity: 1; transform: none } }
+    .scale-up { animation: scaleUp .22s cubic-bezier(.16, 1, .3, 1) both; }
+    @media (prefers-reduced-motion: reduce) { .fade-up, .scale-up { animation: none; } }
 
-    .fade-up {
-      animation: fadeUp .28s cubic-bezier(.16, 1, .3, 1) both;
-    }
-
-    @keyframes scaleUp {
-      from {
-        opacity: 0;
-        transform: scale(.96)
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1)
-      }
-    }
-
-    .scale-up {
-      animation: scaleUp .22s cubic-bezier(.16, 1, .3, 1) both;
-    }
-
-    ::-webkit-scrollbar {
-      width: 5px
-    }
-
-    ::-webkit-scrollbar-track {
-      background: transparent
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #1e293b;
-      border-radius: 99px
-    }
-
-    /* pill chips */
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 2px 8px;
-      border-radius: 99px;
-      font-size: 10px;
-      font-weight: 700;
-      border-width: 1px;
-      border-style: solid;
-    }
-
-    /* status badges */
-    .badge-active {
-      background: rgba(16, 185, 129, .12);
-      color: #34d399;
-      border-color: rgba(16, 185, 129, .25);
-    }
-
-    .badge-expiring {
-      background: rgba(245, 158, 11, .12);
-      color: #fbbf24;
-      border-color: rgba(245, 158, 11, .28);
-    }
-
-    .badge-future {
-      background: rgba(59, 130, 246, .12);
-      color: #93c5fd;
-      border-color: rgba(59, 130, 246, .25);
-    }
-
-    .badge-expired {
-      background: rgba(239, 68, 68, .10);
-      color: #f87171;
-      border-color: rgba(239, 68, 68, .22);
-    }
-
-    .badge-nodate {
-      background: rgba(100, 116, 139, .10);
-      color: #94a3b8;
-      border-color: rgba(100, 116, 139, .22);
-    }
-
-    /* today highlight ring on card */
-    .today-ring {
-      box-shadow: 0 0 0 2px rgba(16, 185, 129, .55), 0 4px 28px rgba(0, 0, 0, .5);
-    }
-
-    body.light select option {
-      background: #fff;
-      color: #0f172a;
-    }
-
-    body.light select,
-    body.light input {
-      background: var(--input-bg) !important;
-      border-color: var(--border) !important;
-      color: var(--text) !important;
-    }
-
-    body.light .glass {
-      background: var(--surface) !important;
-      border-color: var(--border) !important;
-    }
-
-    /* Calculadora slider */
-    input[type=range] {
-      accent-color: #3b82f6;
-    }
+    ::-webkit-scrollbar { width: 8px }
+    ::-webkit-scrollbar-track { background: transparent }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; border: 2px solid var(--bg) }
+    html { scrollbar-color: var(--border) transparent; }
   </style>
 </head>
 
@@ -239,12 +175,12 @@
     const GENERATED_TIME = "__TIMESTAMP__";
 
     const BANKS = [
-      { id: 'basa', name: 'Banco BASA', short: 'BASA', color: '#F59E0B', url: 'https://www.bancobasa.com.py/promociones-personas' },
-      { id: 'eclub', name: 'eClub', short: 'eClub', color: '#EC4899', url: 'https://eclub.com.py/promociones/' },
-      { id: 'gnb', name: 'Banco GNB', short: 'GNB', color: '#10B981', url: 'https://www.beneficiosbancognb.com.py/v2/beneficios/categorias' },
-      { id: 'itau', name: 'Itaú Paraguay', short: 'Itaú', color: '#FF6B00', url: 'https://www.itau.com.py/beneficios' },
-      { id: 'continental', name: 'Banco Continental', short: 'Continental', color: '#3B82F6', url: 'https://www.bancontinental.com.py/#/club-continental/comercios' },
-      { id: 'personalpay', name: 'Personal Pay', short: 'PersonalPay', color: '#8B5CF6', url: 'https://www.personalpay.com.py/beneficios' },
+      { id: 'basa', name: 'Banco BASA', short: 'BASA', color: '#c99a3e', url: 'https://www.bancobasa.com.py/promociones-personas' },
+      { id: 'eclub', name: 'eClub', short: 'eClub', color: '#c46a8f', url: 'https://eclub.com.py/promociones/' },
+      { id: 'gnb', name: 'Banco GNB', short: 'GNB', color: '#4f9c7d', url: 'https://www.beneficiosbancognb.com.py/v2/beneficios/categorias' },
+      { id: 'itau', name: 'Itaú Paraguay', short: 'Itaú', color: '#cf7a45', url: 'https://www.itau.com.py/beneficios' },
+      { id: 'continental', name: 'Banco Continental', short: 'Continental', color: '#5b84c4', url: 'https://www.bancontinental.com.py/#/club-continental/comercios' },
+      { id: 'personalpay', name: 'Personal Pay', short: 'PersonalPay', color: '#8c76c2', url: 'https://www.personalpay.com.py/beneficios' },
     ];
 
     // Rubros presentes en los datos, de más a menos promos; "Otros" al final
@@ -366,7 +302,7 @@
         <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md" onClick={onClose}>
           <div className="glass max-w-sm w-full rounded-3xl p-6 scale-up" onClick={e => e.stopPropagation()}>
             <div className="flex items-center justify-between mb-5">
-              <h4 className="font-bold text-white text-lg">🧮 Calculadora</h4>
+              <h4 className="font-bold text-white text-lg">Calculadora</h4>
               <button onClick={onClose} className="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-sm">✕</button>
             </div>
             <p className="text-xs text-slate-400 mb-4 line-clamp-2">{promo.title}</p>
@@ -403,100 +339,56 @@
       const vi = useMemo(() => getValidityInfo(p.validity), [p.validity]);
       const isToday = promoIsToday(p);
 
+      const days = Array.isArray(p.days) ? p.days : [];
+      const daysTxt = days.includes('Todos') ? 'Todos los días' : days.map(d => d.slice(0, 3)).join(' · ');
+      const inst = p.installments === 0 ? 'Cuotas sin interés' : p.installments ? `${p.installments} cuotas` : '';
+
       return (
-        <div
+        <article
           onClick={() => onOpen(p)}
-          className={`glass rounded-xl overflow-hidden flex flex-col group hover:ring-1 hover:ring-blue-500/50 transition-all duration-300 hover:-translate-y-0.5 fade-up cursor-pointer ${isToday ? 'today-ring' : ''}`}
-          style={{ animationDelay: `${Math.min(index * 12, 280)}ms` }}
+          className="glass card rounded-2xl overflow-hidden flex flex-col fade-up cursor-pointer"
+          style={{ animationDelay: `${Math.min(index * 12, 240)}ms` }}
         >
-          {/* Image */}
-          <div className="relative h-44 overflow-hidden" style={{ background: 'var(--s2)' }}>
-            {p.img ? (
-              <img src={p.img} alt={p.title} loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                onError={e => { e.target.style.display = 'none'; }} />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center p-4 text-center font-display font-extrabold text-xl" style={{ color: 'var(--muted)' }}>
-                {p.title}
-              </div>
-            )}
-            {/* Overlay badges top-left */}
-            <div className="absolute top-2.5 left-2.5 flex flex-col gap-1.5">
-              {p.discount_percent > 0 && (
-                <span className="chip" style={{ background: 'var(--ac)', color: 'var(--ac-tx)', borderColor: 'transparent', fontSize: 13 }}>
-                  -{p.discount_percent}%
-                </span>
-              )}
-              {p.installments !== null && p.installments !== undefined && (
-                <span className="chip" style={{ background: 'rgb(8 9 12 / .7)', color: '#fff', borderColor: 'transparent' }}>
-                  {p.installments === 0 ? 'Sin interés' : `${p.installments} cuotas`}
-                </span>
-              )}
+          {p.img && (
+            <div className="relative h-36 overflow-hidden" style={{ background: 'var(--s2)' }}>
+              <img src={p.img} alt="" loading="lazy" className="w-full h-full object-cover"
+                onError={e => { e.target.parentNode.style.display = 'none'; }} />
             </div>
-            {/* Bank badge top-right */}
-            <div className="absolute top-2.5 right-2.5 px-2 py-1 rounded-lg font-bold text-xs bank-tag" style={{ background: bank.color }}>
-              {bank.short}
-            </div>
-            {/* Today indicator */}
-            {isToday && (
-              <div className="absolute bottom-0 left-0 right-0 px-2.5 py-1 flex items-center gap-1.5" style={{ background: 'var(--ac)', color: 'var(--ac-tx)' }}>
-                <span className="text-[11px] font-bold">Disponible hoy</span>
-              </div>
-            )}
-          </div>
+          )}
 
-          {/* Body */}
-          <div className="p-3.5 flex-1 flex flex-col gap-2">
-            <div>
-              <h3 className="font-bold text-sm leading-snug line-clamp-2 mb-1" style={{ color: 'var(--text)' }} title={p.title}>
-                {p.title}
-              </h3>
-              {p.category && (
-                <span className="text-xs" style={{ color: 'var(--muted)' }}>{p.category.replace(/^\W+\s*/, '')}</span>
-              )}
+          <div className="p-4 flex-1 flex flex-col gap-3">
+            <div className="flex items-center justify-between gap-2 text-xs" style={{ color: 'var(--muted)' }}>
+              <span className="flex items-center gap-1.5 font-semibold"><span className="dot" style={{ background: bank.color }}></span>{bank.short}</span>
+              {isToday && <span className="flex items-center gap-1.5 font-semibold" style={{ color: 'var(--ac)' }}><span className="dot" style={{ background: 'var(--ac)' }}></span>Hoy</span>}
             </div>
 
-            {/* Days */}
-            {Array.isArray(p.days) && p.days.length > 0 && (
-              <div className="flex flex-wrap gap-1">
-                {p.days.includes('Todos') ? (
-                  <span className="chip" style={{ background: 'rgba(20,184,166,.1)', color: '#5eead4', borderColor: 'rgba(20,184,166,.25)' }}>
-                    <i className="fa-solid fa-calendar-days text-[8px]"></i> Todos los días
-                  </span>
-                ) : p.days.map(d => {
-                  const active = d === todayDayName();
-                  return (
-                    <span key={d} className={`chip ${active ? 'badge-active' : ''}`}
-                      style={active ? {} : { background: 'rgba(100,116,139,.1)', color: '#94a3b8', borderColor: 'rgba(100,116,139,.2)' }}>
-                      {d.slice(0, 3)}
-                    </span>
-                  );
-                })}
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <h3 className="font-semibold text-[15px] leading-snug line-clamp-2" style={{ color: 'var(--text)' }} title={p.title}>{p.title}</h3>
+                {p.category && <p className="text-xs mt-1" style={{ color: 'var(--muted)' }}>{p.category.replace(/^\W+\s*/, '')}</p>}
               </div>
-            )}
+              {p.discount_percent > 0 && <span className="pct text-2xl leading-none shrink-0">-{p.discount_percent}%</span>}
+            </div>
 
-            {/* Validity */}
-            <ValidityBadge info={vi} />
+            <dl className="text-xs grid gap-1" style={{ color: 'var(--muted)' }}>
+              {daysTxt && <div className="flex gap-2"><dt className="sr-only">Días</dt><dd>{daysTxt}</dd></div>}
+              {inst && <div className="flex gap-2"><dt className="sr-only">Cuotas</dt><dd>{inst}</dd></div>}
+            </dl>
 
-            {/* Actions */}
-            <div className="mt-auto flex gap-1.5 pt-1">
-              <button
-                onClick={e => { e.stopPropagation(); onOpen(p); }}
-                className="flex-1 py-2 rounded-lg text-xs font-semibold transition-colors" style={{ background: 'var(--s2)', color: 'var(--text)' }}
-              >Ver detalles</button>
+            <div className="mt-auto flex items-center gap-1.5 pt-1">
+              <ValidityBadge info={vi} />
+              <span className="flex-1"></span>
               {p.href && (
-                <button onClick={e => { e.stopPropagation(); window.open(p.href, '_blank'); }}
-                  className="w-8 flex items-center justify-center bg-slate-800/50 border border-slate-700/50 rounded-lg hover:bg-slate-700 transition-all" title="Bases y condiciones">
-                  <i className="fa-solid fa-file-lines text-slate-400 text-xs"></i>
+                <button onClick={e => { e.stopPropagation(); window.open(p.href, '_blank'); }} className="icon-btn h-[34px]" title="Bases y condiciones" aria-label="Bases y condiciones">
+                  <i className="fa-solid fa-file-lines text-xs" aria-hidden="true"></i>
                 </button>
               )}
-              <button onClick={e => { e.stopPropagation(); window.open(`https://www.google.com/maps/search/${encodeURIComponent(p.title)}+Paraguay`, '_blank'); }}
-                className="w-8 flex items-center justify-center bg-slate-800/50 border border-slate-700/50 rounded-lg hover:bg-slate-700 transition-all" title="Ver en mapa">
-                <i className="fa-solid fa-location-dot text-slate-400 text-xs"></i>
+              <button onClick={e => { e.stopPropagation(); window.open(`https://www.google.com/maps/search/${encodeURIComponent(p.title)}+Paraguay`, '_blank'); }} className="icon-btn h-[34px]" title="Ver en mapa" aria-label="Ver en mapa">
+                <i className="fa-solid fa-location-dot text-xs" aria-hidden="true"></i>
               </button>
             </div>
           </div>
-        </div>
+        </article>
       );
     }
 
@@ -513,57 +405,41 @@
             onClick={e => e.stopPropagation()}>
 
             <button onClick={onClose}
-              className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-slate-900/80 text-white flex items-center justify-center border border-slate-700/50 hover:bg-slate-800 transition-colors text-sm">
-              ✕
+              aria-label="Cerrar" className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full flex items-center justify-center border transition-colors" style={{ background: 'var(--surface)', borderColor: 'var(--border)', color: 'var(--text)' }}>
+              <i className="fa-solid fa-xmark text-sm" aria-hidden="true"></i>
             </button>
 
-            {/* Hero image */}
-            <div className="h-52 bg-slate-950 relative flex items-center justify-center overflow-hidden">
-              {promo.img ? (
-                <img src={promo.img} alt={promo.title} className="w-full h-full object-cover opacity-90" onError={e => e.target.style.display = 'none'} />
-              ) : (
-                <span className="font-display font-extrabold text-3xl px-6 text-center" style={{ color: 'var(--muted)' }}>{promo.title}</span>
-              )}
-              <span className="absolute top-4 left-4 text-xs uppercase font-bold tracking-wider px-3 py-1 rounded-full border"
-                style={{ color: bank.color, background: `${bank.color}20`, borderColor: `${bank.color}40` }}>
-                {bank.short}
-              </span>
-              {promo.category && (
-                <span className="absolute bottom-4 right-4 text-xs font-bold bg-slate-900/90 text-slate-300 px-3 py-1 rounded-full">
-                  {promo.category}
-                </span>
-              )}
-              {isToday && (
-                <span className="absolute bottom-4 left-4 chip badge-active">
-                  Hoy disponible
-                </span>
-              )}
-            </div>
+            {promo.img && (
+              <div className="h-48 relative overflow-hidden shrink-0" style={{ background: 'var(--s2)' }}>
+                <img src={promo.img} alt="" className="w-full h-full object-cover" onError={e => { e.target.parentNode.style.display = 'none'; }} />
+              </div>
+            )}
 
             {/* Body */}
             <div className="p-6 overflow-y-auto flex-1">
-              {/* Chips row */}
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-semibold mb-3 pr-10 whitespace-nowrap" style={{ color: 'var(--muted)' }}>
+                <span className="flex items-center gap-1.5"><span className="dot" style={{ background: bank.color }}></span>{bank.name || bank.short}</span>
+                {promo.category && <span>{promo.category.replace(/^\W+\s*/, '')}</span>}
+                {isToday && <span className="flex items-center gap-1.5" style={{ color: 'var(--ac)' }}><span className="dot" style={{ background: 'var(--ac)' }}></span>Disponible hoy</span>}
+              </div>
+
+              <div className="flex items-start justify-between gap-4 mb-3">
+                <h3 className="text-2xl font-display font-extrabold leading-tight" style={{ color: 'var(--text)' }}>{promo.title}</h3>
+                {promo.discount_percent > 0 && <span className="pct text-3xl leading-none shrink-0">-{promo.discount_percent}%</span>}
+              </div>
+
               <div className="flex gap-2 flex-wrap mb-3">
-                {promo.discount_percent > 0 && (
-                  <span className="chip" style={{ background: 'rgba(245,158,11,.15)', color: '#fcd34d', borderColor: 'rgba(245,158,11,.3)' }}>
-                    -{promo.discount_percent}%
-                  </span>
-                )}
                 {promo.installments !== null && promo.installments !== undefined && (
-                  <span className="chip" style={{ background: 'rgba(139,92,246,.15)', color: '#c4b5fd', borderColor: 'rgba(139,92,246,.3)' }}>
-                    {promo.installments === 0 ? 'Cuotas sin interés' : `${promo.installments} cuotas`}
-                  </span>
+                  <span className="chip">{promo.installments === 0 ? 'Cuotas sin interés' : `${promo.installments} cuotas`}</span>
                 )}
                 <ValidityBadge info={vi} />
               </div>
 
-              <h3 className="text-xl font-black mb-3 leading-tight" style={{ color: 'var(--text)' }}>{promo.title}</h3>
-
               {/* Validity detail */}
               {promo.validity && (
-                <div className="flex items-center gap-2 text-sm bg-teal-500/10 border border-teal-500/20 rounded-xl px-3.5 py-2 mb-3 w-fit">
-                  <i className="fa-solid fa-calendar-range text-teal-400 text-xs"></i>
-                  <span className="text-teal-300 font-semibold text-xs">{promo.validity}</span>
+                <div className="flex items-center gap-2 text-sm mb-3" style={{ color: 'var(--muted)' }}>
+                  <i className="fa-regular fa-calendar text-xs" aria-hidden="true"></i>
+                  <span className="text-xs">{promo.validity}</span>
                 </div>
               )}
 
@@ -607,7 +483,7 @@
                         <div key={s.id}
                           onClick={() => onOpen(s)}
                           className="flex items-center gap-3 p-2.5 bg-slate-900/60 rounded-xl border border-slate-800/40 cursor-pointer hover:border-slate-700 transition-all">
-                          <span className="text-xs font-bold px-2 py-0.5 rounded" style={{ background: `${sb.color}20`, color: sb.color }}>{sb.short}</span>
+                          <span className="text-xs font-semibold flex items-center gap-1.5 shrink-0" style={{ color: 'var(--muted)' }}><span className="dot" style={{ background: sb.color }}></span>{sb.short}</span>
                           <span className="text-xs text-slate-300 flex-1 line-clamp-1">{s.title}</span>
                           {s.discount_percent > 0 && <span className="text-[10px] text-amber-400 font-bold">{s.discount_percent}%</span>}
                           <ValidityBadge info={svi} />
@@ -658,7 +534,15 @@
       const [selInst, setSelInst] = useState("");
       const [selValidity, setSelValidity] = useState("");
       const [todayOnly, setTodayOnly] = useState(false);
-      const [theme, setTheme] = useState("dark");
+      const [moreFilters, setMoreFilters] = useState(false);
+      const [theme, setTheme] = useState(() => {
+        let t = null; try { t = localStorage.getItem('promopy-theme'); } catch {}
+        return t || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      });
+      useEffect(() => {
+        document.body.classList.toggle('light', theme === 'light');
+        try { localStorage.setItem('promopy-theme', theme); } catch {}
+      }, [theme]);
       const [activePromo, setActivePromo] = useState(null);
       const [calcPromo, setCalcPromo] = useState(null);
 
@@ -679,7 +563,6 @@
       const toggleTheme = () => {
         const next = theme === "dark" ? "light" : "dark";
         setTheme(next);
-        document.body.classList.toggle("light", next === "light");
       };
 
       // Active-filter count for reset button
@@ -782,42 +665,32 @@
             </div>
             <div className="flex flex-col md:items-end gap-2">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-mono" style={{ color: 'var(--muted)' }}>Actualizado: {GENERATED_TIME}</span>
+                <span className="text-xs" style={{ color: 'var(--muted)' }}>Actualizado {GENERATED_TIME}</span>
                 <button onClick={toggleTheme}
-                  className="p-2.5 rounded-xl border border-slate-700/50 hover:bg-slate-800 transition-colors glass flex items-center justify-center text-lg"
-                  title={theme === 'dark' ? 'Modo Claro' : 'Modo Oscuro'}>
-                  {theme === 'dark' ? '☀️' : '🌙'}
+                  className="icon-btn h-[38px] !w-[38px]"
+                  title={theme === 'dark' ? 'Modo claro' : 'Modo oscuro'} aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}>
+                  <i className={`fa-solid ${theme === 'dark' ? 'fa-sun' : 'fa-moon'} text-sm`} aria-hidden="true"></i>
                 </button>
               </div>
               <div className="flex gap-1.5 flex-wrap">
                 {BANKS.map(b => (
                   <a key={b.id} href={b.url} target="_blank" rel="noreferrer"
-                    className="text-xs px-2.5 py-1 rounded-lg bg-slate-800/80 hover:bg-slate-700 transition-colors border border-slate-700/50"
-                    style={{ color: b.color }}>
-                    {b.short}
+                    className="text-xs flex items-center gap-1.5 px-2 py-1 rounded-lg hover:underline underline-offset-4"
+                    style={{ color: 'var(--muted)' }}>
+                    <span className="dot" style={{ background: b.color }}></span>{b.short}
                   </a>
                 ))}
               </div>
             </div>
           </header>
 
-          {/* STATS */}
-          <section className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-7">
-            {[
-              { label: 'Total Promos', value: PROMOS.length, color: 'text-white' },
-              { label: 'Con Descuento', value: PROMOS.filter(p => p.discount_percent > 0).length, color: 'text-amber-400' },
-              { label: 'Hoy disponibles', value: todayCount, color: 'text-emerald-400' },
-              { label: 'Mostrando', value: filteredPromos.length, color: 'text-sky-400' },
-            ].map(s => (
-              <div key={s.label} className="glass p-4 rounded-2xl">
-                <span className="text-[11px] text-slate-400  block font-semibold mb-0.5">{s.label}</span>
-                <span className={`text-3xl font-black ${s.color}`}>{s.value}</span>
-              </div>
-            ))}
-          </section>
+          {/* RESUMEN: una línea, no un tablero de métricas */}
+          <p className="mb-6 text-sm" style={{ color: 'var(--muted)' }}>
+            <b style={{ color: 'var(--text)' }}>{PROMOS.length}</b> promos · <b style={{ color: 'var(--text)' }}>{PROMOS.filter(p => p.discount_percent > 0).length}</b> con descuento · <b style={{ color: 'var(--ac)' }}>{todayCount}</b> disponibles hoy
+          </p>
 
           {/* FILTERS */}
-          <section className="glass p-5 rounded-3xl mb-7 flex flex-col gap-3">
+          <section className="glass p-4 md:p-5 rounded-3xl mb-7 flex flex-col gap-3" data-more={moreFilters ? 1 : 0}>
             {/* Row 1 */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <div className="relative">
@@ -830,19 +703,24 @@
                 <option value="">Todos los bancos</option>
                 {BANKS.map(b => <option key={b.id} value={b.id}>{b.name}</option>)}
               </select>
-              <select value={selCat} onChange={e => setSelCat(e.target.value)} className={`${sel} text-slate-300`}>
+              <select value={selCat} onChange={e => setSelCat(e.target.value)} className={`${sel} text-slate-300 more-f`}>
                 <option value="">Todas las categorías</option>
                 {CATEGORIES.map(([c, n]) => <option key={c} value={c}>{c} ({n})</option>)}
               </select>
               {malls.length > 0 && (
-                <select value={selMall} onChange={e => setSelMall(e.target.value)} className={`${sel} text-slate-300`}>
+                <select value={selMall} onChange={e => setSelMall(e.target.value)} className={`${sel} text-slate-300 more-f`}>
                   <option value="">Todos los shoppings</option>
                   {malls.map(m => { const c = mallCounts[m.name]; return c ? <option key={m.name} value={m.name}>{m.name} ({c})</option> : null; })}
                 </select>
               )}
             </div>
+            <button type="button" onClick={() => setMoreFilters(v => !v)} aria-expanded={moreFilters}
+              className="md:hidden flex items-center justify-between text-sm font-semibold px-1 py-1" style={{ color: 'var(--text)' }}>
+              {moreFilters ? 'Menos filtros' : `Más filtros${activeFilters ? ` (${activeFilters})` : ''}`}
+              <i className={`fa-solid fa-chevron-${moreFilters ? 'up' : 'down'} text-xs`} aria-hidden="true" style={{ color: 'var(--muted)' }}></i>
+            </button>
             {/* Row 2 */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 more-f">
               <select value={selDiscount} onChange={e => setSelDiscount(e.target.value)} className={`${sel} text-slate-300`}>
                 <option value="">Descuento (cualquiera)</option>
                 <option value="yes">Con descuento</option>
@@ -871,7 +749,7 @@
             </div>
             {/* Row 3 */}
             <div className="flex flex-col md:flex-row gap-3 items-start md:items-center border-t border-slate-800/40 pt-3">
-              <select value={selValidity} onChange={e => setSelValidity(e.target.value)} className={`${sel} text-slate-300 md:w-72`}>
+              <select value={selValidity} onChange={e => setSelValidity(e.target.value)} className={`${sel} text-slate-300 md:w-72 more-f`}>
                 <option value="">Vigencia (cualquiera)</option>
                 <option value="active">✅ Activas ahora</option>
                 <option value="expiring">⚠️ Vencen pronto (7d)</option>
@@ -882,10 +760,10 @@
               </select>
 
               <label className="flex items-center gap-2 cursor-pointer select-none">
-                <div onClick={() => setTodayOnly(!todayOnly)}
-                  className={`relative w-10 h-5 rounded-full border transition-all ${todayOnly ? 'bg-emerald-500 border-emerald-400' : 'bg-slate-800 border-slate-700'}`}>
-                  <div className={`absolute top-0.5 w-4 h-4 rounded-full bg-white shadow transition-all ${todayOnly ? 'left-5' : 'left-0.5'}`}></div>
-                </div>
+                <button type="button" role="switch" aria-checked={todayOnly} onClick={() => setTodayOnly(!todayOnly)}
+                  className="relative w-10 h-6 rounded-full border transition-colors" style={{ background: todayOnly ? 'var(--ac)' : 'var(--s2)', borderColor: todayOnly ? 'var(--ac)' : 'var(--border)' }}>
+                  <div className={`absolute top-[3px] w-4 h-4 rounded-full transition-all ${todayOnly ? 'left-[19px]' : 'left-[3px]'}`} style={{ background: todayOnly ? 'var(--ac-tx)' : 'var(--muted)' }}></div>
+                </button>
                 <span className="text-sm text-slate-300">Solo disponibles hoy ({todayCount})</span>
               </label>
 
@@ -912,7 +790,10 @@
                 )}
               </div>
             )}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            {filteredPromos.length > 0 && activeFilters > 0 && (
+              <p className="text-sm mb-3" style={{ color: 'var(--muted)' }} aria-live="polite">{filteredPromos.length} resultados</p>
+            )}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
               {filteredPromos.slice(0, shown).map((p, i) => (
                 <PromoCard key={p.id || `${p.bankId}-${i}`} p={p} index={i} onOpen={setActivePromo} />
               ))}
