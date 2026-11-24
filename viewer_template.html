@@ -138,6 +138,9 @@
     .badge-expired { background: transparent; color: var(--bad); border-color: var(--border); }
     .badge-nodate { background: transparent; color: var(--faint); padding-left: 0; }
     .today-ring { box-shadow: none; }
+    /* Logos de comercios: enteros, sobre placa clara (muchos son oscuros o transparentes) */
+    .logo-tile { background: #f3f1ec; padding: 14px 20px; border-bottom: 1px solid var(--border); }
+    body.light .logo-tile { background: #fff; }
     @media (max-width: 767px) { section[data-more="0"] .more-f { display: none !important; } }
 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
@@ -350,8 +353,8 @@
           style={{ animationDelay: `${Math.min(index * 12, 240)}ms` }}
         >
           {p.img && (
-            <div className="relative h-36 overflow-hidden" style={{ background: 'var(--s2)' }}>
-              <img src={p.img} alt="" loading="lazy" referrerPolicy="no-referrer" className="w-full h-full object-cover"
+            <div className="logo-tile h-28">
+              <img src={p.img} alt="" loading="lazy" referrerPolicy="no-referrer" className="w-full h-full object-contain"
                 onError={e => { e.target.parentNode.style.display = 'none'; }} />
             </div>
           )}
@@ -410,8 +413,8 @@
             </button>
 
             {promo.img && (
-              <div className="h-48 relative overflow-hidden shrink-0" style={{ background: 'var(--s2)' }}>
-                <img src={promo.img} alt="" referrerPolicy="no-referrer" className="w-full h-full object-cover" onError={e => { e.target.parentNode.style.display = 'none'; }} />
+              <div className="logo-tile h-40 shrink-0">
+                <img src={promo.img} alt="" referrerPolicy="no-referrer" className="w-full h-full object-contain" onError={e => { e.target.parentNode.style.display = 'none'; }} />
               </div>
             )}
 
