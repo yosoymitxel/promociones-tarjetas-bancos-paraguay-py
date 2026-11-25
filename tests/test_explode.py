@@ -3,7 +3,21 @@ import unittest
 from scraper_modules.explode import explode, parse_affiliated_stores
 
 
-STORE_LIST = """ALDO BERTONI BIRKENSTOCK EL MERCADILLO GAP MOSS UNDER ARMOUR VERONICA WILLIGS ALEMANIA CELL BRAUN CALVIN KLEIN CASA AMERICANA CUNA BELLA HERING HIGH LOW ISDIN JOYERIA ARMELE MAC MANGO ORAL B PALUPIA PARFOIS PILAR TL SPORT & OUTDOORS TOMMY HILFIGER VENDOME RELOJERIA AEROPOSTALE APHRODITE CASA MARIA CAT CHAMPS ELYSEÉS COLE HAAN COLUMBIA CROCS DENOIR ENEACHE FUSCHIA INDIAN EMPORIUM JOSEFINA KERASTASE LUPO MARIE MARIE MATCH MAYBELLINE MUAR NEW BALANCE NINE WEST ODETTE OPTICA VISION PIERRE LANNIER PLANET TOY PULSAK PUMA RND ROCHESTER RONDINA SCALA SKECHERS SPORT HOUSE TIMBERLAND TOTTO VERDAD CONSECUENCIA WRANGLER - LEE GNC VERNIER BIBI"""
+STORE_NAMES = [
+    "ALDO", "BERTONI", "BIRKENSTOCK", "EL MERCADILLO", "GAP", "MOSS",
+    "UNDER ARMOUR", "VERONICA WILLIGS", "ALEMANIA CELL", "CALVIN KLEIN",
+    "CUNA BELLA", "HERING", "HIGH LOW", "ISDIN", "JOYERIA ARMELE", "MAC",
+    "MANGO", "PALUPIA", "PARFOIS", "PILAR", "TL SPORT & OUTDOORS",
+    "TOMMY HILFIGER", "VENDOME RELOJERIA", "AEROPOSTALE", "APHRODITE",
+    "CASA MARIA", "CAT", "CHAMPS ELYSEÉS", "COLE HAAN", "COLUMBIA", "CROCS",
+    "DENOIR", "ENEACHE", "FUSCHIA", "INDIAN EMPORIUM", "JOSEFINA", "KERASTASE",
+    "LUPO", "MARIE MARIE", "MATCH", "MAYBELLINE", "MUAR", "NEW BALANCE",
+    "NINE WEST", "ODETTE", "PIERRE LANNIER", "PLANET TOY", "PULSAK", "PUMA",
+    "RND", "ROCHESTER", "RONDINA", "SCALA", "SKECHERS", "SPORT HOUSE",
+    "TIMBERLAND", "TOTTO", "VERDAD CONSECUENCIA", "WRANGLER", "GNC", "VERNIER",
+    "BIBI",
+]
+STORE_LIST = " ".join(STORE_NAMES)
 
 
 def sample_promo(bank_id="itau", description=None):
@@ -26,24 +40,26 @@ def sample_promo(bank_id="itau", description=None):
 
 
 class ItaúAffiliatedStoreTests(unittest.TestCase):
-    def test_catalog_segments_full_list_without_splitting_compound_names(self):
+    def test_catalog_matches_only_names_from_the_supplied_list(self):
         stores = parse_affiliated_stores(STORE_LIST)
-        self.assertEqual(len(stores), 66)
-        self.assertEqual(stores[:4], ["ALDO", "BERTONI", "BIRKENSTOCK", "EL MERCADILLO"])
+        self.assertEqual(stores, STORE_NAMES)
+        self.assertEqual(len(stores), 62)
         self.assertIn("UNDER ARMOUR", stores)
         self.assertIn("VERONICA WILLIGS", stores)
         self.assertIn("TL SPORT & OUTDOORS", stores)
         self.assertIn("VERDAD CONSECUENCIA", stores)
-        self.assertIn("WRANGLER - LEE", stores)
+        self.assertIn("WRANGLER", stores)
+        self.assertNotIn("BRAUN", stores)
+        self.assertNotIn("CASA AMERICANA", stores)
 
     def test_explode_keeps_parent_and_adds_one_promo_per_store(self):
         original = sample_promo()
         result = explode([original])
-        self.assertEqual(len(result), 67)
+        self.assertEqual(len(result), 63)
 
         parent = result[0]
         self.assertEqual(parent["title"], "Primer Martes")
-        self.assertEqual(parent["affiliated_stores"], parse_affiliated_stores(STORE_LIST))
+        self.assertEqual(parent["affiliated_stores"], STORE_NAMES)
         self.assertNotIn("Locales adheridos:", parent["desc"])
 
         aldo = next(p for p in result if p["title"] == "ALDO")
