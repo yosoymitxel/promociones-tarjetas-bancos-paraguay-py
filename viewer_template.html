@@ -520,7 +520,7 @@
 
     // ─── Main App ─────────────────────────────────────────────────────
     function App() {
-      const [search, setSearch] = useState("");
+      const [search, setSearch] = useState(() => new URLSearchParams(window.location.search).get("q") || "");
       const [selBank, setSelBank] = useState("");
       const [selCat, setSelCat] = useState("");
       // Shoppings: listas de locales que junta el panel Web-scrapping
