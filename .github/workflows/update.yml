@@ -5,6 +5,11 @@ on:
     branches: [main]
     paths:
       - analysis.py
+      - main.py
+      - scraper_modules/**
+      - viewer_template.html
+      - tests/**
+      - .github/workflows/update.yml
   schedule: [{ cron: '43 9 * * *' }]
   workflow_dispatch:
 permissions: { contents: write }
@@ -17,6 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - run: pip install httpx beautifulsoup4 playwright pdfplumber && (python -m playwright install --with-deps chromium || python -m playwright install chromium)
+      - run: python -m unittest discover -s tests -v
       - run: cp promos.json /tmp/prev.json && python main.py
       # Si los bancos fallan y sale menos de la mitad, no pisa los datos buenos
       - run: |

@@ -369,6 +369,10 @@
               <div className="min-w-0">
                 <h3 className="font-semibold text-[15px] leading-snug line-clamp-2" style={{ color: 'var(--text)' }} title={p.title}>{p.title}</h3>
                 {p.category && <p className="text-xs mt-1" style={{ color: 'var(--muted)' }}>{p.category.replace(/^\W+\s*/, '')}</p>}
+                {Array.isArray(p.affiliated_stores) && p.affiliated_stores.length > 0 && (
+                  <p className="text-[11px] mt-1" style={{ color: 'var(--muted)' }}>{p.affiliated_stores.length} locales adheridos</p>
+                )}
+                {p.group && <p className="text-[11px] mt-1" style={{ color: 'var(--muted)' }}>Incluido en: {p.group}</p>}
               </div>
               {p.discount_percent > 0 && <span className="pct text-2xl leading-none shrink-0">-{p.discount_percent}%</span>}
             </div>
@@ -401,6 +405,7 @@
       const vi = useMemo(() => getValidityInfo(promo.validity), [promo.validity]);
       const similar = useMemo(() => getSimilarPromos(promo, allPromos), [promo, allPromos]);
       const isToday = promoIsToday(promo);
+      const parentPromo = promo.parent_id ? allPromos.find(p => p.id === promo.parent_id) : null;
 
       return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md" onClick={onClose}>
@@ -461,6 +466,15 @@
                 </div>
               )}
 
+              {parentPromo && (
+                <div className="mb-3 flex items-center gap-2 text-xs border-t border-slate-800/60 pt-4" style={{ color: 'var(--muted)' }}>
+                  <span>Local adherido a:</span>
+                  <button type="button" onClick={() => onOpen(parentPromo)} className="font-bold underline underline-offset-4" style={{ color: 'var(--ac)' }}>
+                    {parentPromo.title}
+                  </button>
+                </div>
+              )}
+
               {/* Description */}
               {promo.desc ? (
                 <div className="text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4 whitespace-pre-line">
@@ -470,6 +484,23 @@
                 <p className="text-sm text-slate-500 italic border-t border-slate-800/60 pt-4">
                   Sin descripción adicional. Consultá las bases y condiciones oficiales.
                 </p>
+              )}
+
+              {Array.isArray(promo.affiliated_stores) && promo.affiliated_stores.length > 0 && (
+                <section className="mt-5 border-t border-slate-800/60 pt-4">
+                  <p className="text-xs font-bold text-slate-400 mb-2">
+                    Locales adheridos <span className="font-normal">({promo.affiliated_stores.length})</span>
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {promo.affiliated_stores.map(name => {
+                      const child = allPromos.find(p => p.parent_id === promo.id && p.title === name);
+                      return child ? (
+                        <button type="button" key={name} onClick={() => onOpen(child)}
+                          className="chip hover:border-slate-500 hover:text-white transition-colors">{name}</button>
+                      ) : <span key={name} className="chip">{name}</span>;
+                    })}
+                  </div>
+                </section>
               )}
 
               {/* Similar promos in other banks */}
@@ -590,8 +621,10 @@
 
           // Text search
           if (q) {
-            const hay = [p.title, p.desc, p.category, p.validity]
-              .map(v => v == null ? "" : String(v).toLowerCase()).join(" ");
+            const hay = [
+              p.title, p.desc, p.category, p.validity, p.group,
+              ...(Array.isArray(p.affiliated_stores) ? p.affiliated_stores : [])
+            ].map(v => v == null ? "" : String(v).toLowerCase()).join(" ");
             if (!hay.includes(q)) return false;
           }
 

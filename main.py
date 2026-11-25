@@ -15,7 +15,8 @@ def deduplicate(promos: list[dict]) -> list[dict]:
     seen: set[tuple] = set()
     unique: list[dict] = []
     for p in promos:
-        key = (p["bankId"], p["title"].lower().strip())
+        group_key = p.get("parent_id") or (p.get("group") or "").lower().strip()
+        key = (p["bankId"], p["title"].lower().strip(), group_key, p.get("href") or "")
         if key not in seen:
             seen.add(key)
             unique.append(p)
