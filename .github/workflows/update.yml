@@ -9,8 +9,10 @@ on:
       - scraper_modules/**
       - viewer_template.html
       - tests/**
-      - .github/workflows/update.yml
-  schedule: [{ cron: '43 9 * * *' }]
+  schedule:
+    # Primera tanda diaria a las 00:00 de Paraguay.
+    - cron: '0 0 * * *'
+      timezone: 'America/Asuncion'
   workflow_dispatch:
 permissions: { contents: write }
 jobs:
