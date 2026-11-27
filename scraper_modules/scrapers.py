@@ -64,7 +64,15 @@ class BASAScraper(ScraperBase):
         promos = super().scrape()           # runs scrape_api → scrape_html
 
         if promos and HAS_PLAYWRIGHT:
-            promos = self._enrich_with_pdfs(promos)
+            try:
+                promos = self._enrich_with_pdfs(promos)
+            except Exception as exc:
+                # PDF enrichment is optional: never discard valid HTML results.
+                print(
+                    f"    [BASA] PDF enrichment failed; retaining "
+                    f"{len(promos)} HTML promotions "
+                    f"({type(exc).__name__}: {exc})"
+                )
 
         return promos
 
@@ -102,7 +110,9 @@ class BASAScraper(ScraperBase):
         with self.open_playwright_page() as (page, _):
             # Visit main page first to establish the browser session / cookies
             # that unlock the PDF storage URLs (direct httpx calls get 403).
-            page.goto(self.bank_url, wait_until="domcontentloaded", timeout=45_000)
+            # Only wait for the response commit; BASA can keep the document
+            # open while third-party resources load. Cookies are already set.
+            page.goto(self.bank_url, wait_until="commit", timeout=30_000)
             page.wait_for_timeout(2_000)
 
             for href, promo in pdf_map.items():
