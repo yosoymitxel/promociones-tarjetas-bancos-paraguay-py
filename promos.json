@@ -56,19 +56,17 @@
   {
     "id": "basa-90738a3b",
     "title": "CUOTAS SIN INTERESES EN COMPRAS INTERNACIONALES",
-    "desc": "Hasta 6 cuotas sin intereses\nTarjetas: 3. No aplica el beneficio a las Empresariales\nDías: Todos los días\nVigencia: y actualizada para",
+    "desc": null,
     "img": "",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/destacadas%20abril/compras%20al%20exterior%20en%20cuotas.pdf",
     "bankId": "basa",
     "bankShort": "BASA",
     "bankColor": "#F59E0B",
     "category": "Otros",
-    "validity": null,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
     "discount_percent": null,
+    "days": [],
+    "installments": 0,
+    "validity": null,
     "expired": false
   },
   {
@@ -4258,17 +4256,19 @@
   {
     "id": "basa-0fd11c8c",
     "title": "Ferrex",
-    "desc": null,
+    "desc": "Hasta 12 cuotas sin intereses\nTarjetas: Visa Clásica, Visa Oro, Visa Signature, MasterCard Clásica, Basa MasterCard Oro, MasterCard Black, Afinidad Farmacenter, Afinidad Club Libertad\nDías: Todos los días\nVigencia: Todos los días hasta el 31 de diciembre de 2027.",
     "img": "https://www.bancontinental.com.py/uploads/small_og_logo_aa7536a487.jpeg",
     "href": "https://www.bancobasa.com.py/storage/app/media/pdf/bases-condiciones/tarjetas-institucionales/CUOTAS%20EXTENDIDAS%202027/ferrex.pdf",
     "bankId": "basa",
     "bankShort": "BASA",
     "bankColor": "#F59E0B",
     "category": "Otros",
+    "validity": "Hasta el 31 de diciembre de 2027",
+    "days": [
+      "Todos"
+    ],
+    "installments": 12,
     "discount_percent": null,
-    "days": [],
-    "installments": null,
-    "validity": null,
     "expired": false
   },
   {
@@ -6907,11 +6907,11 @@
     "expired": false
   },
   {
-    "id": "eclub-21bbade4",
+    "id": "eclub-bfc90b52",
     "title": "15% reintegroSupermercado",
     "desc": "¡Tenés 15% de reintegro en supermercados todos los lunes de octubre pagando con QR!",
     "img": "https://eclub.com.py/wp-content/uploads/2025/11/google-pay-e1791034039179-150x150.png",
-    "href": "https://eclub.com.py/wp-content/uploads/2026/11/Promo-Supermercado-Noviembre.pdf",
+    "href": "https://eclub.com.py/wp-content/uploads/2026/11/TYC_Supermercados.pdf",
     "bankId": "eclub",
     "bankShort": "eClub",
     "bankColor": "#EC4899",
@@ -7224,42 +7224,6 @@
     "expired": false
   },
   {
-    "id": "gnb-34cdb26c",
-    "title": "Champs Elysees",
-    "desc": "Hasta 25% de descuento los jueves y viernes + Hasta 6 cuotas sin intereses todos los días.\n \nDel 08 de enero al 27 de noviembre del 2026.\n\nHasta 25% de descuento para pagos con tarjetas de crédito del Banco GNB Paraguay todos los jueves y viernes. 20% de descuento para pagos con tarjetas de crédito del Banco GNB Paraguay (5% en caja + 15% con tarjetas de crédito físicas). +5% de descuento adicional para pagos con QR con tarjetas de crédito a través de la App Banco GNB Personas.\nHasta 6 cuotas sin intereses todos los días para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 2.000.000 (guaraníes dos millones) por cuenta de tarjeta de crédito (incluye titulares y adicionales), el cual aplica en forma conjunta a todos los locales de los comercios adheridos (Champs Elysees, O boticário, Isdin).\nLa promoción de descuento aplica todos los jueves y viernes dentro del periodo de la promoción.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nEl descuento en caja no aplica en la compra de Gift Cards y servicios de cabina como tratamientos faciales.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5064_champs-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/362",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 08 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-8a848c83",
-    "title": "Springfield",
-    "desc": "Hasta 25% de descuento los jueves y viernes + Hasta 6 cuotas sin intereses todos los días.\n \nDel 03 de septiembre al 27 de noviembre del 2026.\n\n20% de descuento para pagos con tarjetas de crédito del Banco GNB Paraguay (5% en caja + 15% con tarjetas de crédito físicas). +5% de descuento adicional para pagos con QR con tarjetas de crédito a través de la App Banco GNB Personas.\nHasta 6 cuotas sin intereses todos los días para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 2.500.000 (guaraníes dos millones quinientos mil) por cuenta de tarjeta de crédito (incluye titulares y adicionales), el cual aplica en forma conjunta a todos los locales de los comercios adheridos (Springfield, Women Secret, Forever 21, Jack & Jones).\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/4714_springfield-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/474",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "👗 Moda",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 03 de septiembre al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
     "id": "gnb-a29eae2a",
     "title": "El Negro Suplementos",
     "desc": "Hasta 45% de descuento + Hasta 6 cuotas sin intereses los días viernes.\n \nDel 02 de octubre del 2026 al 29 de enero del 2027.\n\n45% de descuento para pagos con tarjetas de crédito Mastercard Clásicas, Oro, Black, Black Premier y Metalcard Premier del Banco GNB Paraguay en la Sucursal de Asunción.\n20% de descuento para pagos con tarjetas de crédito Mastercard Clásicas, Oro, Black, Black Premier y Metalcard Premier del Banco GNB Paraguay en la Sucursal de Ciudad del Este.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.000.000 (guaraníes un millón) por cuenta de tarjeta de crédito Incluye titulares y adicionales.\nLa promoción aplica los días viernes dentro del periodo de vigencia de la promoción.\nNo acumulable con otras promociones.",
@@ -7332,24 +7296,6 @@
     "expired": false
   },
   {
-    "id": "gnb-9bcd3ae5",
-    "title": "Vernier",
-    "desc": "Hasta 25% de descuento los jueves y viernes + Hasta 6 cuotas sin intereses todos los días.\n \nDel 21 de mayo al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito Mastercard afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay.\n20% de descuento para pagos con tarjetas de crédito Mastercard afinidades Clásicas y Oro del Banco GNB Paraguay.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) por cuenta de tarjeta de crédito (incluye titulares y adicionales).\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5137_vernier-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/620",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 21 de mayo al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
     "id": "gnb-00b26c64",
     "title": "Casa Pro",
     "desc": "Hasta 12 cuotas sin intereses todos los días.\n \nDel 26 de agosto al 31 de diciembre del 2026.\n\nHasta 12 cuotas sin intereses con las tarjetas de crédito del Banco GNB Paraguay.\nPara el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago bajo el Plan 1 de Bancard. Las cuotas se verán reflejadas en el extracto del cliente.\nNo participan de la promoción las tarjetas de débito y crédito de afinidades Empresariales, Corporativas, Gift Card, Gourmet y Prepagas.\nNo acumulable con otras promociones.",
@@ -7365,25 +7311,6 @@
     ],
     "installments": 12,
     "validity": "Del 26 de agosto al 31 de diciembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-f10f509f",
-    "title": "Mercedes Benz Collection",
-    "desc": "Hasta 25% de descuento los días jueves y viernes.\n \nDel 22 de octubre al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito Mastercard afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay.\n20% de descuento para pagos con tarjetas de crédito Mastercard afinidades Clásicas y Oro del Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.000.000 (guaraníes un millón) por cuenta de tarjeta de crédito (incluye titulares y adicionales), el cual aplica en forma conjunta a todos los locales de los comercios adheridos.\nNo participan de la promoción las tarjetas de débito y crédito; Visa, de afinidades Empresariales, Corporativas, Gift Card, Gourmet y Prepagas.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5397_mercedes-benz-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/686",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Jueves",
-      "Viernes"
-    ],
-    "installments": null,
-    "validity": "Del 22 de octubre al 27 de noviembre del 2026",
     "expired": false
   },
   {
@@ -7440,24 +7367,6 @@
     ],
     "installments": 3,
     "validity": "Del 02 de enero al 28 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-2eea5df4",
-    "title": "Forever 21",
-    "desc": "Hasta 25% de descuento los jueves y viernes + Hasta 6 cuotas sin intereses todos los días.\n \nDel 03 de septiembre al 27 de noviembre del 2026.\n\n20% de descuento para pagos con tarjetas de crédito del Banco GNB Paraguay (5% en caja + 15% con tarjetas de crédito físicas). +5% de descuento adicional para pagos con QR con tarjetas de crédito a través de la App Banco GNB Personas.\nHasta 6 cuotas sin intereses todos los días para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 2.500.000 (guaraníes dos millones quinientos mil) por cuenta de tarjeta de crédito (incluye titulares y adicionales), el cual aplica en forma conjunta a todos los locales de los comercios adheridos (Springfield, Women Secret, Forever 21, Jack & Jones).\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/4093_forever-2026-webv2.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/324",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 03 de septiembre al 27 de noviembre del 2026",
     "expired": false
   },
   {
@@ -7552,24 +7461,6 @@
     ],
     "installments": null,
     "validity": "Del 02 de octubre al 29 de enero del 2027",
-    "expired": false
-  },
-  {
-    "id": "gnb-228229b7",
-    "title": "Óptica Valemar",
-    "desc": "20% de reintegro + Hasta 6 cuotas sin intereses los días viernes.\n \nDel 02 de octubre al 27 de noviembre del 2026.\n\n20% de reintegro para pagos con tarjetas de crédito Mastercard del Banco GNB Paraguay.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.000.000 (guaraníes un millón) por cuenta de tarjeta de crédito (incluye titulares y adicionales), el cual aplica en forma conjunta con todas las sucursales de lácteos, restaurantes y heladerías.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5368_valemar-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/675",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "💊 Salud y belleza",
-    "discount_percent": 20,
-    "days": [
-      "Viernes"
-    ],
-    "installments": 6,
-    "validity": "Del 02 de octubre al 27 de noviembre del 2026",
     "expired": false
   },
   {
@@ -7681,24 +7572,6 @@
     "expired": false
   },
   {
-    "id": "gnb-2c0bf66a",
-    "title": "Artemera",
-    "desc": "Hasta 25% de descuento los días viernes + Hasta 6 cuotas sin intereses todos los días.\n \nDel 11 de septiembre al 27 de noviembre del 2026.\n\n25% de reintegro para pagos con tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier del Banco GNB Paraguay.\n20% de reintegro para pagos con tarjetas de crédito Mastercard Clásicas y Oro del Banco GNB Paraguay. \nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) por cuenta de tarjeta de crédito Incluye titulares y adicionales.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra. \nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/4769_artemera-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/491",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 11 de septiembre al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
     "id": "gnb-a4746946",
     "title": "Todo Cubierta",
     "desc": "20% de descuento en servicios, 5% en productos + Hasta 12 cuotas sin intereses.\n \nDel 08 de enero al 31 de diciembre del 2026.\n\nHasta 20% de descuento para pagos con tarjetas de crédito del Banco GNB Paraguay.\nHasta 12 cuotas sin intereses para pagos con tarjetas de crédito Clásicas, Oro, Experience, Black, Black Premier, Metalcard Premier, Platinum e Infinite del Banco GNB Paraguay.\nLa promoción aplica todos los días durante el periodo de promoción.\nEl descuento es realizado en caja. 20% de descuento para servicios y 5% para productos. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nNo acumulable con otras promociones.",
@@ -7714,24 +7587,6 @@
     ],
     "installments": 12,
     "validity": "Del 08 de enero al 31 de diciembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-81f500a7",
-    "title": "Paats & Paats",
-    "desc": "20% de descuento + Hasta 6 cuotas sin intereses los días viernes.\n \nDel 03 de julio al 27 de noviembre del 2026.\n\n20% de descuento para pagos con tarjetas de crédito Mastercard Clásicas, Oro, Black, Black Premier y Metalcard Premier del Banco GNB Paraguay.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.000.000 (guaraníes un milón) por cuenta de tarjeta de crédito (incluye titulares y adicionales).\nEl 10% de descuento será aplicado por el comercio en caja/mostrador al momento del pago y el 10% restante será vía reintegro en el extracto al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nNo aplica para pagos realizados a través de plataformas de terceros y/o e-commerce.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/4846_paats-paats-al-11-2025-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/515",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 20,
-    "days": [
-      "Viernes"
-    ],
-    "installments": 6,
-    "validity": "Del 03 de julio al 27 de noviembre del 2026",
     "expired": false
   },
   {
@@ -7885,96 +7740,6 @@
     "expired": false
   },
   {
-    "id": "gnb-2f27ac1d",
-    "title": "Jeep",
-    "desc": "Hasta 25% de descuento los viernes + 6 cuotas sin intereses todos los días\n \nDel 23 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días viernes. \n20% de descuento para pagos con tarjetas de crédito afinidades Clàsicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días viernes. \nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) para tarjetas de crédito Mastercard y Visa Clásicas, Oro Platinum e Infinite. y Gs. 3.000.000 (guaraníes tres millones) para tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier el cual aplica en forma conjunta a todos los locales de los comercios adheridos.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5038_jeep-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/570",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 23 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-d2339413",
-    "title": "Women'Secret",
-    "desc": "Hasta 25% de descuento los jueves y viernes + Hasta 6 cuotas sin intereses todos los días.\n \nDel 03 de septiembre al 27 de noviembre del 2026.\n\n20% de descuento para pagos con tarjetas de crédito del Banco GNB Paraguay (5% en caja + 15% con tarjetas de crédito físicas). +5% de descuento adicional para pagos con QR con tarjetas de crédito a través de la App Banco GNB Personas.\nHasta 6 cuotas sin intereses todos los días para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 2.500.000 (guaraníes dos millones quinientos mil) por cuenta de tarjeta de crédito (incluye titulares y adicionales), el cual aplica en forma conjunta a todos los locales de los comercios adheridos (Springfield, Women Secret, Forever 21, Jack & Jones).\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/4715_women-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/571",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 03 de septiembre al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-c62ca26f",
-    "title": "Jack & Jones",
-    "desc": "Hasta 25% de descuento los jueves y viernes + Hasta 6 cuotas sin intereses todos los días.\n \nDel 03 de septiembre al 27 de noviembre del 2026.\n\n20% de descuento para pagos con tarjetas de crédito del Banco GNB Paraguay (5% en caja + 15% con tarjetas de crédito físicas). +5% de descuento adicional para pagos con QR con tarjetas de crédito a través de la App Banco GNB Personas.\nHasta 6 cuotas sin intereses todos los días para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 2.500.000 (guaraníes dos millones quinientos mil) por cuenta de tarjeta de crédito (incluye titulares y adicionales), el cual aplica en forma conjunta a todos los locales de los comercios adheridos (Springfield, Women Secret, Forever 21, Jack & Jones).\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5039_jack-jones-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/572",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 03 de septiembre al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-90f6e938",
-    "title": "O Boticário",
-    "desc": "Hasta 25% de descuento los jueves y viernes + Hasta 6 cuotas sin intereses todos los días.\n \nDel 08 de enero al 27 de noviembre del 2026.\n\nHasta 25% de descuento para pagos con tarjetas de crédito del Banco GNB Paraguay todos los jueves y viernes. 20% de descuento para pagos con tarjetas de crédito del Banco GNB Paraguay (5% en caja + 15% con tarjetas de crédito físicas). +5% de descuento adicional para pagos con QR con tarjetas de crédito a través de la App Banco GNB Personas.\nHasta 6 cuotas sin intereses todos los días para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 2.000.000 (guaraníes dos millones) por cuenta de tarjeta de crédito (incluye titulares y adicionales), el cual aplica en forma conjunta a todos los locales de los comercios adheridos (Champs Elysees, O boticário, Isdin).\nLa promoción de descuento aplica todos los jueves y viernes dentro del periodo de la promoción.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nEl descuento en caja no aplica en la compra de Gift Cards y servicios de cabina como tratamientos faciales.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5065_oboticario-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/591",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 08 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-dd36827f",
-    "title": "Isdin",
-    "desc": "Hasta 25% de descuento los jueves y viernes + Hasta 6 cuotas sin intereses todos los días.\n \nDel 08 de enero al 27 de noviembre del 2026.\n\nHasta 25% de descuento para pagos con tarjetas de crédito del Banco GNB Paraguay todos los jueves y viernes. 20% de descuento para pagos con tarjetas de crédito del Banco GNB Paraguay (5% en caja + 15% con tarjetas de crédito físicas). +5% de descuento adicional para pagos con QR con tarjetas de crédito a través de la App Banco GNB Personas.\nHasta 6 cuotas sin intereses todos los días para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 2.000.000 (guaraníes dos millones) por cuenta de tarjeta de crédito (incluye titulares y adicionales), el cual aplica en forma conjunta a todos los locales de los comercios adheridos (Champs Elysees, O boticário, Isdin).\nLa promoción de descuento aplica todos los jueves y viernes dentro del periodo de la promoción.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nEl descuento en caja no aplica en la compra de Gift Cards y servicios de cabina como tratamientos faciales.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5066_isdin-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/592",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "💊 Salud y belleza",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 08 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
     "id": "gnb-d55f412a",
     "title": "Cerogrado",
     "desc": "Hasta 20% de descuento + Hasta 6 cuotas sin intereses los días jueves y viernes.\n \nDel 20 de agosto al 31 de diciembre del 2026.\n\nHasta 20% de descuento para pagos con tarjetas de crédito del Banco GNB Paraguay.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra por periodo de la promoción: Gs. 1.500.000 (guaraníes un millón quinientos mil) por cuenta de tarjeta de crédito (Incluye titulares y adicionales).\nEl descuento será aplicado en caja al momento del pago por el comercio. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nLa promoción aplica únicamente los días jueves y viernes durante el periodo de promoción.\nNo acumulable con otras promociones.",
@@ -8084,24 +7849,6 @@
     "expired": false
   },
   {
-    "id": "gnb-a16db658",
-    "title": "Raphaella Booz",
-    "desc": "Hasta 25% de descuento los jueves y viernes + Hasta 6 cuotas sin intereses todos los días.\n \nDel 10 de septiembre al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito Mastercard afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay.\n20% de descuento para pagos con tarjetas de crédito Mastercard afinidades Clásicas y Oro del Banco GNB Paraguay.\nHasta 6 cuotas sin intereses todos los días para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) por cuenta de tarjeta de crédito (incluye titulares y adicionales), el cual aplica en forma conjunta a todos los locales de los comercios adheridos.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5337_raphaela-booz-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/664",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 10 de septiembre al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
     "id": "gnb-a8f6923b",
     "title": "Farma Lorena - Farmacia Vida",
     "desc": "20% de descuento los días viernes.\n \nDel 11 de septiembre al 25 de diciembre del 2026.\n\n20% de descuento para pagos con las tarjetas de crédito Mastercard del Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.000.000 (guaranies un millón) por cuenta de tarjeta de crédito (incluye titulares y adicionales)\nNo participan de la promoción las tarjetas de débito y crédito de afinidades Empresariales, Corporativas, Gift Card, Gourmet y Prepagas.\nNo acumulable con otras promociones.",
@@ -8135,24 +7882,6 @@
     ],
     "installments": 6,
     "validity": "Del 18 de septiembre al 28 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-fb9124c0",
-    "title": "Global Box",
-    "desc": "Hasta 25% de reintegro + Hasta 6 cuotas sin intereses todos los días.\n \nDel 10 de octubre al 27 de noviembre del 2026.\n\n25% de reintegro para pagos con tarjetas de crédito Mastercard afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay. \n20% de reintegro para pagos con tarjetas de crédito Mastercard afinidades Clásicas y Oro del Banco GNB Paraguay.\nHasta 6 cuotas sin intereses todos los días para pagos con tarjetas de crédito del Banco GNB Paraguay.\nPor cada paquete abonado con tarjetas de crédito Banco GNB entre el 12 de octubre y el 26 de noviembre de 2026, el cliente recibirá doble cupón para participar de la promoción aniversario de los 15 años de GlobalBox.\nTope de compra mensual: Gs. 700.000 (guaraníes setecientos mil) por cuenta de tarjeta de crédito (incluye titulares y adicionales), el cual aplica en forma conjunta a todos los locales de los comercios adheridos.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5370_global-box-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/676",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 10 de octubre al 27 de noviembre del 2026",
     "expired": false
   },
   {
@@ -8264,24 +7993,6 @@
     "expired": false
   },
   {
-    "id": "gnb-62369f39",
-    "title": "Patrol Jeans",
-    "desc": "Hasta 25% de descuento los jueves y viernes + hasta 6 cuotas sin intereses todos los días.\n \nDel 08 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con las tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier del Banco GNB Paraguay.\n20% de descuento para pagos con tarjetas de crédito afinidades Clásicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay.\nHasta 6 cuotas sin intereses para tarjetas de crédito del Banco GNB Paraguay.\nEl 10% del descuento será aplicado por el comercio en caja/mostrador al momento del pago y el porcentaje restante será procesado vía reintegro en el extracto del cliente. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nTope de compra mensual: Gs. 1.000.000 (guaraníes un millón) por cuenta de tarjeta de crédito (incluye titulares y adicionales).\nNo aplica para pagos realizados a través de plataformas de terceros y/o e-commerce.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/4599_patrol-2025-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/436",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "👗 Moda",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 08 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
     "id": "gnb-7f5ccd90",
     "title": "Cat Town – Agrofield Web",
     "desc": "20% de reintegro + Hasta 6 cuotas sin intereses los días jueves.\n \nDel 02 de julio al 31 de diciembre del 2026.\n\n20% de reintegro para pagos con tarjetas de crédito Mastercard Clásicas, Oro, Black, Black Premier y Metalcard Premier del Banco GNB Paraguay.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 500.000 (guaraníes quinientos mil) por cuenta de tarjeta de crédito, incluye titulares y adicionales.\nEl beneficio aplica única y exclusivamente a compras web vía pagos online.\nNo participan de la promoción las tarjetas de débito y crédito; Visa, de afinidades Empresariales, Corporativas, Gift Card, Gourmet y Prepagas.\nNo acumulable con otras promociones.",
@@ -8373,24 +8084,6 @@
     "expired": false
   },
   {
-    "id": "gnb-a9654f47",
-    "title": "Juguetería Me Encanta",
-    "desc": "Hasta 25% de descuento todos los jueves y viernes + 6 cuotas sin intereses todos los días.\n \nDel 24 de julio al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clàsicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.000.000 (guaraníes un millón) por cuenta de tarjeta de crédito (incluye titulares y adicionales).\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nEl descuento en caja no aplica en la compra de Gift Cards.\nBeneficio no aplica a compras e-commerce.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5070_web-me-encanta.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/246",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "🧸 Niños",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 24 de julio al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
     "id": "gnb-6c9eb915",
     "title": "Anjos",
     "desc": "20% de descuento los viernes + Hasta 12 cuotas sin intereses todos los días.\n \nDel 21 de octubre al 31 de diciembre del 2026.\n\n20% de descuento los viernes en productos seleccionados para tarjetas de afinidad Clásicas, Oro, Black, Black Premier, Metalcard Premier, Experience, Platinum, Infinite.\nHasta 12 cuotas sin intereses para pagos con tarjetas de crédito Clásicas, Oro, Experience, Black, Black Premier, Metalcard Premier, Platinum e Infinite.\nEl descuento será aplicado por el comercio directamente en caja/mostrador al momento del pago. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nNo acumulable con otras promociones.",
@@ -8409,42 +8102,6 @@
     "expired": false
   },
   {
-    "id": "gnb-090277ad",
-    "title": "Literato",
-    "desc": "Hasta 25% de descuento los días jueves y viernes + 6 cuotas sin intereses todos los días.\n \nDel 15 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito MasterCard afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay.\n20% de descuento para pagos con tarjetas de crédito afinidades Clásicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay.\nEl descuento será aplicado vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nPara el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago bajo el Plan 1 de Bancard. Las cuotas se verán reflejadas en el extracto del cliente.\nTope de compra mensual: Gs. 500.000 (guaraníes quinientos mil). El tope de reintegro se aplica por cuenta de tarjeta de crédito (titulares + adicionales).\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/2493_literato-04-2024-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/16",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 15 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-6de4dce1",
-    "title": "New Balance",
-    "desc": "Hasta 25% de descuento los viernes + 6 cuotas sin intereses todos los días\n \nDel 23 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días viernes. \n20% de descuento para pagos con tarjetas de crédito afinidades Clàsicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días viernes. \nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) para tarjetas de crédito Mastercard y Visa Clásicas, Oro Platinum e Infinite. y Gs. 3.000.000 (guaraníes tres millones) para tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier el cual aplica en forma conjunta a todos los locales de los comercios adheridos.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/2535_gp-04-newbalance-2024-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/34",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "👗 Moda",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 23 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
     "id": "gnb-9e2cb902",
     "title": "Charpentier",
     "desc": "Todos los días 15% de descuento + Hasta 6 cuotas sin intereses.\n \nDel 01 de enero al 31 de diciembre del 2026.\n\n15% de descuento para tarjetas de afinidad Clásicas, Oro, Black, Black Premier, Metalcard Premier, Experience, Platinum, Infinite.\nHasta 6 cuotas sin intereses para tarjetas de afinidad Clásicas, Oro, Black, Black Premier, Metalcard Premier, Experience, Platinum, Infinite.\nEl descuento será aplicado al momento del pago en caja/mostrador por el comercio. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que sea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nNo acumulable con otras promociones.",
@@ -8460,24 +8117,6 @@
     ],
     "installments": 6,
     "validity": "Del 01 de enero al 31 de diciembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-f7514b62",
-    "title": "Body Club",
-    "desc": "Todos los jueves y viernes hasta 25% de descuento + 6 cuotas sin intereses todos los días.\n \nDel 08 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clàsicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.000.000 (guaraníes un millón) por cuenta de tarjeta de crédito (Incluye titulares y adicionales).\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nBeneficio no aplica a compras vía web.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/851_body-club-2025-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/48",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 08 de enero al 27 de noviembre del 2026",
     "expired": false
   },
   {
@@ -8517,24 +8156,6 @@
     "expired": false
   },
   {
-    "id": "gnb-9126dd33",
-    "title": "Denoir",
-    "desc": "Hasta 25% de descuento los jueves y viernes + Hasta 12 cuotas sin intereses todos los días.\n \nDel 22 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clàsicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 12 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 10.000.000 (guaranies diez millones) por cuenta de tarjeta de crédito (incluye titulares y adicionales).\nEl 10% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que sea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nNo aplica a compras a través del e-commerce.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/1058_denoir-2025-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/100",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 12,
-    "validity": "Del 22 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
     "id": "gnb-f9a28379",
     "title": "Boxes Casual Shoes",
     "desc": "25% de descuento los días sábados.\n \nDel 05 de septiembre al 26 de diciembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito Mastercard Clásicas, Oro, Black, Black Premier y Metalcard Premier del Banco GNB Paraguay.\nTope de compra mensual: Gs. 1.000.000 (guaraníes un millón) por cuenta de tarjeta de crédito Incluye titulares y adicionales.\nPara compras en tiendas físicas: El 15% de descuento será aplicado por el comercio en caja/mostrador al momento del pago y el 10% restante será vía reintegro en el extracto al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta.\nPara compras vía web: El 25% de descuento será aplicado vía reintegro en el extracto al cierre o podrá visualizarlo en los movimientos mensuales de su tarjeta.\nNo acumulable con otras promociones.",
@@ -8550,24 +8171,6 @@
     ],
     "installments": null,
     "validity": "Del 05 de septiembre al 26 de diciembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-5983132f",
-    "title": "Cole Haan",
-    "desc": "25% de descuento los viernes + 6 cuotas sin intereses todos los días.\n \nDel 23 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clàsicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra\nEl 10% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que sea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/1134_gp-02-colehaan-2024-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/116",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 23 de enero al 27 de noviembre del 2026",
     "expired": false
   },
   {
@@ -8607,60 +8210,6 @@
     "expired": false
   },
   {
-    "id": "gnb-fe835e56",
-    "title": "Outdoors",
-    "desc": "25% de descuento los viernes + 6 cuotas sin intereses todos los días.\n \nDel 23 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clàsicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra\nEl 10% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que sea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/2839_gp-01-outdoors-2024-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/167",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "🏋️ Deportes y fitness",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 23 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-848fa7ee",
-    "title": "Crocs",
-    "desc": "25% de descuento los viernes + 6 cuotas sin intereses todos los días.\n \nDel 23 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clàsicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra\nEl 10% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que sea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/2846_gp-03-crocs-2024-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/169",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "👗 Moda",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 23 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-638aea68",
-    "title": "Timberland",
-    "desc": "25% de descuento los viernes + 6 cuotas sin intereses todos los días.\n \nDel 23 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clàsicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra\nEl 10% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que sea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/2850_gp-05-timberland-2024-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/170",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "👗 Moda",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 23 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
     "id": "gnb-9d738522",
     "title": "La Nutry Healthy Food",
     "desc": "Hasta 25% de reintegro de lunes a viernes.\n \nDel 01 de julio al 31 de diciembre del 2026.\n\n25% de reintegro para pagos con tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier del Banco GNB Paraguay.\n20% de reintegro para pagos con tarjetas de crédito Mastercard Clásicas y Oro del Banco GNB Paraguay.\nTope de compra mensual: Gs.800.000, el cual aplica en forma conjunta a todos los locales del comercio y delivery directo de La Nutry.\nEl reembolso será vía reintegro en extracto el cual será reflejado al cierre o podrá visualizarlo en su app Banco GNB Personas en los movimientos mensuales de su tarjeta.\nNo aplica para pagos realizados a través de plataformas de terceros (Pedidos Ya, Monchis, entre otros) y/o e-commerce.\nNo acumulable con otras promociones.",
@@ -8680,42 +8229,6 @@
     ],
     "installments": null,
     "validity": "Del 01 de julio al 31 de diciembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-55f0cc41",
-    "title": "Urban Haus",
-    "desc": "Hasta 25% de descuento todos los jueves y viernes + 6 cuotas sin intereses todos los días.\n \nDel 08 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clàsicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 2.000.000 (guaranies dos millones) por cuenta de tarjeta de crédito (incluye titulares y adicionales).\nEl 15% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/2887_urban-haus-2025-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/179",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 08 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-9f8ec9a8",
-    "title": "Armele",
-    "desc": "25% de descuento los jueves y viernes + Hasta 6 cuotas sin intereses todos los días.\n \nDel 22 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clásicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los jueves y viernes.\nHasta 12 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nTope de compra mensual: Gs. 20.000.000 (guaranies veinte millones) por cuenta de tarjeta de crédito (incluye titulares y adicionales).\nEl 10% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su aplicación en los movimientos mensuales de su tarjeta.\nPara el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago bajo el Plan 1 de Bancard. Las cuotas se verán reflejadas en el extracto del cliente.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/3116_armele-2025-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/193",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 22 de enero al 27 de noviembre del 2026",
     "expired": false
   },
   {
@@ -9161,168 +8674,6 @@
     ],
     "installments": 12,
     "validity": "Del 06 de febrero al 31 de diciembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-13940990",
-    "title": "Aero",
-    "desc": "Hasta 25% de descuento todos los jueves y viernes + 6 cuotas sin intereses en tiendas del Grupo Kemsa.\n \nDel 22 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clásicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay todos los días.\nEl 15% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) para tarjetas de crédito Mastercard y Visa Clásicas, Oro Platinum e Infinite. y Gs. 3.000.000 (guaraníes tres millones) para tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5042_aero-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/573",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 22 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-63e5a405",
-    "title": "American Look",
-    "desc": "Hasta 25% de descuento todos los jueves y viernes + 6 cuotas sin intereses en tiendas del Grupo Kemsa.\n \nDel 22 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clásicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay todos los días.\nEl 15% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) para tarjetas de crédito Mastercard y Visa Clásicas, Oro Platinum e Infinite. y Gs. 3.000.000 (guaraníes tres millones) para tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5043_american-look-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/574",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 22 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-269b84c4",
-    "title": "Brooksfield",
-    "desc": "Hasta 25% de descuento todos los jueves y viernes + 6 cuotas sin intereses en tiendas del Grupo Kemsa.\n \nDel 22 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clásicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay todos los días.\nEl 15% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) para tarjetas de crédito Mastercard y Visa Clásicas, Oro Platinum e Infinite. y Gs. 3.000.000 (guaraníes tres millones) para tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5044_brooksfield-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/575",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "👗 Moda",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 22 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-19b331cb",
-    "title": "Kappa",
-    "desc": "Hasta 25% de descuento todos los jueves y viernes + 6 cuotas sin intereses en tiendas del Grupo Kemsa.\n \nDel 22 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clásicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay todos los días.\nEl 15% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) para tarjetas de crédito Mastercard y Visa Clásicas, Oro Platinum e Infinite. y Gs. 3.000.000 (guaraníes tres millones) para tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5045_kappa-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/576",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 22 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-7c838677",
-    "title": "Kenneth Cole",
-    "desc": "Hasta 25% de descuento todos los jueves y viernes + 6 cuotas sin intereses en tiendas del Grupo Kemsa.\n \nDel 22 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clásicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay todos los días.\nEl 15% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) para tarjetas de crédito Mastercard y Visa Clásicas, Oro Platinum e Infinite. y Gs. 3.000.000 (guaraníes tres millones) para tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5046_kenneth-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/577",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 22 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-a77d2671",
-    "title": "Lotto",
-    "desc": "Hasta 25% de descuento todos los jueves y viernes + 6 cuotas sin intereses en tiendas del Grupo Kemsa.\n \nDel 22 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clásicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay todos los días.\nEl 15% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) para tarjetas de crédito Mastercard y Visa Clásicas, Oro Platinum e Infinite. y Gs. 3.000.000 (guaraníes tres millones) para tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5047_lotto-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/578",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 22 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-49fd56ef",
-    "title": "Puma",
-    "desc": "Hasta 25% de descuento todos los jueves y viernes + 6 cuotas sin intereses en tiendas del Grupo Kemsa.\n \nDel 22 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clásicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay todos los días.\nEl 15% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) para tarjetas de crédito Mastercard y Visa Clásicas, Oro Platinum e Infinite. y Gs. 3.000.000 (guaraníes tres millones) para tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5048_puma-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/579",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 22 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-828ec8ac",
-    "title": "Skechers",
-    "desc": "Hasta 25% de descuento todos los jueves y viernes + 6 cuotas sin intereses en tiendas del Grupo Kemsa.\n \nDel 22 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clásicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay todos los días.\nEl 15% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) para tarjetas de crédito Mastercard y Visa Clásicas, Oro Platinum e Infinite. y Gs. 3.000.000 (guaraníes tres millones) para tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5050_skechers-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/581",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "👗 Moda",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 22 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
-    "id": "gnb-4ee9e875",
-    "title": "Sport House",
-    "desc": "Hasta 25% de descuento todos los jueves y viernes + 6 cuotas sin intereses en tiendas del Grupo Kemsa.\n \nDel 22 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días jueves y viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clásicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días jueves y viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay todos los días.\nEl 15% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nTope de compra mensual: Gs. 1.500.000 (guaraníes un millón quinientos mil) para tarjetas de crédito Mastercard y Visa Clásicas, Oro Platinum e Infinite. y Gs. 3.000.000 (guaraníes tres millones) para tarjetas de crédito Mastercard Black, Black Premier y Metalcard Premier.\nEl descuento en caja no aplica en la compra de Gift Cards.\nNo acumulable con otras promociones.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5051_sporthouse-2026-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/582",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "🏋️ Deportes y fitness",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 22 de enero al 27 de noviembre del 2026",
     "expired": false
   },
   {
@@ -11324,24 +10675,6 @@
     "expired": false
   },
   {
-    "id": "gnb-26387c29",
-    "title": "CAT",
-    "desc": "25% de descuento los viernes + 6 cuotas sin intereses todos los días.\n \nDel 23 de enero al 27 de noviembre del 2026.\n\n25% de descuento para pagos con tarjetas de crédito afinidades Black, Black Premier y Metalcard Premier del Banco GNB Paraguay los días viernes.\n20% de descuento para pagos con tarjetas de crédito afinidades Clàsicas, Oro, Experience, Platinum e Infinite del Banco GNB Paraguay los días viernes.\nHasta 6 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nLos reintegros serán reflejados de manera automática en el extracto del cliente, en un período de 24 a 48hs hábiles luego de la compra\nEl 10% del descuento será aplicado en mostrador por el comercio al momento del pago y el porcentaje restante vía reintegro en el extracto del cliente lo cual será reflejado al cierre o podrá visualizarlo en su app en los movimientos mensuales de su tarjeta. Para el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que sea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/2842_gp-06-cat-2024-2024-web.png",
-    "href": "https://www.beneficiosbancognb.com.py/v2/beneficios/categorias/168",
-    "bankId": "gnb",
-    "bankShort": "GNB",
-    "bankColor": "#10B981",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 6,
-    "validity": "Del 23 de enero al 27 de noviembre del 2026",
-    "expired": false
-  },
-  {
     "id": "gnb-ab340bb6",
     "title": "Climarco",
     "desc": "Hasta 12 cuotas sin intereses todos los días.\n \nDel 05 de enero al 31 de diciembre del 2026.\n\nHasta 12 cuotas sin intereses para pagos con tarjetas de crédito del Banco GNB Paraguay.\nPara el fraccionamiento de las cuotas el cliente deberá solicitar/seleccionar la cantidad de cuotas que desea al momento del pago. Las cuotas se verán reflejadas en el extracto del cliente.\nPagos realizados con tarjetas de crédito Banco GNB Paraguay S.A.E.C.A.\nNo participan de la promoción las tarjetas de débito y crédito de afinidades Empresariales, Corporativas, Gift Card, Gourmet y Prepagas.",
@@ -12913,24 +12246,6 @@
     "expired": false
   },
   {
-    "id": "itau-d2bec1fb",
-    "title": "Ginebra",
-    "desc": "25 % con 10 Cuotas sin intereses\n\nEl 26 y 27 de noviembre de 2026. Pagando con tus tarjetas de crédito PERSONAL BANK Itaú. Tenes 25% de ahorro y hasta 10 cuotas sin intereses.\n\nVigencia: Del 03/12/2025 al 27/11/2026\n\nBeneficio: Tenes 25% de ahorro y hasta 10 cuotas sin intereses.\n\nBases y condiciones: *Con tus tarjetas de crédito Itaú podés elegir pagar en hasta 10 cuotas sin intereses. La cantidad de cuotas la elegís al momento de la compra. Aplica para compras realizadas a través del pos de Bancard. No incluye tarjetas pre – pagas. Las tarjetas de crédito que acumulan puntos son Visa Infinite, Interventajas, American Express (Platinum, Gold y Green), Visa Platinum, Mastercard Black, afinidad Club Centenario y Touring. Las tarjetas de crédito con las afinidades LATAM y Aadvantage acumulan en sus respectivos programas. No acumulable con otras promociones.",
-    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/Ginebra.png",
-    "href": "https://www.itau.com.py/beneficios2/Detalle?b=16823&c=30244",
-    "bankId": "itau",
-    "bankShort": "Itaú",
-    "bankColor": "#FF6B00",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 10,
-    "validity": "Del 03/12/2025 al 27/11/2026",
-    "expired": false
-  },
-  {
     "id": "itau-74037566",
     "title": "Centro Legrand",
     "desc": "20 % con 12 Cuotas sin intereses\n\nHasta el 31 de diciembre de 2026. Pagando con tus tarjetas VISA INIFNITE y AMEX PLATINUM de Itaú. Tenes 20% de ahorro y hasta 12 cuotas sin intereses. Aplica todos los días. No aplica a faciales. No aplica a inyectables\n\nVigencia: Del 01/01/2026 al 31/12/2026\n\nBeneficio: 25% de ahorro y hasta 12 cuotas sin intereses.\n\nBases y condiciones: *Con tus tarjetas de crédito Itaú podés elegir pagar en hasta 12 cuotas sin intereses. La cantidad de cuotas la elegís al momento de la compra. Aplica para compras realizadas a través del pos de Bancard. No incluye tarjetas pre – pagas. Las tarjetas de crédito que acumulan puntos son Visa Infinite, Interventajas, American Express (Platinum, Gold y Green), Visa Platinum, Mastercard Black, afinidad Club Centenario y Touring. Las tarjetas de crédito con las afinidades LATAM y Aadvantage acumulan en sus respectivos programas. No acumulable con otras promociones.",
@@ -13539,7 +12854,7 @@
     "bankId": "itau",
     "bankShort": "Itaú",
     "bankColor": "#FF6B00",
-    "category": "🛒 Supermercados",
+    "category": "Otros",
     "discount_percent": 15,
     "days": [
       "Martes"
@@ -13857,6 +13172,24 @@
     "expired": false
   },
   {
+    "id": "itau-d580510c",
+    "title": "Paseo Via Allegra",
+    "desc": "6 Cuotas sin intereses con 25 % Hasta\n\nEl 27 y 28 noviembre de 2026. Pagando con tus tarjetas de crédito Itaú. Tenés 20% de ahorro + 5% PERSONAL BANK y hasta 6 cuotas sin intereses. Aplica a locales adheridos, consultar al comercio.\n\nVigencia: Del 13/03/2024 al 28/11/2026\n\nBeneficio: Tenés 20% de ahorro + 5% PERSONAL BANK y hasta 6 cuotas sin intereses\n\nBases y condiciones: *Con tus tarjetas de crédito Itaú podés elegir pagar en hasta 6 cuotas sin intereses. La cantidad de cuotas la elegís al momento de la compra. Aplica para compras realizadas a través del pos de Bancard. No incluye tarjetas pre – pagas. Las tarjetas de crédito que acumulan puntos son Visa Infinite, Interventajas, American Express (Platinum, Gold y Green), Visa Platinum, Mastercard Black, afinidad Club Centenario y Touring. Las tarjetas de crédito con las afinidades LATAM y Aadvantage acumulan en sus respectivos programas. No acumulable con otras promociones.",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/via_allegra_136x96.jpg",
+    "href": "https://www.itau.com.py/beneficios2/Detalle?b=15089&c=30171",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "Otros",
+    "discount_percent": 25,
+    "days": [
+      "Todos"
+    ],
+    "installments": 6,
+    "validity": "Del 13/03/2024 al 28/11/2026",
+    "expired": false
+  },
+  {
     "id": "itau-c28a2f15",
     "title": "Fuschia",
     "desc": "25 % Hasta con 6 Cuotas sin intereses\n\nDel 7 al 28 de octubre 2026. Pagando con tus tarjetas de crédito Itaú. Tenes 20% de ahorro + 5% adicional pagando con VISA via GPAY y APPLE PAY y hasta 6 cuotas sin intereses. Aplica los sábados en sucursal Palma.\n\nVigencia: Del 27/09/2025 al 28/11/2026\n\nBeneficio: Tenes 20% de ahorro + 5% adicional pagando con VISA via GPAY y APPLE PAY y hasta 6 cuotas sin intereses\n\nBases y condiciones: *Con tus tarjetas de crédito Itaú podés elegir pagar en hasta 6 cuotas sin intereses. La cantidad de cuotas la elegís al momento de la compra. Aplica para compras realizadas a través del pos de Bancard. No incluye tarjetas pre – pagas. Las tarjetas de crédito que acumulan puntos son Visa Infinite, Interventajas, American Express (Platinum, Gold y Green), Visa Platinum, Mastercard Black, afinidad Club Centenario y Touring. Las tarjetas de crédito con las afinidades LATAM y Aadvantage acumulan en sus respectivos programas. No acumulable con otras promociones.",
@@ -14034,6 +13367,24 @@
     ],
     "installments": 12,
     "validity": "Hasta el 31 de diciembre de 2026",
+    "expired": false
+  },
+  {
+    "id": "itau-23eac2ec",
+    "title": "Gonzalez Gimenez",
+    "desc": "10 Cuotas sin intereses con tarjeta de crédito\n\nDel 1 al 13 de diciembre de 2026. Pagando con tus tarjetas de crédito Itaú. Tenes hasta 10 cuotas sin intereses.\n\nVigencia: Del 10/11/2025 al 13/12/2026\n\nBeneficio: hasta 10 cuotas sin intereses.\n\nBases y condiciones: *Con tus tarjetas de crédito Itaú podés elegir pagar en hasta 10 cuotas sin intereses. La cantidad de cuotas la elegís al momento de la compra. Aplica para compras realizadas a través del pos de Bancard. No incluye tarjetas pre – pagas. Las tarjetas de crédito que acumulan puntos son Visa Infinite, Interventajas, American Express (Platinum, Gold y Green), Visa Platinum, Mastercard Black, afinidad Club Centenario y Touring. Las tarjetas de crédito con las afinidades LATAM y Aadvantage acumulan en sus respectivos programas. No acumulable con otras promociones.",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/Gonzalezgimenez_136x96306126d5-464b-4b53-8a1d-facb9b4b83f6.png",
+    "href": "https://www.itau.com.py/beneficios2/Detalle?b=16795&c=1028",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "📱 Tecnología",
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": 10,
+    "validity": "Del 10/11/2025 al 13/12/2026",
     "expired": false
   },
   {
@@ -14736,6 +14087,24 @@
     ],
     "installments": 10,
     "validity": "Del 13/08/2026 al 31/12/2026",
+    "expired": false
+  },
+  {
+    "id": "itau-52603c01",
+    "title": "LAS PEPAS",
+    "desc": "10 Cuotas sin intereses con tarjeta de crédito\n\nEl 19 de noviembre al 31 de diciembre 2026. Pagando con tus tarjetas de crédito Itaú. Tenes hasta 10 cuotas sin intereses.\n\nVigencia: Del 24/11/2026 al 31/12/2026\n\nBeneficio: Tenes hasta 10 cuotas sin intereses.\n\nBases y condiciones: Con tus tarjetas de crédito Itaú podés elegir pagar en hasta 10 cuotas sin intereses. La cantidad de cuotas la elegís al momento de la compra. Aplica para compras realizadas a través del pos de Bancard. No incluye tarjetas pre – pagas. Las tarjetas de crédito que acumulan puntos son Visa Infinite, Interventajas, American Express (Platinum, Gold y Green), Visa Platinum, Mastercard Black, afinidad Club Centenario y Touring. Las tarjetas de crédito con las afinidades LATAM y Aadvantage acumulan en sus respectivos programas.",
+    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/laspepas136x9628e4c7a4-3ef2-4b42-a411-8eebe284b1ae.png",
+    "href": "https://www.itau.com.py/beneficios2/Detalle?b=17086&c=32102",
+    "bankId": "itau",
+    "bankShort": "Itaú",
+    "bankColor": "#FF6B00",
+    "category": "👗 Moda",
+    "discount_percent": null,
+    "days": [
+      "Todos"
+    ],
+    "installments": 10,
+    "validity": "Del 24/11/2026 al 31/12/2026",
     "expired": false
   },
   {
@@ -16891,7 +16260,7 @@
     "id": "itau-0d6fed57-store-vernier",
     "title": "VERNIER",
     "desc": "25 % Hasta con 10 Cuotas sin intereses\n\nDel martes 6 de enero al 1 de diciembre de 2026. Pagando con tus tarjetas de crédito Itaú. Tenes hasta 25% de ahorro y hasta 10 cuotas sin intereses + 5% con Apple pay y Google pay. Aplica al Paseo La Galería.\n\nVigencia: Del 06/01/2026 al 01/12/2026\n\nBeneficio: hasta 25% de ahorro y hasta 10 cuotas sin intereses + 10% con código QR, Apple Pay, Google Pay.\n\nBases y condiciones: *Con tus tarjetas de crédito Itaú podés elegir pagar en hasta 10 cuotas sin intereses. La cantidad de cuotas la elegís al momento de la compra. Aplica para compras realizadas a través del pos de Bancard. No incluye tarjetas pre – pagas. Las tarjetas de crédito que acumulan puntos son Visa Infinite, Interventajas, American Express (Platinum, Gold y Green), Visa Platinum, MasterCard Black, afinidad Club Centenario y Touring. Las tarjetas de crédito con las afinidades LATAM y Aadvantage acumulan en sus respectivos programas. Aplica a descuentos de 5 – 10 – 15 – 20 y hasta 25% de descuento y un adicional de 5% pagando con QR, Apple Pay, Google Pay con tarjeta de crédito desde la app ITAÚ en locales adheridos del Paseo la Galería. No acumulable con otras promociones",
-    "img": "https://www.beneficiosbancognb.com.py/imagenes/5137_vernier-2026-web.png",
+    "img": "",
     "href": "https://www.itau.com.py/beneficios2/Detalle?b=13431&c=31173",
     "bankId": "itau",
     "bankShort": "Itaú",
@@ -17087,24 +16456,6 @@
     ],
     "installments": 10,
     "validity": "Hasta el 31 de diciembre 2026",
-    "expired": false
-  },
-  {
-    "id": "itau-afe1bda7",
-    "title": "Nueva Americana",
-    "desc": "10 Cuotas sin intereses con 25 % Hasta\n\nEl 26 y 27 de noviembre del 2026. Pagando con tus tarjetas de crédito Itaú. Tenes 20% de reintegro + 5% con AMEX PLATINUM y VISA INFINITE y hasta 10 cuotas sin intereses. No aplica a Aphrodite.\n\nVigencia: Del 25/09/2025 al 27/11/2026\n\nBeneficio: Tenes 20% de reintegro + 5% con AMEX PLATINUM y VISA INFINITE y hasta 10 cuotas sin intereses.\n\nBases y condiciones: *Con tus tarjetas de crédito Itaú podés elegir pagar en hasta 10 cuotas sin intereses. La cantidad de cuotas la elegís al momento de la compra. Aplica para compras realizadas a través del pos de Bancard. No incluye tarjetas pre – pagas. Las tarjetas de crédito que acumulan puntos son Visa Infinite, Interventajas, American Express (Platinum, Gold y Green), Visa Platinum, Mastercard Black, afinidad Club Centenario y Touring. Las tarjetas de crédito con las afinidades LATAM y Aadvantage acumulan en sus respectivos programas.",
-    "img": "https://www.secure.itau.com.py/24horasinternet_motor/Imagenes/nuevaamericana_logo_136x96_1120.png",
-    "href": "https://www.itau.com.py/beneficios2/Detalle?b=16660&c=1044",
-    "bankId": "itau",
-    "bankShort": "Itaú",
-    "bankColor": "#FF6B00",
-    "category": "Otros",
-    "discount_percent": 25,
-    "days": [
-      "Todos"
-    ],
-    "installments": 10,
-    "validity": "Del 25/09/2025 al 27/11/2026",
     "expired": false
   },
   {
@@ -26721,24 +26072,6 @@
     "expired": false
   },
   {
-    "id": "continental-61c1e203",
-    "title": "Mi Dulce Bebé",
-    "desc": "Los jueves, en Mi Dulce Bebé.  \n- 20% de reintegro. Límite de compras mensual de hasta de Gs. 1.000.000 por cuenta de tarjeta.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\n\n Aplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n \nVigente hasta el 27 de noviembre de 2026.\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones. \n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente. \n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "https://www.bancontinental.com.py/uploads/small_Logo_8ca3d3f11e.png",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "🧸 Niños",
-    "discount_percent": 20,
-    "days": [
-      "Jueves"
-    ],
-    "installments": null,
-    "validity": "Hasta el 27 de noviembre de 2026",
-    "expired": false
-  },
-  {
     "id": "continental-64334c30",
     "title": "A Punto Market - Tienda del Asadero",
     "desc": "Los miércoles, en A Punto Market - Tienda del Asadero. \n- 20% de reintegro. Límite de compra semanal de hasta Gs. 1.000.000 por cuenta de tarjeta, en conjunto para todos los supermercados adheridos a la promoción de \"Miércoles de Supermercados\".\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\n\n Vigente hasta el 07 de abril de 2027\n\n(*) No aplica para compras en patios de comida.\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
@@ -27636,24 +26969,6 @@
     ],
     "installments": null,
     "validity": "Hasta el 26 de agosto de 2027",
-    "expired": false
-  },
-  {
-    "id": "continental-6cc52da3",
-    "title": "Arte & Company",
-    "desc": "Todos los días, en Arte & Company.   \n\n- Hasta 12 cuotas sin intereses, pagando con las tarjetas de crédito Continental exclusivamente a través del POS Dinelco. \n\nLímites de compras: \n\n- Cuotas sin intereses con límite de compra mensual de Gs. 50.000.000 por cuenta de tarjeta. \n\n \nAplica únicamente para compras presenciales. No aplica para pagos a través de POS Virtual. \n\nVigente hasta el 27 de noviembre del 2026. \n\n \n\n\n(*) No participan las tarjetas Pre-Pagas, Gourmet Card ni Cabal. No acumulable con otras promociones. \n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente. \n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos. \n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "https://www.bancontinental.com.py/uploads/small_PHOTO_2025_11_11_12_09_22_49fc28ef92.jpeg",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "🏠 Hogar",
-    "discount_percent": null,
-    "days": [
-      "Todos"
-    ],
-    "installments": 12,
-    "validity": "Hasta el 27 de noviembre del 2026",
     "expired": false
   },
   {
@@ -33429,24 +32744,6 @@
     "expired": false
   },
   {
-    "id": "continental-abe3f4c8",
-    "title": "San Cayetano Comercial - Miércoles de Supermercados",
-    "desc": "Los miércoles, en San Cayetano Comercial.\n- 20% de reintegro. Límite de compra semanal de hasta Gs. 1.000.000 por cuenta de tarjeta, en conjunto para todos los supermercados adheridos a la promoción de \"Miércoles de Supermercados\".\n\nAdemás, todos los días:\n- Hasta 6 cuotas sin intereses. Límite de compra mensual de hasta Gs. 50.0000.000 por cuenta de tarjeta.\n\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 27 de noviembre de 2026.\n\n(*) No aplica para compras en patios de comida.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
-    "img": "https://www.bancontinental.com.py/uploads/568a3176_8097_435a_9381_fbaca61e7203_7dcdfce541.jpeg",
-    "href": "",
-    "bankId": "continental",
-    "bankShort": "Continental",
-    "bankColor": "#3B82F6",
-    "category": "🛒 Supermercados",
-    "discount_percent": 20,
-    "days": [
-      "Miércoles"
-    ],
-    "installments": 6,
-    "validity": "Hasta el 27 de noviembre de 2026",
-    "expired": false
-  },
-  {
     "id": "continental-755539b4",
     "title": "Paulista Grill Churrasquería",
     "desc": "Los sábados y domingos, en Paulista Grill.\n- 35% de reintegro con Privilege Continental. Límite de compra mensual de hasta Gs. 2.000.000 por cuenta de tarjeta, por rubro.\n- 25% de reintegro con Black e Infinite. Límite de compra mensual de hasta Gs. 1.000.000 por cuenta de tarjeta, por rubro.\n\nVigente hasta el 25 de octubre de 2027.\n\n_\n\nAdemás:\n- 20% de reintegro con Dinelco, Clásica y Oro. Límite de compra mensual de hasta Gs. 500.000 por cuenta de tarjeta, en conjunto con Acuarela. Exclusivo en POS Dinelco.\n\nVigente hasta el 27 de noviembre de 2026.\n\nLocales adheridos:\n- Avda. San Martín y Guido Spano.\n- Fernando de la Mora, Capitán Rivas y Sgto. Galarza.\n\nVálido pagando con tarjetas de crédito Continental.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
@@ -34268,6 +33565,43 @@
     ],
     "installments": 12,
     "validity": "Hasta el 25 de noviembre de 2027",
+    "expired": false
+  },
+  {
+    "id": "continental-fa37afcb",
+    "title": "Impacto",
+    "desc": "Del 28 de noviembre al 26 de diciembre de 2026, en las sucursales de Impacto.\n- 15% de descuento en caja + 10% de reintegro con Privilege Continental. Límite de compra mensual de hasta Gs. 20.000.000 por cuenta de tarjeta.\n- 15% de descuento en caja + 5% de reintegro con Dinelco, Clásica, Oro, Black e Infinite. Límite de compra mensual de hasta Gs. 20.000.000 por cuenta de tarjeta.\n\nAdemás, todos los días:\n- Hasta 18 cuotas sin intereses. Límite de compra mensual de hasta Gs. 50.000.000 por cuenta de tarjeta.\n\nVálido pagando con tarjetas de crédito Continental. Exclusivo en POS Dinelco.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\nVigente hasta el 26 de diciembre de 2026.\n\nSucursales adheridas:\n\nAsunción:\n- Avda. España N.° 1343 casi Senador Long.\n- Shopping del Sol.\n\nSan Lorenzo:\n- Ruta 2, Km. 14,5.\n\nEncarnación:\n- Dr. José Gaspar Rodríguez de Francia.\n\nCiudad del Este:\n- Comercial del Paraná Country Club.\n\nLuque:\n- Shopping Los Jardines.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "img": "https://www.bancontinental.com.py/uploads/small_logo_home_9a80106d32.png",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "🏠 Hogar",
+    "discount_percent": 15,
+    "days": [
+      "Todos"
+    ],
+    "installments": 18,
+    "validity": "Del 28 de noviembre al 26 de diciembre de 2026",
+    "expired": false
+  },
+  {
+    "id": "continental-3e5de9ae",
+    "title": "El Viejo Marino",
+    "desc": "Los sábados y domingos, en El Viejo Marino.\n- 35% de reintegro con Privilege Continental. Límite de compra mensual de hasta Gs. 2.000.000 por cuenta de tarjeta, por rubro.\n- 25% de reintegro con Black e Infinite. Límite de compra mensual de hasta Gs. 1.000.000 por cuenta de tarjeta, por rubro.\n\nVigente hasta el 25 de octubre de 2027.\n\n_\n\nAdemás:\n- 20% de reintegro con Dinelco, Clásica y Oro. Límite de compra mensual de hasta Gs. 500.000 por cuenta de tarjeta.\n\nVigente hasta el 31 de octubre de 2027.\n\nVálido pagando con tarjetas de crédito Continental.\n\nAplica únicamente para compras o pagos presenciales vía POS físico, con tarjeta física o QR. No aplica para pagos online, a través de links de pago o POS virtuales.\n\n(*) No participan las tarjetas Prepagas, Gourmet Card ni Cabal. No acumulable con otras promociones.\n\n(**) El Banco Continental S.A.E.C.A. se reserva el derecho de modificar o dar por finalizada la continuidad de esta u otra promoción en cualquier momento, de manera unilateral, sin incurrir en reclamo alguno por parte del cliente.\n\n(***) Beneficio exclusivo para clientes del Banco Continental y para uso personal de los mismos.\n\n() Para beneficiarse de la promoción, la factura del producto o servicio adquirido deberá ser emitida a nombre del titular o adicional de la tarjeta con la cual se abonó el pago.",
+    "img": "https://www.bancontinental.com.py/uploads/small_El_Viejo_Marino_6aaa83d428.jpeg",
+    "href": "",
+    "bankId": "continental",
+    "bankShort": "Continental",
+    "bankColor": "#3B82F6",
+    "category": "🍽️ Gastronomía",
+    "discount_percent": 35,
+    "days": [
+      "Domingo",
+      "Sábado"
+    ],
+    "installments": null,
+    "validity": "Hasta el 25 de octubre de 2027",
     "expired": false
   },
   {
